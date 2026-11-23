@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 
-assert.ok(EMOTIONS.length >= 15, "The library should contain a broad set of emotion spaces.");
+assert.ok(EMOTIONS.length >= 18, "The library should contain a broad set of emotion spaces.");
 const ids = EMOTIONS.map(item => item.id);
 assert.equal(new Set(ids).size, ids.length, "Emotion IDs must be unique.");
 
@@ -24,6 +24,11 @@ for (const emotion of EMOTIONS) {
     for (const sourceId of tool.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by " + tool.id);
   }
 }
+
+assert.ok(toolIds.size >= 85, "The library should contain at least 85 interactive tools.");
+assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
+assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
+assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
 
 for (const [id, source] of Object.entries(SOURCES)) {
   assert.ok(source.label && source.citation, "Incomplete source metadata: " + id);
