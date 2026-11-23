@@ -1187,8 +1187,8 @@ EMOTIONS.push({
   "why": "A May 2026 network meta-analysis of 35 trials and 3,263 adults found CBT and several related psychological interventions superior to a waiting-list control. Its component analysis linked exposure/response prevention, cognitive restructuring, and mindfulness with improved outcomes. This does not mean that symptoms should be dismissed or that users should independently stop medical follow-up.",
   "evidence": {
     "label": "Evidence supports CBT for health anxiety; clinical boundaries are essential",
-    "level": "strong",
-    "note": "A May 2026 network meta-analysis included 35 trials (3,263 adults). CBT was among the interventions with significant effects versus waiting-list control; exposure/response prevention and cognitive restructuring were associated with improved outcomes in component analysis. Medical assessment and appropriate follow-up remain essential."
+    "level": "moderate",
+    "note": "A May 2026 network meta-analysis included 35 trials (3,263 adults). CBT was among the interventions with significant effects versus waiting-list control; exposure/response prevention and cognitive restructuring were associated with improved outcomes in component analysis. The component findings do not replace active-comparator evidence or medical assessment and appropriate follow-up."
   },
   "focus": [
     "Follow an agreed medical-care plan",
