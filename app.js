@@ -1,7 +1,8 @@
 import { EMOTIONS, SOURCES, WORKSHEETS } from "./data.js";
+import { CORE_TECHNIQUES } from "./technique-library.js";
 
 const KEY = "cbt-workspace-v1";
-const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {} };
+const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All" };
 let state = readState();
 let toastTimer;
 const $ = (s, root = document) => root.querySelector(s);
@@ -54,7 +55,7 @@ function renderSidebar() {
   $("#emotion-count").textContent = EMOTIONS.length;
 }
 function renderHeader() {
-  $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : activeEmotion().name.toUpperCase();
+  $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : state.tab === "library" ? "CBT TECHNIQUE LIBRARY" : activeEmotion().name.toUpperCase();
 }
 function tabs() {
   return `<div class="section-tabs" role="tablist" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" role="tab" aria-selected="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</div>`;
@@ -83,6 +84,34 @@ function overview(e) {
 function techniques(e) {
   return `<section class="tab-intro"><div><div class="eyebrow muted">METHOD LIBRARY</div><h2>Techniques for ${esc(e.name.toLowerCase())}</h2><p>Each method includes its purpose, suggested use, practical steps, and evidence context.</p></div><span class="tab-count">${String(e.tools.length).padStart(2,"0")} METHODS</span></section><div class="technique-list">${e.tools.map((t,i) => `<article class="technique-row"><div class="technique-index">0${i+1}</div><div class="technique-main"><div class="technique-overline">METHOD 0${i+1}</div><h3>${esc(t.title)}</h3><p>${esc(t.description)}</p><div class="technique-detail"><strong>When to use it</strong><span>${esc(t.when)}</span></div><div class="technique-detail"><strong>How it works</strong><ol>${t.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div><div class="technique-evidence"><span>EVIDENCE NOTE</span>${esc(t.evidence)}</div><div class="technique-sources">${links(t.sources)}</div></div><div class="technique-side"><span class="worksheet-tag">INTERACTIVE</span><button class="primary-button compact" type="button" data-tool="${t.id}">Open worksheet ↗</button></div></article>`).join("")}</div>`;
 }
+
+function renderTechniqueLibrary() {
+  const query = ($("#global-search")?.value || "").trim().toLowerCase();
+  const categories = ["All","Assessment & formulation","Cognitive methods","Behavioural methods","Imagery & memory methods","Maintenance & homework","Related approaches"];
+  const visible = CORE_TECHNIQUES.filter(item => {
+    const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
+    const searchText = [item.title,item.classification,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
+    return categoryMatch && (!query || searchText.includes(query));
+  });
+  return `<section class="library-hero">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>REFERENCE DIRECTORY / CBT METHODS</div>
+    <h1>CBT technique library<span class="title-period">.</span></h1>
+    <p>A structured map of common CBT procedures, specialist treatment components, and related third-wave approaches. Each entry identifies the kind of method and its boundaries.</p>
+    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>6</strong> method families</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.classification === "Specialist protocol").length}</strong> specialist components</span></div>
+  </section>
+  <div class="library-notice"><strong>How to use this directory</strong><p>There is no single finite list of every CBT technique: manuals and diagnosis-specific protocols contain overlapping procedures and variations. This directory maps the principal methods identified in the scientific audit. Some techniques require a trained clinician. Related approaches are labelled separately rather than misrepresented as classical CBT.</p></div>
+  <div class="library-toolbar"><div class="library-filters" role="group" aria-label="Filter techniques by family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div><span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span></div>
+  ${visible.length ? `<div class="library-grid">${visible.map(item=>`<article class="library-card">
+    <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.classification === "Specialist protocol" ? "specialist" : item.classification === "Core CBT" ? "core" : "related"}">${esc(item.classification)}</span></div>
+    <h3>${esc(item.title)}</h3>
+    <p>${esc(item.description)}</p>
+    <div class="library-use"><strong>Typical use</strong><span>${esc(item.when)}</span></div>
+    <div class="library-boundary"><strong>Boundary</strong><span>${esc(item.caution)}</span></div>
+    <div class="library-sources">${sourceLinks(item.sources)}</div>
+  </article>`).join("")}</div>` : `<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different method family.</p></div>`}
+  <div class="library-note"><strong>Clinical scope</strong><p>A technique is not a treatment by itself. Whether it is appropriate depends on formulation, diagnosis where relevant, risk, medical context, and practitioner competence. Read the evidence review before treating any item as a programme.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the full scientific audit ↗</a></div>`;
+}
+
 function planPage(e) {
   const done = e.plan.filter((_,i) => state.completed[`${e.id}:${i}`]).length;
   return `<section class="plan-page"><div class="tab-intro"><div><div class="eyebrow muted">PROGRESSIVE PRACTICE</div><h2>A plan you can work through</h2><p>This is a flexible skills-practice sequence, not a fixed clinical treatment protocol. Repeat or adapt each step.</p></div><div class="plan-progress"><strong>${done}/4</strong><span>steps complete</span></div></div><div class="large-progress-track"><span style="width:${done*25}%"></span></div><div class="plan-steps">${e.plan.map((p,i) => { const checked = !!state.completed[`${e.id}:${i}`]; return `<article class="plan-step ${checked ? "completed" : ""}"><button type="button" class="step-check ${checked ? "checked" : ""}" data-plan="${i}" aria-label="${checked ? "Mark as not complete" : "Mark as complete"}">${checked ? "✓" : ""}</button><div class="step-content"><div class="step-meta">STEP 0${i+1}</div><h3>${esc(p.title)}</h3><p>${esc(p.detail)}</p></div><span class="step-state">${checked ? "COMPLETED" : "UP NEXT"}</span></article>`; }).join("")}</div><div class="plan-note"><span>↗</span><p>Progress is saved only in this browser. Completion is a personal reminder, not a clinical measure of recovery.</p></div></section>`;
@@ -109,6 +138,7 @@ function render() {
   renderSidebar(); renderHeader();
   if (state.tab === "home") page.innerHTML = homePage();
   else if (state.tab === "journal") page.innerHTML = journalPage();
+  else if (state.tab === "library") page.innerHTML = renderTechniqueLibrary();
   else {
     const e = activeEmotion();
     page.innerHTML = hero(e) + tabs() + (state.tab === "techniques" ? techniques(e) : state.tab === "plan" ? planPage(e) : overview(e));
@@ -171,6 +201,8 @@ document.addEventListener("click", event => {
   }
   const tab = event.target.closest("[data-tab]");
   if (tab) { state.tab = tab.dataset.tab; saveState(); render(); return; }
+  const libraryCategory = event.target.closest("[data-library-category]");
+  if (libraryCategory) { state.libraryCategory = libraryCategory.dataset.libraryCategory; render(); return; }
   const tool = event.target.closest("[data-tool]");
   if (tool) { openTool(tool.dataset.tool); return; }
   const plan = event.target.closest("[data-plan]");
@@ -188,7 +220,7 @@ document.addEventListener("submit", event => {
   if (form.dataset.form === "worksheet") saveWorksheet(form);
   if (form.dataset.form === "checkin") saveCheckin(form);
 });
-$("#global-search").addEventListener("input", renderSidebar);
+$("#global-search").addEventListener("input", () => { renderSidebar(); if (state.tab === "library") page.innerHTML = renderTechniqueLibrary(); });
 $("#open-sidebar").addEventListener("click", () => { $("#sidebar").classList.add("sidebar-open"); $("#sidebar-scrim").classList.add("visible"); });
 $("#close-sidebar").addEventListener("click", () => { $("#sidebar").classList.remove("sidebar-open"); $("#sidebar-scrim").classList.remove("visible"); });
 $("#sidebar-scrim").addEventListener("click", () => { $("#sidebar").classList.remove("sidebar-open"); $("#sidebar-scrim").classList.remove("visible"); });
