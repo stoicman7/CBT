@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 import { CORE_TECHNIQUES } from "../technique-library.js";
 
@@ -41,6 +42,12 @@ assert.ok(EMOTIONS.find(item => item.id === "substance-use").caution.toLowerCase
 assert.ok(EMOTIONS.find(item => item.id === "body-focused-repetitive-behaviours").tools.some(tool => tool.id === "bfrb-competing-response"));
 
 assert.ok(CORE_TECHNIQUES.length >= 49, "The searchable technique directory should contain at least 49 methods.");
+const appSource = await readFile(new URL("../app.js", import.meta.url), "utf8");
+assert.ok(appSource.includes("function renderTechniqueLibrary()"), "The technique directory renderer should exist.");
+assert.ok(appSource.includes("${links(item.sources)}"), "The technique directory should use the shared source-link renderer.");
+assert.ok(!appSource.includes("${sourceLinks(item.sources)}"), "The technique directory must not call an undefined source-link helper.");
+assert.ok(appSource.includes('data-library-category'), "Technique category filters should be wired to the app.");
+
 const techniqueIds = new Set();
 const categories = new Set();
 for (const technique of CORE_TECHNIQUES) {
