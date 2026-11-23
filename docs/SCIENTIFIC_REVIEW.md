@@ -1204,3 +1204,81 @@ Automated checks now require:
 - Existing safety assertions for panic, trauma, OCD, sleep, jealousy, and specialist workspaces to remain intact.
 
 The 36 new exercises are practice aids, not 36 separate evidence-based treatments. Clinical protocols remain diagnosis-specific, and the website must continue to label specialist exposure, trauma processing, and severe or complex presentations as requiring professional care.
+
+
+# Fifth audit — practice interface and expanded emotional workspaces (23 November 2026)
+
+## Scope and method
+
+This focused update reviews the 22 additional exercise records introduced for anger, stress, general anxiety, fear, and social anxiety, alongside the changes to their presentation. It is an evidence-informed implementation audit, not a registered systematic review, guideline update, clinical trial, or usability study. The tool count refers to interactive prompts in the application; it does not represent 159 independently validated interventions.
+
+## Revised catalogue and coverage
+
+The current application contains 25 workspaces and 159 interactive tools, with 49 entries in the separate CBT technique directory. The five requested areas now contain:
+
+| Workspace | Tools after this update | Additional tools in this audit |
+|---|---:|---:|
+| Anger | 13 | 4 |
+| Stress | 13 | 4 |
+| Anxiety | 13 | 4 |
+| Fear | 13 | 4 |
+| Social anxiety | 9 | 6 |
+
+The new anger items address interpretation checking, converting anger into a specific request, a planned pause with a return condition, and vulnerability/context monitoring. The stress items distinguish control from influence, triage overloaded tasks, plan for predictable pressure points, and prepare a realistic workload conversation. The anxiety items map avoidance costs, trace worry-response loops, record coping evidence, and support valued action in the presence of anxiety. The fear additions prioritise objective risk checks, review of feared predictions, values-linked safe approach choices, and learning after setbacks. The social-anxiety additions cover safety behaviours, anticipatory processing, low-stakes conversation experiments, observable evidence versus self-impression, rigid performance rules, and preparation for clinician-guided video feedback.
+
+## Domain-specific evidence and boundaries
+
+### Anger
+
+Cognitive reappraisal, functional analysis, problem-solving, and communication skills are recognisable CBT-informed procedures. A 2025 meta-analysis of 81 studies and 115 effect sizes reported associations between anger and several emotion-regulation strategies, including rumination, avoidance, suppression, acceptance, and reappraisal. Heterogeneity was substantial, and these associations must not be presented as proof that an individual worksheet causes anger reduction.
+
+The additions are therefore framed as skills for noticing patterns and choosing behaviour, not as independent anger treatments. The pause-and-return exercise does not recommend punitive silence. It requires a safe pause and does not encourage intimidation, revenge, or venting. The vulnerability map is an observation prompt, not a causal diagnosis or an excuse for aggression. Immediate risk of violence requires distance and urgent local support rather than a worksheet.
+
+### Stress
+
+The new tools intentionally include the possibility that the demands themselves are unreasonable or structurally constrained. The control/influence map and workload conversation are not framed as proof that an individual can solve understaffing, discrimination, unsafe work, financial hardship, or other external conditions through better coping.
+
+An umbrella review of workplace mental-health intervention meta-analyses reported small-to-moderate effects across some outcomes, but certainty varied and was often low or very low. A 2025 trial comparing internet-delivered CBT with general health promotion did not find CBT superior on its primary perceived-stress outcome in the overall sample. These findings support cautious educational framing rather than claims that a digital worksheet is an established stress treatment.
+
+### Anxiety
+
+The new tools address avoidance, recurring worry loops, realistic coping appraisal, and valued activity. They are intended for reflective use and safe, proportionate behavioural experiments. They must not discourage legitimate medical assessment, urgent help-seeking, or reasonable safety precautions. Reassurance review is not a rule to stop asking for help; it is a prompt to examine repetitive reassurance patterns when they are maintaining distress.
+
+NICE CG113 describes stepped care for generalised anxiety and panic and recommends manual-based CBT or applied relaxation delivered by trained and competent practitioners at higher-intensity steps. The site does not claim to deliver that protocol. The 2025 CBT meta-analysis across anxiety disorders found an average benefit versus controls, but effects varied by diagnostic group and cannot be generalised to every anxiety presentation or individual.
+
+### Fear
+
+The four additions make assessment of objective danger explicit before any approach exercise. Exposure is not a dare, and discomfort is not evidence that a situation is safe. Legitimate precautions must remain in place. The new fear worksheet prohibits self-directed trauma-memory processing, panic-sensation induction, and OCD exposure and response prevention.
+
+A 2022 meta-analysis of exposure for specific phobia compared single- and multi-session in-vivo formats across 85 study groups and 1,758 participants. This is evidence about specific-phobia exposure formats, not a blanket authorisation for unsupervised exposure or a claim about every kind of fear. A 2025 fear/safety-learning meta-analysis contributes to understanding group-level learning processes; it does not predict an individual's course.
+
+### Social anxiety
+
+The six new tools map components identified in NICE CG159 rather than inventing a generic confidence programme. The guideline's individual CBT protocols include work on self-focused attention, safety-seeking behaviours, behavioural experiments, pre- and post-event processing, and, in the Clark and Wells model, video feedback and core beliefs.
+
+The video-feedback item is deliberately preparation for clinician-guided work only. It does not recommend recording oneself, repeated self-scrutiny, or sharing sensitive recordings without informed consent and a clear privacy arrangement. The conversation experiment is restricted to low-stakes, safe situations. Persistent or impairing social anxiety should be directed toward competent, disorder-specific care; these prompts are not the full Clark and Wells or Heimberg protocol.
+
+## Implementation and exercise-design audit
+
+The worksheet now separates four different user tasks:
+
+1. **Orientation:** a concise introduction, purpose card, and “when to use it” card.
+2. **Method:** numbered, visually separate steps rather than a single continuous paragraph.
+3. **Evidence:** a collapsible explanation of the exercise's evidence context and limitations, with source links.
+4. **Reflection:** separately labelled prompts in a responsive field grid, with larger writing areas and a clear local-storage notice.
+
+The technique catalogue now uses progressive disclosure for procedural steps and evidence notes. This keeps the initial view scannable while leaving detail available on demand. Exercise cards use a two-column desktop layout and a single-column narrow-screen layout. The intended visual hierarchy is supplied by spacing, borders, numbering, headings, and restrained surface contrast rather than by reducing the substantive text size.
+
+Global search now returns matching workspaces and exact tool titles. Selecting a tool result switches to its workspace and opens that worksheet. Keyboard interactions support arrow navigation, Enter, and Escape. The search field and result list use combobox/listbox semantics. Workspace section navigation uses ordinary navigation buttons with pressed state rather than an incomplete tablist pattern.
+
+## Persistence and privacy corrections
+
+Saving a worksheet or daily check-in now checks whether local storage accepted the update before displaying a success state. On failure, the UI preserves the unsaved form or restores the prior in-memory state. Plan completion, note deletion, and clearing local data follow the same rollback principle. The initial local-state loader validates core shapes before using stored values, which reduces the chance that malformed browser data breaks the interface. Export object URLs are revoked after the browser has had time to initiate the download.
+
+These changes do not make browser local storage encrypted. Notes remain on the current device and browser profile, and another person with access to that profile may be able to read them. Private browsing, clearing site data, or switching browsers/devices may make notes unavailable. The privacy notice and export/delete controls must remain visible and accurate.
+
+## Remaining work and acceptance criteria
+
+The next quality phase should include real browser testing on desktop and narrow mobile screens, keyboard-only walkthroughs, screen-reader checks, contrast testing, and an automated accessibility scan. The site should also test storage quota failures, unavailable storage, corrupted saved data, export integrity, and long tool titles or prompt labels. Automated unit and smoke tests are necessary but cannot establish visual quality or accessibility by themselves.
+
+The current additions should continue to satisfy the following criteria: every new tool has a unique ID, a valid worksheet schema, at least five practical steps, a use context, a conservative evidence note, and at least one valid source. Specialist clinical procedures remain clearly distinguished from self-guided reflection aids. No tool should be promoted as a validated treatment merely because it uses a technique that appears in a clinical protocol.
