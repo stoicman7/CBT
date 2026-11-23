@@ -551,5 +551,83 @@ export const CORE_TECHNIQUES = [
       "depressionNICE",
       "ruminationFocused"
     ]
+  },
+  {
+    "id": "psychoeducation",
+    "title": "Psychoeducation and shared formulation",
+    "category": "Assessment & formulation",
+    "classification": "Core CBT",
+    "description": "Explain a relevant cognitive-behavioural model in clear, collaborative language and link it to the person's own examples, current goals, and treatment rationale.",
+    "when": "Use early in a treatment or learning programme and revisit when new information changes the formulation.",
+    "caution": "Information alone is not a treatment. Avoid presenting simplified models as universal explanations or implying that all symptoms are caused by thoughts.",
+    "sources": [
+      "beckManual",
+      "gadGuideline"
+    ]
+  },
+  {
+    "id": "collaborative-agenda",
+    "title": "Collaborative agenda and target setting",
+    "category": "Assessment & formulation",
+    "classification": "Core CBT",
+    "description": "Agree on a small number of specific, relevant targets for a session or practice period, including review of previous learning and current emotional status.",
+    "when": "Use when a treatment session, coaching appointment, or self-directed practice period needs focus.",
+    "caution": "Do not make an agenda so ambitious that it becomes another source of pressure. Targets should be jointly chosen and revised when necessary.",
+    "sources": [
+      "beckManual"
+    ]
+  },
+  {
+    "id": "session-feedback",
+    "title": "Session feedback and summary",
+    "category": "Maintenance & homework",
+    "classification": "Core CBT",
+    "description": "Check what was understood, what felt useful or inaccurate, and what should change; summarise key learning and the next agreed action.",
+    "when": "Use at the end of a session or after completing an important exercise.",
+    "caution": "Feedback is part of collaborative clinical delivery, not a score of whether a person is a 'good' therapy participant.",
+    "sources": [
+      "beckManual"
+    ]
+  },
+  {
+    "id": "scheduled-worry",
+    "title": "Worry postponement / scheduled worry",
+    "category": "Cognitive methods",
+    "classification": "Core CBT",
+    "description": "Briefly label a non-urgent worry, record it, return to the present activity, and review it at a planned time to distinguish problem-solving from repetitive hypothetical worry.",
+    "when": "Use for repetitive, non-urgent worry in an appropriate anxiety formulation.",
+    "caution": "Never postpone urgent medical, safety, legal, or practical decisions. In OCD, repeated worry review can become a mental ritual; seek specialist guidance if compulsive.",
+    "sources": [
+      "gad",
+      "gadGuideline",
+      "rumination"
+    ]
+  },
+  {
+    "id": "systematic-desensitisation",
+    "title": "Systematic desensitisation",
+    "category": "Behavioural methods",
+    "classification": "Specialist protocol",
+    "description": "A historical exposure procedure that pairs a graded fear hierarchy with relaxation training and gradual imagined or real-world approach. Contemporary exposure methods may use different learning principles and do not require relaxation as a universal ingredient.",
+    "when": "Use only where selected by a trained practitioner for an appropriate phobia or anxiety formulation.",
+    "caution": "Not appropriate for all anxiety problems and not a substitute for modern disorder-specific exposure. Do not apply it to trauma memories, panic sensations, or genuine danger without clinical guidance.",
+    "sources": [
+      "anxietyGuidelines",
+      "socialNICE"
+    ]
+  },
+  {
+    "id": "coping-skills-training",
+    "title": "Coping-skills training and rehearsal",
+    "category": "Behavioural methods",
+    "classification": "Core CBT",
+    "description": "Identify a predictable challenging situation, select a practical coping response, rehearse it, and review whether it works in context.",
+    "when": "Use when a person needs a concrete alternative response for cravings, stress, anger, communication, or other predictable high-risk situations.",
+    "caution": "Coping skills should complement, not replace, risk management, medical care, or specialist treatment. Rehearsal needs to be tailored to the situation.",
+    "sources": [
+      "addictionSkillsNCBI",
+      "alcoholGuideline2026",
+      "beckManual"
+    ]
   }
 ];
