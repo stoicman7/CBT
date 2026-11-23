@@ -563,3 +563,323 @@ a { color: inherit; }
   .tool-dialog .form-field,
   .tool-dialog .form-field textarea { font-size: 17px; }
 }
+
+
+/* Product UI refinement — clearer scanning, balanced cards, and structured practice. */
+.workspace-layout .tool-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.workspace-layout .tool-card {
+  min-height: 275px;
+  padding: 21px 22px 18px;
+  border-radius: 15px;
+  border-color: #e9e1df;
+  box-shadow: 0 4px 14px rgba(42, 23, 25, .025);
+}
+.workspace-layout .tool-card:hover {
+  border-color: #d9babb;
+  box-shadow: 0 12px 28px rgba(42, 23, 25, .07);
+}
+.tool-card-top { gap: 10px; }
+.tool-number {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  border-radius: 10px; background: #f8eeee; color: var(--red);
+  font-size: 13px;
+}
+.tool-type {
+  padding: 5px 8px; border-radius: 20px; background: #f6f2f1;
+  color: #786d6f; font-size: 10px; letter-spacing: .65px;
+}
+.tool-card h3 {
+  margin: 17px 0 8px; font-size: 21px; line-height: 1.35;
+  letter-spacing: -.45px;
+}
+.tool-card > p {
+  margin: 0 0 17px; color: #62595b; font-size: 17px; line-height: 1.65;
+}
+.tool-when {
+  margin-top: auto; padding: 12px 13px;
+  border: 1px solid #eee7e5; border-left: 3px solid #c58a8e;
+  border-radius: 9px; background: #fcfaf9;
+  color: #655b5d; font-size: 16px; line-height: 1.6;
+}
+.tool-when span {
+  margin-bottom: 5px; color: #897b7d; font-size: 11px;
+}
+.text-action {
+  min-height: 44px; margin-top: 14px; padding: 10px 0 0;
+  border-top: 1px solid #f0eae9; color: var(--red);
+  font-size: 16px; font-weight: 700;
+}
+.text-action span:last-child { font-size: 19px; }
+
+/* The technique catalogue is progressive disclosure rather than a wall of text. */
+.technique-list { gap: 15px; }
+.technique-row {
+  grid-template-columns: 42px minmax(0,1fr) 150px;
+  align-items: start; gap: 17px; padding: 21px;
+  border-radius: 15px; border-color: #e9e1df;
+}
+.technique-index {
+  width: 36px; height: 36px; display: grid; place-items: center;
+  border-radius: 10px; background: #f8eeee; color: var(--red);
+  font-size: 15px;
+}
+.technique-overline { font-size: 10px; }
+.technique-main h3 { margin: 5px 0 8px; font-size: 21px; line-height: 1.35; }
+.technique-main > p { margin: 0 0 14px; color: #62595b; font-size: 17px; line-height: 1.65; }
+.technique-when {
+  display: grid; gap: 5px; margin: 12px 0;
+  padding: 13px 15px; border-radius: 10px;
+  background: #faf7f6; border: 1px solid #eee7e5;
+}
+.technique-when strong { color: #64595b; font: 700 13px Manrope,sans-serif; }
+.technique-when span { color: #655b5d; font-size: 16px; line-height: 1.6; }
+.technique-expand, .technique-evidence {
+  margin-top: 10px; border: 1px solid #ece5e4;
+  border-radius: 10px; background: #fff;
+}
+.technique-expand summary, .technique-evidence summary {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 13px 15px; cursor: pointer;
+  color: #5e5557; font-size: 15px; font-weight: 700;
+  list-style: none;
+}
+.technique-expand summary::-webkit-details-marker,
+.technique-evidence summary::-webkit-details-marker { display: none; }
+.technique-expand summary::after,
+.technique-evidence summary::after {
+  content: "+"; color: var(--red); font-size: 20px; line-height: 1;
+}
+.technique-expand[open] summary::after,
+.technique-evidence[open] summary::after { content: "−"; }
+.technique-expand summary span { color: #938789; font-size: 12px; font-weight: 500; }
+.technique-step-list {
+  margin: 0; padding: 2px 18px 15px 40px;
+  display: grid; gap: 9px; color: #655b5d;
+  font-size: 16px; line-height: 1.65;
+}
+.technique-evidence { background: #faf8f7; }
+.technique-evidence summary { color: #6e6264; font-size: 14px; }
+.technique-evidence > p {
+  margin: 0; padding: 0 15px 11px; color: #6c6264;
+  font-size: 15px; line-height: 1.65;
+}
+.technique-evidence .technique-sources { margin: 0; padding: 0 15px 14px; }
+.technique-side { position: sticky; top: 90px; align-items: stretch; }
+.technique-side .primary-button { white-space: nowrap; }
+.technique-side .worksheet-tag { text-align: right; }
+@media (max-width: 900px) {
+  .technique-row { grid-template-columns: 38px minmax(0,1fr); }
+  .technique-side { position: static; grid-column: 2; align-items: flex-start; }
+  .technique-side .worksheet-tag { text-align: left; }
+}
+@media (max-width: 650px) {
+  .workspace-layout .tool-grid { grid-template-columns: 1fr; gap: 12px; }
+  .workspace-layout .tool-card { min-height: 0; padding: 18px; }
+  .tool-card h3 { font-size: 20px; }
+  .tool-card > p, .tool-when { font-size: 17px; }
+  .technique-row { padding: 17px 14px; gap: 10px; }
+  .technique-main h3 { font-size: 19px; }
+  .technique-main > p, .technique-when span { font-size: 16px; }
+  .technique-step-list { font-size: 16px; }
+}
+
+/* A worksheet is presented as distinct stages instead of one continuous text block. */
+.tool-dialog {
+  width: min(900px, calc(100vw - 32px));
+  max-height: min(92vh, 1040px);
+  border-radius: 19px;
+}
+#dialog-content { padding: 28px 34px 32px; }
+.practice-dialog-head {
+  position: sticky; top: -1px; z-index: 5;
+  margin: -1px -1px 0; padding: 2px 0 19px;
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(8px);
+}
+.practice-dialog-head h2 { font-size: 27px; line-height: 1.25; }
+.practice-dialog-head p { max-width: 720px; font-size: 17px; line-height: 1.65; }
+.practice-meta {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 7px; margin-top: 13px;
+}
+.practice-meta span {
+  padding: 5px 9px; border-radius: 20px;
+  background: #f7f3f2; color: #6f6466; font-size: 12px; font-weight: 600;
+}
+.practice-intro-grid {
+  display: grid; grid-template-columns: 1.15fr 1fr;
+  gap: 12px; margin: 20px 0 24px;
+}
+.practice-purpose-card, .practice-when-card {
+  min-width: 0; padding: 18px 19px;
+  border: 1px solid #ece4e2; border-radius: 14px;
+  background: #fcf9f8;
+}
+.practice-purpose-card { border-top: 3px solid var(--red); }
+.practice-when-card { background: #f8faf9; border-color: #e4ebe7; }
+.practice-kicker {
+  display: block; margin-bottom: 9px;
+  color: #8c7779; font: 700 11px Manrope,sans-serif;
+  letter-spacing: .85px;
+}
+.practice-kicker i { color: var(--red); font-style: normal; padding: 0 3px; }
+.practice-purpose-card h3, .practice-when-card h3 {
+  margin: 0 0 7px; color: #332d2f;
+  font: 800 18px/1.35 Manrope,sans-serif;
+}
+.practice-purpose-card p, .practice-when-card p {
+  margin: 0; color: #5f5658; font-size: 17px; line-height: 1.65;
+}
+.practice-steps-section { margin: 0 0 22px; }
+.practice-section-heading {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 15px; margin: 0 0 13px;
+}
+.practice-section-heading h3 {
+  margin: 2px 0 4px; color: #2f292b;
+  font: 800 22px/1.3 Manrope,sans-serif;
+}
+.practice-section-heading p {
+  margin: 0; color: #7d7274; font-size: 15px; line-height: 1.5;
+}
+.practice-step-count {
+  flex: 0 0 auto; padding: 6px 9px; border-radius: 20px;
+  background: #f7eeee; color: #8e333c;
+  font: 700 10px Manrope,sans-serif; letter-spacing: .65px;
+}
+.practice-step-list {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px; margin: 0; padding: 0; list-style: none;
+  counter-reset: practice-step;
+}
+.practice-step-list li {
+  display: grid; grid-template-columns: 34px minmax(0,1fr);
+  align-items: start; gap: 11px; min-width: 0;
+  padding: 14px 15px; border: 1px solid #ece6e4;
+  border-radius: 12px; background: #fff;
+}
+.practice-step-number {
+  width: 31px; height: 31px; display: grid; place-items: center;
+  border-radius: 9px; background: #f8eeee; color: var(--red);
+  font: 800 12px Manrope,sans-serif;
+}
+.practice-step-list li p {
+  margin: 1px 0 0; color: #554d4f; font-size: 17px; line-height: 1.65;
+}
+.practice-evidence {
+  margin: 0 0 22px; border: 1px solid #eae4e2;
+  border-radius: 12px; background: #faf8f7;
+}
+.practice-evidence summary {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 15px; padding: 14px 16px; cursor: pointer; list-style: none;
+}
+.practice-evidence summary::-webkit-details-marker { display: none; }
+.practice-evidence summary b {
+  display: block; color: #5f5557; font: 700 14px Manrope,sans-serif;
+}
+.practice-evidence summary small {
+  display: block; margin-top: 3px; color: #8d8284; font-size: 13px;
+}
+.evidence-toggle {
+  width: 26px; height: 26px; flex: 0 0 26px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: #f2e8e7; color: var(--red); font-size: 18px;
+}
+.practice-evidence[open] .evidence-toggle { transform: rotate(45deg); }
+.practice-evidence-content { padding: 0 16px 15px; }
+.practice-evidence-content p {
+  margin: 0 0 10px; color: #655b5d;
+  font-size: 16px; line-height: 1.65;
+}
+.practice-evidence-content .technique-sources { margin: 0; }
+.practice-evidence-content .technique-sources a { font-size: 14px; }
+.practice-reflection {
+  display: block; padding-top: 21px;
+  border-top: 1px solid #eae3e2;
+}
+.reflection-heading { margin-bottom: 15px; align-items: flex-start; }
+.reflection-local-note {
+  flex: 0 0 auto; padding: 6px 9px; border-radius: 20px;
+  background: #f3f7f4; color: #547262;
+  font-size: 12px; font-weight: 600;
+}
+.reflection-field-grid {
+  display: grid; grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 13px;
+}
+.form-field {
+  min-width: 0; align-content: start; gap: 8px;
+  padding: 13px; border: 1px solid #ebe4e2;
+  border-radius: 12px; background: #fdfcfc;
+  color: #51494b; font-size: 16px; line-height: 1.5;
+}
+.field-caption {
+  display: flex; align-items: flex-start; gap: 9px;
+  min-height: 30px;
+}
+.field-caption b {
+  flex: 0 0 25px; width: 25px; height: 25px;
+  display: grid; place-items: center; border-radius: 7px;
+  background: #f6eceb; color: var(--red);
+  font: 700 10px Manrope,sans-serif;
+}
+.field-caption > span { padding-top: 1px; font-size: 16px; line-height: 1.5; }
+.form-field textarea {
+  min-height: 116px; border-radius: 9px;
+  background: #fff; font-size: 17px; line-height: 1.6;
+}
+.dialog-actions {
+  position: sticky; bottom: -32px; z-index: 4;
+  margin-top: 14px; padding: 14px 0 3px;
+  border-top: 1px solid #ebe5e4;
+  background: rgba(255,255,255,.97);
+}
+.practice-reflection .primary-button,
+.practice-reflection .outline-button {
+  min-height: 46px; font-size: 16px;
+}
+@media (max-width: 700px) {
+  .tool-dialog { width: calc(100vw - 14px); max-height: 94vh; }
+  #dialog-content { padding: 19px 14px 25px; }
+  .practice-dialog-head { padding-bottom: 16px; }
+  .practice-dialog-head h2 { font-size: 23px; }
+  .practice-intro-grid { grid-template-columns: 1fr; margin: 15px 0 20px; }
+  .practice-step-list { grid-template-columns: 1fr; }
+  .practice-section-heading { align-items: flex-start; }
+  .practice-section-heading h3 { font-size: 20px; }
+  .reflection-field-grid { grid-template-columns: 1fr; gap: 10px; }
+  .form-field { padding: 12px; }
+  .form-field textarea { min-height: 104px; }
+  .reflection-local-note { display: none; }
+  .dialog-actions { bottom: -25px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .practice-evidence[open] .evidence-toggle { transform: none; }
+}
+
+/* Live search results lead to the matching workspace or exact exercise. */
+.topbar-actions { position: relative; }
+.search-results {
+  position: absolute; top: 45px; right: 125px; z-index: 50;
+  width: min(390px, calc(100vw - 30px));
+  display: grid; gap: 3px; padding: 7px;
+  border: 1px solid #e7dfde; border-radius: 12px;
+  background: #fff; box-shadow: 0 16px 38px rgba(31,20,21,.14);
+}
+.search-results[hidden] { display: none; }
+.search-result {
+  display: grid; gap: 3px; width: 100%; padding: 10px 11px;
+  border: 0; border-radius: 8px; background: #fff;
+  color: #383133; text-align: left; cursor: pointer;
+}
+.search-result:hover, .search-result:focus-visible { background: #faf1f0; outline: none; }
+.search-result-main { font-size: 15px; font-weight: 700; }
+.search-result small { color: #877c7e; font-size: 12px; }
+.search-no-results { padding: 14px 12px; color: #766b6d; font-size: 14px; }
+@media (max-width: 650px) {
+  .search-results { top: 43px; right: 0; width: min(360px, calc(100vw - 26px)); }
+}
