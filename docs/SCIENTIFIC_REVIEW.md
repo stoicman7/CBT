@@ -1029,25 +1029,25 @@ A 2023 systematic review and meta-analysis identified 23 trials involving 805 ad
 
 These 11 new references supplement the prior 29 source records in the source register.
 
-38. **NICE NG193.** Chronic pain (primary and secondary) in over 16s: assessment and management of chronic primary pain. Recommendation: consider CBT for chronic primary pain when delivered by appropriately trained healthcare professionals.  
+30. **NICE NG193.** Chronic pain (primary and secondary) in over 16s: assessment and management of chronic primary pain. Recommendation: consider CBT for chronic primary pain when delivered by appropriately trained healthcare professionals.  
     https://www.nice.org.uk/guidance/ng193/chapter/recommendations
 
-39. **NICE NG87.** Attention deficit hyperactivity disorder: diagnosis and management. Adult non-pharmacological care includes a structured supportive psychological intervention focused on ADHD, with regular follow-up; CBT elements may be included.  
+31. **NICE NG87.** Attention deficit hyperactivity disorder: diagnosis and management. Adult non-pharmacological care includes a structured supportive psychological intervention focused on ADHD, with regular follow-up; CBT elements may be included.  
     https://www.nice.org.uk/guidance/ng87/chapter/recommendations
 
-40. **NICE CG178.** Psychosis and schizophrenia in adults: prevention and management. Last reviewed 29 July 2025. Individual, manual-based CBT with at least 16 planned sessions and specified coping/monitoring/functioning components.  
+32. **NICE CG178.** Psychosis and schizophrenia in adults: prevention and management. Last reviewed 29 July 2025. Individual, manual-based CBT with at least 16 planned sessions and specified coping/monitoring/functioning components.  
     https://www.nice.org.uk/guidance/cg178/chapter/recommendations
 
-37. **NICE NG69.** Eating disorders: recognition and treatment. Condition-specific CBT-ED pathways for anorexia nervosa, bulimia nervosa, and binge-eating disorder.  
+33. **NICE NG69.** Eating disorders: recognition and treatment. Condition-specific CBT-ED pathways for anorexia nervosa, bulimia nervosa, and binge-eating disorder.  
     https://www.nice.org.uk/guidance/ng69/chapter/recommendations
 
-38. **Komischke-Konnerup et al. (2024).** Grief-focused cognitive behavioral therapies for prolonged grief symptoms: A systematic review and meta-analysis. *Journal of Consulting and Clinical Psychology*, 92(4), 236–248.  
+34. **Komischke-Konnerup et al. (2024).** Grief-focused cognitive behavioral therapies for prolonged grief symptoms: A systematic review and meta-analysis. *Journal of Consulting and Clinical Psychology*, 92(4), 236–248.  
     https://doi.org/10.1037/ccp0000884
 
-39. **Bryant et al. (2024).** Cognitive Behavior Therapy vs Mindfulness in Treatment of Prolonged Grief Disorder: A Randomized Clinical Trial. *JAMA Psychiatry*, 81(7), 646–654.  
+35. **Bryant et al. (2024).** Cognitive Behavior Therapy vs Mindfulness in Treatment of Prolonged Grief Disorder: A Randomized Clinical Trial. *JAMA Psychiatry*, 81(7), 646–654.  
     https://doi.org/10.1001/jamapsychiatry.2024.0432
 
-40. **Fisak et al. (2026).** The efficacy of psychotherapeutic and pharmacological interventions for trichotillomania: A review and meta-analysis. *Journal of Psychiatric Research*, 197, 264–274.  
+36. **Fisak et al. (2026).** The efficacy of psychotherapeutic and pharmacological interventions for trichotillomania: A review and meta-analysis. *Journal of Psychiatric Research*, 197, 264–274.  
     https://doi.org/10.1016/j.jpsychires.2026.02.029
 
 37. **A meta-analysis of cognitive behavioral therapy for substance use disorder: Treatment effects by comparator type and consumption and psychosocial outcomes (2026).** 52 randomised trials; 9,442 participants.  
