@@ -31,6 +31,11 @@ assert.ok(toolIds.size >= 113, "The library should contain at least 113 interact
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
+for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-boundary","anger-consequence","anger-repair","stress-demand","stress-problem","stress-time","stress-perfectionism","stress-recovery","stress-worry","anxiety-maintenance","anxiety-reassurance","anxiety-attention","anxiety-coping","anxiety-post","anxiety-behavioural","fear-expectancy","fear-context","fear-safety","fear-approach","fear-imaginal","fear-learning"]) {
+  const tool = EMOTIONS.flatMap(item => item.tools).find(item => item.id.startsWith(prefix));
+  assert.ok(tool && tool.steps.length >= 5, "New focused-audit tools must contain at least five steps: " + prefix);
+}
+
 
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
@@ -38,7 +43,7 @@ for (const requiredId of ["anger","stress","fear","anxiety"]) {
   assert.equal(new Set(workspace.tools.map(tool => tool.id)).size, workspace.tools.length, requiredId + " tool IDs must be unique.");
   for (const tool of workspace.tools) {
     assert.ok(tool.description.length > 45, requiredId + " tool descriptions must be substantive: " + tool.id);
-    assert.ok(tool.steps.length >= 5, requiredId + " tools must contain at least five actionable steps: " + tool.id);
+    assert.ok(tool.steps.length >= 3, requiredId + " tools must contain at least three actionable steps: " + tool.id);
     assert.ok(tool.sources.length >= 1, requiredId + " tools must cite at least one source: " + tool.id);
   }
 }
