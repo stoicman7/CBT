@@ -787,17 +787,17 @@ These approaches overlap historically and conceptually with cognitive-behavioura
 
 ## 17. The 49-method technique directory
 
-The application now includes a separate searchable technique directory with 49 entries. It is organised into six families.
+The application now contains 49 named methods across six families. The directory includes both client-facing procedures and therapist-delivery processes. A method's presence in a manual does not establish that it is independently effective as a stand-alone intervention.
 
-### 17.1 Assessment and formulation
+### 17.1 Assessment and formulation (5 methods)
 
 1. **The five-areas formulation:** situation, thoughts/images, emotion, body, and behaviour.
 2. **Functional analysis (ABC / antecedent–response–consequence):** maps the factors that trigger and maintain a pattern.
 3. **Self-monitoring and activity records:** collects real-world observations for formulation and review.
 4. **Psychoeducation and shared formulation:** links a treatment model to the person's own experiences.
-5. **Collaborative agenda and target setting:** identifies a manageable focus for a treatment or practice session.
+5. **Collaborative agenda and target setting:** identifies a manageable focus for a session or practice period.
 
-### 17.2 Cognitive methods
+### 17.2 Cognitive methods (13 methods)
 
 6. **Guided discovery and Socratic questioning:** collaborative inquiry rather than persuasion or debate.
 7. **Downward-arrow questioning:** explores the meaning behind an automatic thought.
@@ -813,12 +813,12 @@ The application now includes a separate searchable technique directory with 49 e
 17. **Imagery-based thought elicitation:** uses a tolerable image or recalled context to help identify thoughts and meanings.
 18. **Worry postponement / scheduled worry:** separates non-urgent repetitive worry from immediate action.
 
-### 17.3 Behavioural methods
+### 17.3 Behavioural methods (20 methods)
 
 19. **Behavioural experiments:** tests a specific prediction through planned, observable action.
 20. **Behavioural activation:** restores meaningful activity and reinforcement.
 21. **Graded task assignment:** breaks difficult tasks into manageable steps.
-22. **Structured problem-solving:** defines a problem, generates options, selects an action, and reviews it.
+22. **Structured problem-solving:** defines a problem, generates options, selects an action, and reviews the result.
 23. **Graded in-vivo exposure:** approaches appropriate, safe feared situations in a planned sequence.
 24. **Interoceptive exposure:** specialist exposure to feared bodily sensations, used in panic-focused CBT after clinical screening.
 25. **Imaginal exposure and trauma-memory processing:** specialist procedures within validated protocols.
@@ -833,29 +833,31 @@ The application now includes a separate searchable technique directory with 49 e
 34. **Activity pacing for pain:** plans sustainable activity within an individualised pain-care programme.
 35. **Craving and high-risk-situation coping:** prepares alternative responses and support within addiction treatment.
 36. **Regular-eating structure in CBT-ED:** a clinician-guided component of some eating-disorder protocols.
+37. **Systematic desensitisation:** a structured, graded exposure approach historically paired with relaxation in some protocols; it is not the universal or required format for modern exposure.
+38. **Coping-skills training and rehearsal:** practises alternative responses for predictable challenging situations.
 
-### 17.4 Imagery and memory methods
+### 17.4 Imagery and memory methods (1 method)
 
-37. **Imagery rescripting:** a specialist imagery method for selected distressing images and memories. It is not a universal or self-guided trauma treatment.
+39. **Imagery rescripting:** a specialist imagery method for selected distressing images and memories. It is not a universal or self-guided trauma treatment.
 
-### 17.5 Maintenance and homework
+### 17.5 Maintenance and homework (4 methods)
 
-38. **Relapse-prevention and maintenance planning:** identifies warning signs, triggers, support, and contingency actions.
-39. **Between-session practice and homework:** applies an agreed method outside sessions and reviews the learning.
-40. **Progress review and collaborative feedback:** checks whether the approach is accurate, useful, and needs adjustment.
+40. **Relapse-prevention and maintenance planning:** identifies warning signs, triggers, support, and contingency actions.
+41. **Between-session practice and homework:** applies an agreed method outside sessions and reviews the learning.
+42. **Progress review and collaborative feedback:** checks whether the approach is accurate, useful, and needs adjustment.
+43. **Session feedback and summary:** checks understanding, captures key learning, and agrees on the next step.
 
-### 17.6 Related approaches
+### 17.6 Related approaches (6 methods)
 
-41. **Attention Training Technique (MCT).**
-42. **Detached mindfulness (MCT).**
-43. **Cognitive defusion (ACT).**
-44. **Values clarification and committed action (ACT).**
-45. **Distress-tolerance skills (DBT).**
-46. **Mindfulness and decentering (MBCT).**
+44. **Attention Training Technique (MCT).**
+45. **Detached mindfulness (MCT).**
+46. **Cognitive defusion (ACT).**
+47. **Values clarification and committed action (ACT).**
+48. **Distress-tolerance skills (DBT).**
+49. **Mindfulness and decentering (MBCT).**
 
-The remaining three entries in the current directory are included as distinct process-level or skill variants in the source file and should be maintained under the same classification and evidence rules. The application does not interpret the directory count as a count of independent, validated treatments: many entries are components or variations inside a smaller number of treatment families.
+The directory distinguishes the six families because therapist-delivery processes, core cognitive methods, behavioural procedures, and specialist protocols are not interchangeable. It also keeps ACT, DBT, MCT, and MBCT separate from classical CBT, while recognising their historical and clinical relationships.
 
----
 
 ## 18. New specialist domains added to the application
 
@@ -1025,39 +1027,39 @@ A 2023 systematic review and meta-analysis identified 23 trials involving 805 ad
 
 ## 22. New and expanded source register
 
-These references supplement the prior 29 source records in the source register.
+These 11 new references supplement the prior 29 source records in the source register.
 
-26. **NICE NG193.** Chronic pain (primary and secondary) in over 16s: assessment and management of chronic primary pain. Recommendation: consider CBT for chronic primary pain when delivered by appropriately trained healthcare professionals.  
+38. **NICE NG193.** Chronic pain (primary and secondary) in over 16s: assessment and management of chronic primary pain. Recommendation: consider CBT for chronic primary pain when delivered by appropriately trained healthcare professionals.  
     https://www.nice.org.uk/guidance/ng193/chapter/recommendations
 
-27. **NICE NG87.** Attention deficit hyperactivity disorder: diagnosis and management. Adult non-pharmacological care includes a structured supportive psychological intervention focused on ADHD, with regular follow-up; CBT elements may be included.  
+39. **NICE NG87.** Attention deficit hyperactivity disorder: diagnosis and management. Adult non-pharmacological care includes a structured supportive psychological intervention focused on ADHD, with regular follow-up; CBT elements may be included.  
     https://www.nice.org.uk/guidance/ng87/chapter/recommendations
 
-28. **NICE CG178.** Psychosis and schizophrenia in adults: prevention and management. Last reviewed 29 July 2025. Individual, manual-based CBT with at least 16 planned sessions and specified coping/monitoring/functioning components.  
+40. **NICE CG178.** Psychosis and schizophrenia in adults: prevention and management. Last reviewed 29 July 2025. Individual, manual-based CBT with at least 16 planned sessions and specified coping/monitoring/functioning components.  
     https://www.nice.org.uk/guidance/cg178/chapter/recommendations
 
-29. **NICE NG69.** Eating disorders: recognition and treatment. Condition-specific CBT-ED pathways for anorexia nervosa, bulimia nervosa, and binge-eating disorder.  
+37. **NICE NG69.** Eating disorders: recognition and treatment. Condition-specific CBT-ED pathways for anorexia nervosa, bulimia nervosa, and binge-eating disorder.  
     https://www.nice.org.uk/guidance/ng69/chapter/recommendations
 
-30. **Komischke-Konnerup et al. (2024).** Grief-focused cognitive behavioral therapies for prolonged grief symptoms: A systematic review and meta-analysis. *Journal of Consulting and Clinical Psychology*, 92(4), 236–248.  
+38. **Komischke-Konnerup et al. (2024).** Grief-focused cognitive behavioral therapies for prolonged grief symptoms: A systematic review and meta-analysis. *Journal of Consulting and Clinical Psychology*, 92(4), 236–248.  
     https://doi.org/10.1037/ccp0000884
 
-31. **Bryant et al. (2024).** Cognitive Behavior Therapy vs Mindfulness in Treatment of Prolonged Grief Disorder: A Randomized Clinical Trial. *JAMA Psychiatry*, 81(7), 646–654.  
+39. **Bryant et al. (2024).** Cognitive Behavior Therapy vs Mindfulness in Treatment of Prolonged Grief Disorder: A Randomized Clinical Trial. *JAMA Psychiatry*, 81(7), 646–654.  
     https://doi.org/10.1001/jamapsychiatry.2024.0432
 
-32. **Fisak et al. (2026).** The efficacy of psychotherapeutic and pharmacological interventions for trichotillomania: A review and meta-analysis. *Journal of Psychiatric Research*, 197, 264–274.  
+40. **Fisak et al. (2026).** The efficacy of psychotherapeutic and pharmacological interventions for trichotillomania: A review and meta-analysis. *Journal of Psychiatric Research*, 197, 264–274.  
     https://doi.org/10.1016/j.jpsychires.2026.02.029
 
-33. **A meta-analysis of cognitive behavioral therapy for substance use disorder: Treatment effects by comparator type and consumption and psychosocial outcomes (2026).** 52 randomised trials; 9,442 participants.  
+37. **A meta-analysis of cognitive behavioral therapy for substance use disorder: Treatment effects by comparator type and consumption and psychosocial outcomes (2026).** 52 randomised trials; 9,442 participants.  
     https://www.sciencedirect.com/science/article/pii/S0005796726001543
 
-34. **UK Department of Health and Social Care.** Clinical guidelines for alcohol treatment, Chapter 5: Psychosocial interventions. Published 28 November 2025; updated 17 April 2026.  
+38. **UK Department of Health and Social Care.** Clinical guidelines for alcohol treatment, Chapter 5: Psychosocial interventions. Published 28 November 2025; updated 17 April 2026.  
     https://www.gov.uk/guidance/clinical-guidelines-for-alcohol-treatment/5-psychosocial-interventions
 
-35. **NCBI Bookshelf.** Addiction Psychotherapeutic Care. Describes CBT functional analysis, craving and trigger management, refusal skills, problem-solving, and relapse prevention in a broader recovery plan.  
+39. **NCBI Bookshelf.** Addiction Psychotherapeutic Care. Describes CBT functional analysis, craving and trigger management, refusal skills, problem-solving, and relapse prevention in a broader recovery plan.  
     https://www.ncbi.nlm.nih.gov/books/NBK587365/
 
-36. **Imagery rescripting as a short intervention for symptoms associated with mental images in clinical disorders: A systematic review and meta-analysis (2023).** 23 trials; 805 adults.  
+40. **Imagery rescripting as a short intervention for symptoms associated with mental images in clinical disorders: A systematic review and meta-analysis (2023).** 23 trials; 805 adults.  
     https://pubmed.ncbi.nlm.nih.gov/37738780/
 
 The source file contains the full 40-record source set. The source count is metadata count, not the number of independent studies, and overlapping references may support multiple technique entries.
