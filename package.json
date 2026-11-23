@@ -1,0 +1,1 @@
+{"name":"cbt-workspace","version":"1.0.0","private":true,"type":"module","description":"An evidence-informed CBT skills workspace for adults","scripts":{"check":"node --check app.js && node --check data.js","test":"npm run check && node tests/smoke-test.mjs"}}
