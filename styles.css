@@ -529,3 +529,37 @@ a { color: inherit; }
   .dialog-method p, .dialog-method ol, .worksheet-evidence p { font-size: 16px; }
   .form-field textarea { font-size: 17px; }
 }
+
+
+/* Interactive exercise readability: match the site's 17px body text. */
+.tool-dialog #dialog-content { font-size: 17px; }
+.tool-dialog .dialog-head .eyebrow { font-size: 13px; letter-spacing: .9px; }
+.tool-dialog .dialog-head h2 { font-size: 26px; line-height: 1.25; }
+.tool-dialog .dialog-head p { font-size: 17px; line-height: 1.65; }
+.tool-dialog .dialog-method { padding: 21px 0 17px; }
+.tool-dialog .dialog-method strong { margin: 0 0 7px; font-size: 18px; }
+.tool-dialog .dialog-method p,
+.tool-dialog .dialog-method ol { font-size: 17px; line-height: 1.7; }
+.tool-dialog .dialog-method p { margin-bottom: 18px; }
+.tool-dialog .dialog-method ol { padding-left: 25px; gap: 10px; }
+.tool-dialog .worksheet-evidence { margin: 17px 0; padding: 15px 17px; }
+.tool-dialog .worksheet-evidence > span { font-size: 13px; letter-spacing: .9px; }
+.tool-dialog .worksheet-evidence p { font-size: 17px; line-height: 1.7; }
+.tool-dialog .worksheet-evidence a { font-size: 14px; }
+.tool-dialog .form-section-heading span { font-size: 13px; }
+.tool-dialog .form-section-heading small { font-size: 13px; }
+.tool-dialog .form-field { font-size: 17px; line-height: 1.5; }
+.tool-dialog .form-field textarea { font-size: 17px; line-height: 1.6; min-height: 100px; padding: 12px 13px; }
+.tool-dialog .primary-button,
+.tool-dialog .outline-button { min-height: 44px; font-size: 16px; padding: 0 17px; }
+@media (max-width: 650px) {
+  .tool-dialog { width: calc(100vw - 18px); max-height: 92vh; }
+  #dialog-content { padding: 21px 16px 23px; }
+  .tool-dialog .dialog-head h2 { font-size: 23px; }
+  .tool-dialog .dialog-head p,
+  .tool-dialog .dialog-method p,
+  .tool-dialog .dialog-method ol,
+  .tool-dialog .worksheet-evidence p,
+  .tool-dialog .form-field,
+  .tool-dialog .form-field textarea { font-size: 17px; }
+}
