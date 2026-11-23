@@ -34,7 +34,7 @@ Requires Node.js 20 or later:
 npm test
 ```
 
-This checks JavaScript syntax and validates the 25-workspace library, 113 tool-to-worksheet mappings, 43 technique-directory entries, evidence references, and key safety boundaries.
+This checks JavaScript syntax and validates the 25-workspace library, 113 tool-to-worksheet mappings, 49 technique-directory entries, evidence references, the expanded anger/stress/fear/anxiety workspaces, and key safety boundaries.
 
 GitHub Actions workflow files are included under `.github/workflows/`. A repository Actions runner must be enabled for those checks to execute.
 
