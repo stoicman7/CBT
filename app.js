@@ -107,7 +107,7 @@ function renderTechniqueLibrary() {
     <p>${esc(item.description)}</p>
     <div class="library-use"><strong>Typical use</strong><span>${esc(item.when)}</span></div>
     <div class="library-boundary"><strong>Boundary</strong><span>${esc(item.caution)}</span></div>
-    <div class="library-sources">${sourceLinks(item.sources)}</div>
+    <div class="library-sources">${links(item.sources)}</div>
   </article>`).join("")}</div>` : `<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different method family.</p></div>`}
   <div class="library-note"><strong>Clinical scope</strong><p>A technique is not a treatment by itself. Whether it is appropriate depends on formulation, diagnosis where relevant, risk, medical context, and practitioner competence. Read the evidence review before treating any item as a programme.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the full scientific audit ↗</a></div>`;
 }
