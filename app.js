@@ -46,7 +46,7 @@ function links(ids) {
 }
 
 function renderSidebar() {
-  const q = ($("#global-search").value || "").trim().toLowerCase();
+  const q = state.tab === "library" ? "" : ($("#global-search").value || "").trim().toLowerCase();
   nav.innerHTML = ["Emotions", "Patterns", "Focused care"].map(group => {
     const items = EMOTIONS.filter(e => e.group === group).filter(e => !q || [e.name, e.subtitle, e.description, ...e.tools.map(t => t.title + " " + t.description)].join(" ").toLowerCase().includes(q));
     if (!items.length) return "";
