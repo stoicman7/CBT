@@ -490,6 +490,692 @@ export const EMOTIONS = [
   }
 ];
 
+const ADDITIONAL_TOOLS = {
+  "anger": [
+    {
+      "id": "anger-rumination",
+      "title": "Interrupt anger rumination",
+      "description": "Notice when the mind is replaying an offence without producing new information, repair, or a decision.",
+      "when": "Use after the immediate situation has passed and you notice repeated mental replay.",
+      "steps": [
+        "Name the event or conversation being replayed.",
+        "Ask whether the replay is producing new information or a useful next action.",
+        "If there is an actionable issue, write one proportionate step for later.",
+        "If there is no new action, shift to a concrete task or low-arousal activity.",
+        "Review whether the new response reduced time spent replaying the event."
+      ],
+      "worksheet": "worry",
+      "evidence": "A 2025 meta-analysis found anger was associated with rumination, avoidance, and suppression, while reappraisal and acceptance were negatively associated. These are associations, not proof that this brief exercise treats anger.",
+      "sources": [
+        "angerRegulation",
+        "angerArousal"
+      ]
+    },
+    {
+      "id": "anger-assertive",
+      "title": "Prepare an assertive boundary statement",
+      "description": "Turn an accusation or aggressive urge into a specific statement about the behaviour, its effect, and the change you are requesting.",
+      "when": "Use only when direct communication is safe and you are calm enough to listen as well as speak.",
+      "steps": [
+        "Describe the observable behaviour without labelling the other person.",
+        "State its effect on you or on the task.",
+        "Make one specific, realistic request.",
+        "State the boundary you control if the behaviour continues.",
+        "Keep the exchange non-threatening; leave and seek support if safety is uncertain."
+      ],
+      "worksheet": "relationship",
+      "evidence": "Assertive communication and problem-solving are CBT-compatible skills within anger programmes. This worksheet is not a validated violence-prevention intervention.",
+      "sources": [
+        "angerSaini",
+        "angerReview",
+        "beckManual"
+      ]
+    }
+  ],
+  "stress": [
+    {
+      "id": "stress-priority",
+      "title": "Sort demands by urgency and influence",
+      "description": "Convert an undifferentiated task load into a short sequence based on consequences, deadlines, and what can be influenced.",
+      "when": "Use when several tasks feel equally urgent or you are switching between them without finishing.",
+      "steps": [
+        "List the active demands in plain language.",
+        "For each one, note the real deadline and consequence of delay.",
+        "Mark whether the demand is controllable, influenceable, or outside your control.",
+        "Choose one high-consequence next action and one task to defer, delegate, or renegotiate.",
+        "Review the list after taking the first action rather than continually re-ranking it."
+      ],
+      "worksheet": "problem",
+      "evidence": "Structured problem-solving and task planning are common CBT components. Internet-delivered CBT has reduced elevated stress in trials, but a priority matrix itself is not a stand-alone validated treatment.",
+      "sources": [
+        "stressICBT",
+        "occupationalStress",
+        "beckManual"
+      ]
+    },
+    {
+      "id": "stress-early-warning",
+      "title": "Build an early-warning and response plan",
+      "description": "Identify the first signs that pressure is becoming difficult to manage and decide what support or adjustment to use early.",
+      "when": "Use when stress follows a recurring pattern, such as workload, conflict, or poor recovery.",
+      "steps": [
+        "Identify early changes in sleep, concentration, irritability, body tension, or avoidance.",
+        "Name situations that tend to precede those changes.",
+        "Choose one practical adjustment and one request for support.",
+        "Write what you will do if the warning signs continue or worsen.",
+        "Include professional or occupational support where demands are unsafe or persistently excessive."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Maintenance and contingency planning are included in evidence-based psychological care. Applying the same structure to stress is a CBT-informed adaptation, not a validated stress relapse scale.",
+      "sources": [
+        "depressionNICE",
+        "stressICBT"
+      ]
+    }
+  ],
+  "anxiety": [
+    {
+      "id": "anxiety-reassurance",
+      "title": "Audit reassurance and checking",
+      "description": "Observe whether repeated reassurance or checking gives brief relief but leaves the feared question unresolved.",
+      "when": "Use when you repeatedly search, ask, review, or check for certainty in a low-risk situation.",
+      "steps": [
+        "Record the trigger and the question you want answered.",
+        "Write what you expect the check or reassurance to settle.",
+        "Note how much relief follows and how long it lasts.",
+        "Separate necessary information-gathering from repeated certainty-seeking.",
+        "Discuss a planned reduction with a clinician if the behaviour is severe, compulsive, or linked to OCD."
+      ],
+      "worksheet": "worry",
+      "evidence": "Reducing reassurance and avoidance is part of some anxiety-focused CBT formulations. In OCD, the same behaviour may be a compulsion requiring specialist ERP; this is not an ERP plan.",
+      "sources": [
+        "gad",
+        "gadGuideline",
+        "anxietyGuidelines",
+        "ocdNICE"
+      ]
+    },
+    {
+      "id": "anxiety-coping-prediction",
+      "title": "Test a coping prediction",
+      "description": "Shift from asking only whether a feared event will happen to examining how you could respond if it did.",
+      "when": "Use for a hypothetical fear where the mind predicts that an outcome would be completely unmanageable.",
+      "steps": [
+        "Write the feared outcome in one sentence.",
+        "Record what you predict you would be unable to do if it happened.",
+        "List coping resources, choices, and people you could realistically access.",
+        "Write a balanced prediction that includes both difficulty and possible coping.",
+        "Choose one practical preparation step without turning preparation into repeated reassurance."
+      ],
+      "worksheet": "thought",
+      "evidence": "Cognitive restructuring and coping appraisal are components of established CBT protocols for anxiety. This does not establish that a feared event is harmless or that all risk can be controlled.",
+      "sources": [
+        "gad",
+        "gadGuideline",
+        "cognitiveRestructuring"
+      ]
+    }
+  ],
+  "fear": [
+    {
+      "id": "fear-expectancy",
+      "title": "Record what exposure teaches",
+      "description": "Compare a specific fear prediction with what actually happened, including what you learned about coping and uncertainty.",
+      "when": "Use only after a safe, appropriate, low-risk approach step; not for trauma processing or medically risky sensations.",
+      "steps": [
+        "Write the precise outcome you predicted before the step.",
+        "Record the safe approach step you agreed to try.",
+        "Describe what actually happened using observable details.",
+        "Note whether the feared outcome occurred, changed, or was more manageable than predicted.",
+        "Record one learning point and decide with a clinician whether another step is appropriate."
+      ],
+      "worksheet": "exposure",
+      "evidence": "Modern exposure models emphasise expectancy testing and new learning, not simply waiting for anxiety to disappear. This is a learning record, not a substitute for a clinician-guided hierarchy when fear is severe.",
+      "sources": [
+        "anxietyGuidelines",
+        "socialNICE"
+      ]
+    },
+    {
+      "id": "fear-avoidance-cost",
+      "title": "Map the cost of avoidance",
+      "description": "Examine what avoidance protects you from immediately and what it prevents you from doing over time.",
+      "when": "Use when repeated avoidance limits ordinary activities and the situation is not objectively dangerous.",
+      "steps": [
+        "Name the situation or cue you tend to avoid.",
+        "Record the immediate relief avoidance provides.",
+        "List longer-term costs to work, relationships, health, or valued activity.",
+        "Separate reasonable precautions from fear-driven safety behaviours.",
+        "Choose one small, safe alternative to discuss or plan."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Avoidance is a maintenance process addressed in CBT for anxiety and phobias. This is functional analysis, not an instruction to approach genuine hazards.",
+      "sources": [
+        "anxietyGuidelines",
+        "socialNICE"
+      ]
+    }
+  ],
+  "sadness": [
+    {
+      "id": "mood-activity-monitor",
+      "title": "Track activity, mood, and mastery",
+      "description": "Notice how different activities relate to mood, pleasure, connection, and a sense of accomplishment.",
+      "when": "Use for a few days when low mood is associated with withdrawal or loss of routine.",
+      "steps": [
+        "Record a few ordinary activities and when they happened.",
+        "Rate mood before and after if useful, without treating the rating as a test.",
+        "Separately note pleasure, mastery, connection, or meaning.",
+        "Look for patterns rather than judging any single day.",
+        "Use the observations to choose one small activity to schedule."
+      ],
+      "worksheet": "activity",
+      "evidence": "Activity monitoring is part of behavioural activation. A 2026 meta-analysis included 105 trials and 13,933 patients; behavioural activation improved adult depression outcomes versus control conditions, with substantial heterogeneity.",
+      "sources": [
+        "ba2026",
+        "depressionNICE"
+      ]
+    },
+    {
+      "id": "mood-relapse-plan",
+      "title": "Create a low-mood early-warning plan",
+      "description": "Identify personal warning signs and write specific actions to take if withdrawal or symptoms begin returning.",
+      "when": "Use after improvement or when you have noticed a recurring pattern of worsening mood.",
+      "steps": [
+        "List earliest warning signs, such as reduced activity, disrupted sleep, or increasing rumination.",
+        "Name situations that have preceded worsening in the past.",
+        "Write two helpful actions you can restart early.",
+        "Identify one person or professional service you can contact if symptoms persist or worsen.",
+        "Include urgent local support if you may not be able to stay safe."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Relapse-prevention planning is explicitly included in NICE depression guidance. It is a maintenance aid and does not replace assessment or continuing treatment when indicated.",
+      "sources": [
+        "depressionNICE",
+        "broadCBT"
+      ]
+    }
+  ],
+  "frustration": [
+    {
+      "id": "frustration-goal-flex",
+      "title": "Adjust the goal without abandoning it",
+      "description": "Distinguish the underlying goal from one rigid route or timetable for achieving it.",
+      "when": "Use when a blocked plan is producing repeated frustration or an all-or-nothing response.",
+      "steps": [
+        "Write the outcome that matters most to you.",
+        "Separate that outcome from the current method or deadline.",
+        "List what has changed or what information you have learned.",
+        "Generate one alternative route, smaller milestone, or revised timetable.",
+        "Choose a next step that preserves the underlying value while accepting the constraint."
+      ],
+      "worksheet": "problem",
+      "evidence": "Flexible problem-solving and behavioural experiments are CBT-compatible strategies. This is an evidence-informed application to frustration, not a validated frustration-specific protocol.",
+      "sources": [
+        "beckManual",
+        "cognitiveRestructuring"
+      ]
+    },
+    {
+      "id": "frustration-urge",
+      "title": "Pause before acting on the urge",
+      "description": "Recognise the action urge that follows frustration and choose a response after a brief pause.",
+      "when": "Use when frustration pushes you towards snapping, quitting, or sending an impulsive message.",
+      "steps": [
+        "Name the urge without acting on it immediately.",
+        "Check whether the situation is safe and whether a short pause is possible.",
+        "Identify the need underneath the urge: information, rest, help, fairness, or a changed plan.",
+        "Choose one response that addresses that need without creating a new problem.",
+        "Review the outcome and adjust the plan if the obstacle remains."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Functional analysis, response delay, and problem-solving are CBT-informed skills; this sequence is not a standalone clinical treatment.",
+      "sources": [
+        "beckManual",
+        "cognitiveRestructuring"
+      ]
+    }
+  ],
+  "guilt": [
+    {
+      "id": "guilt-responsibility-map",
+      "title": "Draw a responsibility map",
+      "description": "Consider the people, decisions, and circumstances that contributed to an outcome instead of assigning yourself total responsibility by default.",
+      "when": "Use when you are taking responsibility for an event with several contributing factors.",
+      "steps": [
+        "Describe the outcome without judging yourself.",
+        "List people, decisions, information, and external circumstances that contributed.",
+        "Estimate your actual contribution using what you knew at the time.",
+        "Notice whether hindsight or impossible standards are affecting the estimate.",
+        "Identify any proportionate repair or future change within your control."
+      ],
+      "worksheet": "belief",
+      "evidence": "Responsibility reattribution and guided discovery are CBT techniques used in relevant formulations. This is not appropriate for compulsive responsibility checking without OCD-informed guidance.",
+      "sources": [
+        "cognitiveRestructuring",
+        "beckManual",
+        "ocdNICE"
+      ]
+    },
+    {
+      "id": "guilt-repair-boundary",
+      "title": "Separate repair from self-punishment",
+      "description": "Decide whether a specific repair is possible, then distinguish constructive accountability from repetitive self-attack.",
+      "when": "Use when you have identified a real mistake but keep replaying it after taking reasonable action.",
+      "steps": [
+        "State what you did or did not do in specific terms.",
+        "Ask whether someone was harmed and what repair would genuinely help.",
+        "Choose one proportionate action, if appropriate and safe.",
+        "Identify what you can learn or change next time.",
+        "Notice when further self-criticism adds no new information or repair."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Problem-solving and cognitive restructuring are established CBT methods. This is not a universal guilt treatment and should not minimise serious harm or legal responsibilities.",
+      "sources": [
+        "beckManual",
+        "cognitiveRestructuring"
+      ]
+    }
+  ],
+  "shame": [
+    {
+      "id": "shame-continuum",
+      "title": "Replace the all-or-nothing self-judgement",
+      "description": "Use a continuum to test whether one difficult event supports an absolute judgement about your whole identity.",
+      "when": "Use when you describe yourself with global terms such as failure or unacceptable.",
+      "steps": [
+        "Write the global label exactly as it appears.",
+        "Define what the label would mean at its extreme and what the opposite extreme would mean.",
+        "Place the specific event on a realistic continuum rather than at an absolute endpoint.",
+        "Identify other evidence about your actions, context, and capacities.",
+        "Write a specific conclusion about the event instead of a verdict about your whole self."
+      ],
+      "worksheet": "belief",
+      "evidence": "Continuum methods and core-belief work are recognised cognitive therapy procedures. Direct evidence for this worksheet as a stand-alone shame treatment is limited.",
+      "sources": [
+        "selfEsteem",
+        "cognitiveRestructuring",
+        "beckManual"
+      ]
+    },
+    {
+      "id": "shame-concealment",
+      "title": "Examine the cost of hiding",
+      "description": "Notice when concealment protects privacy appropriately and when shame-driven hiding prevents valued contact or support.",
+      "when": "Use when you withdraw from safe relationships or activities because of feared judgement.",
+      "steps": [
+        "Name what you are hiding and from whom, without recording details you do not want to share.",
+        "Identify the feared judgement or consequence.",
+        "Separate a legitimate privacy or safety need from a shame-driven prediction.",
+        "Consider a low-risk alternative such as asking for support without full disclosure.",
+        "Review whether the alternative supports your values and safety."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Behavioural experiments and avoidance analysis are CBT methods used in social-anxiety and self-esteem work. Disclosure is optional; this is not an instruction to reveal private information.",
+      "sources": [
+        "socialNICE",
+        "selfEsteem"
+      ]
+    }
+  ],
+  "jealousy": [
+    {
+      "id": "jealousy-response-plan",
+      "title": "Plan a response to the checking urge",
+      "description": "Create a pause between an uncertainty trigger and a non-essential checking or reassurance behaviour.",
+      "when": "Use when you feel pulled to repeat a question or seek certainty where no immediate safety issue exists.",
+      "steps": [
+        "Name the trigger and the urge without acting on it immediately.",
+        "Ask whether the check is necessary for a concrete decision or mainly intended to remove uncertainty.",
+        "If it is not necessary, delay the action briefly and return to a chosen task.",
+        "Decide whether a direct, respectful conversation is needed instead.",
+        "Do not access accounts, devices, private messages, or location data without consent."
+      ],
+      "worksheet": "relationship",
+      "evidence": "This applies functional analysis and response planning to a relationship pattern; it is not a validated jealousy-specific protocol or unsupervised ERP.",
+      "sources": [
+        "cognitiveRestructuring",
+        "ocdNICE"
+      ]
+    },
+    {
+      "id": "jealousy-boundary",
+      "title": "Clarify trust, request, and personal boundary",
+      "description": "Separate a request for clarity from a demand to control another person's behaviour.",
+      "when": "Use when a relationship concern needs a calm conversation and direct communication is safe.",
+      "steps": [
+        "Identify the specific event or agreement that concerns you.",
+        "Write what you need to understand rather than assuming motive.",
+        "Make one respectful request for a conversation or clarification.",
+        "Listen to the response and consider whether the relationship agreement fits your needs.",
+        "State a boundary about your own choices; do not threaten, monitor, or coerce."
+      ],
+      "worksheet": "relationship",
+      "evidence": "Assertive communication and problem-solving are CBT-compatible skills. This does not validate coercion or provide treatment for delusional jealousy or relationship violence.",
+      "sources": [
+        "beckManual",
+        "cognitiveRestructuring"
+      ]
+    }
+  ],
+  "rumination": [
+    {
+      "id": "rumination-postpone",
+      "title": "Schedule a deliberate review period",
+      "description": "Record a recurring thought and decide when, if ever, it deserves a focused review rather than repeatedly reopening it throughout the day.",
+      "when": "Use for repetitive non-urgent worries or replay; do not postpone practical, medical, or safety decisions.",
+      "steps": [
+        "Write a short label for the recurring topic.",
+        "Decide whether there is an action that genuinely needs attention now.",
+        "If not urgent, choose one brief review period later.",
+        "When the thought returns, acknowledge it and return to your chosen activity.",
+        "At review time, define an action, accept that uncertainty remains, or close the review."
+      ],
+      "worksheet": "worry",
+      "evidence": "Worry postponement is used in CBT for GAD; RNT-specific interventions showed larger effects than less specific CBT in a 2025 transdiagnostic meta-analysis.",
+      "sources": [
+        "rumination",
+        "gad",
+        "gadGuideline"
+      ]
+    },
+    {
+      "id": "rumination-function",
+      "title": "Identify what the rumination is trying to do",
+      "description": "Explore whether repetitive thinking is functioning as preparation, self-punishment, threat monitoring, or an attempt to reach impossible certainty.",
+      "when": "Use when you know the topic but cannot understand why the same thinking keeps restarting.",
+      "steps": [
+        "Name the recurring thought or question.",
+        "Ask what you hope thinking it through will achieve.",
+        "Identify whether the process creates a decision or mainly changes your mood temporarily.",
+        "Choose a more direct behaviour that meets the underlying need, if one exists.",
+        "Record what you learned about the function of the loop."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Metacognitive and process-focused formulations examine beliefs about the usefulness and function of repetitive thinking. This is not a full metacognitive therapy protocol.",
+      "sources": [
+        "rumination",
+        "ruminationFocused"
+      ]
+    }
+  ],
+  "self-esteem": [
+    {
+      "id": "self-esteem-continuum",
+      "title": "Build a balanced self-evaluation continuum",
+      "description": "Move away from a single global label by evaluating one specific quality or behaviour across a realistic range.",
+      "when": "Use when you treat one shortcoming as proof that you are entirely inadequate.",
+      "steps": [
+        "Choose one specific quality or skill you are judging.",
+        "Define what very low, middle, and high levels look like in observable terms.",
+        "Use real examples to place yourself on the range.",
+        "Identify where you have room to grow and where the negative belief overstates the evidence.",
+        "Write a conclusion that allows strengths, limits, and development to coexist."
+      ],
+      "worksheet": "belief",
+      "evidence": "Continuum methods and core-belief work are standard cognitive therapy procedures. Fennell-model CBT has meta-analytic support for low self-esteem, though treatment-specific effects require careful interpretation.",
+      "sources": [
+        "selfEsteem",
+        "beckManual"
+      ]
+    },
+    {
+      "id": "self-esteem-data-log",
+      "title": "Keep a positive and corrective data log",
+      "description": "Collect specific examples that challenge a negative core belief, including ordinary actions, feedback, and evidence of learning.",
+      "when": "Use when you selectively remember mistakes and discount information that does not fit a negative self-view.",
+      "steps": [
+        "Write the core belief you want to examine.",
+        "Record one concrete piece of evidence that seems to support it, without exaggeration.",
+        "Record specific examples that do not fit the belief, including small everyday actions.",
+        "Note what each example suggests about your abilities or qualities.",
+        "Review the pattern weekly and update the belief only as far as the evidence supports."
+      ],
+      "worksheet": "belief",
+      "evidence": "Positive-data logging is used in Fennell-style CBT for low self-esteem. It is not a generic affirmation list; examples should be specific, believable, and balanced.",
+      "sources": [
+        "selfEsteem",
+        "beckManual"
+      ]
+    }
+  ],
+  "social-anxiety": [
+    {
+      "id": "social-video-feedback",
+      "title": "Plan a fair video-feedback review",
+      "description": "Learn how video feedback can compare a feared self-image with observable behaviour in a carefully selected social task.",
+      "when": "Discuss with a social-anxiety-trained clinician; record only yourself or obtain clear consent from everyone identifiable.",
+      "steps": [
+        "Write the negative self-image or prediction before recording.",
+        "Agree on a short, low-risk task and appropriate recording plan.",
+        "If recording is suitable, review the clip with a neutral observation checklist rather than repeatedly checking appearance.",
+        "Compare what is observable with the prediction, including what remains uncertain.",
+        "Delete the recording securely when no longer needed and do not share without consent."
+      ],
+      "worksheet": "exposure",
+      "evidence": "Video feedback is a component of Clark and Wells CBT for social anxiety and can correct distorted self-imagery. It should be used purposefully, not as repeated appearance or performance checking.",
+      "sources": [
+        "socialNICE"
+      ]
+    },
+    {
+      "id": "social-safety-behaviours",
+      "title": "Select one safety behaviour to test",
+      "description": "Identify a subtle protective behaviour that may prevent you from learning what happens in a social interaction.",
+      "when": "Use for a safe social task within a planned social-anxiety CBT approach.",
+      "steps": [
+        "List what you do to prevent embarrassment, such as rehearsing every sentence.",
+        "Choose one behaviour that is not needed for actual safety or courtesy.",
+        "Write what you predict will happen if you reduce it slightly.",
+        "Try the small change in a manageable interaction.",
+        "Review observable outcomes and what you learned about the prediction."
+      ],
+      "worksheet": "exposure",
+      "evidence": "Reducing safety-seeking behaviours and testing predictions are central components of the Clark and Wells model recommended by NICE.",
+      "sources": [
+        "socialNICE"
+      ]
+    }
+  ],
+  "panic": [
+    {
+      "id": "panic-safety-behaviours",
+      "title": "Identify panic-related safety behaviours",
+      "description": "Notice actions used to prevent or escape feared sensations and consider how they may affect learning.",
+      "when": "Use after a clinician has assessed recurring panic symptoms; do not stop medically necessary precautions.",
+      "steps": [
+        "Record a recent episode and the action you used to feel safer.",
+        "Identify whether the action was medically advised or mainly fear-driven.",
+        "Note the immediate relief and longer-term effect on confidence.",
+        "Bring recurring safety behaviours to a panic-focused CBT clinician.",
+        "Agree on any change within a treatment plan rather than stopping precautions abruptly."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Panic-focused CBT includes modification of anxiety-maintaining behaviours. This is a reflection tool, not a self-directed exposure prescription.",
+      "sources": [
+        "panicAPA",
+        "panicComponents"
+      ]
+    },
+    {
+      "id": "panic-coping-card",
+      "title": "Create a balanced panic coping card",
+      "description": "Write a short reminder of your agreed panic formulation and coping plan for use after appropriate assessment.",
+      "when": "Use when a healthcare professional has helped you understand recurrent symptoms as panic; never use it to dismiss new or unusual symptoms.",
+      "steps": [
+        "Write the symptoms and pattern previously assessed with your clinician.",
+        "Record a balanced interpretation that does not claim certainty about every future symptom.",
+        "List coping actions agreed with your clinician.",
+        "State when you should seek medical review or urgent help.",
+        "Keep the card brief and review it with your clinician if symptoms change."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Psychoeducation and coping statements are components of panic-focused CBT. A coping card cannot distinguish panic from a medical problem.",
+      "sources": [
+        "panicAPA",
+        "gadGuideline"
+      ]
+    }
+  ],
+  "ocd": [
+    {
+      "id": "ocd-mental-ritual-audit",
+      "title": "Notice covert and mental rituals",
+      "description": "Identify invisible neutralising strategies, such as reviewing, silently repeating, counting, or mentally checking.",
+      "when": "Use to prepare for OCD-informed clinical assessment; do not start response prevention alone from this worksheet.",
+      "steps": [
+        "Write the intrusive thought or doubt that appeared.",
+        "Notice any mental action used to cancel, neutralise, prove, or disprove it.",
+        "Record whether the mental act is repeated until it feels complete or certain.",
+        "Note how much time or distress the cycle creates.",
+        "Discuss the pattern with an ERP-trained clinician, including rituals that others cannot see."
+      ],
+      "worksheet": "reflection",
+      "evidence": "NICE OCD guidance explicitly includes mental rituals and neutralising strategies in exposure and response prevention. Identification is an assessment aid, not ERP itself.",
+      "sources": [
+        "ocdNICE"
+      ]
+    },
+    {
+      "id": "ocd-accommodation-map",
+      "title": "Map reassurance and accommodation patterns",
+      "description": "Notice how family or close others may be drawn into reassurance, checking, avoidance, or ritual participation.",
+      "when": "Use collaboratively with an OCD-informed clinician and with the consent of everyone involved.",
+      "steps": [
+        "Describe the repeated request or routine without blame.",
+        "Record how the other person responds and what relief follows.",
+        "Identify whether the response changes daily life or reinforces the OCD cycle.",
+        "Discuss the pattern with the affected person and an ERP-trained clinician.",
+        "Agree on any change collaboratively; do not abruptly withdraw support or police another person."
+      ],
+      "worksheet": "relationship",
+      "evidence": "Family accommodation is relevant to OCD assessment and treatment planning, but the appropriate response is individualised and often needs clinician guidance.",
+      "sources": [
+        "ocdNICE"
+      ]
+    }
+  ],
+  "trauma": [
+    {
+      "id": "trauma-orientation",
+      "title": "Use a present-time orientation cue",
+      "description": "Create a neutral reminder of current time, place, and surroundings when you feel disoriented or overwhelmed.",
+      "when": "Use only if sensory orientation feels comfortable; stop if it increases distress or dissociation.",
+      "steps": [
+        "Look around and name the current place and date if this feels grounding.",
+        "Notice a few neutral details in the present environment.",
+        "Remind yourself of one difference between the current situation and a past event, without forcing memory recall.",
+        "Identify one safe person or practical support available now.",
+        "If disorientation continues or worsens, seek qualified support."
+      ],
+      "worksheet": "reflection",
+      "evidence": "Present-focused grounding and arousal-management strategies may be supportive skills, but this exercise is not a PTSD treatment and does not replace trauma-focused CBT.",
+      "sources": [
+        "ptsdNICE"
+      ]
+    },
+    {
+      "id": "trauma-support-map",
+      "title": "Map triggers to support options",
+      "description": "Identify situations that make daily functioning harder and decide what practical support is available without attempting trauma exposure.",
+      "when": "Use as a support-planning exercise while arranging appropriate care.",
+      "steps": [
+        "Name a current situation or reminder that affects functioning, without describing traumatic details.",
+        "Identify what would make the immediate situation safer or more manageable.",
+        "List one trusted person, professional, or service you can contact.",
+        "Choose a small practical adjustment to support sleep, work, or daily routine.",
+        "Review the plan with a trauma-informed practitioner when possible."
+      ],
+      "worksheet": "problem",
+      "evidence": "Safety planning, psychoeducation, and support for functioning are described in trauma-focused care. This is supportive planning, not memory processing or exposure.",
+      "sources": [
+        "ptsdNICE"
+      ]
+    }
+  ],
+  "sleep": [
+    {
+      "id": "sleep-stimulus-plan",
+      "title": "Review stimulus-control principles",
+      "description": "Check whether the bed, wake time, and time spent awake may have become linked with effort, frustration, or alertness.",
+      "when": "Use for education and discussion as part of a structured CBT-I programme.",
+      "steps": [
+        "Notice whether you spend long periods awake, working, or worrying in bed.",
+        "Review whether your wake time varies substantially across days.",
+        "Learn the role of stimulus control in strengthening the bed–sleep association.",
+        "Discuss the full stimulus-control protocol with a CBT-I-trained clinician.",
+        "Do not make changes that create unsafe daytime sleepiness or conflict with medical advice."
+      ],
+      "worksheet": "sleep",
+      "evidence": "A 2024 component network meta-analysis of 241 CBT-I trials and 31,452 participants found stimulus control and cognitive restructuring among components associated with improved remission. Component findings may be affected by interactions and are not isolated prescriptions.",
+      "sources": [
+        "cbtiComponents",
+        "insomniaAASM",
+        "insomniaVADoD"
+      ]
+    },
+    {
+      "id": "sleep-arousal-log",
+      "title": "Track sleep-related mental arousal",
+      "description": "Record the thoughts, planning, and monitoring behaviours that make bedtime feel like a performance test.",
+      "when": "Use when worry about sleep or tomorrow is adding pressure at night.",
+      "steps": [
+        "Write the thought that appears when you notice you are not sleeping.",
+        "Identify whether it is a prediction, a rule, or an attempt to force sleep.",
+        "Record what you do next, such as clock-checking or calculating hours remaining.",
+        "Create a balanced response that does not demand immediate sleep.",
+        "Bring persistent patterns to a structured CBT-I programme."
+      ],
+      "worksheet": "sleep",
+      "evidence": "Cognitive therapy is a core element of CBT-I. This record is a reflection aid and should be integrated into multicomponent care for chronic insomnia.",
+      "sources": [
+        "cbtiComponents",
+        "insomniaAASM"
+      ]
+    }
+  ],
+  "perfectionism": [
+    {
+      "id": "perfectionism-checking-budget",
+      "title": "Set a proportionate checking limit",
+      "description": "Define in advance how much review a low-stakes task reasonably needs, then compare the outcome with the feared consequence of stopping.",
+      "when": "Use only for low-consequence tasks; never use for medical, legal, safety-critical, or high-stakes work.",
+      "steps": [
+        "Choose a low-consequence task that you usually overcheck.",
+        "Define an objective completion standard before starting.",
+        "Set a reasonable number of review passes or a short time limit.",
+        "Notice the urge to continue checking after the standard is met.",
+        "Review the real outcome and update the rule based on evidence."
+      ],
+      "worksheet": "exposure",
+      "evidence": "Behavioural experiments and reduction of checking are components of CBT for perfectionism. The task must be low-risk and selected carefully.",
+      "sources": [
+        "perfectionism",
+        "beckManual"
+      ]
+    },
+    {
+      "id": "perfectionism-mistake-learning",
+      "title": "Review a mistake as data",
+      "description": "Separate the practical information in an error from a global judgement about your competence or worth.",
+      "when": "Use after an ordinary, repairable mistake once immediate practical consequences have been addressed.",
+      "steps": [
+        "Describe the mistake in specific, observable terms.",
+        "Identify what contributed to it, including workload, information, process, and choice.",
+        "Separate what needs repair from conclusions about yourself.",
+        "Write one specific lesson or system adjustment.",
+        "Plan how to apply that adjustment without demanding flawless future work."
+      ],
+      "worksheet": "belief",
+      "evidence": "Cognitive restructuring and behavioural review are established CBT methods. This is an evidence-informed perfectionism exercise, not a validated stand-alone intervention.",
+      "sources": [
+        "perfectionism",
+        "cognitiveRestructuring"
+      ]
+    }
+  ]
+};
+for (const emotion of EMOTIONS) emotion.tools.push(...(ADDITIONAL_TOOLS[emotion.id] || []));
 export const WORKSHEETS = {
   anger: {
     title: "Anger chain record",
