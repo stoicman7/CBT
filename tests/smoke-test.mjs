@@ -25,7 +25,7 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.ok(toolIds.size >= 85, "The library should contain at least 85 interactive tools.");
+assert.ok(toolIds.size >= 88, "The library should contain at least 85 interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
