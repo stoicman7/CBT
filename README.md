@@ -10,7 +10,8 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 - **Four-step practice plans:** progress can be checked off and is saved locally.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
-- **Evidence review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
+- **Scientific review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
+- **Product and usability audit:** see [docs/PRODUCT_AND_USABILITY_AUDIT.md](docs/PRODUCT_AND_USABILITY_AUDIT.md) for the interface review, interaction fixes, privacy and persistence analysis, accessibility roadmap, and release criteria.
 
 ## Run locally
 
