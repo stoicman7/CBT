@@ -670,6 +670,10 @@ a { color: inherit; }
 .technique-side { position: sticky; top: 90px; align-items: stretch; }
 .technique-side .primary-button { white-space: nowrap; }
 .technique-side .worksheet-tag { text-align: right; }
+@media (max-width: 1180px) {
+  /* The persistent workspace aside narrows the primary column on tablets. */
+  .workspace-layout .tool-grid { grid-template-columns: 1fr; }
+}
 @media (max-width: 900px) {
   .technique-row { grid-template-columns: 38px minmax(0,1fr); }
   .technique-side { position: static; grid-column: 2; align-items: flex-start; }
