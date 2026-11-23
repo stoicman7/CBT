@@ -650,3 +650,449 @@ For each future tool, the content review should record:
 8. Whether changes to the product and the scientific review have been committed together.
 
 The scientific audit remains a targeted review rather than a formally registered PRISMA systematic review. New research should be added only after checking publication details, population, methods, and the interpretation of the actual outcomes. Abstracts and search snippets are discovery tools, not a substitute for critical appraisal of the full paper when accessible.
+
+
+---
+
+# Third audit — broad CBT technique coverage and clinical-domain expansion
+
+**Audit date:** 23 November 2026  
+**Purpose:** Expand the first two reviews into a broad map of common CBT procedures, specialist protocol components, and related third-wave therapies; identify gaps in the application; and document the additional workspaces and catalogue entries.
+
+## 15. Scope, search strategy, and limits of the phrase “all CBT tools”
+
+### 15.1 Why there is no single closed list
+
+There is no universally accepted, finite master list of every CBT tool. “CBT” refers to a family of cognitive and behavioural treatments, and the techniques used depend on the clinical problem, the explanatory formulation, treatment phase, and manual being followed. A behavioural experiment in social anxiety is not identical to exposure and response prevention in OCD, and neither is interchangeable with sleep-restriction therapy in CBT-I. Some manuals also describe therapist-delivery skills—such as collaborative agenda setting, feedback, and guided discovery—which are not stand-alone patient worksheets.
+
+For this audit, “broad CBT coverage” therefore means:
+
+- the principal procedures commonly described in cognitive therapy and behavioural treatment manuals;
+- the important components identified in current disorder-specific clinical guidelines;
+- commonly used condition-specific protocols where there is a meaningful evidence base;
+- relevant behavioural and cognitive methods used in specialist settings;
+- related third-wave therapies, clearly labelled as related approaches rather than classical CBT.
+
+The result is a broad, curated catalogue, not a claim to have enumerated every exercise ever used in every CBT manual or research trial.
+
+### 15.2 Search and source strategy
+
+The audit used a targeted online scoping search, with searches organised around technique names, clinical conditions, and evidence type. Sources were prioritised in this order:
+
+1. Clinical practice guidelines and official treatment recommendations (NICE, AASM, VA/DoD, government clinical guidance).
+2. Systematic reviews, meta-analyses, and component network meta-analyses.
+3. Randomised clinical trials when they directly clarify a protocol or its outcomes.
+4. Established cognitive therapy manuals and professional training materials for technique definitions and delivery principles.
+5. Professional or educational resources for discovering additional worksheet terminology, not as the sole evidence basis for a treatment claim.
+
+Search clusters included: Beckian cognitive therapy; guided discovery and Socratic dialogue; automatic-thought and core-belief work; behavioural experiments; exposure and response prevention; behavioural activation; problem-solving; graded tasks; habit reversal; insomnia treatment; social anxiety; panic; OCD; trauma-focused CBT; depression; eating-disorder-focused CBT; chronic pain; adult ADHD; substance-use disorders; prolonged grief; psychosis; and metacognitive/third-wave approaches.
+
+A direct review of the Beck Institute Cognitive Therapy Rating Scale Manual was especially useful for distinguishing therapist-delivery skills from client exercises. The manual describes agenda-setting, feedback, collaboration, guided discovery, conceptualisation of key cognitions and behaviours, strategy for change, cognitive and behavioural methods, and homework. It also describes imagery, role-play, reattribution, graded tasks, activity scheduling, mastery/pleasure ratings, and cognitive rehearsal.
+
+### 15.3 What this audit did not do
+
+This is a targeted scoping audit, not a PRISMA-registered systematic review. It does not claim:
+
+- to have exhaustively searched every database (including every PsycINFO, Embase, CINAHL, Scopus, and trial-register record);
+- to have retrieved every manual or every proprietary treatment workbook;
+- to have independently re-rated risk of bias for all underlying trials;
+- to have compared all techniques head-to-head;
+- to have established that each individual technique is effective as a stand-alone treatment.
+
+The directory is intended to be comprehensive across principal, established technique families, but it remains a curated map. A procedure's presence in a treatment manual does not by itself establish its independent efficacy. An effect for a whole treatment package cannot be attributed to every component without component-specific evidence.
+
+### 15.4 Evidence-label discipline
+
+The application continues to use qualitative labels:
+
+- **Strong:** a current guideline or converging, replicated evidence supports a defined treatment for a defined population. It does not mean this website is itself validated or that every listed exercise is a treatment.
+- **Moderate:** evidence supports the approach, but study quality, population, outcome, delivery, or comparator differences require qualification.
+- **Foundational / evidence-informed:** the entry adapts an established CBT procedure, but direct treatment evidence for that precise emotional target or worksheet is limited.
+- **Limited / specialist context:** evidence is indirect, mixed, or highly context-dependent; the page should remain cautious and direct people towards assessment where appropriate.
+
+For condition pages, the label refers to the treatment approach in its proper clinical context, not to the website's self-guided content.
+
+---
+
+## 16. Coverage audit: what was missing and what changed
+
+The original platform concentrated on emotion-specific worksheets. That was useful for navigation, but it underrepresented several core CBT procedures and a number of major clinical domains. The audit identified four kinds of gap.
+
+### 16.1 Core cognitive-therapy procedures
+
+The earlier application had thought records, reappraisal, and core-belief experiments, but did not explicitly document several important methods as separate entries. The directory now includes:
+
+- guided discovery and Socratic questioning;
+- downward-arrow questioning;
+- core-belief and conditional-rule mapping;
+- identifying thinking patterns;
+- evidence review and thought records;
+- decatastrophising and coping appraisal;
+- reattribution and responsibility-pie analysis;
+- continuum techniques;
+- advantages/disadvantages analysis;
+- coping cards and brief balanced reminders;
+- positive-data logging;
+- imagery-based thought elicitation.
+
+These are related cognitive procedures, not interchangeable names for the same exercise. For example, a thought record examines a specific automatic thought; downward-arrow questioning explores personal meaning and assumptions; a continuum challenges an absolute label by operationalising a graded concept; and reattribution examines multiple causes of an event.
+
+### 16.2 Behavioural procedures
+
+The previous site already contained behavioural activation, graded tasks, problem-solving, exposure planning, and some condition-specific safety-behaviour work. However, it needed a clearer method index for:
+
+- behavioural experiments;
+- graded in-vivo exposure;
+- interoceptive exposure (clinician-led only);
+- imaginal exposure and trauma-memory processing (clinician-led only);
+- response prevention / ERP (specialist protocol);
+- stimulus control;
+- habit reversal training;
+- role-play and behavioural rehearsal;
+- assertiveness training;
+- cognitive rehearsal / implementation planning;
+- progressive muscle relaxation and structured relaxation;
+- applied relaxation;
+- chronic-pain activity pacing;
+- craving and high-risk-situation coping;
+- regular-eating structure within CBT-ED.
+
+The technique directory separates common behavioural skills from specialist protocols. A technique's existence in a manual does not mean that a self-guided web page should instruct users to perform it without assessment.
+
+### 16.3 Therapist-delivery and treatment-maintenance procedures
+
+The Beck Institute manual makes clear that cognitive therapy is not just a collection of worksheets. It also relies on collaborative process and treatment structure. The catalogue therefore now explicitly includes:
+
+- psychoeducation and shared formulation;
+- collaborative agenda and target setting;
+- session feedback and summary;
+- between-session practice and homework;
+- progress review and collaborative feedback;
+- relapse-prevention and maintenance planning.
+
+Some of these are therapist-delivery processes. They are included to make the reference directory scientifically representative, but they should not be presented as individual self-help interventions that can reproduce psychotherapy.
+
+### 16.4 Related therapies are labelled separately
+
+The audit found several terms that are often grouped loosely under “modern CBT” but belong to distinct treatment models or developments. The directory labels these separately:
+
+- **Metacognitive therapy:** Attention Training Technique and detached mindfulness.
+- **Acceptance and commitment therapy (ACT):** cognitive defusion, acceptance-related processes, values clarification, and committed action.
+- **Dialectical behaviour therapy (DBT):** distress-tolerance skills.
+- **Mindfulness-based cognitive therapy (MBCT):** mindfulness and decentering.
+
+These approaches overlap historically and conceptually with cognitive-behavioural traditions, and some third-wave components may be incorporated into transdiagnostic CBT packages. However, their theoretical models and treatment protocols are not identical to classical Beckian cognitive therapy. The catalogue should never imply that an ACT, DBT, MCT, or MBCT procedure is simply another name for a classic CBT worksheet.
+
+---
+
+## 17. The 49-method technique directory
+
+The application now includes a separate searchable technique directory with 49 entries. It is organised into six families.
+
+### 17.1 Assessment and formulation
+
+1. **The five-areas formulation:** situation, thoughts/images, emotion, body, and behaviour.
+2. **Functional analysis (ABC / antecedent–response–consequence):** maps the factors that trigger and maintain a pattern.
+3. **Self-monitoring and activity records:** collects real-world observations for formulation and review.
+4. **Psychoeducation and shared formulation:** links a treatment model to the person's own experiences.
+5. **Collaborative agenda and target setting:** identifies a manageable focus for a treatment or practice session.
+
+### 17.2 Cognitive methods
+
+6. **Guided discovery and Socratic questioning:** collaborative inquiry rather than persuasion or debate.
+7. **Downward-arrow questioning:** explores the meaning behind an automatic thought.
+8. **Core-belief and conditional-rule mapping:** identifies recurring assumptions and personal rules.
+9. **Identifying thinking patterns:** recognises common forms of reasoning for further examination.
+10. **Thought record / evidence review:** tests a specific automatic thought against evidence.
+11. **Decatastrophising and coping appraisal:** considers probability, impact, and coping.
+12. **Reattribution and responsibility pie:** examines multiple contributing factors.
+13. **Continuum technique:** replaces absolute self-evaluation with graded, observable criteria.
+14. **Advantages and disadvantages analysis:** examines short- and long-term costs and benefits.
+15. **Coping cards and balanced reminders:** preserves a concise, credible response for a difficult moment.
+16. **Positive-data logging:** records concrete evidence that does not fit a negative core belief.
+17. **Imagery-based thought elicitation:** uses a tolerable image or recalled context to help identify thoughts and meanings.
+18. **Worry postponement / scheduled worry:** separates non-urgent repetitive worry from immediate action.
+
+### 17.3 Behavioural methods
+
+19. **Behavioural experiments:** tests a specific prediction through planned, observable action.
+20. **Behavioural activation:** restores meaningful activity and reinforcement.
+21. **Graded task assignment:** breaks difficult tasks into manageable steps.
+22. **Structured problem-solving:** defines a problem, generates options, selects an action, and reviews it.
+23. **Graded in-vivo exposure:** approaches appropriate, safe feared situations in a planned sequence.
+24. **Interoceptive exposure:** specialist exposure to feared bodily sensations, used in panic-focused CBT after clinical screening.
+25. **Imaginal exposure and trauma-memory processing:** specialist procedures within validated protocols.
+26. **Response prevention / ERP:** reduces rituals and neutralising responses within an individualised exposure plan.
+27. **Stimulus control:** adjusts environmental cues within CBT-I or habit-reversal protocols.
+28. **Habit reversal training:** awareness training, stimulus control, and competing-response practice for assessed repetitive behaviours.
+29. **Role-play and behavioural rehearsal:** practises new responses in a controlled setting.
+30. **Assertiveness and communication skills:** rehearses clear requests, refusals, and boundaries.
+31. **Cognitive rehearsal and implementation planning:** mentally sequences a task and identifies likely obstacles.
+32. **Progressive muscle relaxation and structured relaxation:** trains recognition and reduction of muscle tension where appropriate.
+33. **Applied relaxation:** a structured treatment component in some anxiety protocols.
+34. **Activity pacing for pain:** plans sustainable activity within an individualised pain-care programme.
+35. **Craving and high-risk-situation coping:** prepares alternative responses and support within addiction treatment.
+36. **Regular-eating structure in CBT-ED:** a clinician-guided component of some eating-disorder protocols.
+
+### 17.4 Imagery and memory methods
+
+37. **Imagery rescripting:** a specialist imagery method for selected distressing images and memories. It is not a universal or self-guided trauma treatment.
+
+### 17.5 Maintenance and homework
+
+38. **Relapse-prevention and maintenance planning:** identifies warning signs, triggers, support, and contingency actions.
+39. **Between-session practice and homework:** applies an agreed method outside sessions and reviews the learning.
+40. **Progress review and collaborative feedback:** checks whether the approach is accurate, useful, and needs adjustment.
+
+### 17.6 Related approaches
+
+41. **Attention Training Technique (MCT).**
+42. **Detached mindfulness (MCT).**
+43. **Cognitive defusion (ACT).**
+44. **Values clarification and committed action (ACT).**
+45. **Distress-tolerance skills (DBT).**
+46. **Mindfulness and decentering (MBCT).**
+
+The remaining three entries in the current directory are included as distinct process-level or skill variants in the source file and should be maintained under the same classification and evidence rules. The application does not interpret the directory count as a count of independent, validated treatments: many entries are components or variations inside a smaller number of treatment families.
+
+---
+
+## 18. New specialist domains added to the application
+
+Seven workspaces have been added. These broaden the clinical map beyond the original emotional difficulties and make clear when self-guided support is not an adequate substitute for treatment.
+
+### 18.1 Chronic pain
+
+**Guideline context.** NICE NG193 recommends considering CBT for chronic primary pain in people aged 16 and over, delivered by healthcare professionals with appropriate training. The guideline rationale reports that most of the evidence suggested benefits for quality of life, while consistent benefits were not demonstrated across all outcomes. The committee judged the evidence quality insufficient for a stronger recommendation.
+
+**New tools:**
+
+- pain, activity, and functional-impact mapping;
+- sustainable activity-rhythm review;
+- flare-up coping-plan preparation;
+- pain-related prediction review.
+
+**Boundary:** CBT for pain does not mean pain is imaginary. The tools must not be used to ignore new symptoms, cancel investigations, stop treatment, or push through medical warning signs. Pain pacing and activity changes should be individualised with healthcare professionals.
+
+### 18.2 Adult ADHD skills
+
+**Guideline context.** NICE NG87 states that adults with ADHD who need non-pharmacological treatment should be offered a structured supportive psychological intervention focused on ADHD, with regular follow-up; treatment may involve elements or a full course of CBT. The guideline's evidence review identifies psychoeducation, attention, organisation, planning, cognitive restructuring, and, where relevant, procrastination, frustration, anger, and communication skills.
+
+**New tools:**
+
+- one external task-capture system;
+- low-friction task-start planning;
+- estimated-versus-actual time review;
+- distraction capture and return planning.
+
+**Boundary:** the tools do not diagnose ADHD or replace assessment, medication review, accommodations, or structured psychological care. Difficulties are not framed as laziness or lack of character.
+
+### 18.3 Body-focused repetitive behaviours (BFRBs)
+
+**Evidence context.** A 2026 meta-analysis of psychotherapeutic and pharmacological interventions for trichotillomania included 29 trials in standard meta-analysis and 30 in network meta-analysis. The authors found strong replicated support for behavioural therapy with habit reversal, ACT-enhanced HRT, and N-acetylcysteine; interventions containing habit reversal generally performed better than those without it. This does not mean that the evidence is equally strong for every BFRB or every delivery format.
+
+**New tools:**
+
+- awareness-training record;
+- environmental stimulus-control review;
+- competing-response planning;
+- lapse review without punishment.
+
+**Boundary:** these are introductory preparation tools, not a full HRT programme. The exact competing response should be safe and individually selected. Painful restraints, injurious barriers, and self-punishment are prohibited. Skin injury, infection, significant hair loss, or impairment warrants professional assessment.
+
+### 18.4 Substance-use recovery skills
+
+**Evidence context.** A 2026 meta-analysis included 52 randomised clinical trials and 9,442 participants. CBT showed efficacy overall, with more consistent benefits for consumption outcomes; it did not outperform other evidence-based treatments in active-comparator analyses. Updated UK Department of Health and Social Care alcohol guidance, last updated 17 April 2026, describes CBT-based relapse prevention in personalised, supervised treatment and recovery plans.
+
+**New tools:**
+
+- substance-use functional analysis;
+- craving-response planning;
+- refusal and safe-exit rehearsal;
+- lapse review and restoration of safety.
+
+**Boundary:** this is not detoxification, overdose management, or a standalone addiction treatment. Alcohol and sedative withdrawal can be dangerous and may require medical management. The page instructs users to access urgent care for medical emergencies and to remain connected with treatment and recovery supports.
+
+### 18.5 Eating-disorder CBT (CBT-ED)
+
+**Guideline context.** NICE NG69 describes different treatment approaches for anorexia nervosa, bulimia nervosa, and binge-eating disorder. Protocols may include self-monitoring, regular eating, analysis of triggers, cognitive restructuring, behavioural experiments, exposure, body-image work, and relapse prevention. They differ in session structure, intensity, and medical context. NICE explicitly states that weight loss is not the goal of CBT for binge-eating disorder and advises against dieting during treatment because it may trigger binge eating.
+
+**New tools:**
+
+- non-calorie-focused trigger mapping;
+- treatment-plan clarification;
+- preparation of a body-image belief for clinical review.
+
+**Boundary:** the site deliberately does not provide calorie targets, meal plans, body measurements, weight goals, dieting, or compensatory-behaviour instructions. Eating disorders can create serious medical complications regardless of appearance. Specialist medical and psychological care takes priority.
+
+### 18.6 Prolonged grief support
+
+**Evidence context.** A 2024 systematic review and meta-analysis examined grief-focused CBT for prolonged-grief symptoms. A separate 2024 randomised clinical trial involving 100 adults compared grief-focused CBT with mindfulness-based cognitive therapy; both treatments reduced grief severity, and CBT showed greater symptom reduction at six-month follow-up.
+
+**New tools:**
+
+- grief and daily-functioning map;
+- review of a grief-related belief;
+- small reconnection step linked to valued life activity.
+
+**Boundary:** grief is not automatically a mental disorder and there is no correct timetable for mourning. The site does not ask users to force memory exposure or prove that they have moved on. Persistent, impairing grief or safety concerns warrant assessment by an appropriately qualified practitioner.
+
+### 18.7 CBT for psychosis support
+
+**Guideline context.** NICE CG178 was last reviewed on 29 July 2025. It recommends CBT for people with psychosis or schizophrenia and describes individual, manual-based treatment over at least 16 planned sessions. Components include monitoring experiences, developing alternative coping strategies, reducing distress, and improving functioning. The guideline also emphasises specialist assessment and care.
+
+**New tools:**
+
+- distressing-experience record for clinical discussion;
+- coping-strategy inventory to review with a clinician;
+- appointment and treatment-review preparation.
+
+**Boundary:** this is not self-help treatment for psychosis. The app does not ask users to confront, prove, or disprove unusual experiences, change medication, or replace clinical care. Worsening symptoms, inability to care for oneself, severe distress, or risk of harm require prompt professional help; immediate danger requires local emergency support.
+
+---
+
+## 19. Coverage matrix after the third audit
+
+| Domain | Prior coverage | New coverage | Boundary |
+|---|---|---|---|
+| Core cognitive therapy | Thought records, reappraisal, core-belief experiments | Guided discovery, downward arrow, continuums, reattribution, cost-benefit analysis, coping cards, imagery elicitation | Core skills; not every technique suits every problem |
+| Behavioural methods | Activation, task breakdown, exposure planning, problem-solving | Role-play, rehearsal, HRT, stimulus control, pacing, systematic desensitisation, craving skills | Specialist protocols are clearly identified |
+| Clinical process | Practice plans and personal notes | Psychoeducation, shared formulation, agenda, feedback, homework, maintenance review | Some are therapist-delivery processes |
+| Pain | Not previously present | Pain and activity mapping, pacing, flare planning, appraisal review | Medical care remains central |
+| ADHD | Generic task planning | External capture, task-start design, time estimation, distraction return | Not diagnosis or full ADHD treatment |
+| BFRBs | Not previously present | Awareness, stimulus control, competing response, lapse review | HRT-informed; professional support for injury or impairment |
+| Substance use | Not previously present | Functional analysis, craving plan, refusal rehearsal, lapse safety review | Not detoxification or overdose care |
+| Eating disorders | Not previously present | Trigger map, treatment-plan questions, body-image belief preparation | Specialist and medical care; no dieting/weight tools |
+| Prolonged grief | Guilt/shame/low-mood pages only | Grief-function mapping, belief review, reconnection activity | Does not pathologise normal grief |
+| Psychosis | Not previously present | Experience record, coping review, appointment preparation | Clinician-led care only |
+| Third-wave therapies | Some transdiagnostic wording | ACT, DBT, MCT, and MBCT techniques separately classified | Not mislabelled as classical CBT |
+
+---
+
+## 20. Clinical distinctions and tools deliberately not made self-guided
+
+A broad tool directory must not become a universal do-it-yourself treatment manual. The following procedures are named for scientific completeness but are restricted to appropriate clinical contexts:
+
+- **Interoceptive exposure:** may deliberately evoke feared bodily sensations. The website must not supply self-directed symptom-induction instructions.
+- **Trauma-memory processing and imaginal exposure:** require a validated trauma-focused approach, risk assessment, and trained practitioner.
+- **Full OCD ERP:** requires an individualised hierarchy and response-prevention plan. Identifying rituals is different from conducting ERP.
+- **CBT-I sleep restriction:** can be effective but requires appropriate assessment and monitoring; the website does not prescribe sleep windows.
+- **CBT-ED:** eating-disorder pathways must consider physical risk and diagnosis-specific treatment. The website does not prescribe eating, weight, or calorie targets.
+- **CBTp:** requires individual, manual-based treatment, specialist assessment, and clinical follow-up; the app only helps prepare records and questions.
+- **Applied relaxation and systematic desensitisation:** are structured procedures that should be selected and taught in a suitable anxiety formulation, not offered as generic breathing instructions.
+- **Imagery rescripting:** promising across selected conditions, but not a universal or self-guided trauma procedure.
+- **Substance-use relapse prevention:** does not replace withdrawal management, overdose care, medication, or structured recovery support.
+
+The technique library labels such methods as “Specialist protocol”. The relevant condition workspace repeats the safety boundary near the exercise itself.
+
+---
+
+## 21. Critical interpretation of newly reviewed evidence
+
+### 21.1 Chronic pain
+
+NICE NG193 recommends considering CBT for chronic primary pain, with a trained provider. The rationale reports quality-of-life benefits in most evidence, but not a consistent benefit across all outcomes, and notes that evidence quality was not high. Accordingly, the page uses a moderate rather than strong label and focuses on functioning and clinical collaboration.
+
+### 21.2 Adult ADHD
+
+NICE NG87 supports structured psychological interventions for adults who need non-pharmacological care and states that these may include CBT. The page presents skills such as external task capture and task initiation as practical adaptations; it does not claim that each individual prompt has independent RCT evidence.
+
+### 21.3 Habit reversal and BFRBs
+
+The 2026 trichotillomania meta-analysis strengthens the case for HRT-containing behavioural treatment for hair-pulling. However, trichotillomania evidence should not be automatically generalised to all skin-picking or other body-focused repetitive behaviours. The interface therefore says that condition-specific evidence differs.
+
+### 21.4 Substance-use disorders
+
+The 2026 meta-analysis is important partly because it does not claim CBT is better than every other established treatment. Its results support CBT compared with usual or minimal care on consumption outcomes; active-comparator findings did not show superiority. The content is framed as one evidence-based option in a broader recovery plan.
+
+### 21.5 Eating disorders
+
+NICE NG69 is not a generic endorsement of self-guided body-image or eating worksheets. It describes distinct clinical protocols, different intensities, and medical risks. The product therefore avoids measurements and dieting content and uses tools primarily for treatment preparation and clinician-supported reflection.
+
+### 21.6 Prolonged grief
+
+The 2024 meta-analysis and randomised trial support grief-focused CBT for prolonged grief presentations. They do not imply that ordinary grief requires treatment or that every bereaved person should use exposure. The page focuses on function, beliefs, and small reconnection actions, with clinician support for prolonged-grief treatment.
+
+### 21.7 Psychosis
+
+NICE's recommendation is for individual manual-based CBT delivered in a clinical context, not a collection of online thought-challenging exercises. The page avoids telling users to dispute unusual experiences and instead supports monitoring distress, identifying helpful coping, and preparing for care review.
+
+### 21.8 Imagery rescripting
+
+A 2023 systematic review and meta-analysis identified 23 trials involving 805 adults across several diagnoses and reported promising symptom reductions. However, the studies differed in diagnosis, design, and delivery; large pre–post changes do not prove that a single self-guided session is a treatment. The directory therefore includes imagery rescripting as a specialist procedure and explicitly prohibits unsupervised trauma processing.
+
+---
+
+## 22. New and expanded source register
+
+These references supplement the prior 29 source records in the source register.
+
+26. **NICE NG193.** Chronic pain (primary and secondary) in over 16s: assessment and management of chronic primary pain. Recommendation: consider CBT for chronic primary pain when delivered by appropriately trained healthcare professionals.  
+    https://www.nice.org.uk/guidance/ng193/chapter/recommendations
+
+27. **NICE NG87.** Attention deficit hyperactivity disorder: diagnosis and management. Adult non-pharmacological care includes a structured supportive psychological intervention focused on ADHD, with regular follow-up; CBT elements may be included.  
+    https://www.nice.org.uk/guidance/ng87/chapter/recommendations
+
+28. **NICE CG178.** Psychosis and schizophrenia in adults: prevention and management. Last reviewed 29 July 2025. Individual, manual-based CBT with at least 16 planned sessions and specified coping/monitoring/functioning components.  
+    https://www.nice.org.uk/guidance/cg178/chapter/recommendations
+
+29. **NICE NG69.** Eating disorders: recognition and treatment. Condition-specific CBT-ED pathways for anorexia nervosa, bulimia nervosa, and binge-eating disorder.  
+    https://www.nice.org.uk/guidance/ng69/chapter/recommendations
+
+30. **Komischke-Konnerup et al. (2024).** Grief-focused cognitive behavioral therapies for prolonged grief symptoms: A systematic review and meta-analysis. *Journal of Consulting and Clinical Psychology*, 92(4), 236–248.  
+    https://doi.org/10.1037/ccp0000884
+
+31. **Bryant et al. (2024).** Cognitive Behavior Therapy vs Mindfulness in Treatment of Prolonged Grief Disorder: A Randomized Clinical Trial. *JAMA Psychiatry*, 81(7), 646–654.  
+    https://doi.org/10.1001/jamapsychiatry.2024.0432
+
+32. **Fisak et al. (2026).** The efficacy of psychotherapeutic and pharmacological interventions for trichotillomania: A review and meta-analysis. *Journal of Psychiatric Research*, 197, 264–274.  
+    https://doi.org/10.1016/j.jpsychires.2026.02.029
+
+33. **A meta-analysis of cognitive behavioral therapy for substance use disorder: Treatment effects by comparator type and consumption and psychosocial outcomes (2026).** 52 randomised trials; 9,442 participants.  
+    https://www.sciencedirect.com/science/article/pii/S0005796726001543
+
+34. **UK Department of Health and Social Care.** Clinical guidelines for alcohol treatment, Chapter 5: Psychosocial interventions. Published 28 November 2025; updated 17 April 2026.  
+    https://www.gov.uk/guidance/clinical-guidelines-for-alcohol-treatment/5-psychosocial-interventions
+
+35. **NCBI Bookshelf.** Addiction Psychotherapeutic Care. Describes CBT functional analysis, craving and trigger management, refusal skills, problem-solving, and relapse prevention in a broader recovery plan.  
+    https://www.ncbi.nlm.nih.gov/books/NBK587365/
+
+36. **Imagery rescripting as a short intervention for symptoms associated with mental images in clinical disorders: A systematic review and meta-analysis (2023).** 23 trials; 805 adults.  
+    https://pubmed.ncbi.nlm.nih.gov/37738780/
+
+The source file contains the full 40-record source set. The source count is metadata count, not the number of independent studies, and overlapping references may support multiple technique entries.
+
+---
+
+## 23. Revised catalogue and product counts
+
+After the third audit, the application contains:
+
+- **25 workspaces** across common emotions, transdiagnostic patterns, and specialist clinical domains.
+- **113 interactive exercises** distributed through those workspaces.
+- **49 technique-directory entries** covering the principal cognitive, behavioural, imagery, formulation, and maintenance methods reviewed in this audit.
+- **40 source records** attached to technique or condition entries.
+- **10 reusable worksheet templates** powering the interactive exercises.
+
+The 113 tool count is a count of application exercises, not 113 unique validated treatments. Several exercises apply the same underlying CBT procedure to different situations or clinical formulations. The 49 directory entries are a taxonomy of principal methods and delivery processes; related approaches and specialist protocols are separately labelled.
+
+---
+
+## 24. Maintenance and further research priorities
+
+Future additions should continue to use a gap-led process:
+
+1. Identify the clinical target and its boundary: common emotion, transdiagnostic process, or recognised disorder.
+2. Identify the actual treatment model and manual, not merely the generic label “CBT”.
+3. Search current clinical guidelines before searching only for worksheets.
+4. Review systematic reviews, meta-analyses, component analyses, and trials where appropriate.
+5. Separate whole-treatment evidence from component evidence.
+6. Describe populations, comparators, outcomes, effect sizes, heterogeneity, and limitations when reporting numbers.
+7. Decide whether the procedure is safe for self-guided reflection, suitable only as psychoeducation, or restricted to a trained practitioner.
+8. Keep the evidence label and on-page safety note consistent with the review.
+9. Add the technique to the searchable directory and the relevant condition page where there is a clear use case; do not multiply near-identical exercises merely to increase the tool count.
+10. Keep regression tests for references, unique IDs, worksheet mappings, and safety restrictions.
+
+Areas that may warrant future specialist reviews include body dysmorphic disorder, bipolar disorder, tinnitus, chronic fatigue and other medically complex syndromes, personality-disorder-specific CBT protocols, paediatric CBT, and culturally adapted interventions. They should not be added as self-help treatment pages until the protocol and safeguards have been reviewed separately.
+
+**Bottom line:** the aim is not to claim that every CBT procedure can be turned into an online worksheet. The aim is to provide a broad and clearly classified reference to the main CBT methods, explain where they are used, show the scientific basis and limitations, and make the boundary between educational practice and clinical treatment visible at the point of use.
