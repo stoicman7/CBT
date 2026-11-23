@@ -14,9 +14,24 @@ const dialogContent = $("#dialog-content");
 function readState() {
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || "null");
-    return saved && typeof saved === "object"
-      ? { ...defaults, ...saved, entries: Array.isArray(saved.entries) ? saved.entries : [], checkins: Array.isArray(saved.checkins) ? saved.checkins : [], completed: saved.completed || {} }
-      : structuredClone(defaults);
+    if (!saved || typeof saved !== "object" || Array.isArray(saved)) return structuredClone(defaults);
+    const validTabs = new Set(["home", "journal", "library", "overview", "techniques", "plan"]);
+    const entries = Array.isArray(saved.entries)
+      ? saved.entries.filter(item => item && typeof item === "object" && typeof item.createdAt === "string" && typeof item.toolTitle === "string" && item.values && typeof item.values === "object")
+      : [];
+    const checkins = Array.isArray(saved.checkins)
+      ? saved.checkins.filter(item => item && typeof item === "object" && typeof item.createdAt === "string" && Number.isFinite(Number(item.level)))
+      : [];
+    return {
+      ...defaults,
+      ...saved,
+      active: EMOTIONS.some(item => item.id === saved.active) ? saved.active : defaults.active,
+      tab: validTabs.has(saved.tab) ? saved.tab : defaults.tab,
+      entries,
+      checkins,
+      completed: saved.completed && typeof saved.completed === "object" && !Array.isArray(saved.completed) ? saved.completed : {},
+      libraryCategory: typeof saved.libraryCategory === "string" ? saved.libraryCategory : defaults.libraryCategory
+    };
   } catch { return structuredClone(defaults); }
 }
 function saveState() {
@@ -245,7 +260,10 @@ function action(name) {
   if (name === "export") exportData();
   if (name === "close-dialog") dialog.close();
   if (name === "clear-data" && confirm("Delete all saved notes, check-ins, and plan progress from this browser? This cannot be undone.")) {
-    state = { ...defaults, active:state.active, tab:"journal" }; saveState(); render(); toast("Local workspace data cleared.");
+    const previous = state;
+    state = { ...defaults, active:previous.active, tab:"journal" };
+    if (!saveState()) { state = previous; return; }
+    render(); toast("Local workspace data cleared.");
   }
 }
 document.addEventListener("click", event => {
