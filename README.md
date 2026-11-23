@@ -1,3 +1,65 @@
-# CBT — an evidence-informed emotional skills workspace
+# CBT Workspace
 
-An English-language, privacy-first CBT skills library. See `docs/SCIENTIFIC_REVIEW.md` for the evidence review and clinical scope.
+An English-language, evidence-informed CBT skills workspace for adults. It is organised around the emotion or pattern a person wants to work with, with practical worksheets, flexible practice plans, evidence notes, and clear boundaries around self-guided care.
+
+## What is included
+
+- **17 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, and perfectionism.
+- **51 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links.
+- **Four-step practice plans:** progress can be checked off and is saved locally.
+- **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
+- **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
+- **Evidence review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
+
+## Run locally
+
+No framework, build step, or third-party JavaScript package is required.
+
+With Python installed:
+
+```bash
+python -m http.server 8000
+```
+
+Open [http://localhost:8000](http://localhost:8000).
+
+The application uses ES modules, so do not open `index.html` directly with a `file://` URL.
+
+## Quality checks
+
+Requires Node.js 20 or later:
+
+```bash
+npm test
+```
+
+This checks JavaScript syntax and validates the emotion library, tool-to-worksheet mappings, evidence references, and key safety boundaries.
+
+GitHub Actions workflow files are included under `.github/workflows/`. A repository Actions runner must be enabled for those checks to execute.
+
+## Publish with GitHub Pages
+
+The repository includes a static GitHub Pages deployment workflow at `.github/workflows/pages.yml`.
+
+1. Open **Settings → Pages** in the repository.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. Ensure GitHub Actions are enabled for the repository.
+4. Push to `main` or manually run the deployment workflow.
+
+**Repository visibility matters:** GitHub Pages is available for public repositories on GitHub Free. Publishing from a private personal repository requires an eligible paid plan. A Pages site is public by default, even if its source repository is private. Review the current [GitHub Pages eligibility](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and [publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) before enabling public access.
+
+## Privacy
+
+This is a static, browser-only application. It has no account system, server-side journal, analytics, or AI service. Worksheet notes, check-ins, and plan progress are kept in the current browser's local storage. They are not uploaded by this application.
+
+Local storage is **not encrypted**. Anyone with access to the same browser profile or device may be able to read saved entries. Private browsing, clearing site data, or switching devices may remove them. Export important notes and avoid saving sensitive details on a shared or monitored device.
+
+The stylesheet loads optional Google Fonts. If that request is blocked, local system font fallbacks remain available. No journal content is sent with the font request.
+
+## Scientific and clinical scope
+
+This is an educational skills workspace, **not a medical device, diagnostic instrument, or substitute for psychotherapy**. Evidence strength differs by emotion and condition. Some areas provide general CBT-informed exercises, while panic, OCD, trauma, and chronic insomnia include explicit restrictions because parts of their validated treatment protocols require assessment and trained professional support.
+
+The accompanying review is a targeted evidence map, not a formally registered PRISMA systematic review or a complete guideline appraisal. It is dated 23 November 2026 and should be updated when guidelines and research change.
+
+Do not use the site to manage an immediate crisis, risk of harm, abuse, violence, or a medical emergency. Seek appropriate local professional or emergency support when safety is at risk.
