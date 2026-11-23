@@ -1286,6 +1286,765 @@ EMOTIONS.push({
   "caution": "Never use this page to self-diagnose, ignore new or worsening symptoms, cancel recommended tests, stop treatment, or delay urgent medical care. Follow qualified medical advice. The exercises are for health anxiety after appropriate assessment and are not a substitute for a healthcare professional."
 });
 
+EMOTIONS.push(...[
+  {
+    "id": "chronic-pain",
+    "name": "Chronic pain",
+    "group": "Focused care",
+    "initials": "CP",
+    "subtitle": "Support meaningful activity while respecting pain and medical care.",
+    "description": "Chronic pain can affect movement, sleep, mood, attention, and valued activity. CBT for pain does not mean pain is imaginary or that a person should ignore symptoms. It works with the effects of pain on coping, activity, distress, and daily functioning alongside appropriate healthcare.",
+    "model": "Pain or flare cue → threat or helplessness appraisal → distress and protective response → reduced or boom-bust activity → impact on function and mood",
+    "why": "NICE recommends considering CBT for chronic primary pain when delivered by appropriately trained healthcare professionals. The guideline rationale reports quality-of-life benefits but notes that evidence quality is not high and consistent benefits were not demonstrated across all outcomes.",
+    "evidence": {
+      "label": "Guideline-supported option; effects and outcomes vary",
+      "level": "moderate",
+      "note": "NICE NG193 recommends considering CBT for chronic primary pain for people aged 16 and over, delivered by appropriately trained professionals. The committee found most evidence suggested quality-of-life improvement but rated the evidence as not high quality."
+    },
+    "focus": [
+      "Keep medical assessment and treatment in place",
+      "Understand the impact of pain on activity",
+      "Plan sustainable activity rather than boom-and-bust cycles",
+      "Strengthen coping and valued functioning"
+    ],
+    "tools": [
+      {
+        "id": "pain-impact-map",
+        "title": "Map pain, activity, and impact",
+        "description": "Record how pain, sleep, mood, activity, and coping responses interact without assuming pain has a psychological cause.",
+        "when": "Use to prepare for a healthcare or pain-management appointment.",
+        "steps": [
+          "Describe the pain-related situation and its effect on daily function without trying to diagnose its cause.",
+          "Record what activity you were doing before and after the change.",
+          "Note the effect on sleep, mood, concentration, and valued roles.",
+          "Identify what helped or worsened function, while avoiding causal conclusions from one episode.",
+          "Bring the record to your healthcare professional and ask which changes are medically appropriate."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Self-monitoring and functional formulation are commonly used in CBT for pain. This record is not a pain diagnostic tool and cannot determine tissue damage or medical risk.",
+        "sources": [
+          "chronicPainNICE"
+        ]
+      },
+      {
+        "id": "pain-pacing",
+        "title": "Plan a sustainable activity rhythm",
+        "description": "Review patterns of overactivity and forced rest, then discuss a steadier activity pattern with your care team.",
+        "when": "Use only within a plan consistent with medical advice and your current physical capacity.",
+        "steps": [
+          "Choose one valued daily activity that has become difficult.",
+          "Record how activity varies on better and worse days.",
+          "Notice whether you repeatedly overdo activity on better days and then need extended recovery.",
+          "Discuss a realistic, flexible activity rhythm with your clinician or physiotherapist.",
+          "Review function and recovery rather than treating pain intensity as the only measure of success."
+        ],
+        "worksheet": "activity",
+        "evidence": "Activity planning and pacing are used in pain self-management, but recommendations must be individualised; the NICE recommendation is to consider professionally delivered CBT for chronic primary pain.",
+        "sources": [
+          "chronicPainNICE"
+        ]
+      },
+      {
+        "id": "pain-flare-plan",
+        "title": "Prepare a flare-up coping plan",
+        "description": "Identify practical supports and agreed care steps for a flare without assuming a flare is harmless.",
+        "when": "Use after discussing red flags and flare-up guidance with your healthcare professional.",
+        "steps": [
+          "Write what a familiar flare pattern looks like for you, if one has been assessed.",
+          "Record the medical advice you have been given about when to seek review or urgent care.",
+          "List practical adjustments that help you maintain essential daily activities safely.",
+          "Identify who can help and how to contact your care team if the pattern changes.",
+          "Do not use the plan to dismiss new, severe, or unexplained symptoms."
+        ],
+        "worksheet": "problem",
+        "evidence": "Coping and maintenance planning are CBT-compatible approaches; a flare plan must be grounded in an individual medical care plan.",
+        "sources": [
+          "chronicPainNICE"
+        ]
+      },
+      {
+        "id": "pain-thoughts",
+        "title": "Review pain-related predictions",
+        "description": "Examine predictions about what pain means for activity and coping while retaining appropriate medical uncertainty.",
+        "when": "Use for distressing predictions after a clinician has assessed the pain condition and explained the care plan.",
+        "steps": [
+          "Write the specific prediction, such as what you fear will happen if you attempt an activity.",
+          "Separate the pain sensation from the conclusion or forecast you are making.",
+          "Review what your healthcare professional has advised about safe activity and warning signs.",
+          "Write a balanced statement that recognises both limitations and available choices.",
+          "Choose a next step that fits the medical plan, not an online challenge."
+        ],
+        "worksheet": "thought",
+        "evidence": "Cognitive appraisal is one component of CBT for pain. It should not be used to reinterpret a new symptom as psychological or to override medical restrictions.",
+        "sources": [
+          "chronicPainNICE"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Clarify the care plan",
+        "detail": "Confirm your diagnosis, treatment plan, activity advice, and when a symptom change needs review."
+      },
+      {
+        "title": "Understand functional impact",
+        "detail": "Track how pain interacts with sleep, mood, daily roles, and activity."
+      },
+      {
+        "title": "Choose one sustainable adjustment",
+        "detail": "Discuss pacing, coping, or activity planning with a trained healthcare professional."
+      },
+      {
+        "title": "Review function and quality of life",
+        "detail": "Assess what has become more manageable, not only whether pain intensity has changed."
+      }
+    ],
+    "caution": "Never assume new or worsening pain is psychological. Do not stop investigations, medication, or treatment, exceed medical activity advice, or use exposure to push through warning signs. CBT for pain should be delivered by appropriately trained healthcare professionals alongside medical care."
+  },
+  {
+    "id": "adult-adhd",
+    "name": "Adult ADHD skills",
+    "group": "Focused care",
+    "initials": "AD",
+    "subtitle": "Externalise tasks, reduce friction, and build workable routines.",
+    "description": "CBT-informed ADHD interventions focus on practical functioning: organising, planning, prioritising, managing time, coping with procrastination, and revising unhelpful beliefs after repeated setbacks. These skills support care; they do not diagnose ADHD or replace medication review and comprehensive treatment.",
+    "model": "Demand or intention → executive-function bottleneck → delay or distraction → time pressure and self-criticism → avoidance or last-minute effort",
+    "why": "NICE NG87 states that adults with ADHD who need non-pharmacological treatment should receive a structured supportive psychological intervention focused on ADHD, with regular follow-up; treatment may include elements or a full course of CBT. Its evidence review highlights attention, organisation, planning, cognitive restructuring, and frustration/communication difficulties.",
+    "evidence": {
+      "label": "Guideline-supported structured psychological intervention",
+      "level": "moderate",
+      "note": "NICE NG87 supports structured psychological intervention focused on ADHD with regular follow-up; treatment may include CBT. Evidence supports practical organisational and planning skills, but this self-guided page is not a full ADHD treatment programme."
+    },
+    "focus": [
+      "Use external reminders instead of relying on memory",
+      "Make tasks visible and concrete",
+      "Plan short starts and realistic time estimates",
+      "Reduce shame while still taking responsibility for systems"
+    ],
+    "tools": [
+      {
+        "id": "adhd-task-capture",
+        "title": "Create one external task-capture system",
+        "description": "Move open tasks out of memory into one trusted place, then define the next physical action.",
+        "when": "Use when tasks are forgotten, scattered across apps, or repeatedly held in working memory.",
+        "steps": [
+          "Choose one place to capture tasks, such as a notebook or digital list.",
+          "Write each task as a short action beginning with a verb.",
+          "Separate tasks from appointments and reminders.",
+          "Choose one time each day to review and sort the list.",
+          "Avoid building multiple competing lists; simplify the system if you stop using it."
+        ],
+        "worksheet": "problem",
+        "evidence": "Organisation and planning are specifically identified in NICE's adult ADHD psychological-intervention evidence review. The tool is a skills aid, not an ADHD diagnostic or treatment substitute.",
+        "sources": [
+          "adhdNICE"
+        ]
+      },
+      {
+        "id": "adhd-starting",
+        "title": "Design a low-friction task start",
+        "description": "Reduce the gap between intending to act and beginning by specifying a small first step and the cue that will trigger it.",
+        "when": "Use when a task is repeatedly delayed despite being important.",
+        "steps": [
+          "Name the task and the reason it matters.",
+          "Define a first action that can be completed in five minutes or less.",
+          "Choose the time, place, and cue that will prompt the start.",
+          "Remove one avoidable obstacle or prepare one needed item in advance.",
+          "After starting, decide whether to continue, pause, or schedule the next block."
+        ],
+        "worksheet": "activity",
+        "evidence": "Task breakdown and planning are CBT-compatible ADHD skills. The exact five-minute prompt is a practical adaptation rather than a stand-alone trial-validated protocol.",
+        "sources": [
+          "adhdNICE"
+        ]
+      },
+      {
+        "id": "adhd-time-review",
+        "title": "Compare estimated and actual time",
+        "description": "Use neutral time-estimation data to improve planning rather than treating inaccurate estimates as a character flaw.",
+        "when": "Use when transitions, deadlines, or task duration repeatedly cause problems.",
+        "steps": [
+          "Choose a routine task that is safe to time.",
+          "Estimate how long it will take before starting.",
+          "Record the actual start, finish, and interruptions.",
+          "Compare the estimate with the observation and identify predictable sources of extra time.",
+          "Use the information to plan a more realistic buffer next time."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Time-management and planning are commonly addressed within structured CBT for adult ADHD. This exercise is a practical monitoring adaptation.",
+        "sources": [
+          "adhdNICE"
+        ]
+      },
+      {
+        "id": "adhd-distraction-reset",
+        "title": "Use a distraction return plan",
+        "description": "Create a repeatable way to notice a distraction, park it, and return to the chosen task without restarting the whole plan.",
+        "when": "Use during focused work when unrelated thoughts or tasks repeatedly pull attention away.",
+        "steps": [
+          "Write the current task in one visible sentence.",
+          "Keep a capture space for unrelated thoughts or tasks that appear.",
+          "When distracted, record the new item in a few words rather than pursuing it immediately.",
+          "Return to the next visible action on the original task.",
+          "Review the captured items at a planned break and decide which truly need action."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Attention and organisation strategies are consistent with structured adult ADHD interventions. This should be individualised and is not a substitute for a formal assessment or comprehensive treatment.",
+        "sources": [
+          "adhdNICE"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Choose a single system",
+        "detail": "Select one capture place and one review time for tasks and commitments."
+      },
+      {
+        "title": "Reduce task friction",
+        "detail": "Break one avoided task into a visible first action and prepare the environment."
+      },
+      {
+        "title": "Collect planning data",
+        "detail": "Compare estimated and actual time to improve future plans."
+      },
+      {
+        "title": "Review with support",
+        "detail": "Discuss persistent impairment and treatment options with an ADHD-informed professional."
+      }
+    ],
+    "caution": "This page does not diagnose ADHD or recommend medication changes. Persistent impairment warrants a qualified assessment. Use these tools alongside appropriate clinical care, accommodations, and follow-up; do not interpret executive-function difficulties as laziness or lack of character."
+  },
+  {
+    "id": "body-focused-repetitive-behaviours",
+    "name": "Body-focused repetitive behaviours",
+    "group": "Focused care",
+    "initials": "BR",
+    "subtitle": "Notice pulling or picking patterns and practise safer competing responses.",
+    "description": "Body-focused repetitive behaviours (BFRBs), such as hair-pulling and skin-picking, can involve automatic or focused urges, sensory cues, and repeated patterns that are difficult to interrupt. Habit reversal training (HRT) is a specialised behavioural approach that includes awareness training, stimulus control, and competing-response practice.",
+    "model": "Context or cue → urge or automatic hand movement → pulling or picking → brief sensory or emotional consequence → habit is reinforced",
+    "why": "A 2026 meta-analysis of 29 trials found strong support for behavioural therapy including habit reversal in trichotillomania, with interventions containing habit reversal generally outperforming those without it. HRT elements are also described in clinical practice guidance for body-focused repetitive behaviours.",
+    "evidence": {
+      "label": "Strong support for habit reversal in trichotillomania; condition-specific evidence differs",
+      "level": "strong",
+      "note": "A 2026 review/meta-analysis found replicated support for behavioural therapy with habit reversal for trichotillomania. Evidence for excoriation disorder and other BFRBs differs; the tools here are introductory and are not a full HRT protocol."
+    },
+    "focus": [
+      "Notice the earliest movement and context",
+      "Identify automatic and focused episodes",
+      "Use a safe, non-injurious competing response",
+      "Seek BFRB-informed treatment when impairment or injury is present"
+    ],
+    "tools": [
+      {
+        "id": "bfrb-awareness",
+        "title": "Complete an awareness-training record",
+        "description": "Identify the situations, sensations, thoughts, and hand movements that occur before a pulling or picking episode.",
+        "when": "Use as a first step or to prepare for habit-reversal treatment.",
+        "steps": [
+          "Record the time and general context without describing or judging the behaviour.",
+          "Notice what your hands were doing immediately beforehand.",
+          "Identify internal cues such as tension, boredom, sensory discomfort, or an urge.",
+          "Mark whether the episode felt automatic or more deliberate.",
+          "Look for repeated patterns and discuss them with a clinician if the behaviour causes injury or distress."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Awareness training is a core component of habit reversal training and is identified in clinical guidance for BFRBs.",
+        "sources": [
+          "habitReversal2026",
+          "anxietyGuidelines"
+        ]
+      },
+      {
+        "id": "bfrb-stimulus-control",
+        "title": "Make one environmental cue easier to manage",
+        "description": "Adjust a trigger-rich context in a practical, non-punitive way to reduce automatic opportunities for pulling or picking.",
+        "when": "Use for a recurring low-risk context, ideally as part of a habit-reversal plan.",
+        "steps": [
+          "Choose one context where the behaviour often begins.",
+          "Identify an environmental cue, such as prolonged mirror time or idle hands.",
+          "Choose one reversible adjustment that preserves normal daily functioning.",
+          "Observe whether awareness or urge frequency changes without adding shame or rigid avoidance.",
+          "Review the adjustment with a BFRB-informed clinician if the behaviour persists or causes injury."
+        ],
+        "worksheet": "problem",
+        "evidence": "Stimulus control is a recognised component of habit reversal training. Avoidance should not spread into ordinary self-care or become another rigid ritual.",
+        "sources": [
+          "habitReversal2026",
+          "anxietyGuidelines"
+        ]
+      },
+      {
+        "id": "bfrb-competing-response",
+        "title": "Plan a safe competing response",
+        "description": "Learn how HRT uses a response that is physically incompatible with the target behaviour, selected to be safe and appropriate for the individual.",
+        "when": "Use for education and discuss the exact response with a BFRB-trained clinician.",
+        "steps": [
+          "Identify the movement that usually begins the behaviour.",
+          "Ask a clinician to help choose a safe response that is incompatible with that movement.",
+          "Practise the response briefly when an urge or early cue is noticed, if it is comfortable and medically safe.",
+          "Record whether the response was feasible and whether it affected the episode.",
+          "Do not use painful restraints, skin-damaging barriers, or forceful movements."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Competing-response practice is a central element of HRT. The exact response should be personalised; this page does not prescribe a universal movement.",
+        "sources": [
+          "habitReversal2026",
+          "anxietyGuidelines"
+        ]
+      },
+      {
+        "id": "bfrb-relapse",
+        "title": "Review a lapse without punishment",
+        "description": "Use a brief functional review after an episode to identify a cue and refine the plan rather than treating the lapse as failure.",
+        "when": "Use after an episode has ended and immediate skin or hair-care needs have been addressed.",
+        "steps": [
+          "Describe the context and earliest cue.",
+          "Identify what made the competing response or environmental adjustment difficult to use.",
+          "Note what was happening emotionally or physically without assuming one cause.",
+          "Choose one small change to test or one point to discuss in treatment.",
+          "If there is bleeding, infection, significant tissue damage, or escalating distress, seek appropriate healthcare."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Maintenance and relapse planning are standard parts of behavioural treatment. This is a supportive review, not a substitute for HRT or medical care.",
+        "sources": [
+          "habitReversal2026"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Notice the pattern",
+        "detail": "Identify automatic and focused episodes, cues, contexts, and early movements."
+      },
+      {
+        "title": "Choose one cue adjustment",
+        "detail": "Make a realistic, non-punitive change to a recurring trigger-rich context."
+      },
+      {
+        "title": "Discuss a competing response",
+        "detail": "Work with a trained practitioner to select and rehearse an appropriate HRT response."
+      },
+      {
+        "title": "Review and maintain",
+        "detail": "Use lapses as information and seek medical care for injury or infection."
+      }
+    ],
+    "caution": "Persistent pulling or picking, significant hair loss, skin damage, infection, distress, or functional impairment deserves professional assessment. HRT is specialised; do not use painful restraints, injure the skin, or treat lapses as moral failure."
+  },
+  {
+    "id": "substance-use",
+    "name": "Substance-use recovery skills",
+    "group": "Focused care",
+    "initials": "SU",
+    "subtitle": "Understand triggers, plan coping responses, and protect recovery.",
+    "description": "CBT for substance-use disorders uses collaborative functional analysis, coping-skills training, and relapse-prevention planning. It can include identifying high-risk situations, managing cravings, refusing offers, building alternative rewards, and responding constructively to a lapse. CBT is often part of a broader personalised treatment and recovery plan.",
+    "model": "Trigger or high-risk situation → expectation or urge → use-related behaviour → short-term consequence → longer-term costs and renewed risk",
+    "why": "A 2026 meta-analysis included 52 randomised trials and 9,442 participants. CBT showed benefits overall, with the most consistent effects for consumption outcomes versus usual or minimal care; it did not outperform other evidence-based treatments. Updated UK alcohol guidance emphasises personalised treatment, clinical supervision, coping skills, and relapse prevention.",
+    "evidence": {
+      "label": "Evidence supports CBT as one treatment option; not superior to all active treatments",
+      "level": "moderate",
+      "note": "A 2026 meta-analysis of 52 RCTs (9,442 participants) found CBT efficacy versus usual/minimal care on consumption outcomes, but not superiority over other evidence-based treatments. Alcohol and drug treatment should be personalised and integrated with medical and recovery support."
+    },
+    "focus": [
+      "Map the situations linked to use",
+      "Prepare coping and refusal responses",
+      "Plan for high-risk periods and support",
+      "Treat a lapse as a cue for safety review and revised care"
+    ],
+    "tools": [
+      {
+        "id": "substance-functional-analysis",
+        "title": "Map a substance-use episode",
+        "description": "Identify antecedents, thoughts, emotions, behaviour, and consequences without shame or moral judgement.",
+        "when": "Use to prepare for discussion with an addiction-informed clinician or recovery worker.",
+        "steps": [
+          "Describe the situation and context before use.",
+          "Record the thoughts, expectations, emotions, and body cues that appeared.",
+          "Identify who was present, what was available, and what made use more likely.",
+          "Note immediate effects and later consequences, including safety risks.",
+          "Choose one trigger or maintaining factor to discuss in the treatment plan."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Functional analysis is a core component of CBT for substance-use disorders and is described in addiction treatment guidance.",
+        "sources": [
+          "substanceMeta2026",
+          "addictionSkillsNCBI",
+          "alcoholGuideline2026"
+        ]
+      },
+      {
+        "id": "substance-craving-plan",
+        "title": "Prepare a craving response plan",
+        "description": "Create a short sequence for responding to an urge while accessing the support and treatment already agreed with your care team.",
+        "when": "Use as a support plan within treatment; do not use it as a detoxification or withdrawal-management plan.",
+        "steps": [
+          "Identify the situations in which urges are most likely.",
+          "Write the first safe action you can take to create distance from the trigger.",
+          "List two coping or support options, such as contacting a support person or attending a scheduled service.",
+          "Record what you will do if the urge escalates or you feel unsafe.",
+          "Review the plan with your treatment team and keep urgent-care contacts available."
+        ],
+        "worksheet": "problem",
+        "evidence": "Craving and trigger management are common CBT and relapse-prevention components. This plan is not a substitute for withdrawal management, medication, or emergency care.",
+        "sources": [
+          "addictionSkillsNCBI",
+          "alcoholGuideline2026"
+        ]
+      },
+      {
+        "id": "substance-refusal",
+        "title": "Rehearse a refusal and exit response",
+        "description": "Practise brief, assertive language for social pressure and a realistic way to leave a high-risk situation.",
+        "when": "Use where it is safe to refuse directly; choose a safer exit or seek help if pressured or threatened.",
+        "steps": [
+          "Name a likely situation where you may be offered a substance.",
+          "Write a short refusal statement that feels natural to say.",
+          "Prepare a second statement that repeats the boundary without lengthy explanation.",
+          "Identify a safe exit, transport option, or person to contact.",
+          "Rehearse the response with a clinician, peer, or trusted support person."
+        ],
+        "worksheet": "relationship",
+        "evidence": "Refusal skills and coping with social pressure are included in CBT-based addiction treatment and relapse prevention.",
+        "sources": [
+          "addictionSkillsNCBI",
+          "alcoholGuideline2026"
+        ]
+      },
+      {
+        "id": "substance-lapse-review",
+        "title": "Review a lapse and restore safety",
+        "description": "Use a compassionate functional review to identify immediate risks and reconnect with treatment rather than treating a lapse as a total failure.",
+        "when": "Use after immediate safety needs are addressed; contact clinical services promptly after a return to use.",
+        "steps": [
+          "Check for immediate medical danger, overdose, dangerous intoxication, or withdrawal concerns.",
+          "Contact your treatment or recovery support and follow their advice.",
+          "When safe, describe the situation leading to the lapse without self-attack.",
+          "Identify one change to the recovery plan and one support to reconnect with.",
+          "Do not attempt abrupt alcohol or sedative withdrawal without medical advice; withdrawal can be dangerous."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Relapse-prevention guidance treats return to use as a signal for safety assessment, functional analysis, and treatment-plan revision. It is not a substitute for clinical management.",
+        "sources": [
+          "addictionSkillsNCBI",
+          "alcoholGuideline2026",
+          "substanceMeta2026"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Connect with treatment and support",
+        "detail": "Confirm your care, withdrawal-risk advice, medication or medical needs, and recovery supports with a qualified service."
+      },
+      {
+        "title": "Map high-risk patterns",
+        "detail": "Use functional analysis to identify triggers, expectations, and consequences."
+      },
+      {
+        "title": "Prepare coping responses",
+        "detail": "Rehearse refusal, craving, support-seeking, and safe-exit plans."
+      },
+      {
+        "title": "Maintain and review",
+        "detail": "Review warning signs and lapses with your care team and update the recovery plan."
+      }
+    ],
+    "caution": "This page is not a detox, withdrawal, overdose, or addiction-treatment service. Alcohol and sedative withdrawal can be dangerous and may require medical management. Seek urgent local medical help for overdose, severe intoxication, seizures, confusion, or other emergencies. Do not stop prescribed treatment based on these exercises."
+  },
+  {
+    "id": "eating-disorder-cbt",
+    "name": "Eating-disorder CBT (CBT-ED)",
+    "group": "Focused care",
+    "initials": "ED",
+    "subtitle": "Understand eating-related cycles within specialist, medically informed care.",
+    "description": "CBT-ED is a set of condition-specific treatment protocols for eating disorders. Depending on the diagnosis, treatment may address regular eating, binge cues, dietary restraint, emotional triggers, body-image concerns, self-esteem, cognitive restructuring, behavioural experiments, and relapse prevention. The correct care pathway depends on medical and psychological assessment.",
+    "model": "Trigger or body/food-related appraisal → distress or restraint → eating-related behaviour → short-term consequence → maintaining beliefs and patterns",
+    "why": "NICE NG69 describes distinct CBT-ED approaches for anorexia nervosa, bulimia nervosa, and binge-eating disorder. The protocols differ in intensity and components; for binge eating, NICE specifically advises against dieting during treatment because it may trigger binge eating.",
+    "evidence": {
+      "label": "Strong guideline support for specific CBT-ED pathways; specialist care required",
+      "level": "strong",
+      "note": "NICE NG69 recommends condition-specific CBT-ED approaches with different components and treatment intensity. The tools on this site are clinician-preparation and reflection aids only; they are not self-guided eating-disorder treatment."
+    },
+    "focus": [
+      "Prioritise medical and specialist assessment",
+      "Notice triggers and maintaining processes without calorie counting",
+      "Work from an agreed treatment plan",
+      "Avoid weight-loss goals or restrictive challenges"
+    ],
+    "tools": [
+      {
+        "id": "ed-trigger-map",
+        "title": "Map an eating-related trigger cycle",
+        "description": "Record context, emotions, thoughts, and behaviours in a non-calorie-focused way to support clinical formulation.",
+        "when": "Use only as agreed with an eating-disorder-informed clinician; stop if monitoring increases preoccupation or distress.",
+        "steps": [
+          "Describe the situation and what was happening beforehand without recording calories or body measurements.",
+          "Note emotions, stressors, and thoughts that were present.",
+          "Describe the eating-related behaviour in neutral, non-judgemental language.",
+          "Record the immediate and later effects on mood, distress, or functioning.",
+          "Review the pattern with your clinician rather than creating independent rules or restrictions."
+        ],
+        "worksheet": "reflection",
+        "evidence": "CBT-ED uses self-monitoring and formulation, but the content and intensity must be selected for the specific eating disorder and medical presentation.",
+        "sources": [
+          "eatingDisordersNICE"
+        ]
+      },
+      {
+        "id": "ed-treatment-plan",
+        "title": "Clarify your agreed treatment plan",
+        "description": "Prepare questions about the eating pattern, medical monitoring, regular eating, and psychological targets set with your care team.",
+        "when": "Use before or after an appointment with an eating-disorder specialist.",
+        "steps": [
+          "Write down the treatment goals agreed by your care team.",
+          "Ask what regular eating or other behavioural steps are appropriate for your specific condition.",
+          "Identify which symptoms or physical changes should prompt medical contact.",
+          "Ask how to handle difficult emotions, social situations, or setbacks within treatment.",
+          "Record who to contact if symptoms worsen or you cannot follow the plan safely."
+        ],
+        "worksheet": "problem",
+        "evidence": "NICE CBT-ED protocols are formulation-led and include medical risk, eating patterns, emotional triggers, and relapse prevention. This tool helps prepare for care and does not prescribe a meal plan.",
+        "sources": [
+          "eatingDisordersNICE"
+        ]
+      },
+      {
+        "id": "ed-body-image-thoughts",
+        "title": "Prepare a body-image thought for clinical review",
+        "description": "Capture a distressing body-related belief so it can be addressed in an appropriate treatment session without checking or measuring the body.",
+        "when": "Use with clinician support, especially if recording thoughts increases urges to check, compare, restrict, or compensate.",
+        "steps": [
+          "Write the body-related thought in the words that appeared.",
+          "Identify the situation in which it arose and the emotion it triggered.",
+          "Notice any checking, comparison, avoidance, restriction, or compensatory urge that followed.",
+          "Write one question you want to explore with your clinician.",
+          "Do not add body measurements, weight targets, calorie totals, or appearance-rating tasks."
+        ],
+        "worksheet": "thought",
+        "evidence": "Body-image concerns and cognitive restructuring are components of some CBT-ED protocols, but interventions must be condition-specific and professionally supported.",
+        "sources": [
+          "eatingDisordersNICE"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Arrange specialist assessment",
+        "detail": "Seek an eating-disorder-informed medical and psychological assessment and follow medical advice."
+      },
+      {
+        "title": "Clarify the individual protocol",
+        "detail": "Confirm which CBT-ED pathway and monitoring are appropriate for your diagnosis and health."
+      },
+      {
+        "title": "Use supported reflection",
+        "detail": "Bring triggers, beliefs, and questions to the treatment team without self-imposed food or weight rules."
+      },
+      {
+        "title": "Plan for difficulties",
+        "detail": "Agree on how to respond to setbacks, worsening symptoms, and medical concerns with your care team."
+      }
+    ],
+    "caution": "Eating disorders can cause serious medical complications even when a person does not appear underweight. This site does not provide meal plans, calorie targets, weight tracking, dieting, or compensatory-behaviour instructions. Do not delay medical assessment or alter a prescribed treatment plan."
+  },
+  {
+    "id": "prolonged-grief",
+    "name": "Prolonged grief support",
+    "group": "Focused care",
+    "initials": "PG",
+    "subtitle": "Make space for loss while rebuilding connection with life.",
+    "description": "Grief is a human response to loss and does not follow a fixed timetable. Prolonged grief disorder involves persistent, impairing grief symptoms that warrant assessment. Grief-focused CBT may combine cognitive restructuring, behavioural activation, exposure to avoided loss-related reminders, and restoration of social and valued functioning.",
+    "model": "Loss reminder → intense longing or painful appraisal → avoidance or withdrawal → short-term relief or protection → continuing impairment and isolation",
+    "why": "A 2024 systematic review and meta-analysis found grief-focused CBT reduced prolonged-grief symptoms across randomised trials. A 2024 clinical trial of 100 adults found both grief-focused CBT and mindfulness-based therapy reduced symptoms, with greater symptom reduction in the CBT group at six-month follow-up.",
+    "evidence": {
+      "label": "Evidence supports grief-focused CBT for prolonged grief; assessment is essential",
+      "level": "moderate",
+      "note": "A 2024 systematic review/meta-analysis and a 100-person randomised clinical trial support grief-focused CBT for prolonged grief. Normal grief is not a disorder, and memory exposure or intensive grief processing should be conducted within an appropriate clinical protocol."
+    },
+    "focus": [
+      "Respect the individual course of grief",
+      "Notice avoidance and functional impact",
+      "Reconnect with valued relationships and activities",
+      "Seek assessment for persistent, impairing symptoms"
+    ],
+    "tools": [
+      {
+        "id": "grief-function-map",
+        "title": "Map grief and daily functioning",
+        "description": "Notice how reminders of the loss interact with emotions, avoidance, social contact, and everyday roles.",
+        "when": "Use for reflection or to prepare for a grief-informed assessment; do not use to judge how quickly you should recover.",
+        "steps": [
+          "Name a situation or reminder that has been especially difficult.",
+          "Record the emotions and thoughts that arose without judging them.",
+          "Notice whether you withdrew, avoided a reminder, sought support, or continued a valued activity.",
+          "Describe the effect on daily functioning and relationships.",
+          "Choose one support or practical question to discuss with a clinician or trusted person."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Grief-focused CBT includes formulation of grief-related distress and functional impact. This record is a preparation aid, not a diagnostic assessment.",
+        "sources": [
+          "griefMeta2024",
+          "griefRCT2024"
+        ]
+      },
+      {
+        "id": "grief-beliefs",
+        "title": "Review a grief-related belief",
+        "description": "Explore a painful belief about the loss, responsibility, identity, or future without forcing a positive interpretation.",
+        "when": "Use when a specific belief is causing distress and you feel able to reflect; seek clinician support for traumatic or overwhelming memories.",
+        "steps": [
+          "Write the belief exactly as it appears.",
+          "Identify the loss-related situation or reminder that activates it.",
+          "Separate facts, hindsight, assumptions, and uncertainties.",
+          "Consider what a compassionate but realistic interpretation might include.",
+          "Bring the belief to a grief-informed clinician if it remains intense or affects safety and functioning."
+        ],
+        "worksheet": "thought",
+        "evidence": "Cognitive restructuring is a component of grief-focused CBT. It must not invalidate the loss, remove the significance of the relationship, or impose a fixed meaning.",
+        "sources": [
+          "griefMeta2024",
+          "griefRCT2024"
+        ]
+      },
+      {
+        "id": "grief-reconnection",
+        "title": "Choose one small reconnection step",
+        "description": "Identify a manageable activity or relationship that supports daily life while allowing grief to remain present.",
+        "when": "Use when withdrawal is reducing valued activity and the step feels appropriate to your circumstances.",
+        "steps": [
+          "Identify one role, relationship, or activity that matters to you.",
+          "Choose a small action that does not require suppressing grief.",
+          "Decide whether you want another person's support.",
+          "Complete the action in a way that respects your energy and current needs.",
+          "Reflect on what the activity meant; do not use it as a test of whether you are grieving correctly."
+        ],
+        "worksheet": "activity",
+        "evidence": "Behavioural activation and restoration of adaptive functioning are included in grief-focused CBT approaches. This activity plan is supportive and is not a complete grief treatment.",
+        "sources": [
+          "griefMeta2024",
+          "griefRCT2024"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Understand the loss and current needs",
+        "detail": "Notice the impact of grief on mood, relationships, and daily functioning without imposing a timetable."
+      },
+      {
+        "title": "Seek appropriate assessment",
+        "detail": "Discuss persistent and impairing symptoms with a clinician familiar with grief and bereavement."
+      },
+      {
+        "title": "Work with beliefs and avoidance",
+        "detail": "Use grief-focused CBT with professional support when the presentation warrants treatment."
+      },
+      {
+        "title": "Reconnect at a humane pace",
+        "detail": "Choose meaningful activities and support while allowing the continuing significance of the loss."
+      }
+    ],
+    "caution": "Grief is not automatically a mental disorder, and there is no correct timetable for mourning. Do not use this page to force exposure to loss memories or judge whether someone has 'moved on'. Seek professional support for persistent, impairing grief, trauma symptoms, depression, or safety concerns."
+  },
+  {
+    "id": "psychosis-cbt",
+    "name": "CBT for psychosis support",
+    "group": "Focused care",
+    "initials": "PX",
+    "subtitle": "Prepare for collaborative care and identify coping that reduces distress.",
+    "description": "CBT for psychosis (CBTp) uses an individual formulation to understand experiences, appraisals, distress, coping, and functioning. It does not require arguing with a person about their experiences. The aim is collaborative exploration, distress reduction, and improved coping and quality of life.",
+    "model": "Unusual or distressing experience → appraisal and context → emotion and arousal → coping response → short- and longer-term impact",
+    "why": "NICE CG178, last reviewed in July 2025, recommends CBT for people with psychosis or schizophrenia. It describes individual, manual-based therapy over at least 16 planned sessions, with monitoring, alternative coping strategies, distress reduction, and functioning as components.",
+    "evidence": {
+      "label": "Guideline-supported specialist treatment; not self-guided",
+      "level": "strong",
+      "note": "NICE CG178 recommends individual, manual-based CBT for psychosis with at least 16 planned sessions and a trained clinical context. The site provides preparation and monitoring prompts only, not CBTp or advice to challenge unusual beliefs independently."
+    },
+    "focus": [
+      "Stay connected with the treating team",
+      "Record distress and functioning, not just belief content",
+      "Identify coping that feels safe and helpful",
+      "Agree on safety and support plans with clinicians"
+    ],
+    "tools": [
+      {
+        "id": "psychosis-experience-record",
+        "title": "Prepare a distressing-experience record",
+        "description": "Record the context, emotional impact, coping response, and support needs without trying to prove or disprove the experience.",
+        "when": "Use to support a conversation with your mental-health team.",
+        "steps": [
+          "Describe the experience in your own words, using the level of detail you are comfortable with.",
+          "Record the context, sleep, stress, medication changes, or other factors you want the team to know about.",
+          "Note the distress or impact on daily functioning.",
+          "Record what helped you feel safer or cope more effectively.",
+          "Share the record with your clinician and ask what needs further assessment."
+        ],
+        "worksheet": "reflection",
+        "evidence": "Monitoring experiences and functioning is consistent with NICE CBTp guidance. This record is not diagnostic and does not assess risk by itself.",
+        "sources": [
+          "psychosisNICE"
+        ]
+      },
+      {
+        "id": "psychosis-coping-inventory",
+        "title": "List coping strategies with your clinician",
+        "description": "Identify coping responses that reduce distress or support daily functioning and review their effects with a professional.",
+        "when": "Use collaboratively with a treating clinician; do not stop treatment or avoid support because one strategy seems helpful.",
+        "steps": [
+          "List a few responses you have tried when the experience becomes distressing.",
+          "Describe what each response changes: distress, sleep, safety, or ability to function.",
+          "Identify any response that increases isolation, risk, or distress.",
+          "Ask your clinician which strategies fit your treatment plan.",
+          "Agree on what to do if distress or risk increases."
+        ],
+        "worksheet": "reflection",
+        "evidence": "NICE describes promoting alternative ways of coping with target symptoms and reducing distress as CBTp components. Selection must be individualised within treatment.",
+        "sources": [
+          "psychosisNICE"
+        ]
+      },
+      {
+        "id": "psychosis-appointment-plan",
+        "title": "Prepare for a clinical review",
+        "description": "Organise questions about experiences, treatment, side effects, support, and safety so they can be discussed in an appointment.",
+        "when": "Use before a planned appointment or care review.",
+        "steps": [
+          "Write the main change or concern you want to discuss.",
+          "List questions about symptoms, functioning, sleep, treatment, or side effects.",
+          "Note any recent changes that your clinician should know about.",
+          "Identify a support person you may want involved, where appropriate.",
+          "Ask your clinician to clarify whom to contact if symptoms worsen or you feel unsafe."
+        ],
+        "worksheet": "problem",
+        "evidence": "Collaborative formulation, monitoring, and treatment planning are central to specialist CBTp. This tool supports communication and does not replace clinical review.",
+        "sources": [
+          "psychosisNICE"
+        ]
+      }
+    ],
+    "plan": [
+      {
+        "title": "Stay connected to care",
+        "detail": "Maintain contact with your mental-health team and follow the agreed treatment plan."
+      },
+      {
+        "title": "Record impact and coping",
+        "detail": "Use brief notes to communicate changes, distress, and what helps with functioning."
+      },
+      {
+        "title": "Review strategies collaboratively",
+        "detail": "Discuss coping options and concerns with a clinician rather than independently challenging experiences."
+      },
+      {
+        "title": "Confirm safety and escalation",
+        "detail": "Agree on support contacts and what to do if symptoms, distress, or risk increase."
+      }
+    ],
+    "caution": "This is not self-help treatment for psychosis. Do not stop medication, confront or test experiences, or change care based on this website. Seek prompt professional help for worsening symptoms, inability to care for yourself, severe distress, or risk of harm; use local emergency services for immediate danger."
+  }
+]);
+
 export const WORKSHEETS = {
   anger: {
     title: "Anger chain record",
