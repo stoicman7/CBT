@@ -119,6 +119,10 @@ export const SOURCES = {
     citation: "Cognitive restructuring and psychotherapy outcome: A meta-analytic review (2023).",
     url: "https://pubmed.ncbi.nlm.nih.gov/36913269/"
   },
+  angerRegulation: {"label":"Anger and emotion regulation strategies meta-analysis (2025)","citation":"Pop et al. (2025). Anger and emotion regulation strategies: a meta-analysis. Scientific Reports, 15, 6931. Included 81 studies (115 effect sizes); associations were heterogeneous.","url":"https://doi.org/10.1038/s41598-025-91646-0"},
+  ba2026: {"label":"Behavioural activation comprehensive meta-analysis (2026)","citation":"Cuijpers et al. (2026). Behavioral activation for depression: A comprehensive systematic review and meta-analysis. Clinical Psychology Review, 128, 102783. Included 105 trials and 13,933 patients; adult outpatient SMD 0.67 versus controls, with high heterogeneity.","url":"https://doi.org/10.1016/j.cpr.2026.102783"},
+  cbtiComponents: {"label":"CBT-I components and delivery network meta-analysis (2024)","citation":"Furukawa et al. (2024). Components and Delivery Formats of Cognitive Behavioral Therapy for Chronic Insomnia in Adults: A Systematic Review and Component Network Meta-Analysis. JAMA Psychiatry, 81(4), 357–365. 241 trials; 31,452 participants.","url":"https://doi.org/10.1001/jamapsychiatry.2023.5060"},
+  healthAnxiety2026: {"label":"Health anxiety psychological treatments network meta-analysis (2026)","citation":"Lai et al. (2026). The comparative effectiveness of psychological interventions for health anxiety: systematic review and a network meta-analysis of randomised controlled trials. British Journal of Psychiatry. Published online 22 May 2026. 35 trials; 3,263 participants.","url":"https://doi.org/10.1192/bjp.2026.10647"},
   beckManual: {
     label: "Beck Institute: cognitive therapy rating scale manual",
     citation: "Beck Institute. Cognitive Therapy Rating Scale Manual (2020).",
