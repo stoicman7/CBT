@@ -448,3 +448,205 @@ Before adding a new emotion or technique:
 8. Do not use generated AI text as a scientific source or invent references, treatment doses, effect sizes, or clinical recommendations.
 
 **Bottom line:** the platform should make high-quality CBT skills easier to understand and practise while being honest about what has been validated, what remains an evidence-informed adaptation, and when self-guided work is not appropriate.
+
+
+---
+
+# Supplementary audit — expanded toolkit and new evidence (23 November 2026)
+
+This section documents the second development audit. It evaluates the additional exercises added after the first release, records newly reviewed evidence, and states where the additional tools are adaptations rather than validated stand-alone treatments.
+
+## 9. New evidence reviewed
+
+### 9.1 Anger and emotion-regulation strategies (2025)
+
+Pop et al. (2025) conducted a meta-analysis of 81 studies and 115 effect sizes examining associations between anger and emotion-regulation strategies. Anger was positively associated with avoidance, rumination, and suppression, and negatively associated with acceptance and cognitive reappraisal. Heterogeneity was large, and the included studies differed in anger type, clinical status, criminal status, culture, study quality, and sample composition.
+
+**Interpretation:** this is an association meta-analysis, not a trial demonstrating that a particular worksheet or strategy causes anger reduction. It supports paying attention to rumination, avoidance, suppression, acceptance, and reappraisal in anger formulations, but it does not establish a universal recipe.
+
+**Product changes:** the anger workspace now includes an anger-rumination interruption record and a structured assertive-boundary planner. The latter is a CBT-compatible communication skill, not an intervention for violence, coercive control, or imminent risk. The earlier 2024 meta-analysis of arousal-changing activities remains relevant: arousal-decreasing activities reduced anger/aggression on average (g = −0.63), whereas arousal-increasing activities did not show an overall benefit (g = −0.02). Venting should not be prescribed as an anger-management technique.
+
+### 9.2 Behavioural activation for depression (2026)
+
+Cuijpers et al. (2026) included 105 trials and 13,933 patients in a comprehensive meta-analysis. For adult outpatients, behavioural activation compared with control conditions produced an SMD of 0.67 (95% CI 0.54–0.80; 61 comparisons), with substantial heterogeneity (I² = 71%) and a broad prediction interval. There was no significant difference between behavioural activation and other therapies in the included head-to-head comparisons. Self-guided behavioural activation also showed a smaller significant effect (SMD 0.36; 15 comparisons).
+
+**Interpretation:** behavioural activation is an evidence-supported depression treatment, but effects vary and a self-guided activity worksheet is not equivalent to a complete behavioural activation protocol.
+
+**Product changes:** the low-mood workspace now includes activity/mood/mastery monitoring and an early-warning/relapse-prevention plan. The latter is also consistent with NICE NG222 recommendations to identify warning signs, stressors, avoidance, and rumination and to make concrete contingency plans after improvement.
+
+### 9.3 CBT-I components and delivery (2024)
+
+Furukawa et al. (2024) analysed 241 trials involving 31,452 participants. The component network meta-analysis found associations with improved remission for cognitive restructuring (incremental OR 1.68), third-wave components (1.49), sleep restriction (1.49), and stimulus control (1.43). Sleep-hygiene education was not identified as an essential component in that analysis (iOR 1.01). The point estimate for relaxation was below one, but its confidence interval crossed one; it should not be interpreted as proof that relaxation is always harmful. The authors noted that possible component interactions could affect conclusions.
+
+**Interpretation:** chronic insomnia treatment should not be reduced to sleep-hygiene tips. Multicomponent CBT-I is recommended by clinical guidelines; individual components need to be selected and sequenced within a programme suitable for the person.
+
+**Product changes:** the sleep workspace now contains a stimulus-control review and sleep-related mental-arousal record. Both are educational/reflection tools. The site still does not calculate or prescribe sleep-restriction windows.
+
+### 9.4 Health-anxiety psychological interventions (2026)
+
+Lai et al. (2026), published online on 22 May 2026 in the *British Journal of Psychiatry*, conducted a systematic review and network meta-analysis of 35 trials involving 3,263 adults with substantial health anxiety. CBT, exposure therapy, acceptance and commitment therapy, metacognitive therapy, mindfulness-based cognitive therapy, and behavioural stress management showed significant effects compared with a waiting-list control. Component analysis linked exposure and response prevention, cognitive restructuring, and mindfulness with improved outcomes. The authors concluded that CBT and third-wave CBT are reasonable first-line choices for health anxiety.
+
+**Interpretation:** the network comparison is not a licence to dismiss physical symptoms. The component analysis identifies associations within treatment packages; it does not prove that a self-guided exercise is sufficient or that each component is independently effective for every patient. Medical assessment and appropriate follow-up remain essential.
+
+**Product changes:** a dedicated Health Anxiety workspace has been added. Its exercises map the anxiety cycle, distinguish medically advised monitoring from non-essential repeated checking, and support balanced appraisal after appropriate assessment. The page explicitly prohibits using the exercises to ignore new or worsening symptoms, cancel recommended tests, stop treatment, or delay urgent medical care.
+
+## 10. Audit of the 34 additional tools
+
+The added methods below expand the range of CBT skills represented in the platform. A technique can be a recognised CBT procedure without being an independently validated stand-alone treatment for the emotion to which it is applied.
+
+### 10.1 Anger
+
+**Interrupt anger rumination.** This tool targets repeated mental replay after an anger-provoking event. Its structure asks whether replay is generating new information, a repair action, or merely renewed activation. The rationale is supported by the 2025 anger/emotion-regulation association meta-analysis and by the transdiagnostic RNT meta-analysis. It should not be used to suppress a legitimate grievance or avoid a necessary conversation.
+
+**Prepare an assertive boundary statement.** This converts blame or an aggressive urge into a behaviour-specific description, effect, request, and personal boundary. It is a CBT-compatible communication and problem-solving skill. It must only be used where direct communication is safe; leaving, distancing, or seeking help takes priority where intimidation or violence is possible.
+
+### 10.2 Stress
+
+**Sort demands by urgency and influence.** A demand-prioritisation record helps distinguish genuine deadlines and consequences from a subjective sense that every task is equally urgent. It is a structured problem-solving adaptation, not a validated stress treatment by itself. It must not imply that unsafe workloads or structural adversity can be fixed by individual organisation.
+
+**Build an early-warning and response plan.** This transfers a recognised maintenance-planning principle into stress self-management: identify early signs, likely contexts, practical adjustments, support requests, and escalation steps. It is not a validated stress-relapse scale. Occupational support is appropriate when the source of stress is unsafe or unreasonable work.
+
+### 10.3 Anxiety
+
+**Audit reassurance and checking.** The exercise examines the short-term relief and longer-term persistence associated with repeated checking. This can be relevant to anxiety formulations, but checking may be a compulsion in OCD. Therefore, the tool explicitly directs users with severe or compulsive symptoms to an OCD-informed clinician and does not provide an ERP hierarchy.
+
+**Test a coping prediction.** Cognitive work often addresses both the probability of a feared outcome and beliefs about its consequences or manageability. This exercise asks what coping resources and realistic choices would remain if the feared event occurred. It is not an assurance that the event will not happen.
+
+### 10.4 Fear
+
+**Record what exposure teaches.** Exposure learning should be assessed against a specific prediction and observable outcome, not simply by whether anxiety falls during the exercise. The record captures the prediction, step, observed outcome, and learning. It is restricted to safe and appropriate approach work; trauma processing and interoceptive panic exposure remain outside the self-guided tool.
+
+**Map the cost of avoidance.** Functional analysis makes the immediate relief and longer-term costs of avoidance visible. The tool distinguishes fear-driven avoidance from reasonable precautions. It never instructs a person to approach a genuine hazard.
+
+### 10.5 Low mood
+
+**Track activity, mood, and mastery.** Activity monitoring is a core behavioural-activation procedure. Recording pleasure and mastery separately can help identify reinforcing activities and patterns of withdrawal. The 2026 behavioural-activation meta-analysis supports behavioural activation as a treatment for adult depression, but the site worksheet is an entry-level practice aid, not the whole treatment.
+
+**Create a low-mood early-warning plan.** This helps identify personal warning signs and actions to restart when symptoms recur. NICE NG222 explicitly describes relapse-prevention skills such as reviewing what helped, identifying triggers and early signs, and making contingency plans. If symptoms are persistent, severe, or associated with self-harm risk, assessment and care take priority over this worksheet.
+
+### 10.6 Frustration
+
+**Adjust the goal without abandoning it.** This separates a valued outcome from one inflexible method, deadline, or route. It uses cognitive flexibility and practical problem-solving. It is evidence-informed rather than a validated frustration-specific treatment.
+
+**Pause before acting on the urge.** This maps the need under an impulsive response—such as rest, information, help, or a revised plan—and asks for a proportionate next step. It is a CBT-informed response-planning skill, not a treatment for aggression or impulse-control disorders.
+
+### 10.7 Guilt
+
+**Draw a responsibility map.** Responsibility reattribution can help when a person takes total responsibility for an outcome involving several actors or circumstances. The worksheet prompts the user to consider information available at the time and to avoid hindsight bias. It is not suitable for self-directed checking when responsibility fears are part of OCD.
+
+**Separate repair from self-punishment.** The tool distinguishes a specific, proportionate action from repetitive self-criticism after reasonable repair. It must not minimise real harm, legal responsibilities, or obligations to make amends.
+
+### 10.8 Shame
+
+**Replace the all-or-nothing self-judgement.** Continuum methods are used in cognitive therapy to move from global labels to more specific, evidence-based evaluations. Their use here is an adaptation; the site does not claim a validated shame-specific protocol.
+
+**Examine the cost of hiding.** This explores whether concealment is a legitimate privacy or safety choice or whether shame-driven withdrawal is limiting support and valued activity. Disclosure remains optional. Users are never instructed to reveal sensitive details or disclose to unsafe people.
+
+### 10.9 Jealousy
+
+**Plan a response to the checking urge.** Functional analysis helps distinguish necessary information-gathering from repeated reassurance or checking aimed at certainty. The exercise prohibits accessing private accounts, devices, messages, or location data without consent.
+
+**Clarify trust, request, and personal boundary.** This supports a respectful conversation and a boundary under the user's own control. It is not a jealousy-specific treatment and cannot be used to legitimise coercion, surveillance, threats, or stalking.
+
+### 10.10 Rumination
+
+**Schedule a deliberate review period.** Worry postponement is used in CBT for GAD. It is intended for repetitive, non-urgent hypothetical worry and must not delay medical, practical, or safety decisions. The 2025 transdiagnostic meta-analysis of 55 studies and 4,970 participants found an overall CBT effect of g = −0.67 on repetitive negative thinking; RNT-specific interventions showed a larger effect than less-specific approaches.
+
+**Identify what rumination is trying to do.** This looks at beliefs about the function of repeated thinking, such as preparation, self-punishment, threat monitoring, or certainty-seeking. It is a process-focused reflection aid, not the full protocol of metacognitive therapy or rumination-focused CBT.
+
+### 10.11 Low self-esteem
+
+**Build a balanced self-evaluation continuum.** A continuum helps challenge all-or-nothing self-evaluation by defining observable anchors and placing specific evidence within a range. This is a recognised cognitive therapy procedure, but the tool is not a treatment programme by itself.
+
+**Keep a positive and corrective data log.** Fennell-style CBT for low self-esteem uses a positive-data approach to collect specific experiences that do not fit a negative core belief. The log is not a generic affirmation list; it should include credible, concrete, balanced information.
+
+### 10.12 Social anxiety
+
+**Plan a fair video-feedback review.** Video feedback is a component of Clark and Wells CBT for social anxiety and may help compare feared self-imagery with observable behaviour. Recording must be purposeful, limited, and consent-based. This must not become repeated appearance checking, performance surveillance, or an excuse to record others without consent.
+
+**Select one safety behaviour to test.** The tool asks the user to identify a subtle behaviour that may prevent new learning, write a prediction, and test a modest change in a safe interaction. This is aligned with the Clark and Wells model. It is not a generic exposure challenge and should be integrated with a structured protocol for clinically significant social anxiety.
+
+### 10.13 Panic
+
+**Identify panic-related safety behaviours.** This is a reflection aid to bring escape and safety behaviours into a panic-focused CBT formulation. It explicitly prohibits stopping medically necessary precautions and does not provide symptom-induction exercises.
+
+**Create a balanced panic coping card.** Psychoeducation and coping statements are components of panic-focused CBT. The card must be based on an appropriate clinical assessment and must include when medical review or urgent care is needed. It cannot determine whether a new symptom is panic or a medical problem.
+
+### 10.14 OCD
+
+**Notice covert and mental rituals.** OCD compulsions may be mental as well as observable. The tool helps the user identify neutralising, reviewing, counting, or silent checking so the pattern can be discussed with an ERP-trained clinician. It is an assessment aid, not unsupervised response prevention.
+
+**Map reassurance and accommodation patterns.** Family and close others can become involved in rituals or reassurance. The map is collaborative and clinician-guided; it must not be used to blame relatives or abruptly withdraw support.
+
+### 10.15 Trauma reactions
+
+**Use a present-time orientation cue.** Neutral sensory and contextual orientation can be a supportive grounding practice for some people. It is not a validated trauma-processing intervention and may not feel helpful for everyone; users are told to stop if it worsens distress or dissociation.
+
+**Map triggers to support options.** This is practical support planning focused on current functioning, safety, and available help. It avoids trauma-memory writing, imaginal exposure, or unsupervised processing.
+
+### 10.16 Sleep difficulties
+
+**Review stimulus-control principles.** Stimulus control is a recognised CBT-I component. The app explains its purpose but directs users to a CBT-I clinician for the full procedure. It does not prescribe sleep restriction or make changes that could create unsafe sleepiness.
+
+**Track sleep-related mental arousal.** Cognitive therapy is a component of multicomponent CBT-I. This record notices pressure thoughts, clock-checking, and sleep performance monitoring. It is not intended to replace CBT-I or turn sleep tracking into compulsive monitoring.
+
+### 10.17 Perfectionism
+
+**Set a proportionate checking limit.** This is a behavioural experiment in reducing unnecessary review on a low-consequence task. The tool excludes safety-critical, medical, legal, and other high-stakes work.
+
+**Review a mistake as data.** The exercise separates correction and learning from global self-condemnation. It is a cognitive/behavioural review, not permission to ignore real consequences or accountability.
+
+## 11. New Health Anxiety workspace: detailed clinical boundary
+
+The Health Anxiety workspace is classified as a focused-care area, not a general emotion. Its intended audience is adults who have had appropriate medical assessment and recognise a health-anxiety pattern.
+
+The three exercises are deliberately limited:
+
+1. **Map the health-anxiety cycle** — trigger, feared interpretation, anxiety, checking/reassurance, and short-term relief.
+2. **Review repeated checking and reassurance** — distinguish clinically advised monitoring from non-essential certainty-seeking; any change to checking is discussed with a clinician.
+3. **Write a balanced health appraisal** — separate observation from catastrophic interpretation while preserving uncertainty and following the clinician's plan.
+
+The site does not provide medical triage, symptom interpretation, disease probability calculators, reassurance about specific symptoms, or advice to discontinue tests or treatment. An appropriate medical-care plan takes precedence. New, severe, worsening, or urgent symptoms require medical assessment according to local services.
+
+The evidence label applies to psychological treatment for health anxiety in adults, not to this website or these worksheets as stand-alone interventions.
+
+## 12. Revised technique inventory and evidence discipline
+
+The application now offers **18 workspaces and 88 interactive tools**. The tools are grouped by their function and target:
+
+- **Cognitive methods:** thought records, responsibility reattribution, continuums, coping appraisals, balanced health appraisals, and core-belief data logs.
+- **Behavioural methods:** activity monitoring, graded tasks, behavioural experiments, exposure-learning records, checking-limit experiments, and relapse-prevention plans.
+- **Functional analysis:** anger chains, avoidance-cost maps, reassurance audits, rumination-function analysis, and trigger/support maps.
+- **Condition-specific components:** Clark and Wells social-anxiety components, panic-focused CBT preparation, OCD mental-ritual assessment, trauma-support planning, and CBT-I education.
+- **Communication and problem-solving:** assertive boundary statements, relationship requests, demand prioritisation, goal adjustment, and practical repair planning.
+
+The increased number of tools does not imply 88 independently validated interventions. Many are different prompts that help users practise a smaller number of established CBT procedures in context. The product must continue to state the evidence status and boundaries at the point of use.
+
+## 13. Additional source register
+
+26. **Pop et al. (2025).** Anger and emotion regulation strategies: a meta-analysis. *Scientific Reports*, 15, 6931. 81 studies and 115 effect sizes; high heterogeneity; association evidence rather than treatment evidence.  
+    https://doi.org/10.1038/s41598-025-91646-0
+
+27. **Cuijpers et al. (2026).** Behavioral activation for depression: A comprehensive systematic review and meta-analysis. *Clinical Psychology Review*, 128, 102783. 105 trials and 13,933 patients; adult outpatient effect SMD 0.67 versus controls, with high heterogeneity.  
+    https://doi.org/10.1016/j.cpr.2026.102783
+
+28. **Furukawa et al. (2024).** Components and Delivery Formats of Cognitive Behavioral Therapy for Chronic Insomnia in Adults: A Systematic Review and Component Network Meta-Analysis. *JAMA Psychiatry*, 81(4), 357–365. 241 trials and 31,452 participants.  
+    https://doi.org/10.1001/jamapsychiatry.2023.5060
+
+29. **Lai et al. (2026).** The comparative effectiveness of psychological interventions for health anxiety: systematic review and a network meta-analysis of randomised controlled trials. *British Journal of Psychiatry*. Published online 22 May 2026. 35 trials and 3,263 participants.  
+    https://doi.org/10.1192/bjp.2026.10647
+
+## 14. Updated maintenance requirements
+
+For each future tool, the content review should record:
+
+1. Whether the target is a common emotion, a transdiagnostic process, or a clinical condition.
+2. The actual CBT model or protocol in which the technique appears.
+3. Whether the evidence supports a whole treatment package or an individual component.
+4. The population, comparator, outcomes, effect estimate, heterogeneity, and important risk-of-bias limitations when available.
+5. What the exercise is not intended to do.
+6. Whether it can be self-guided, requires clinician support, or should only be explained as psychoeducation.
+7. Any physical, psychological, privacy, consent, or interpersonal safety restrictions.
+8. Whether changes to the product and the scientific review have been committed together.
+
+The scientific audit remains a targeted review rather than a formally registered PRISMA systematic review. New research should be added only after checking publication details, population, methods, and the interpretation of the actual outcomes. Abstracts and search snippets are discovery tools, not a substitute for critical appraisal of the full paper when accessible.
