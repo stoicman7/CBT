@@ -73,7 +73,7 @@ function renderSearchResults() {
   const input = $("#global-search"), results = $("#search-results");
   if (!input || !results) return;
   const query = input.value.trim().toLowerCase();
-  if (!query) { results.hidden = true; results.innerHTML = ""; return; }
+  if (!query) { results.hidden = true; results.innerHTML = ""; input.setAttribute("aria-expanded", "false"); return; }
   const hits = [];
   for (const emotion of EMOTIONS) {
     const workspaceText = [emotion.name, emotion.subtitle, emotion.description].join(" ").toLowerCase();
@@ -85,15 +85,16 @@ function renderSearchResults() {
   }
   const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
   results.innerHTML = ordered.length
-    ? ordered.map(({ emotion, tool }) => `<button type="button" class="search-result" role="option" data-search-emotion="${esc(emotion.id)}" data-search-tool="${esc(tool?.id || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? "Interactive exercise" : "Workspace"}</small></button>`).join("")
+    ? ordered.map(({ emotion, tool }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-tool="${esc(tool?.id || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? "Interactive exercise" : "Workspace"}</small></button>`).join("")
     : '<div class="search-no-results">No matching tools or workspaces.</div>';
   results.hidden = false;
+  input.setAttribute("aria-expanded", "true");
 }
 function renderHeader() {
   $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : state.tab === "library" ? "CBT TECHNIQUE LIBRARY" : activeEmotion().name.toUpperCase();
 }
 function tabs() {
-  return `<div class="section-tabs" role="tablist" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" role="tab" aria-selected="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</div>`;
+  return `<nav class="section-tabs" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" aria-pressed="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</nav>`;
 }
 function toolCard(tool, index) {
   return `<article class="tool-card">
@@ -306,11 +307,32 @@ document.addEventListener("submit", event => {
 });
 $("#global-search").addEventListener("input", () => { renderSidebar(); renderSearchResults(); if (state.tab === "library") page.innerHTML = renderTechniqueLibrary(); });
 $("#global-search").addEventListener("keydown", event => {
+  if (event.key === "ArrowDown") {
+    const first = $(".search-result", $("#search-results"));
+    if (first) { event.preventDefault(); first.focus(); }
+  }
   if (event.key === "Enter") {
     const first = $(".search-result", $("#search-results"));
     if (first) { event.preventDefault(); first.click(); }
   }
-  if (event.key === "Escape") $("#search-results").hidden = true;
+  if (event.key === "Escape") {
+    $("#search-results").hidden = true;
+    $("#global-search").setAttribute("aria-expanded", "false");
+  }
+});
+$("#search-results").addEventListener("keydown", event => {
+  const options = [...$("#search-results").querySelectorAll('[role="option"]')];
+  const current = options.indexOf(document.activeElement);
+  if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    event.preventDefault();
+    const direction = event.key === "ArrowDown" ? 1 : -1;
+    options[Math.max(0, Math.min(options.length - 1, current + direction))]?.focus();
+  }
+  if (event.key === "Escape") {
+    $("#global-search").focus();
+    $("#search-results").hidden = true;
+    $("#global-search").setAttribute("aria-expanded", "false");
+  }
 });
 $("#open-sidebar").addEventListener("click", () => { $("#sidebar").classList.add("sidebar-open"); $("#sidebar-scrim").classList.add("visible"); });
 $("#close-sidebar").addEventListener("click", () => { $("#sidebar").classList.remove("sidebar-open"); $("#sidebar-scrim").classList.remove("visible"); });
