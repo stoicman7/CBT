@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a51f2b">
+  <meta name="description" content="An evidence-informed CBT workspace for understanding emotions, practising structured skills, and tracking personal reflections.">
+  <title>CBT — A workspace for emotional skills</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="app-shell" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Emotion navigation">
+      <div class="brand">
+        <a class="brand-mark" href="./" aria-label="CBT home">c<span>.</span></a>
+        <div class="brand-copy">
+          <strong>CBT workspace</strong>
+          <span>Evidence-informed tools</span>
+        </div>
+        <button class="icon-button close-sidebar" id="close-sidebar" type="button" aria-label="Close navigation">×</button>
+      </div>
+
+      <div class="sidebar-label">YOUR WORKSPACE</div>
+      <button class="sidebar-home" type="button" data-home>
+        <span class="nav-glyph">⌂</span>
+        <span>Overview</span>
+      </button>
+
+      <div class="sidebar-label sidebar-label-row">
+        <span>WORK BY EMOTION</span>
+        <span class="side-count" id="emotion-count">17</span>
+      </div>
+      <nav class="emotion-nav" id="emotion-nav"></nav>
+
+      <div class="sidebar-bottom">
+        <div class="privacy-mini"><span class="privacy-dot"></span><span>Your notes stay in this browser</span></div>
+        <button class="sidebar-link" type="button" data-tab="journal"><span class="nav-glyph">▤</span> My journal</button>
+        <a class="sidebar-link" href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener"><span class="nav-glyph">⌁</span> Evidence review</a>
+        <div class="sidebar-version">CBT WORKSPACE <span>·</span> 1.0</div>
+      </div>
+    </aside>
+
+    <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+    <div class="main-frame">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-button" id="open-sidebar" type="button" aria-label="Open navigation">☰</button>
+          <span class="breadcrumb">WORKSPACE <span>/</span> <b id="breadcrumb-current">OVERVIEW</b></span>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-wrap" for="global-search">
+            <span class="search-icon">⌕</span>
+            <input id="global-search" type="search" placeholder="Find an emotion or tool..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+          <button class="topbar-checkin" type="button" data-action="checkin"><span>＋</span> Daily check-in</button>
+        </div>
+      </header>
+
+      <main id="main-content" class="content-area">
+        <div id="page-content" aria-live="polite"></div>
+        <footer class="site-footer">
+          <div><strong>CBT workspace</strong><span>Skills practice, not a diagnosis or a substitute for care.</span></div>
+          <nav aria-label="Footer">
+            <a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Scientific review</a>
+            <a href="https://www.nice.org.uk/" target="_blank" rel="noopener">Clinical guidance</a>
+            <button type="button" data-action="privacy">Privacy</button>
+          </nav>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <dialog class="tool-dialog" id="tool-dialog" aria-labelledby="dialog-title">
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
