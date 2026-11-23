@@ -4,8 +4,8 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 
 ## What is included
 
-- **17 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, and perfectionism.
-- **51 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links.
+- **18 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, perfectionism, and health anxiety.
+- **88 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links.
 - **Four-step practice plans:** progress can be checked off and is saved locally.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
