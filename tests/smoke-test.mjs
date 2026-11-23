@@ -27,7 +27,7 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.ok(toolIds.size >= 159, "The library should contain at least 159 interactive tools.");
+assert.equal(toolIds.size, 159, "The catalogue should contain exactly 159 unique interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
@@ -37,12 +37,21 @@ for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-bo
 }
 
 
+for (const schemaId of ["angerSkills","stressPlan","anxietyExperiment","fearPractice","socialAnxiety"]) {
+  const schema = WORKSHEETS[schemaId];
+  assert.ok(schema && schema.title && schema.intro, "Missing dedicated worksheet schema: " + schemaId);
+  assert.ok(schema.fields.length >= 5, "Dedicated worksheet needs enough reflection prompts: " + schemaId);
+  const fieldIds = schema.fields.map(([field]) => field);
+  assert.equal(new Set(fieldIds).size, fieldIds.length, "Worksheet field IDs must be unique: " + schemaId);
+  assert.ok(schema.fields.every(([field,label]) => field && label), "Worksheet labels must be complete: " + schemaId);
+}
 const socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
-assert.ok(socialWorkspace && socialWorkspace.tools.length >= 9, "Social anxiety needs at least nine dedicated tools.");
+assert.ok(socialWorkspace, "The social-anxiety workspace should be present.");
+assert.equal(socialWorkspace.tools.length, 9, "Social anxiety should contain nine dedicated tools.");
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
-  assert.ok(workspace.tools.length >= 13, requiredId + " must contain at least thirteen dedicated tools.");
+  assert.equal(workspace.tools.length, 13, requiredId + " must contain thirteen dedicated tools.");
   assert.equal(new Set(workspace.tools.map(tool => tool.id)).size, workspace.tools.length, requiredId + " tool IDs must be unique.");
   for (const tool of workspace.tools) {
     assert.ok(tool.description.length > 45, requiredId + " tool descriptions must be substantive: " + tool.id);
