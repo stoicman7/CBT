@@ -54,6 +54,26 @@ function renderSidebar() {
   }).join("") || '<div class="nav-empty">No matching emotions or tools.</div>';
   $("#emotion-count").textContent = EMOTIONS.length;
 }
+function renderSearchResults() {
+  const input = $("#global-search"), results = $("#search-results");
+  if (!input || !results) return;
+  const query = input.value.trim().toLowerCase();
+  if (!query) { results.hidden = true; results.innerHTML = ""; return; }
+  const hits = [];
+  for (const emotion of EMOTIONS) {
+    const workspaceText = [emotion.name, emotion.subtitle, emotion.description].join(" ").toLowerCase();
+    if (workspaceText.includes(query)) hits.push({ emotion, tool: null });
+    for (const tool of emotion.tools) {
+      const toolText = [tool.title, tool.description, tool.when].join(" ").toLowerCase();
+      if (toolText.includes(query)) hits.push({ emotion, tool });
+    }
+  }
+  const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
+  results.innerHTML = ordered.length
+    ? ordered.map(({ emotion, tool }) => `<button type="button" class="search-result" role="option" data-search-emotion="${esc(emotion.id)}" data-search-tool="${esc(tool?.id || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? "Interactive exercise" : "Workspace"}</small></button>`).join("")
+    : '<div class="search-no-results">No matching tools or workspaces.</div>';
+  results.hidden = false;
+}
 function renderHeader() {
   $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : state.tab === "library" ? "CBT TECHNIQUE LIBRARY" : activeEmotion().name.toUpperCase();
 }
@@ -61,7 +81,13 @@ function tabs() {
   return `<div class="section-tabs" role="tablist" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" role="tab" aria-selected="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</div>`;
 }
 function toolCard(tool, index) {
-  return `<article class="tool-card"><div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">INTERACTIVE TOOL</span></div><h3>${esc(tool.title)}</h3><p>${esc(tool.description)}</p><div class="tool-when"><span>BEST USED</span>${esc(tool.when)}</div><button type="button" class="text-action" data-tool="${tool.id}">Open exercise <span>↗</span></button></article>`;
+  return `<article class="tool-card">
+    <div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">GUIDED EXERCISE</span></div>
+    <h3>${esc(tool.title)}</h3>
+    <p>${esc(tool.description)}</p>
+    <div class="tool-when"><span>USE THIS WHEN</span><div>${esc(tool.when)}</div></div>
+    <button type="button" class="text-action" data-tool="${esc(tool.id)}"><span>Open exercise</span><span aria-hidden="true">↗</span></button>
+  </article>`;
 }
 function hero(e) {
   return `<section class="emotion-hero"><div class="hero-content"><div class="eyebrow"><span class="eyebrow-dot"></span>${esc(e.group)} <span class="eyebrow-slash">/</span> PERSONAL WORKSPACE</div><h1>${esc(e.name)}<span class="title-period">.</span></h1><p class="hero-subtitle">${esc(e.subtitle)}</p><div class="hero-status-row"><span class="evidence-pill evidence-${e.evidence.level}"><span></span>${esc(e.evidence.label)}</span><span class="hero-meta">${e.tools.length} practical tools <i>·</i> 4-step practice plan</span></div></div><div class="hero-mark" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-monogram">${e.initials}</div><div class="hero-caption">NOTICE <span>·</span> UNDERSTAND <span>·</span> RESPOND</div></div></section>`;
@@ -82,7 +108,19 @@ function overview(e) {
   </aside></div>`;
 }
 function techniques(e) {
-  return `<section class="tab-intro"><div><div class="eyebrow muted">METHOD LIBRARY</div><h2>Techniques for ${esc(e.name.toLowerCase())}</h2><p>Each method includes its purpose, suggested use, practical steps, and evidence context.</p></div><span class="tab-count">${String(e.tools.length).padStart(2,"0")} METHODS</span></section><div class="technique-list">${e.tools.map((t,i) => `<article class="technique-row"><div class="technique-index">0${i+1}</div><div class="technique-main"><div class="technique-overline">METHOD 0${i+1}</div><h3>${esc(t.title)}</h3><p>${esc(t.description)}</p><div class="technique-detail"><strong>When to use it</strong><span>${esc(t.when)}</span></div><div class="technique-detail"><strong>How it works</strong><ol>${t.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div><div class="technique-evidence"><span>EVIDENCE NOTE</span>${esc(t.evidence)}</div><div class="technique-sources">${links(t.sources)}</div></div><div class="technique-side"><span class="worksheet-tag">INTERACTIVE</span><button class="primary-button compact" type="button" data-tool="${t.id}">Open worksheet ↗</button></div></article>`).join("")}</div>`;
+  return `<section class="tab-intro"><div><div class="eyebrow muted">METHOD LIBRARY</div><h2>Techniques for ${esc(e.name.toLowerCase())}</h2><p>Browse the purpose and use of each method. Open the steps or launch its structured worksheet when you are ready.</p></div><span class="tab-count">${String(e.tools.length).padStart(2,"0")} METHODS</span></section>
+  <div class="technique-list">${e.tools.map((t,i) => `<article class="technique-row">
+    <div class="technique-index">${String(i+1).padStart(2,"0")}</div>
+    <div class="technique-main">
+      <div class="technique-overline">METHOD ${String(i+1).padStart(2,"0")}</div>
+      <h3>${esc(t.title)}</h3>
+      <p>${esc(t.description)}</p>
+      <div class="technique-when"><strong>When it may help</strong><span>${esc(t.when)}</span></div>
+      <details class="technique-expand"><summary>View suggested steps <span>${t.steps.length} steps</span></summary><ol class="technique-step-list">${t.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></details>
+      <details class="technique-evidence"><summary>Evidence context and sources</summary><p>${esc(t.evidence)}</p><div class="technique-sources">${links(t.sources)}</div></details>
+    </div>
+    <div class="technique-side"><span class="worksheet-tag">PRACTICE TOOL</span><button class="primary-button compact" type="button" data-tool="${esc(t.id)}">Open exercise <span aria-hidden="true">↗</span></button></div>
+  </article>`).join("")}</div>`;
 }
 
 function renderTechniqueLibrary() {
@@ -135,7 +173,7 @@ function homePage() {
   <section class="home-disclaimer"><span class="disclaimer-mark">i</span><div><strong>Use this as a skills workspace, not a diagnosis.</strong><p>Self-guided exercises can support reflection and practice, but cannot assess risk, diagnose a condition, or replace personalised care. Some methods on this site are intended to be used with a trained practitioner.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and safety review ↗</a></div></section>`;
 }
 function render() {
-  renderSidebar(); renderHeader();
+  renderSidebar(); renderHeader(); renderSearchResults();
   if (state.tab === "home") page.innerHTML = homePage();
   else if (state.tab === "journal") page.innerHTML = journalPage();
   else if (state.tab === "library") page.innerHTML = renderTechniqueLibrary();
@@ -148,11 +186,22 @@ function openTool(id) {
   const e = activeEmotion(), tool = e.tools.find(t => t.id === id);
   if (!tool) return;
   const schema = WORKSHEETS[tool.worksheet] || WORKSHEETS.reflection;
-  const fields = schema.fields.map(([key,label],i) => `<label class="form-field"><span>${esc(label)}</span><textarea name="${esc(key)}" rows="2" placeholder="Write a few notes..." ${i === 0 ? "autofocus" : ""}></textarea></label>`).join("");
-  dialogContent.innerHTML = `<div class="dialog-head"><div><div class="eyebrow muted">INTERACTIVE PRACTICE · ${esc(e.name.toUpperCase())}</div><h2 id="dialog-title">${esc(tool.title)}</h2><p>${esc(schema.intro)}</p></div><button type="button" class="icon-button dialog-close" data-action="close-dialog" aria-label="Close">×</button></div>
-  <div class="dialog-method"><strong>Purpose</strong><p>${esc(tool.description)}</p><strong>Suggested steps</strong><ol>${tool.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></div>
-  <div class="worksheet-evidence"><span>EVIDENCE CONTEXT</span><p>${esc(tool.evidence)}</p><div>${links(tool.sources)}</div></div>
-  <form class="worksheet-form" data-form="worksheet" data-emotion="${e.id}" data-tool="${tool.id}"><div class="form-section-heading"><span>YOUR REFLECTION</span><small>Saved privately in this browser</small></div>${fields}<div class="dialog-actions"><button type="button" class="outline-button" data-action="close-dialog">Cancel</button><button type="submit" class="primary-button">Save reflection →</button></div></form>`;
+  const fields = schema.fields.map(([key,label],i) => `<label class="form-field"><span class="field-caption"><b>${String(i+1).padStart(2,"0")}</b><span>${esc(label)}</span></span><textarea name="${esc(key)}" rows="3" aria-label="${esc(label)}" placeholder="A few words or bullet points are enough..." ${i === 0 ? "autofocus" : ""}></textarea></label>`).join("");
+  dialogContent.innerHTML = `<div class="dialog-head practice-dialog-head"><div><div class="eyebrow muted">INTERACTIVE PRACTICE <span class="eyebrow-slash">/</span> ${esc(e.name.toUpperCase())}</div><h2 id="dialog-title">${esc(tool.title)}</h2><p id="dialog-intro">${esc(schema.intro)}</p><div class="practice-meta"><span>${tool.steps.length} guided steps</span><span>${schema.fields.length} reflection prompts</span><span>Private to this browser</span></div></div><button type="button" class="icon-button dialog-close" data-action="close-dialog" aria-label="Close exercise">×</button></div>
+  <div class="practice-intro-grid">
+    <section class="practice-purpose-card"><span class="practice-kicker">01 <i>/</i> PURPOSE</span><h3>What this exercise is for</h3><p>${esc(tool.description)}</p></section>
+    <section class="practice-when-card"><span class="practice-kicker">BEFORE YOU START</span><h3>When to use it</h3><p>${esc(tool.when)}</p></section>
+  </div>
+  <section class="practice-steps-section" aria-labelledby="practice-steps-title">
+    <div class="practice-section-heading"><div><span class="practice-kicker">02 <i>/</i> METHOD</span><h3 id="practice-steps-title">Work through the steps</h3><p>Take them one at a time. You do not need perfect answers.</p></div><span class="practice-step-count">${tool.steps.length} STEPS</span></div>
+    <ol class="practice-step-list">${tool.steps.map((step,i) => `<li><span class="practice-step-number">${String(i+1).padStart(2,"0")}</span><p>${esc(step)}</p></li>`).join("")}</ol>
+  </section>
+  <details class="practice-evidence"><summary><span><b>Evidence context and limitations</b><small>Why this tool is included and what it does not establish</small></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><div class="practice-evidence-content"><p>${esc(tool.evidence)}</p><div class="technique-sources">${links(tool.sources)}</div></div></details>
+  <form class="worksheet-form practice-reflection" data-form="worksheet" data-emotion="${e.id}" data-tool="${tool.id}">
+    <div class="practice-section-heading reflection-heading"><div><span class="practice-kicker">03 <i>/</i> REFLECTION</span><h3>Make a note of your response</h3><p>Short notes are fine. Leave any prompt blank if it does not fit.</p></div><span class="reflection-local-note">Saved on this device</span></div>
+    <div class="reflection-field-grid">${fields}</div>
+    <div class="dialog-actions"><button type="button" class="outline-button" data-action="close-dialog">Close</button><button type="submit" class="primary-button">Save reflection <span aria-hidden="true">↗</span></button></div>
+  </form>`;
   dialog.showModal();
 }
 function openCheckin() {
@@ -170,19 +219,25 @@ function saveWorksheet(form) {
   const tool = e?.tools.find(x => x.id === form.dataset.tool);
   const values = Object.fromEntries(new FormData(form).entries());
   if (!Object.values(values).some(v => String(v).trim())) { toast("Add at least one reflection before saving."); return; }
-  state.entries.unshift({ id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), emotionId: form.dataset.emotion, toolId: form.dataset.tool, toolTitle: tool?.title || "Practice note", createdAt: new Date().toISOString(), values });
-  saveState(); dialog.close(); render(); toast("Reflection saved to My notes.");
+  const entry = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), emotionId: form.dataset.emotion, toolId: form.dataset.tool, toolTitle: tool?.title || "Practice note", createdAt: new Date().toISOString(), values };
+  state.entries.unshift(entry);
+  if (!saveState()) { state.entries = state.entries.filter(item => item.id !== entry.id); return; }
+  dialog.close(); render(); toast("Reflection saved to My notes.");
 }
 function saveCheckin(form) {
   const data = Object.fromEntries(new FormData(form).entries());
-  state.checkins.unshift({ id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), createdAt: new Date().toISOString(), level: Math.max(0,Math.min(10,Number(data.level)||0)), note: String(data.note||"").trim() });
-  saveState(); dialog.close(); render(); toast("Daily check-in saved.");
+  const checkin = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), createdAt: new Date().toISOString(), level: Math.max(0,Math.min(10,Number(data.level)||0)), note: String(data.note||"").trim() };
+  state.checkins.unshift(checkin);
+  if (!saveState()) { state.checkins = state.checkins.filter(item => item.id !== checkin.id); return; }
+  dialog.close(); render(); toast("Daily check-in saved.");
 }
 function exportData() {
   const blob = new Blob([JSON.stringify({ exportedAt:new Date().toISOString(), description:"CBT workspace export. This file may contain sensitive personal reflections.", entries:state.entries, checkins:state.checkins, completed:state.completed },null,2)], {type:"application/json"});
   const url = URL.createObjectURL(blob), a = document.createElement("a");
   a.href = url; a.download = "cbt-workspace-" + new Date().toISOString().slice(0,10) + ".json";
-  document.body.append(a); a.click(); a.remove(); URL.revokeObjectURL(url); toast("Your data export has been created.");
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  toast("Your data export has been created.");
 }
 function action(name) {
   if (name === "checkin") openCheckin();
@@ -194,6 +249,17 @@ function action(name) {
   }
 }
 document.addEventListener("click", event => {
+  const searchResult = event.target.closest("[data-search-emotion]");
+  if (searchResult) {
+    state.active = searchResult.dataset.searchEmotion;
+    state.tab = "overview";
+    const toolId = searchResult.dataset.searchTool;
+    $("#global-search").value = "";
+    saveState(); render();
+    if (toolId) openTool(toolId);
+    return;
+  }
+  if (!event.target.closest(".topbar-actions")) $("#search-results").hidden = true;
   const emotion = event.target.closest("[data-emotion]");
   if (emotion) {
     state.active = emotion.dataset.emotion; state.tab = "overview"; saveState(); render();
@@ -206,9 +272,9 @@ document.addEventListener("click", event => {
   const tool = event.target.closest("[data-tool]");
   if (tool) { openTool(tool.dataset.tool); return; }
   const plan = event.target.closest("[data-plan]");
-  if (plan) { const key = activeEmotion().id + ":" + plan.dataset.plan; state.completed[key] = !state.completed[key]; saveState(); render(); return; }
+  if (plan) { const key = activeEmotion().id + ":" + plan.dataset.plan; const previous = !!state.completed[key]; state.completed[key] = !previous; if (!saveState()) { state.completed[key] = previous; return; } render(); return; }
   const del = event.target.closest("[data-entry-delete]");
-  if (del) { state.entries = state.entries.filter(x => x.id !== del.dataset.entryDelete); saveState(); render(); toast("Note deleted."); return; }
+  if (del) { const previous = state.entries; state.entries = previous.filter(x => x.id !== del.dataset.entryDelete); if (!saveState()) { state.entries = previous; return; } render(); toast("Note deleted."); return; }
   const actionButton = event.target.closest("[data-action]");
   if (actionButton) { action(actionButton.dataset.action); return; }
   if (event.target.closest("[data-home]")) { state.tab = "home"; saveState(); render(); }
@@ -220,7 +286,14 @@ document.addEventListener("submit", event => {
   if (form.dataset.form === "worksheet") saveWorksheet(form);
   if (form.dataset.form === "checkin") saveCheckin(form);
 });
-$("#global-search").addEventListener("input", () => { renderSidebar(); if (state.tab === "library") page.innerHTML = renderTechniqueLibrary(); });
+$("#global-search").addEventListener("input", () => { renderSidebar(); renderSearchResults(); if (state.tab === "library") page.innerHTML = renderTechniqueLibrary(); });
+$("#global-search").addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    const first = $(".search-result", $("#search-results"));
+    if (first) { event.preventDefault(); first.click(); }
+  }
+  if (event.key === "Escape") $("#search-results").hidden = true;
+});
 $("#open-sidebar").addEventListener("click", () => { $("#sidebar").classList.add("sidebar-open"); $("#sidebar-scrim").classList.add("visible"); });
 $("#close-sidebar").addEventListener("click", () => { $("#sidebar").classList.remove("sidebar-open"); $("#sidebar-scrim").classList.remove("visible"); });
 $("#sidebar-scrim").addEventListener("click", () => { $("#sidebar").classList.remove("sidebar-open"); $("#sidebar-scrim").classList.remove("visible"); });
