@@ -1176,6 +1176,105 @@ const ADDITIONAL_TOOLS = {
   ]
 };
 for (const emotion of EMOTIONS) emotion.tools.push(...(ADDITIONAL_TOOLS[emotion.id] || []));
+EMOTIONS.push({
+  "id": "health-anxiety",
+  "name": "Health anxiety",
+  "group": "Focused care",
+  "initials": "HA",
+  "subtitle": "Respond to health concerns without becoming trapped in checking and reassurance.",
+  "description": "Health anxiety involves persistent concern about having or developing a serious illness. It can involve body monitoring, internet searching, repeated reassurance, avoidance, or difficulty accepting appropriate medical explanations. The goal is not to ignore symptoms; it is to follow proportionate healthcare advice while working on the anxiety cycle.",
+  "model": "Sensation or health information → threatening interpretation → anxiety → checking, searching, reassurance or avoidance → temporary relief → concern returns",
+  "why": "A May 2026 network meta-analysis of 35 trials and 3,263 adults found CBT and several related psychological interventions superior to a waiting-list control. Its component analysis linked exposure/response prevention, cognitive restructuring, and mindfulness with improved outcomes. This does not mean that symptoms should be dismissed or that users should independently stop medical follow-up.",
+  "evidence": {
+    "label": "Evidence supports CBT for health anxiety; clinical boundaries are essential",
+    "level": "strong",
+    "note": "A May 2026 network meta-analysis included 35 trials (3,263 adults). CBT was among the interventions with significant effects versus waiting-list control; exposure/response prevention and cognitive restructuring were associated with improved outcomes in component analysis. Medical assessment and appropriate follow-up remain essential."
+  },
+  "focus": [
+    "Follow an agreed medical-care plan",
+    "Separate symptoms from catastrophic interpretations",
+    "Notice repeated searching and reassurance",
+    "Reduce non-essential checking with clinical support"
+  ],
+  "tools": [
+    {
+      "id": "health-anxiety-cycle",
+      "title": "Map the health-anxiety cycle",
+      "description": "Trace the sequence from a symptom or health cue to interpretation, anxiety, checking, and temporary relief.",
+      "when": "Use after a concern has been appropriately assessed, not instead of seeking medical care for a new or serious symptom.",
+      "steps": [
+        "Describe the health cue or information that triggered concern.",
+        "Write the feared illness interpretation and how certain it felt.",
+        "Record the checking, searching, reassurance, or avoidance that followed.",
+        "Notice how long any relief lasted and whether the concern returned.",
+        "Bring the pattern and any unanswered medical questions to your healthcare professional."
+      ],
+      "worksheet": "reflection",
+      "evidence": "CBT formulation and self-monitoring are part of health-anxiety interventions. This map cannot assess symptoms or determine whether a medical condition is present.",
+      "sources": [
+        "healthAnxiety2026",
+        "cognitiveRestructuring"
+      ]
+    },
+    {
+      "id": "health-checking-plan",
+      "title": "Review repeated checking and reassurance",
+      "description": "Distinguish medically advised monitoring from repeated checking intended mainly to obtain certainty.",
+      "when": "Use only after agreeing with a healthcare professional what symptom monitoring and follow-up are medically appropriate.",
+      "steps": [
+        "List the checks, searches, or reassurance questions you repeat.",
+        "Mark which actions were recommended by a qualified healthcare professional.",
+        "For non-essential repeated checking, record the trigger and the temporary relief it provides.",
+        "Discuss a gradual, planned change to non-essential checking with a clinician familiar with health anxiety.",
+        "Keep all recommended monitoring, appointments, and urgent-care instructions."
+      ],
+      "worksheet": "worry",
+      "evidence": "Exposure and response prevention was associated with improved outcomes in a 2026 health-anxiety component network meta-analysis. This worksheet is not a self-directed ERP plan and must not reduce appropriate medical care.",
+      "sources": [
+        "healthAnxiety2026"
+      ]
+    },
+    {
+      "id": "health-balanced-appraisal",
+      "title": "Write a balanced health appraisal",
+      "description": "Examine catastrophic interpretations while retaining uncertainty and following appropriate medical guidance.",
+      "when": "Use after appropriate medical assessment when a known health-anxiety pattern is present.",
+      "steps": [
+        "Write the specific interpretation that is causing distress.",
+        "Separate the physical observation from the conclusion you have drawn.",
+        "Record the information and advice provided by your healthcare professional.",
+        "Write a balanced statement that includes what is known, what is not known, and the agreed next step.",
+        "Do not use this exercise to dismiss new, worsening, or urgent symptoms."
+      ],
+      "worksheet": "thought",
+      "evidence": "Cognitive restructuring was one component associated with better outcomes in the 2026 health-anxiety network meta-analysis. A worksheet cannot replace diagnostic assessment or medical advice.",
+      "sources": [
+        "healthAnxiety2026",
+        "cognitiveRestructuring"
+      ]
+    }
+  ],
+  "plan": [
+    {
+      "title": "Clarify the healthcare plan",
+      "detail": "Write down the medical advice, monitoring, and follow-up plan agreed with a qualified healthcare professional."
+    },
+    {
+      "title": "Map the anxiety cycle",
+      "detail": "Notice how interpretations, searching, checking, and reassurance affect anxiety over time."
+    },
+    {
+      "title": "Review non-essential safety behaviours",
+      "detail": "Discuss repeated checking or reassurance with a clinician; do not stop medically advised monitoring."
+    },
+    {
+      "title": "Practise a balanced response",
+      "detail": "Use cognitive work to respond to uncertainty while continuing appropriate medical care."
+    }
+  ],
+  "caution": "Never use this page to self-diagnose, ignore new or worsening symptoms, cancel recommended tests, stop treatment, or delay urgent medical care. Follow qualified medical advice. The exercises are for health anxiety after appropriate assessment and are not a substitute for a healthcare professional."
+});
+
 export const WORKSHEETS = {
   anger: {
     title: "Anger chain record",
