@@ -27,7 +27,7 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.ok(toolIds.size >= 135, "The library should contain at least 135 interactive tools.");
+assert.ok(toolIds.size >= 159, "The library should contain at least 159 interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
@@ -42,7 +42,7 @@ assert.ok(socialWorkspace && socialWorkspace.tools.length >= 9, "Social anxiety 
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
-  assert.ok(workspace.tools.length >= 9, requiredId + " must contain at least nine dedicated tools.");
+  assert.ok(workspace.tools.length >= 13, requiredId + " must contain at least thirteen dedicated tools.");
   assert.equal(new Set(workspace.tools.map(tool => tool.id)).size, workspace.tools.length, requiredId + " tool IDs must be unique.");
   for (const tool of workspace.tools) {
     assert.ok(tool.description.length > 45, requiredId + " tool descriptions must be substantive: " + tool.id);
