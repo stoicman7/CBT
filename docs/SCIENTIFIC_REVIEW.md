@@ -612,7 +612,7 @@ The evidence label applies to psychological treatment for health anxiety in adul
 
 ## 12. Revised technique inventory and evidence discipline
 
-The application now offers **18 workspaces and 88 interactive tools**. The tools are grouped by their function and target:
+The second audit snapshot contained 18 workspaces and 88 interactive tools. After the third audit and specialist-domain expansion, the current application contains **25 workspaces, 113 interactive exercises, and 49 indexed technique entries**. The tools are grouped by their function and target:
 
 - **Cognitive methods:** thought records, responsibility reattribution, continuums, coping appraisals, balanced health appraisals, and core-belief data logs.
 - **Behavioural methods:** activity monitoring, graded tasks, behavioural experiments, exposure-learning records, checking-limit experiments, and relapse-prevention plans.
@@ -620,7 +620,7 @@ The application now offers **18 workspaces and 88 interactive tools**. The tools
 - **Condition-specific components:** Clark and Wells social-anxiety components, panic-focused CBT preparation, OCD mental-ritual assessment, trauma-support planning, and CBT-I education.
 - **Communication and problem-solving:** assertive boundary statements, relationship requests, demand prioritisation, goal adjustment, and practical repair planning.
 
-The increased number of tools does not imply 88 independently validated interventions. Many are different prompts that help users practise a smaller number of established CBT procedures in context. The product must continue to state the evidence status and boundaries at the point of use.
+The expanded number of tools does not imply 113 independently validated interventions. Many are different prompts that help users practise a smaller number of established CBT procedures in context. The 49-entry directory is a map of methods and delivery processes, not a count of unique treatment packages. The product must continue to state the evidence status and boundaries at the point of use.
 
 ## 13. Additional source register
 
