@@ -50,7 +50,7 @@ function renderSidebar() {
   nav.innerHTML = ["Emotions", "Patterns", "Focused care"].map(group => {
     const items = EMOTIONS.filter(e => e.group === group).filter(e => !q || [e.name, e.subtitle, e.description, ...e.tools.map(t => t.title + " " + t.description)].join(" ").toLowerCase().includes(q));
     if (!items.length) return "";
-    return `<div class="nav-group"><div class="nav-group-title">${group === "Focused care" ? "FOCUSED CARE" : group.toUpperCase()}</div>${items.map(e => `<button class="emotion-link ${state.active === e.id && state.tab !== "home" && state.tab !== "journal" ? "active" : ""}" type="button" data-emotion="${e.id}" ${state.active === e.id ? 'aria-current="page"' : ""}><span class="emotion-initial">${e.initials}</span><span class="emotion-name">${esc(e.name)}</span><span class="nav-arrow">›</span></button>`).join("")}</div>`;
+    return `<div class="nav-group"><div class="nav-group-title">${group === "Focused care" ? "FOCUSED CARE" : group.toUpperCase()}</div>${items.map(e => `<button class="emotion-link ${state.active === e.id && !["home","journal","library"].includes(state.tab) ? "active" : ""}" type="button" data-emotion="${e.id}" ${state.active === e.id && !["home","journal","library"].includes(state.tab) ? 'aria-current="page"' : ""}><span class="emotion-initial">${e.initials}</span><span class="emotion-name">${esc(e.name)}</span><span class="nav-arrow">›</span></button>`).join("")}</div>`;
   }).join("") || '<div class="nav-empty">No matching emotions or tools.</div>';
   $("#emotion-count").textContent = EMOTIONS.length;
 }
