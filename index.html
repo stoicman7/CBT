@@ -57,9 +57,10 @@
         <div class="topbar-actions">
           <label class="search-wrap" for="global-search">
             <span class="search-icon">⌕</span>
-            <input id="global-search" type="search" placeholder="Find an emotion or tool..." autocomplete="off">
+            <input id="global-search" type="search" placeholder="Find an emotion or tool..." autocomplete="off" aria-controls="search-results" aria-autocomplete="list">
             <kbd>/</kbd>
           </label>
+          <div class="search-results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
           <button class="topbar-checkin" type="button" data-action="checkin"><span>＋</span> Daily check-in</button>
         </div>
       </header>
