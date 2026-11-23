@@ -34,6 +34,6 @@ assert.ok(EMOTIONS.find(item => item.id === "panic").caution.toLowerCase().inclu
 assert.ok(EMOTIONS.find(item => item.id === "trauma").caution.toLowerCase().includes("do not use this site"));
 assert.ok(EMOTIONS.find(item => item.id === "ocd").caution.toLowerCase().includes("self-directed"));
 assert.ok(EMOTIONS.find(item => item.id === "sleep").caution.toLowerCase().includes("sleep restriction"));
-assert.ok(EMOTIONS.find(item => item.id === "jealousy").caution.toLowerCase().includes("surveillance"));
+assert.ok(EMOTIONS.find(item => item.id === "jealousy").caution.toLowerCase().includes("tracking"));
 
 console.log("CBT smoke tests passed: " + EMOTIONS.length + " emotion spaces, " + toolIds.size + " interactive tools, " + Object.keys(SOURCES).length + " references.");
