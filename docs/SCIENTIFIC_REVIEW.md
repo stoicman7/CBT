@@ -1098,3 +1098,109 @@ Future additions should continue to use a gap-led process:
 Areas that may warrant future specialist reviews include body dysmorphic disorder, bipolar disorder, tinnitus, chronic fatigue and other medically complex syndromes, personality-disorder-specific CBT protocols, paediatric CBT, and culturally adapted interventions. They should not be added as self-help treatment pages until the protocol and safeguards have been reviewed separately.
 
 **Bottom line:** the aim is not to claim that every CBT procedure can be turned into an online worksheet. The aim is to provide a broad and clearly classified reference to the main CBT methods, explain where they are used, show the scientific basis and limitations, and make the boundary between educational practice and clinical treatment visible at the point of use.
+
+
+---
+
+# Fourth focused audit: anger, stress, fear, and anxiety (23 November 2026)
+
+## Scope and method
+
+This is a focused evidence-informed content audit of four emotion workspaces, not a registered systematic review or exhaustive catalogue. The review distinguishes (1) established CBT procedures, (2) components used in diagnosis-specific treatment protocols, (3) transdiagnostic skills that may complement CBT, and (4) brief educational exercises that are not independently validated treatments. A named worksheet is not equivalent to a clinical protocol.
+
+The four workspaces now contain **36 dedicated interactive exercises (nine each)**. The additions are intended to broaden the available practice targets while preserving clinical boundaries. The count describes site exercises, not 36 independently validated interventions.
+
+## Anger: formulation, arousal, appraisal, and action
+
+The anger workspace now covers:
+- Functional analysis of triggers, appraisals, body signals, urges, behaviour, and consequences.
+- Early-warning signal monitoring and safe interruption before escalation.
+- Arousal reduction before responding.
+- Cognitive reappraisal and separating observable facts from assumptions about intent.
+- Anger rumination and repetitive replay.
+- Converting a legitimate concern into a specific boundary or request.
+- Comparing response options and their short- and long-term consequences.
+- Repair after an angry reaction, including responsibility without self-excusing or invalidating the underlying concern.
+
+Evidence notes:
+- A 2024 meta-analytic review included 154 studies, 184 independent samples, and 10,189 participants. Activities intended to decrease arousal reduced anger and aggression (g = -0.63, 95% CI [-0.82, -0.43]); activities that increased arousal had a near-zero pooled effect (g = -0.02, 95% CI [-0.13, 0.09]). The review does not support venting or high-arousal activity as a reliable anger-management strategy. It does not mean exercise is unhealthy or should be avoided for general health.
+- A 2025 meta-analysis of 81 studies (115 effect sizes) found anger positively associated with avoidance, rumination, and suppression, and negatively associated with acceptance and reappraisal. Heterogeneity was large; these are associations, not proof that any one strategy causes anger.
+- The content therefore prioritises cooling down, functional analysis, reappraisal, non-threatening assertiveness, and repair. It does not frame anger itself as wrong or imply that calming down resolves injustice, abuse, or unsafe conditions.
+
+Safety: if there is immediate risk of violence, create distance and seek urgent local support. This self-guided workspace is not a violence-risk assessment, anger-violence intervention, or substitute for specialist care.
+
+## Stress: demand-resource mismatch, controllability, and recovery
+
+The stress workspace now covers:
+- Stressor mapping and demand-resource appraisal.
+- Separating controllable problems, influenceable conditions, and uncertainty.
+- Structured problem-solving from definition to review.
+- Workload boundaries, negotiation, and support requests.
+- Testing perfectionistic rules in non-safety-critical tasks.
+- Building a recovery menu matched to physical, cognitive, social, or emotional depletion.
+- Distinguishing actionable problems from hypothetical worry.
+
+Evidence notes:
+- An umbrella review of workplace mental-health interventions synthesised 16 meta-analyses and reported small-to-moderate effects across some psychosocial interventions, but certainty varied substantially; many outcomes were low or very low certainty. Digital psychosocial interventions showed small pooled effects on stress in the reviewed evidence.
+- The site avoids presenting relaxation as a cure for excessive workload, unsafe work, discrimination, financial hardship, or other structural stressors. Individual coping skills cannot replace organisational or practical change.
+- Stress exercises are educational and skills-based. They do not assess occupational hazards or provide employment, legal, or medical advice.
+
+## Fear: safe approach, expectancy, and exposure learning
+
+The fear workspace now covers:
+- Graded approach planning and checking objective safety before any exposure.
+- Explicit prediction recording and outcome review.
+- Distinguishing reasonable precautions from fear-driven safety behaviours.
+- Context variation and consolidation of learning.
+- Connecting approach goals to meaningful activities.
+- Preparing questions for a clinician about complex or trauma-related fear memories.
+- Reviewing learning beyond whether anxiety fell during the exercise.
+
+Evidence notes:
+- Exposure is a central component in CBT for phobias and several anxiety conditions, but the form depends on the fear target and diagnosis. NICE guidance for social anxiety describes behavioural experiments, attention training, video feedback, work on safety-seeking behaviours, pre/post-event processing, and relapse prevention within a structured clinician-delivered protocol.
+- Inhibitory-learning approaches emphasise expectancy violation, variability, multiple contexts, and retrieval cues. These are treatment-design principles, not a reason to force difficult exposure.
+- The evidence on safety behaviours is nuanced. A meta-analysis reviewed 23 studies and meta-analysed 20; it does not justify indiscriminately removing sensible precautions.
+- Imaginal exposure and trauma-memory processing are explicitly not offered as self-guided exercises. The new memory-related item only prepares questions for a qualified clinician.
+
+Safety: never expose a person to genuine danger, ignore medical advice, or use exposure to test an objectively unsafe situation. Interoceptive exposure, trauma exposure, severe phobia, and complex presentations require appropriate assessment and clinical planning.
+
+## Anxiety: worry, reassurance, attention, coping, and behavioural tests
+
+The anxiety workspace now covers:
+- Mapping the anxiety maintenance cycle.
+- Scheduled worry and distinguishing practical problems from hypothetical worry.
+- Cognitive evaluation of threat predictions.
+- Tolerating ordinary low-risk uncertainty.
+- Reviewing repeated reassurance seeking without discouraging legitimate medical or safety advice.
+- Flexible attention and reducing threat-focused scanning.
+- Coping forecasts that replace impossible guarantees with realistic response plans.
+- Post-event processing review.
+- Low-risk behavioural experiments.
+
+Evidence notes:
+- A 2024 network meta-analysis of 65 randomised trials and 5,048 participants found CBT, third-wave CBTs, and relaxation therapy outperformed treatment as usual for GAD effectiveness; after excluding high-risk-of-bias studies, CBT and third-wave CBT remained superior, and CBT alone showed long-term effectiveness in that analysis.
+- A 2025 meta-analysis of 49 studies and 3,645 participants found a pooled Hedges g of 0.51 (95% CI 0.40–0.62) for CBT versus controls across anxiety disorders. Effects varied by diagnostic group; the result should not be interpreted as one uniform effect for every anxiety presentation.
+- NICE CG113 recommends manual-based CBT or applied relaxation delivered by trained and competent practitioners for GAD with marked impairment or inadequate response to lower-intensity steps. NICE CG159 specifies structured, disorder-specific CBT for social anxiety, including behavioural experiments and work on attention, safety behaviours, and post-event processing.
+- Anxiety exercises therefore distinguish ordinary self-guided reflection from exposure and treatment components that need clinician support.
+
+## Typography and usability audit
+
+The exercise experience has been updated so that:
+- Exercise-card descriptions use 17px text.
+- Exercise-card headings use 20px text.
+- The 'when to use' guidance uses 15–16px text.
+- Worksheet method explanations and ordered instructions use 16px text.
+- Worksheet prompts use 15px text and text-entry areas use 17px text.
+- The same readable sizing is retained on narrow mobile layouts.
+
+Small metadata labels remain intentionally smaller, but they are no longer used for substantive exercise instructions.
+
+## Validation requirements
+
+Automated checks now require:
+- At least nine dedicated tools in each of anger, stress, fear, and anxiety.
+- Unique tool IDs, substantive descriptions, at least five steps, and at least one valid source reference per new tool.
+- Exercise-card descriptions and worksheet text-entry fields to meet the new minimum typography sizes.
+- Existing safety assertions for panic, trauma, OCD, sleep, jealousy, and specialist workspaces to remain intact.
+
+The 36 new exercises are practice aids, not 36 separate evidence-based treatments. Clinical protocols remain diagnosis-specific, and the website must continue to label specialist exposure, trauma processing, and severe or complex presentations as requiring professional care.
