@@ -40,7 +40,7 @@ assert.ok(EMOTIONS.find(item => item.id === "eating-disorder-cbt").caution.toLow
 assert.ok(EMOTIONS.find(item => item.id === "substance-use").caution.toLowerCase().includes("withdrawal"));
 assert.ok(EMOTIONS.find(item => item.id === "body-focused-repetitive-behaviours").tools.some(tool => tool.id === "bfrb-competing-response"));
 
-assert.ok(CORE_TECHNIQUES.length >= 43, "The searchable technique directory should contain at least 43 methods.");
+assert.ok(CORE_TECHNIQUES.length >= 49, "The searchable technique directory should contain at least 49 methods.");
 const techniqueIds = new Set();
 const categories = new Set();
 for (const technique of CORE_TECHNIQUES) {
