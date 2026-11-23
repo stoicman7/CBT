@@ -4,8 +4,9 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 
 ## What is included
 
-- **18 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, perfectionism, and health anxiety.
-- **88 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links.
+- **25 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, perfectionism, health anxiety, chronic pain, adult ADHD skills, body-focused repetitive behaviours, substance-use recovery, eating-disorder CBT, prolonged grief, and CBT for psychosis support.
+- **113 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links.
+- **43-method CBT technique directory:** searchable by method family, with separate labels for core CBT, specialist protocols, and related approaches such as ACT, DBT, metacognitive therapy, and MBCT.
 - **Four-step practice plans:** progress can be checked off and is saved locally.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
@@ -33,7 +34,7 @@ Requires Node.js 20 or later:
 npm test
 ```
 
-This checks JavaScript syntax and validates the emotion library, tool-to-worksheet mappings, evidence references, and key safety boundaries.
+This checks JavaScript syntax and validates the 25-workspace library, 113 tool-to-worksheet mappings, 43 technique-directory entries, evidence references, and key safety boundaries.
 
 GitHub Actions workflow files are included under `.github/workflows/`. A repository Actions runner must be enabled for those checks to execute.
 
