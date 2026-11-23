@@ -27,16 +27,19 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.ok(toolIds.size >= 113, "The library should contain at least 113 interactive tools.");
+assert.ok(toolIds.size >= 135, "The library should contain at least 135 interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
-for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-boundary","anger-consequence","anger-repair","stress-demand","stress-problem","stress-time","stress-perfectionism","stress-recovery","stress-worry","anxiety-maintenance","anxiety-reassurance","anxiety-attention","anxiety-coping","anxiety-post","anxiety-behavioural","fear-expectancy","fear-context","fear-safety","fear-approach","fear-imaginal","fear-learning"]) {
+for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-boundary","anger-consequence","anger-repair","stress-demand","stress-problem","stress-time","stress-perfectionism","stress-recovery","stress-worry","anxiety-maintenance","anxiety-reassurance","anxiety-attention","anxiety-coping","anxiety-post","anxiety-behavioural","fear-expectancy","fear-context","fear-safety","fear-approach","fear-imaginal","fear-learning","anger-interpretation-check","anger-need-request","anger-pause-return","anger-vulnerability-plan","stress-control-influence-map","stress-priority-triage","stress-anticipatory-plan","stress-workload-conversation","anxiety-avoidance-cost-map","anxiety-worry-trigger-chain","anxiety-coping-evidence-log","anxiety-valued-approach-step","fear-real-risk-check","fear-coping-prediction-review","fear-values-approach-choice","fear-setback-reengagement","social-anxiety-safety-map","social-anxiety-anticipatory-review","social-anxiety-conversation-experiment","social-anxiety-impression-evidence","social-anxiety-core-rule-test","social-anxiety-video-feedback-prep"]) {
   const tool = EMOTIONS.flatMap(item => item.tools).find(item => item.id.startsWith(prefix));
   assert.ok(tool && tool.steps.length >= 5, "New focused-audit tools must contain at least five steps: " + prefix);
 }
 
 
+const socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
+assert.ok(socialWorkspace && socialWorkspace.tools.length >= 9, "Social anxiety needs at least nine dedicated tools.");
+assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
   assert.ok(workspace.tools.length >= 9, requiredId + " must contain at least nine dedicated tools.");
@@ -50,7 +53,10 @@ for (const requiredId of ["anger","stress","fear","anxiety"]) {
 const styleSource = await readFile(new URL("../styles.css", import.meta.url), "utf8");
 assert.match(styleSource, /\.tool-card > p\s*\{[^}]*font-size:\s*17px/s, "Exercise card descriptions must match the main reading size.");
 assert.match(styleSource, /\.form-field textarea\s*\{[^}]*font-size:\s*17px/s, "Worksheet inputs must be comfortably readable.");
-assert.match(styleSource, /\.dialog-method ol,?\s*\.worksheet-evidence p\s*\{[^}]*font-size:\s*16px/s, "Exercise instructions must be readable.");
+assert.match(styleSource, /\.dialog-method ol,?\s*\.worksheet-evidence p\s*\{[^}]*font-size:\s*16px/s, "Legacy instruction styles must remain readable.");
+assert.match(styleSource, /\.practice-step-list li p\s*\{[^}]*font-size:\s*17px/s, "Exercise steps must use the main reading size in separate cards.");
+assert.match(styleSource, /\.reflection-field-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2/s, "Reflection fields should use a structured desktop grid.");
+assert.match(styleSource, /\.technique-expand summary/, "Technique steps should use progressive disclosure.");
 
 
 assert.ok(EMOTIONS.length >= 25, "The expanded specialist-workspace set should be present.");
@@ -65,6 +71,10 @@ assert.ok(EMOTIONS.find(item => item.id === "body-focused-repetitive-behaviours"
 assert.ok(CORE_TECHNIQUES.length >= 49, "The searchable technique directory should contain at least 49 methods.");
 const appSource = await readFile(new URL("../app.js", import.meta.url), "utf8");
 assert.ok(appSource.includes("function renderTechniqueLibrary()"), "The technique directory renderer should exist.");
+assert.ok(appSource.includes("function renderSearchResults()"), "Global search should render direct workspace and exercise results.");
+assert.ok(appSource.includes("data-search-tool"), "Search results should identify exact tools.");
+assert.ok(appSource.includes("practice-step-list"), "The worksheet should render visually separated practice steps.");
+assert.ok(appSource.includes("if (!saveState())"), "Save actions should not show success after local persistence fails.");
 assert.ok(appSource.includes("${links(item.sources)}"), "The technique directory should use the shared source-link renderer.");
 assert.ok(!appSource.includes("${sourceLinks(item.sources)}"), "The technique directory must not call an undefined source-link helper.");
 assert.ok(appSource.includes('data-library-category'), "Technique category filters should be wired to the app.");
