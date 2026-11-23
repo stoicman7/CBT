@@ -32,6 +32,22 @@ assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety w
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
 
+for (const requiredId of ["anger","stress","fear","anxiety"]) {
+  const workspace = EMOTIONS.find(item => item.id === requiredId);
+  assert.ok(workspace.tools.length >= 9, requiredId + " must contain at least nine dedicated tools.");
+  assert.equal(new Set(workspace.tools.map(tool => tool.id)).size, workspace.tools.length, requiredId + " tool IDs must be unique.");
+  for (const tool of workspace.tools) {
+    assert.ok(tool.description.length > 45, requiredId + " tool descriptions must be substantive: " + tool.id);
+    assert.ok(tool.steps.length >= 5, requiredId + " tools must contain at least five actionable steps: " + tool.id);
+    assert.ok(tool.sources.length >= 1, requiredId + " tools must cite at least one source: " + tool.id);
+  }
+}
+const styleSource = await readFile(new URL("../styles.css", import.meta.url), "utf8");
+assert.match(styleSource, /\.tool-card > p\s*\{[^}]*font-size:\s*17px/s, "Exercise card descriptions must match the main reading size.");
+assert.match(styleSource, /\.form-field textarea\s*\{[^}]*font-size:\s*17px/s, "Worksheet inputs must be comfortably readable.");
+assert.match(styleSource, /\.dialog-method ol,?\s*\.worksheet-evidence p\s*\{[^}]*font-size:\s*16px/s, "Exercise instructions must be readable.");
+
+
 assert.ok(EMOTIONS.length >= 25, "The expanded specialist-workspace set should be present.");
 for (const required of ["chronic-pain","adult-adhd","body-focused-repetitive-behaviours","substance-use","eating-disorder-cbt","prolonged-grief","psychosis-cbt"]) {
   assert.ok(EMOTIONS.find(item => item.id === required), "Missing specialist workspace: " + required);
