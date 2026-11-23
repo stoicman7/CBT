@@ -184,6 +184,8 @@ a { color: inherit; }
 .small-note { margin: 0; color: #a19899; font-size: 9px; line-height: 1.65; }
 .evidence-score { margin: 12px 0 6px; color: var(--red); font: 800 26px Manrope,sans-serif; }
 .evidence-score span { padding-left: 5px; color: #b3a8a9; font: 700 8px Manrope,sans-serif; letter-spacing: .7px; }
+.evidence-score.evidence-word { font-size: 15px; line-height: 1.35; letter-spacing: .25px; }
+.evidence-score.evidence-word span { font-size: 7px; }
 .evidence-panel > p { margin: 0; color: #83797a; font-size: 9px; line-height: 1.7; }
 .evidence-links { display: grid; gap: 6px; margin-top: 13px; padding-top: 11px; border-top: 1px solid #f0ebea; }
 .evidence-links a, .technique-sources a, .worksheet-evidence a { color: #92787a; text-decoration: none; font-size: 8px; line-height: 1.4; }
