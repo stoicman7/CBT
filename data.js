@@ -168,6 +168,27 @@ export const SOURCES = {
     label: "Beck Institute: cognitive therapy rating scale manual",
     citation: "Beck Institute. Cognitive Therapy Rating Scale Manual (2020).",
     url: "https://beckinstitute.org/wp-content/uploads/2021/06/CTRS-Manual-2020.pdf"
+  },
+
+  socialAnxietyNMA2025: {
+    label: "Psychotherapies for social anxiety: network meta-analysis (2025)",
+    citation: "Psychotherapies for social anxiety disorder in adults: A systematic review and Bayesian network meta-analysis (2025). 92 studies, including 90 randomised trials; Clark and Wells CBT ranked highly against wait-list controls.",
+    url: "https://doi.org/10.1016/j.jad.2025.02.092"
+  },
+  fearLearningMeta2025: {
+    label: "Fear and safety learning meta-analysis (2025)",
+    citation: "Kausche et al. (2025). Fear and safety learning in anxiety- and stress-related disorders: An updated meta-analysis. Neuroscience & Biobehavioral Reviews, 169, 105983. 77 studies; 2,052 patients and 3,258 controls.",
+    url: "https://doi.org/10.1016/j.neubiorev.2024.105983"
+  },
+  specificPhobiaExposureMeta2022: {
+    label: "Exposure dose for specific phobia: meta-analysis (2022)",
+    citation: "The relative efficacy and efficiency of single- and multi-session exposure therapies for specific phobia: A meta-analysis (2022). 85 exposure study groups; 1,758 participants. Both formats showed large pre-post effects; this does not establish suitability for unsupervised exposure.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/36323055/"
+  },
+  stressCBTRCT2025: {
+    label: "Internet CBT versus health-promotion trial for stress-related disorders (2025)",
+    citation: "Internet-Delivered Treatment for Stress-Related Disorders: A Randomized Controlled Superiority Trial of Cognitive Behavioral Therapy versus General Health Promotion (2025). CBT was not superior to health promotion on the primary perceived-stress outcome in the full sample.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/40334656/"
   }
 };
 
@@ -262,7 +283,7 @@ export const EMOTIONS = [
     description: "Fear is a protective response to perceived danger. When a fear is disproportionate or avoidance is shrinking life, exposure-based CBT can help new learning occur through carefully planned contact with feared cues.",
     model: "Cue → danger prediction → fear → escape or avoidance → immediate relief → fear remains untested",
     why: "Avoidance can prevent the person from discovering whether a feared outcome is likely, tolerable, or manageable. Exposure is not a dare or a test of courage; it is a collaborative learning process.",
-    evidence: { label: "Strong for specific phobias and several anxiety conditions", level: "strong", note: "Exposure is a central CBT component for phobias and other anxiety conditions. The appropriate form and supervision depend on the target and clinical context." },
+    evidence: { label: "Strong for specific phobia; context-dependent elsewhere", level: "strong", note: "Exposure is well supported for specific phobia. A 2022 meta-analysis found large effects for both single- and multi-session in-vivo formats, but exposure must match the target and real-world risk; this site does not prescribe intense or unsupervised exposure." },
     focus: ["Define the feared cue", "Rate difficulty realistically", "Build small repeatable steps", "Measure learning, not just fear reduction"],
     tools: [
       { id: "fear-ladder", title: "Draft a graded exposure ladder", description: "Arrange safe steps from manageable to challenging. Use this as a planning worksheet, not an instruction to force exposure.", when: "For ordinary phobic avoidance after ruling out real danger; complex cases need a clinician.", steps: ["Name the feared situation precisely.", "List several versions from easier to harder.", "Rate expected difficulty for each step.", "Choose a first step that is challenging but manageable.", "Write the prediction you want to test and how you will review learning."], worksheet: "exposure", evidence: "Graded exposure is an established CBT component for phobias and anxiety disorders.", sources: ["anxietyGuidelines", "socialNICE"] },
@@ -437,7 +458,7 @@ export const EMOTIONS = [
     description: "Social anxiety is maintained by threat predictions, inward attention, self-imagery, safety behaviours, and post-event processing. Disorder-specific CBT targets these processes rather than simply telling someone to socialise more.",
     model: "Social situation → negative prediction → self-focused attention and safety behaviour → distorted self-impression → post-event review → stronger fear",
     why: "The Clark and Wells model uses behavioural experiments, video feedback, external attention, and work on safety-seeking behaviours. These are structured treatment components, not generic confidence tips.",
-    evidence: { label: "Strong; NICE-recommended disorder-specific CBT", level: "strong", note: "NICE recommends individual CBT based on the Clark and Wells or Heimberg model, including behavioural experiments, attention work, and graduated exposure." },
+    evidence: { label: "Strong; NICE-recommended disorder-specific CBT", level: "strong", note: "NICE recommends protocol-based individual CBT delivered by competent practitioners. A 2025 network meta-analysis of 92 studies (90 randomised trials) found psychotherapy options beneficial versus wait-list controls and ranked Clark and Wells CBT highly; this does not guarantee an individual outcome." },
     focus: ["Shift attention outward", "Identify safety behaviours", "Test a specific prediction", "Reduce post-event processing"],
     tools: [
       { id: "social-attention", title: "Shift attention outward", description: "Practise attending to the conversation and environment rather than monitoring yourself.", when: "Use in a manageable social interaction.", steps: ["Notice what you are monitoring internally.", "Choose two external details to attend to.", "Listen for the other person's meaning rather than rehearsing your next sentence.", "Allow small pauses without correcting every impression.", "Afterwards, record what you noticed about the conversation."], worksheet: "reflection", evidence: "External attention is a named component of Clark and Wells CBT for social anxiety.", sources: ["socialNICE"] },
@@ -2103,6 +2124,376 @@ EMOTIONS.push(...[
   }
 ]);
 
+
+/* Additional focused tools from the fifth usability and clinical-domain audit. */
+EMOTIONS.find(item => item.id === "anger").tools.push(
+  {
+    id: "anger-interpretation-check",
+    title: "Check the story behind the anger",
+    description: "Separate an observable event from assumptions about disrespect, intention, or what another person was thinking.",
+    when: "Use after the immediate intensity has settled and you are unsure whether an interpretation is driving the reaction.",
+    steps: [
+      "Write the event as a camera might record it, without assigning motive.",
+      "Write the exact conclusion you reached about the other person's intention.",
+      "List the evidence that supports that conclusion and what remains unknown.",
+      "Generate one or two plausible alternatives without excusing harmful behaviour.",
+      "Decide what information, boundary, or action is actually needed."
+    ],
+    worksheet: "angerSkills",
+    evidence: "Cognitive reappraisal and functional analysis are established CBT procedures. The 2025 anger meta-analysis found associations between anger and emotion-regulation strategies, but its heterogeneous correlational evidence does not prove that this worksheet alone reduces anger.",
+    sources: ["angerRegulation2025", "cognitiveRestructuring"]
+  },
+  {
+    id: "anger-need-request",
+    title: "Translate anger into a specific request",
+    description: "Identify the concern or boundary beneath anger and express it as a concrete, non-threatening request.",
+    when: "Use when a solvable interpersonal issue needs to be discussed after both people are calm enough to engage.",
+    steps: [
+      "Identify what matters to you in the situation: fairness, reliability, respect, space, or another value.",
+      "Describe the observable behaviour and its practical impact.",
+      "State the change you are requesting in specific, achievable terms.",
+      "Separate your request from what you can control if the other person declines.",
+      "Choose a calm time and a safe setting for the conversation."
+    ],
+    worksheet: "angerSkills",
+    evidence: "Assertive communication and problem-solving are common CBT-informed skills. This is a communication aid, not a substitute for safeguarding or support where coercion, abuse, or violence is present.",
+    sources: ["angerSaini", "beckManual"]
+  },
+  {
+    id: "anger-pause-return",
+    title: "Plan a pause with a clear return",
+    description: "Create a brief, purposeful break when escalation makes constructive conversation difficult, without using silence as punishment.",
+    when: "Use when you notice early escalation and it is safe to pause the interaction.",
+    steps: [
+      "Name the early sign that tells you the conversation is becoming unproductive.",
+      "Use a short, neutral statement that you need a pause.",
+      "Move to a safe, low-stimulation setting and use a comfortable down-regulation activity.",
+      "Agree when and how you will return to the issue, if a return is safe and appropriate.",
+      "Resume only when you can listen and speak without threats, intimidation, or retaliation."
+    ],
+    worksheet: "angerSkills",
+    evidence: "The 2024 meta-analysis found that activities reducing arousal lowered anger and aggression on average; arousal-increasing venting did not. A planned pause is a practical application, not a separately validated protocol.",
+    sources: ["angerArousal", "angerRegulation2025"]
+  },
+  {
+    id: "anger-vulnerability-plan",
+    title: "Map the conditions that lower your anger threshold",
+    description: "Notice whether fatigue, pain, overload, conflict, or other vulnerabilities make familiar triggers harder to manage.",
+    when: "Use after repeated episodes to identify patterns that could be changed or accommodated.",
+    steps: [
+      "Review several recent episodes and note what was happening earlier that day.",
+      "Record relevant context such as sleep, workload, pain, hunger, substances, or ongoing conflict without assuming any one factor caused the anger.",
+      "Notice which conditions repeatedly appear before escalation.",
+      "Choose one realistic adjustment or support request to test.",
+      "Review whether the adjustment changes the pattern over time."
+    ],
+    worksheet: "angerSkills",
+    evidence: "Self-monitoring and functional assessment are standard CBT methods. The factors listed are prompts for individual observation, not a diagnostic explanation or an excuse for harmful behaviour.",
+    sources: ["angerSaini", "angerRegulation2025"]
+  }
+);
+
+EMOTIONS.find(item => item.id === "stress").tools.push(
+  {
+    id: "stress-control-influence-map",
+    title: "Separate what you can control from what you cannot",
+    description: "Distinguish direct actions, areas where you can ask for change, and conditions that may need acceptance or external support.",
+    when: "Use when stress feels global or overwhelming and it is difficult to identify a useful next move.",
+    steps: [
+      "Write the stressor in one specific sentence.",
+      "List the parts you can directly change through your own actions.",
+      "List the parts you may influence through a request, negotiation, or support.",
+      "Name the parts outside your control, including structural or organisational conditions.",
+      "Choose one action or support route without treating uncontrollable demands as a personal failure."
+    ],
+    worksheet: "stressPlan",
+    evidence: "Problem-solving and cognitive-behavioural coping are common intervention components. Workplace intervention reviews report generally small-to-moderate effects with often low or very low certainty; individual coping cannot replace organisational change where demands are unreasonable.",
+    sources: ["workplaceStressUmbrella2023", "stressICBT"]
+  },
+  {
+    id: "stress-priority-triage",
+    title: "Triage an overloaded task list",
+    description: "Turn an undifferentiated workload into a transparent set of priorities, deferrals, requests, and realistic next actions.",
+    when: "Use when too many tasks compete for attention and everything feels equally urgent.",
+    steps: [
+      "List the tasks and commitments currently occupying your attention.",
+      "Identify real deadlines, dependencies, and consequences rather than relying only on urgency feelings.",
+      "Mark what must happen, what can be delayed, simplified, delegated, or dropped.",
+      "Choose one next action that fits the time and resources actually available.",
+      "Record whom you need to inform or ask for help before changing a commitment."
+    ],
+    worksheet: "stressPlan",
+    evidence: "Structured problem-solving can help organise controllable demands. This tool is a planning aid, not proof that an excessive workload is manageable or that the individual is responsible for systemic problems.",
+    sources: ["stressICBT", "workplaceStressUmbrella2023"]
+  },
+  {
+    id: "stress-anticipatory-plan",
+    title: "Prepare for a predictable stress point",
+    description: "Plan a response to a recurring pressure point before it arrives, including a realistic fallback if the day does not go as expected.",
+    when: "Use before a known demanding meeting, transition, deadline, caregiving task, or other recurring stressor.",
+    steps: [
+      "Name the upcoming situation and the part you expect to be most demanding.",
+      "Separate a realistic concern from a worst-case prediction.",
+      "Identify the resources, information, time, or assistance you may need.",
+      "Choose one practical preparation and one fallback option.",
+      "After the event, compare the plan with what actually happened and revise it."
+    ],
+    worksheet: "stressPlan",
+    evidence: "Anticipatory problem-solving and coping planning are CBT-informed strategies. A 2025 trial found internet CBT was not superior to general health promotion on the primary perceived-stress outcome in its full sample, so this is presented as a self-organisation aid rather than a treatment claim.",
+    sources: ["stressCBTRCT2025", "stressICBT"]
+  },
+  {
+    id: "stress-workload-conversation",
+    title: "Prepare a realistic workload conversation",
+    description: "Translate overload into specific information and requests that a manager, colleague, family member, or service can respond to.",
+    when: "Use when external demands or limited resources are contributing to sustained stress and a conversation is safe and feasible.",
+    steps: [
+      "Describe the workload or demand using concrete examples and time requirements.",
+      "Explain the practical impact on quality, health, deadlines, or other responsibilities.",
+      "Identify the change that would make the demand more realistic.",
+      "Prepare a specific request, such as reprioritisation, extra time, clearer scope, or additional support.",
+      "Record the agreed next step and what you will do if the request cannot be met."
+    ],
+    worksheet: "stressPlan",
+    evidence: "Workplace mental-health reviews include both individual and organisational interventions and report variable certainty. The aim here is to support communication about conditions, not to imply that an individual worksheet can remove unsafe or unreasonable demands.",
+    sources: ["workplaceStressUmbrella2023", "occupationalStress"]
+  }
+);
+
+EMOTIONS.find(item => item.id === "anxiety").tools.push(
+  {
+    id: "anxiety-avoidance-cost-map",
+    title: "Map the short- and long-term cost of avoidance",
+    description: "Notice how avoiding a feared but safe situation may bring immediate relief while narrowing important areas of life.",
+    when: "Use when avoidance is recurring and the situation can be approached safely in a gradual, proportionate way.",
+    steps: [
+      "Name the situation or activity you have been avoiding.",
+      "Record what avoidance helps you escape in the short term.",
+      "Identify what it costs over time, such as opportunity, connection, confidence, or independence.",
+      "Check for genuine danger or practical barriers before considering an approach step.",
+      "Choose one small, safe action that moves toward something important to you."
+    ],
+    worksheet: "anxietyExperiment",
+    evidence: "Avoidance is a common maintaining process in anxiety-focused CBT. This planning aid is not an instruction to enter dangerous situations or to undertake specialist exposure without appropriate assessment.",
+    sources: ["gadGuideline", "anxietyCBTMeta2025"]
+  },
+  {
+    id: "anxiety-worry-trigger-chain",
+    title: "Trace the worry trigger and response loop",
+    description: "Identify how a cue develops into a worry sequence and which response brings short-lived relief but keeps the loop active.",
+    when: "Use when the same type of worry keeps returning despite repeated attempts to settle it.",
+    steps: [
+      "Describe the cue that first brought the worry to mind.",
+      "Write the feared prediction and what it seems to say about the future.",
+      "Notice the response that followed, such as checking, asking, researching, avoiding, or mentally reviewing.",
+      "Record the immediate effect and whether the worry returned.",
+      "Choose one alternative response that is safe and proportionate."
+    ],
+    worksheet: "anxietyExperiment",
+    evidence: "Functional analysis is a core CBT approach. This tool maps a personal pattern; it does not establish a diagnosis or imply that all checking or help-seeking is excessive.",
+    sources: ["gadGuideline", "anxietyGuidelines"]
+  },
+  {
+    id: "anxiety-coping-evidence-log",
+    title: "Build a record of coping evidence",
+    description: "Shift the question from whether anxiety will disappear to what you can realistically do when uncertainty or discomfort is present.",
+    when: "Use when you repeatedly predict that you will be unable to cope unless you feel completely calm or certain.",
+    steps: [
+      "Describe a recent situation that felt difficult or uncertain.",
+      "Write what you predicted you would be unable to manage.",
+      "Record what you actually did, including any support or reasonable precautions.",
+      "Identify what helped and what remained difficult.",
+      "Write a balanced statement about your coping capacity without promising that nothing bad can happen."
+    ],
+    worksheet: "anxietyExperiment",
+    evidence: "Cognitive review and coping appraisal are common elements in CBT for anxiety. The exercise supports learning from experience; it is not a promise of control over uncertain outcomes.",
+    sources: ["gadGuideline", "anxietyCBTMeta2025"]
+  },
+  {
+    id: "anxiety-valued-approach-step",
+    title: "Choose an action that matters even with anxiety present",
+    description: "Plan a manageable step toward a valued activity without making the disappearance of anxiety a prerequisite.",
+    when: "Use when anxiety is delaying a safe activity that matters to your relationships, work, learning, or daily life.",
+    steps: [
+      "Name the activity or value that anxiety has been pushing into the background.",
+      "Describe the feared prediction that makes starting difficult.",
+      "Separate reasonable preparation from repeated attempts to achieve certainty.",
+      "Choose a small, safe action that can be completed while some anxiety is present.",
+      "Review what the action made possible, not only how anxious you felt."
+    ],
+    worksheet: "anxietyExperiment",
+    evidence: "Behavioural experiments and approach-oriented practice are used in CBT for anxiety. This prompt is a planning aid and should not be used to override real danger, medical advice, or specialist treatment plans.",
+    sources: ["gadGuideline", "anxietyCBTMeta2025"]
+  }
+);
+
+EMOTIONS.find(item => item.id === "fear").tools.push(
+  {
+    id: "fear-real-risk-check",
+    title: "Check real-world risk before choosing an approach",
+    description: "Distinguish an objectively unsafe situation from a safe cue that has become strongly associated with fear.",
+    when: "Use before any approach practice, especially when the feared situation involves traffic, heights, animals, health, substances, or physical hazards.",
+    steps: [
+      "Describe the setting and the specific feared outcome.",
+      "Identify objective hazards, relevant rules, and reasonable safety precautions.",
+      "Ask whether the concern is supported by current evidence, professional advice, or a real risk in the environment.",
+      "Do not reduce precautions or enter the situation if risk remains meaningful or uncertain.",
+      "Only consider a small approach step when the setting is objectively safe; otherwise seek appropriate advice or change the environment."
+    ],
+    worksheet: "fearPractice",
+    evidence: "Exposure is used for specific phobias, but sound treatment begins with an appropriate assessment of the feared cue. This exercise deliberately prioritises real-world safety over exposure.",
+    sources: ["specificPhobiaExposureMeta2022", "anxietyGuidelines"]
+  },
+  {
+    id: "fear-coping-prediction-review",
+    title: "Review what happened when fear rose",
+    description: "Compare a feared prediction with observable events and the coping responses you actually used.",
+    when: "Use after a safe, manageable situation that produced fear, whether or not it went exactly as planned.",
+    steps: [
+      "Write the prediction you had before the situation.",
+      "Describe what objectively happened, without forcing a positive interpretation.",
+      "Record what was uncomfortable and what, if anything, was genuinely dangerous.",
+      "Notice which coping actions or reasonable precautions helped.",
+      "Write what you would keep, change, or ask a clinician about before another attempt."
+    ],
+    worksheet: "fearPractice",
+    evidence: "Expectancy review is consistent with behavioural experiments and inhibitory-learning approaches to exposure. The exercise is not a substitute for therapist-guided exposure when the fear is severe or complex.",
+    sources: ["inhibitoryLearningExposure", "fearLearningMeta2025"]
+  },
+  {
+    id: "fear-values-approach-choice",
+    title: "Connect a safe approach step to what matters",
+    description: "Choose whether and how to approach a fear by considering valued goals, current risk, and the size of a manageable step.",
+    when: "Use when a fear-related avoidance pattern is interfering with an important but objectively safe activity.",
+    steps: [
+      "Identify what the fear is keeping you from doing or participating in.",
+      "Check whether the situation is objectively safe and whether reasonable precautions are in place.",
+      "List a few possible approach steps, from smaller to larger.",
+      "Choose a step that is challenging but not overwhelming, and define what you want to learn.",
+      "Review whether the action served your goal, regardless of whether fear disappeared."
+    ],
+    worksheet: "fearPractice",
+    evidence: "Exposure-based CBT for specific phobia is supported by clinical evidence; valued-goal framing is an adjunctive planning aid. Do not use it to pressure yourself into unsafe or clinically complex exposure.",
+    sources: ["specificPhobiaExposureMeta2022", "inhibitoryLearningExposure"]
+  },
+  {
+    id: "fear-setback-reengagement",
+    title: "Plan a return after a fear setback",
+    description: "Respond to a difficult or avoided episode with a realistic review and a safe next step rather than treating one setback as proof that learning has failed.",
+    when: "Use after a return of fear, an interrupted practice attempt, or a period of renewed avoidance.",
+    steps: [
+      "Describe what happened and what made the situation difficult.",
+      "Check whether any new real-world risk or health information needs attention.",
+      "Identify what you learned about the cue, your prediction, or your coping.",
+      "Decide whether the previous step needs to be made smaller or better supported.",
+      "Choose a safe next action or discuss the difficulty with a qualified practitioner."
+    ],
+    worksheet: "fearPractice",
+    evidence: "Fear can recur across contexts and over time; recurrence does not by itself show that exposure learning has been erased. The evidence on fear learning describes group-level processes, not a guaranteed individual course.",
+    sources: ["fearLearningMeta2025", "inhibitoryLearningExposure"]
+  }
+);
+
+EMOTIONS.find(item => item.id === "social-anxiety").tools.push(
+  {
+    id: "social-anxiety-safety-map",
+    title: "Identify the safety behaviours you rely on",
+    description: "Notice subtle actions used to prevent negative evaluation, such as rehearsing, hiding, over-apologising, or monitoring how you appear.",
+    when: "Use before or after a manageable social situation when you suspect self-protection is affecting how you participate.",
+    steps: [
+      "Name a social situation that tends to trigger evaluation fears.",
+      "Write what you predict might happen if you did not protect or manage your impression.",
+      "List what you do to feel safer, including internal behaviours such as rehearsing or monitoring.",
+      "Consider how each behaviour might affect attention, spontaneity, or your ability to test the prediction.",
+      "Choose one small, safe behaviour to vary in a planned experiment rather than removing every support at once."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "NICE's Clark and Wells CBT protocol explicitly examines safety-seeking behaviours and uses experiential behavioural experiments. This worksheet is an educational map, not the full protocol.",
+    sources: ["socialAnxietyNICE", "socialAnxietyNMA2025"]
+  },
+  {
+    id: "social-anxiety-anticipatory-review",
+    title: "Prepare for a social situation without rehearsing endlessly",
+    description: "Distinguish useful practical preparation from repetitive mental rehearsal that increases self-monitoring and fear of evaluation.",
+    when: "Use before a meeting, conversation, group, presentation, or other social event you are tempted to avoid.",
+    steps: [
+      "Describe the upcoming situation and what matters about taking part.",
+      "Write the feared judgement or social outcome you are predicting.",
+      "Notice whether you are mentally scripting every sentence or imagining how you look.",
+      "Choose only the preparation that is practically useful for the situation.",
+      "Set an intention to attend to the people and conversation rather than continuously checking your performance."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "NICE's Clark and Wells protocol addresses problematic pre-event processing and trains externally focused attention. This is a brief preparation aid rather than the full treatment procedure.",
+    sources: ["socialAnxietyNICE"]
+  },
+  {
+    id: "social-anxiety-conversation-experiment",
+    title: "Run a small conversation experiment",
+    description: "Test a specific prediction about ordinary interaction using an observable behaviour instead of trying to perform perfectly.",
+    when: "Use in a safe, low-stakes conversation where you can choose how much to participate.",
+    steps: [
+      "Choose a conversation that matters but is manageable.",
+      "Write one specific prediction, such as being judged for a pause or a brief difference of opinion.",
+      "Choose one small behaviour to test, such as asking a genuine question or allowing a natural pause.",
+      "Place attention on what the other person says rather than continually evaluating yourself.",
+      "Record observable events and compare them with the prediction without guessing the other person's private thoughts."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "Behavioural experiments are a named component of NICE-recommended social-anxiety CBT. This low-stakes practice prompt does not replace a structured treatment protocol for persistent or impairing social anxiety.",
+    sources: ["socialAnxietyNICE", "socialAnxietyNMA2025"]
+  },
+  {
+    id: "social-anxiety-impression-evidence",
+    title: "Separate your self-impression from observable evidence",
+    description: "Review the difference between how anxious you felt or imagined you looked and what could actually be observed.",
+    when: "Use after a social interaction when you are convinced that visible anxiety made a poor impression.",
+    steps: [
+      "Write how you felt internally during the interaction.",
+      "Describe the specific sign you fear others noticed.",
+      "List only observable evidence, such as what was said or what happened next.",
+      "Mark any conclusions that depend on mind-reading or assuming you know another person's evaluation.",
+      "Write a balanced conclusion that allows uncertainty without turning it into proof of failure."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "The Clark and Wells model addresses distorted negative self-imagery, self-focused attention, and post-event processing. This is a reflection prompt, not a formal video-feedback procedure.",
+    sources: ["socialAnxietyNICE", "socialAnxietyNMA2025"]
+  },
+  {
+    id: "social-anxiety-core-rule-test",
+    title: "Test a rigid rule about how you must appear",
+    description: "Identify performance rules such as never pausing, always being interesting, or hiding every sign of nervousness, then examine their costs.",
+    when: "Use when social situations feel like tests that require flawless performance.",
+    steps: [
+      "Write the rule you feel you must follow to avoid criticism.",
+      "Identify what you predict would happen if you loosened the rule slightly.",
+      "Consider where the rule came from and whether it is realistic for other people.",
+      "Design one small, safe experiment that tests the rule without deliberately humiliating or endangering yourself.",
+      "Review what the experiment suggests about flexibility, connection, and the need to be perfect."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "NICE's individual CBT protocol includes examination and modification of core beliefs and behavioural experiments. This self-reflection aid is not a full core-belief intervention.",
+    sources: ["socialAnxietyNICE", "socialAnxietyNMA2025"]
+  },
+  {
+    id: "social-anxiety-video-feedback-prep",
+    title: "Prepare for structured video feedback with a therapist",
+    description: "Organise the prediction and questions you would want to explore if video feedback is part of a clinician-guided social-anxiety treatment.",
+    when: "Use only when video feedback is being offered or considered within a structured therapeutic setting and consent and privacy are clear.",
+    steps: [
+      "Write the negative image or prediction you hold about how you appear to others.",
+      "Ask the clinician what the recording is intended to test and how it will be stored or deleted.",
+      "Agree on consent, who may view the recording, and whether you can pause or decline.",
+      "Compare your prediction with specific, observable aspects of the recording using the clinician's guidance.",
+      "Record what the feedback changes or does not change in your understanding; do not use a recording to repeatedly scrutinise yourself."
+    ],
+    worksheet: "socialAnxiety",
+    evidence: "Video feedback is explicitly included in the Clark and Wells protocol in NICE CG159. This worksheet is preparation for clinician-guided work, not a recommendation to record or analyse yourself independently.",
+    sources: ["socialAnxietyNICE"]
+  }
+);
+
+
 export const WORKSHEETS = {
   anger: {
     title: "Anger chain record",
@@ -2215,6 +2606,67 @@ export const WORKSHEETS = {
       ["meaning", "What meaning did you give it?"],
       ["need", "What do you need right now?"],
       ["next", "What is one safe, useful next step?"]
+    ]
+  },
+  angerSkills: {
+    title: "Anger response plan",
+    intro: "Use this after the immediate intensity has settled. Keep the focus on safety, observable events, and behaviour you can control.",
+    fields: [
+      ["event", "What happened? Record observable facts."],
+      ["interpretation", "What meaning or assumption intensified the anger?"],
+      ["need", "What value, need, or boundary may be involved?"],
+      ["earlyCue", "What early sign tells you to pause?"],
+      ["response", "What safe request or response would be proportionate?"],
+      ["safety", "What will you do if the interaction cannot continue safely?"]
+    ]
+  },
+  stressPlan: {
+    title: "Stress and workload plan",
+    intro: "Use this to distinguish controllable actions from demands that require support, negotiation, or wider change.",
+    fields: [
+      ["demand", "What is the main demand or stressor?"],
+      ["control", "What can you control, influence, or not control?"],
+      ["priority", "What is the most important realistic next priority?"],
+      ["options", "What can be delayed, simplified, shared, or dropped?"],
+      ["support", "What support, resource, or change would help?"],
+      ["nextStep", "What is one next step, and when will you review it?"]
+    ]
+  },
+  anxietyExperiment: {
+    title: "Anxiety action and learning record",
+    intro: "Choose only a safe, proportionate action. Do not use this record to postpone medical assessment, ignore safety advice, or replace a specialist treatment plan.",
+    fields: [
+      ["situation", "What situation or activity is involved?"],
+      ["prediction", "What do you predict will happen?"],
+      ["belief", "How strongly do you believe this prediction (0–100)?"],
+      ["action", "What safe, proportionate action could you take?"],
+      ["response", "What checking, avoidance, or reassurance response might appear?"],
+      ["learning", "What actually happened, and what did you learn?"]
+    ]
+  },
+  fearPractice: {
+    title: "Fear and safe-approach review",
+    intro: "Safety comes first. Do not reduce legitimate precautions or plan unsupervised trauma processing, panic-sensation induction, or OCD exposure and response prevention.",
+    fields: [
+      ["cue", "What exact cue or situation triggers fear?"],
+      ["risk", "What objective risks and precautions must be respected?"],
+      ["prediction", "What feared outcome do you predict?"],
+      ["step", "What safe, manageable step could be considered?"],
+      ["outcome", "What happened, including what was uncomfortable or genuinely risky?"],
+      ["next", "What did you learn, and what is an appropriate next step?"]
+    ]
+  },
+  socialAnxiety: {
+    title: "Social-anxiety experiment record",
+    intro: "Use for reflection or a low-stakes experiment. Persistent or impairing social anxiety is best addressed with disorder-specific CBT delivered by a competent practitioner.",
+    fields: [
+      ["situation", "What social situation do you want to understand or practise?"],
+      ["prediction", "What negative evaluation do you predict?"],
+      ["attention", "Where does your attention go during the interaction?"],
+      ["safety", "What safety behaviour do you tend to use?"],
+      ["experiment", "What small, safe change could test your prediction?"],
+      ["observation", "What observable evidence did you notice?"],
+      ["learning", "What is a fair conclusion that does not rely on mind-reading?"]
     ]
   }
 };
