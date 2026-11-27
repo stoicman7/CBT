@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 import { CORE_TECHNIQUES } from "../technique-library.js";
 
-assert.ok(EMOTIONS.length >= 25, "The library should contain a broad set of emotion spaces.");
+assert.ok(EMOTIONS.length >= 26, "The library should contain a broad set of emotion spaces.");
 const ids = EMOTIONS.map(item => item.id);
 assert.equal(new Set(ids).size, ids.length, "Emotion IDs must be unique.");
 
@@ -27,7 +27,7 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.equal(toolIds.size, 159, "The catalogue should contain exactly 159 unique interactive tools.");
+assert.equal(toolIds.size, 163, "The catalogue should contain exactly 159 unique interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
@@ -37,7 +37,7 @@ for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-bo
 }
 
 
-for (const schemaId of ["angerSkills","stressPlan","anxietyExperiment","fearPractice","socialAnxiety"]) {
+for (const schemaId of ["angerSkills","stressPlan","anxietyExperiment","fearPractice","socialAnxiety","embarrassment"]) {
   const schema = WORKSHEETS[schemaId];
   assert.ok(schema && schema.title && schema.intro, "Missing dedicated worksheet schema: " + schemaId);
   assert.ok(schema.fields.length >= 5, "Dedicated worksheet needs enough reflection prompts: " + schemaId);
@@ -45,7 +45,14 @@ for (const schemaId of ["angerSkills","stressPlan","anxietyExperiment","fearPrac
   assert.equal(new Set(fieldIds).size, fieldIds.length, "Worksheet field IDs must be unique: " + schemaId);
   assert.ok(schema.fields.every(([field,label]) => field && label), "Worksheet labels must be complete: " + schemaId);
 }
-const socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
+
+const embarrassmentWorkspace = EMOTIONS.find(item => item.id === "embarrassment");
+assert.ok(embarrassmentWorkspace, "The separate embarrassment workspace should be present.");
+assert.equal(embarrassmentWorkspace.tools.length, 4, "Embarrassment should have four dedicated tools.");
+assert.equal(embarrassmentWorkspace.evidence.level, "foundational", "Embarrassment must not be presented as a validated stand-alone treatment.");
+assert.ok(embarrassmentWorkspace.evidence.note.toLowerCase().includes("no universal stand-alone cbt"), "Embarrassment evidence must distinguish emotion research from treatment evidence.");
+assert.ok(embarrassmentWorkspace.caution.toLowerCase().includes("social anxiety"), "Embarrassment must preserve the boundary with clinical social-anxiety care.");
+\nconst socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
 assert.ok(socialWorkspace, "The social-anxiety workspace should be present.");
 assert.equal(socialWorkspace.tools.length, 9, "Social anxiety should contain nine dedicated tools.");
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
