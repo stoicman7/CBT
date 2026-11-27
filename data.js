@@ -189,6 +189,62 @@ export const SOURCES = {
     label: "Internet CBT versus health-promotion trial for stress-related disorders (2025)",
     citation: "Internet-Delivered Treatment for Stress-Related Disorders: A Randomized Controlled Superiority Trial of Cognitive Behavioral Therapy versus General Health Promotion (2025). CBT was not superior to health promotion on the primary perceived-stress outcome in the full sample.",
     url: "https://pubmed.ncbi.nlm.nih.gov/40334656/"
+  },
+
+  embarrassmentDistinct1996: {
+    label: "Embarrassment, shame, and guilt: distinct antecedents and expressions (1996)",
+    citation: "Keltner, D., & Buswell, B. N. (1996). Evidence for the distinctness of embarrassment, shame, and guilt: A study of recalled antecedents and facial expressions of emotion. Cognition and Emotion, 10(2), 155–172.",
+    url: "https://doi.org/10.1080/026999396380312"
+  },
+  embarrassmentReview1997: {
+    label: "Embarrassment: its distinct form and appeasement functions (1997)",
+    citation: "Keltner, D., & Buswell, B. N. (1997). Embarrassment: Its distinct form and appeasement functions. Psychological Bulletin, 122(3), 250–270.",
+    url: "https://doi.org/10.1037/0033-2909.122.3.250"
+  },
+  embarrassmentFunction2000: {
+    label: "The functions and uses of embarrassment (2000)",
+    citation: "Keltner, D., & Anderson, C. (2000). Saving Face for Darwin: The Functions and Uses of Embarrassment. Current Directions in Psychological Science, 9(6).",
+    url: "https://doi.org/10.1111/1467-8721.00091"
+  },
+  embarrassmentProsociality2012: {
+    label: "Embarrassment as a signal of prosociality (2012)",
+    citation: "Feinberg, M., Willer, R., & Keltner, D. (2012). Flustered and faithful: Embarrassment as a signal of prosociality. Journal of Personality and Social Psychology, 102(1), 81–97.",
+    url: "https://doi.org/10.1037/a0025403"
+  },
+  embarrassmentDailyBlushing2015: {
+    label: "Facial blushing during everyday social encounters (2015)",
+    citation: "aan het Rot, M., Moskowitz, D. S., & de Jong, P. J. (2015). Intrapersonal and interpersonal concomitants of facial blushing during everyday social encounters. PLOS ONE, 10(2), e0118243.",
+    url: "https://doi.org/10.1371/journal.pone.0118243"
+  },
+  fearBlushingReview2020: {
+    label: "Treatment options for fear of blushing: clinical review (2020)",
+    citation: "Drummond, P. D., Shapiro, G. B., Nikolić, M., & Bögels, S. M. (2020). Treatment Options for Fear of Blushing. Current Psychiatry Reports, 22, 28.",
+    url: "https://doi.org/10.1007/s11920-020-01152-5"
+  },
+  fearBlushingTrial1993: {
+    label: "Cognitive and behavioural treatments for fear of visible symptoms (1993)",
+    citation: "Scholing, A., & Emmelkamp, P. M. G. (1993). Cognitive and behavioural treatments of fear of blushing, sweating or trembling. Behaviour Research and Therapy, 31(2), 155–170.",
+    url: "https://doi.org/10.1016/0005-7967(93)90067-5"
+  },
+  fearBlushingFollowup1996: {
+    label: "Long-term follow-up of CBT for fear of visible symptoms (1996)",
+    citation: "Scholing, A., & Emmelkamp, P. M. G. (1996). Treatment of fear of blushing, sweating, or trembling: Results at long-term follow-up. Behavior Modification, 20(3), 338–356.",
+    url: "https://doi.org/10.1177/01454455960203006"
+  },
+  fearBlushingTrial2006: {
+    label: "Attention training and cognitive therapy for fear of blushing (2006)",
+    citation: "Bögels, S. M. (2006). Task concentration training versus applied relaxation, in combination with cognitive therapy, for social phobia patients with fear of blushing, trembling, and sweating. Behaviour Research and Therapy, 44(8), 1199–1210.",
+    url: "https://doi.org/10.1016/j.brat.2005.08.010"
+  },
+  fearBlushingTrial2016: {
+    label: "Intensified group CBT for social anxiety with fear of blushing (2016)",
+    citation: "Härtling, S., Klotsche, J., Heinrich, A., & Hoyer, J. (2016). Cognitive Therapy and Task Concentration Training Applied as Intensified Group Therapies for Social Anxiety Disorder with Fear of Blushing: A Randomized Controlled Trial. Clinical Psychology & Psychotherapy, 23(6), 509–522.",
+    url: "https://doi.org/10.1002/cpp.1975"
+  },
+  selfConsciousEmotionsReview2025: {
+    label: "Systematic review of shame, guilt, embarrassment, and pride (2025)",
+    citation: "Singh, D., & Bhushan, B. (2025). Understanding shame, guilt, embarrassment and pride: A systematic review of self-conscious emotions. Frontiers in Psychology, 16, 1678930.",
+    url: "https://doi.org/10.3389/fpsyg.2025.1678930"
   }
 };
 
@@ -388,6 +444,52 @@ export const EMOTIONS = [
       { title: "Review fairly", detail: "Use what you learned to build a more accurate view, not a forced positive one." }
     ],
     caution: "If shame relates to abuse, exploitation, discrimination, or trauma, the responsibility belongs with the person who caused harm. Trauma processing should be supported by an appropriately trained professional."
+  },
+  {
+    id: "embarrassment", name: "Embarrassment", group: "Emotions", initials: "EM",
+    subtitle: "Recover from social awkwardness without turning one moment into a verdict about yourself.",
+    description: "Embarrassment is a self-conscious emotion that can arise when a social interaction goes awkwardly, a convention is broken, or attention turns unexpectedly towards you. It often concerns how a moment may look to other people; it does not, by itself, prove that you are defective, immoral, or rejected.",
+    model: "Awkward moment or perceived social slip → attention to how you appear → feared audience judgement → embarrassment → hiding, overcompensating, or replaying the event",
+    why: "Research distinguishes embarrassment from shame and guilt by its typical social-convention triggers and its interpersonal signals. The feeling can be uncomfortable while also helping people acknowledge a social slip and restore an interaction. Avoidance and repeated mental replay can become unhelpful when fear of evaluation grows.",
+    evidence: { label: "Foundational; treatment evidence is mainly for social anxiety", level: "foundational", note: "Embarrassment has a substantial emotion-science literature, but no universal stand-alone CBT programme is established for ordinary embarrassment. The most direct treatment evidence concerns diagnosed social anxiety with fear of blushing or visible bodily symptoms; those findings should not be generalised to every awkward moment." },
+    focus: ["Describe the event rather than condemn your whole self", "Separate what others actually did from what you assume they thought", "Choose proportionate repair when a real impact occurred", "Reduce avoidance and unproductive post-event replay"],
+    tools: [
+      {
+        id: "embarrassment-event-review", title: "Separate the awkward event from the story", description: "Turn a vague feeling of humiliation into a specific account of what happened, what it meant, and what it does not prove about you.",
+        when: "Use after an ordinary social slip, mistake, or awkward interaction when your mind is making broad conclusions about yourself.",
+        steps: ["Describe the event as a camera might record it, without labels such as stupid, pathetic, or ridiculous.", "Identify the social rule or expectation you think was broken; check whether it was explicit, reasonable, and shared by everyone involved.", "Separate what you know others noticed from what you are guessing they noticed.", "Ask whether anyone was actually harmed, inconvenienced, or owed a correction; do not confuse awkwardness with wrongdoing.", "Write a conclusion that fits the evidence and includes the possibility that other people may have moved on.", "Choose one useful next step, or decide that no repair is needed."],
+        worksheet: "embarrassment", evidence: "Research differentiates embarrassment from shame and guilt by typical elicitors and expression. This worksheet is an evidence-informed reflection aid, not a validated embarrassment treatment.",
+        sources: ["embarrassmentDistinct1996", "embarrassmentReview1997"]
+      },
+      {
+        id: "embarrassment-audience-test", title: "Test the feared audience reaction", description: "Check a specific prediction about how people will respond instead of treating imagined judgement as established fact.",
+        when: "Use for a safe, low-stakes situation when fear of looking awkward is pushing you to avoid, over-prepare, or hide.",
+        steps: ["Write one observable prediction, such as 'they will ask about it again' or 'the conversation will stop'. Avoid predictions that claim to know another person's private thoughts.", "Rate how strongly you expect the outcome and note what evidence led you to that estimate.", "Choose a small, ordinary action you already have a reason to take; do not create a humiliating stunt or expose private information.", "During the interaction, gently shift attention towards the conversation and the other person rather than continually checking your face, voice, or posture.", "Notice what actually happens, including neutral or mixed responses; do not count the absence of reassurance as proof of rejection.", "Compare the result with the original prediction and decide what remains uncertain."],
+        worksheet: "embarrassment", evidence: "Attention training and cognitive-behavioural methods have been studied in clinical social anxiety focused on blushing or visible symptoms. This low-risk reflection is not a substitute for clinician-guided social-anxiety treatment.",
+        sources: ["fearBlushingReview2020", "fearBlushingTrial2006", "fearBlushingTrial2016", "socialNICE"]
+      },
+      {
+        id: "embarrassment-replay", title: "Close the post-event replay", description: "Replace repeated self-scrutiny with one brief, fair review and a decision about whether anything useful remains to do.",
+        when: "Use when you keep replaying a conversation or mistake and searching for signs that others judged you.",
+        steps: ["Notice that you are replaying the event; do not demand that the memory disappear.", "Write the one question you are trying to answer, such as whether you interrupted someone or whether a correction is needed.", "Separate information you actually have from mental images, imagined dialogue, and guesses about what others thought.", "Decide whether there is a practical action, such as clarifying a misunderstanding or making a brief apology; if not, record that no action is currently indicated.", "Write one balanced sentence about what happened, including what you can learn and what remains unknowable.", "Return attention to the activity you had chosen instead of reopening the review for more certainty."],
+        worksheet: "embarrassment", evidence: "Post-event processing and self-focused attention are addressed in social-anxiety CBT guidance. This short review is a self-reflection aid; persistent rumination or impairment warrants assessment.",
+        sources: ["socialAnxietyNICE", "fearBlushingReview2020"]
+      },
+      {
+        id: "embarrassment-proportionate-repair", title: "Make a proportionate repair", description: "Respond to a genuine social impact with a clear correction or apology, without over-apologising to make your discomfort disappear.",
+        when: "Use when your awkward moment also involved interrupting, inconveniencing, misleading, or hurting someone.",
+        steps: ["Identify the specific action and its actual impact, rather than apologising for your entire personality.", "Decide what would help the other person or put the situation right.", "Offer a brief, direct apology or correction without making the other person responsible for reassuring you.", "Listen to the response and respect the other person's boundaries; they do not have to forgive immediately.", "Take the lesson forward and stop adding repeated apologies once a proportionate repair has been made."],
+        worksheet: "embarrassment", evidence: "Emotion research describes embarrassment displays and repair as signals that a person recognises a social breach; this does not establish that every incident requires an apology or that an apology guarantees reconciliation.",
+        sources: ["embarrassmentReview1997", "embarrassmentFunction2000", "embarrassmentProsociality2012"]
+      }
+    ],
+    plan: [
+      { title: "Name the moment", detail: "Describe the specific social event without turning it into a global judgement about yourself." },
+      { title: "Check the evidence", detail: "Separate observed reactions from assumptions about what others think." },
+      { title: "Choose repair or approach", detail: "Make a proportionate correction if needed, or take one safe step you have been avoiding." },
+      { title: "Close the review", detail: "Keep the useful lesson and return to your life without demanding certainty or instant comfort." }
+    ],
+    caution: "This workspace is for ordinary, manageable embarrassment. It is not a treatment protocol for social anxiety. Persistent fear of scrutiny, marked avoidance, or major interference with work, education, or relationships is a reason to seek assessment; disorder-specific CBT should be delivered by a suitably trained practitioner. Do not use exposure to enter unsafe situations, disclose private information, or tolerate bullying, discrimination, abuse, or coercion."
   },
   {
     id: "jealousy", name: "Jealousy", group: "Patterns", initials: "JE",
@@ -2667,6 +2769,18 @@ export const WORKSHEETS = {
       ["experiment", "What small, safe change could test your prediction?"],
       ["observation", "What observable evidence did you notice?"],
       ["learning", "What is a fair conclusion that does not rely on mind-reading?"]
+    ]
+  },
+  embarrassment: {
+    title: "Embarrassment event and response record",
+    intro: "Use this to understand one specific social moment. Do not treat discomfort as proof that you did something wrong, and do not use the worksheet to excuse genuine harm.",
+    fields: [
+      ["event", "What happened? Describe only what an observer could have seen or heard."],
+      ["expectation", "What social rule or expectation do you think was involved? Was it reasonable and shared?"],
+      ["prediction", "What do you think other people noticed or concluded? What did you actually observe?"],
+      ["impact", "Was anyone harmed, inconvenienced, or owed a correction? What evidence supports that?"],
+      ["balanced", "What is the fairest conclusion that fits the facts without mind-reading or global self-judgement?"],
+      ["nextStep", "Is a proportionate repair or safe next action needed, or can you close the review?"]
     ]
   }
 };
