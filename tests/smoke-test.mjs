@@ -55,7 +55,7 @@ assert.ok(embarrassmentWorkspace.caution.toLowerCase().includes("social anxiety"
 
 const socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
 assert.ok(socialWorkspace, "The social-anxiety workspace should be present.");
-assert.equal(socialWorkspace.tools.length, 9, "Social anxiety should contain nine dedicated tools.");
+assert.equal(socialWorkspace.tools.length, 11, "Social anxiety should contain eleven dedicated tools.");
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
