@@ -59,7 +59,7 @@ assert.equal(socialWorkspace.tools.length, 11, "Social anxiety should contain el
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
 for (const requiredId of ["anger","stress","fear","anxiety"]) {
   const workspace = EMOTIONS.find(item => item.id === requiredId);
-  assert.equal(workspace.tools.length, 13, requiredId + " must contain thirteen dedicated tools.");
+  assert.equal(workspace.tools.length, 15, requiredId + " must contain fifteen dedicated tools.");
   assert.equal(new Set(workspace.tools.map(tool => tool.id)).size, workspace.tools.length, requiredId + " tool IDs must be unique.");
   for (const tool of workspace.tools) {
     assert.ok(tool.description.length > 45, requiredId + " tool descriptions must be substantive: " + tool.id);
