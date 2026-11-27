@@ -1277,6 +1277,85 @@ Saving a worksheet or daily check-in now checks whether local storage accepted t
 
 These changes do not make browser local storage encrypted. Notes remain on the current device and browser profile, and another person with access to that profile may be able to read them. Private browsing, clearing site data, or switching browsers/devices may make notes unavailable. The privacy notice and export/delete controls must remain visible and accurate.
 
+
+# Sixth focused review — embarrassment and fear of embarrassment (27 November 2026)
+
+## Scope and search limits
+
+This targeted review examined foundational emotion research, studies distinguishing embarrassment from shame and guilt, work on its social signalling and blushing, recent reviews of self-conscious emotions, and clinical trials that directly address fear of blushing or visible bodily symptoms. Sources were located through PubMed/PMC, journal pages, DOI records, and accessible full texts. The review is intended to guide the product; it is **not** a registered PRISMA review and cannot establish that every paper ever published on embarrassment has been retrieved.
+
+A 2025 PRISMA-style systematic review by Singh and Bhushan searched empirical work from 2000–2024 on shame, guilt, embarrassment, and pride. It included 23 studies from a much larger initial search and highlighted inconsistent definitions, variable measurement, limits in experimental induction and ecological validity, and a predominance of Western samples. It is a review of self-conscious emotions together, not a treatment review focused solely on embarrassment.
+
+## What the research says about embarrassment
+
+### 1. Embarrassment is related to, but distinguishable from, shame and guilt
+
+Keltner and Buswell's 1996 study found different typical antecedents: embarrassment was associated with breaches of conventions governing public interaction; shame with failure to meet important personal standards; and guilt with actions that harm others or violate duties. Their work also found that observers could identify embarrassment and shame displays more reliably than a distinct facial expression for guilt. Their 1997 review evaluated antecedents, experience, displays, and physiology and concluded that embarrassment has a distinct, time-varying emotional profile, while noting that some physiological distinctions were limited.
+
+**Product implication:** do not use the existing shame workspace as a substitute for embarrassment. A social slip, awkward pause, mispronunciation, or unexpected moment of attention is not automatically evidence of a defective self or a moral wrong.
+
+### 2. Embarrassment can communicate awareness of a social slip
+
+Keltner and colleagues describe embarrassment as having an appeasement or relationship-repair function: its visible display can communicate awareness of a breached convention and concern about the interaction. Feinberg, Willer, and Keltner tested this account in five studies. Observers interpreted embarrassed targets as more prosocial and were more willing to trust or affiliate with them than comparison targets.
+
+This is a proposed social function, not a rule that every display will be interpreted positively. Context, culture, power differences, and the actual impact of a person's behaviour matter. An embarrassed expression does not erase harm or guarantee forgiveness.
+
+**Product implication:** offer proportionate correction or apology when a real impact occurred, but do not tell users to apologise simply because they feel awkward. Repeated apologies should not be used to obtain reassurance or force another person to comfort them.
+
+### 3. Blushing is related to embarrassment, but it is not a reliable measure of what others think
+
+Research on everyday social encounters found that reported blushing was associated with feeling embarrassed, ashamed, or exposed. The study used event-contingent self-reports and was correlational; it does not show that blushing reliably reveals how an audience judged someone. Frequent blushers also reported a different interaction style and perceptions of others, but these trait associations were not equivalent to the effect of a particular blushing episode.
+
+The 2020 review by Drummond and colleagues discusses physiological and psychological factors in blushing and fear of blushing. It identifies social anxiety, self-focused attention, and inflated beliefs about the likelihood or social cost of blushing as relevant mechanisms. It reviews task-concentration training, exposure, cognitive therapy, social-skills work, psychoeducation, and applied relaxation. Mindfulness, self-compassion, video feedback, and imagery rescripting are discussed as newer or developing approaches, not as equally established stand-alone treatments.
+
+**Product implication:** do not describe blushing as proof that a person is visibly failing, nor promise that an exercise will stop blushing. The practical target is the interpretation and avoidance cycle, not mandatory control of a normal bodily response.
+
+### 4. The wider embarrassment literature is broader than clinical psychology
+
+The 2025 systematic review of self-conscious emotions included studies using self-report, behavioural observation, eye tracking, facial measures, physiological methods, and neuroimaging. It reports variation in valence, arousal, nonverbal cues, and cross-cultural expression, alongside major measurement and sampling limitations.
+
+Two newer papers are relevant but should not be mistaken for clinical treatment evidence. Kavaklı and Cirhinlioglu's 2025 study developed a 28-item embarrassment measure with three factors in a sample of 429 participants in a Turkish cultural context; it is a psychometric study, not a diagnostic test or universal norm. Ziegler, Peloza, and Vincent's meta-analysis (first published online in December 2025; 2026 issue) combined 152 independent samples and 64,374 participants and reported a nonlinear association between consumer embarrassment and avoidance. Its consumer/product and medical-context findings should not be generalised to all interpersonal embarrassment or clinical treatment.
+
+## Clinical evidence: what has and has not been tested
+
+Ordinary embarrassment is common and is not itself a psychiatric disorder. The clinical studies most directly relevant to intervention concern **people with social anxiety whose main fear involves blushing, sweating, trembling, or being seen to show anxiety**. These studies do not validate a generic four-step app treatment for everyday embarrassment.
+
+- **Scholing and Emmelkamp (1993):** 30 patients with social phobia and fear of blushing, sweating, or trembling were allocated to different sequences of in-vivo exposure and cognitive therapy, or an integrated cognitive-behavioural approach. The groups improved after the treatment blocks and at follow-up; the study did not establish one package as clearly superior.
+- **Scholing and Emmelkamp (1996):** the long-term follow-up reported improvement maintained at 18 months among the 26 participants who completed that follow-up. It found no clear differences between the treatment packages.
+- **Bögels (2006):** 65 patients with social phobia and fear of visible bodily symptoms received task-concentration training or applied relaxation, each followed by cognitive therapy. Task-concentration training showed advantages on some outcomes at intermediate measurement points; differences narrowed after cognitive therapy, while the combined task-concentration/cognitive-therapy sequence had a stronger long-term effect on fear of showing symptoms than relaxation plus cognitive therapy. This is a specialised clinical population, not a trial of ordinary embarrassment.
+- **Härtling and colleagues (2016):** an RCT with 82 patients with social anxiety and fear of blushing compared intensified group task-concentration training and cognitive therapy with a waiting-list condition. Both active approaches outperformed waiting list after the first treatment weekend. Reported remission among completers at six months was 69–73%; gains were stable or improved at six and twelve months. These results apply to the study's selected social-anxiety population and intensive group format.
+
+NICE CG159's individual CBT protocol for social anxiety also includes externally focused attention, behavioural experiments, video feedback, work on safety behaviours, and pre-/post-event processing. This guideline supports disorder-specific treatment delivered according to an established protocol. It does not say that every embarrassed person needs exposure or that self-guided embarrassment practice is a substitute for treatment.
+
+**Evidence conclusion:** there is meaningful, but narrow, clinical evidence for CBT components in social anxiety dominated by fear of visible symptoms. There is not an established universal CBT protocol specifically for ordinary embarrassment. The product therefore labels the new workspace **Foundational / evidence-informed**, not Moderate or Strong.
+
+## Changes made to the application
+
+A separate **Embarrassment** workspace has been added alongside **Shame**. It contains four guided tools:
+
+1. **Separate the awkward event from the story** — observable facts, perceived social rules, assumptions about audience judgement, and a fair conclusion.
+2. **Test the feared audience reaction** — a low-stakes prediction test that redirects attention towards the interaction. It explicitly prohibits humiliating stunts, unsafe exposure, or unnecessary disclosure.
+3. **Close the post-event replay** — distinguish actionable information from imagined judgement, make any needed correction, and stop reopening the event solely to obtain certainty.
+4. **Make a proportionate repair** — offer a clear correction or apology when there was a genuine impact, while respecting the other person's response.
+
+All four tools use a dedicated reflection schema and link to relevant research. The page does not tell users to suppress embarrassment, force positive thinking, or assume that other people were kind. It distinguishes social awkwardness from actual harm, and it directs persistent, impairing fear of scrutiny towards assessment and disorder-specific care.
+
+## Selected research and primary sources
+
+- Keltner, D., & Buswell, B. N. (1996). [Evidence for the distinctness of embarrassment, shame, and guilt](https://doi.org/10.1080/026999396380312). *Cognition and Emotion, 10*(2), 155–172.
+- Keltner, D., & Buswell, B. N. (1997). [Embarrassment: Its distinct form and appeasement functions](https://doi.org/10.1037/0033-2909.122.3.250). *Psychological Bulletin, 122*(3), 250–270.
+- Keltner, D., & Anderson, C. (2000). [Saving Face for Darwin: The Functions and Uses of Embarrassment](https://doi.org/10.1111/1467-8721.00091). *Current Directions in Psychological Science, 9*(6).
+- Feinberg, M., Willer, R., & Keltner, D. (2012). [Flustered and faithful: Embarrassment as a signal of prosociality](https://doi.org/10.1037/a0025403). *Journal of Personality and Social Psychology, 102*(1), 81–97.
+- aan het Rot, M., Moskowitz, D. S., & de Jong, P. J. (2015). [Intrapersonal and interpersonal concomitants of facial blushing during everyday social encounters](https://doi.org/10.1371/journal.pone.0118243). *PLOS ONE, 10*(2), e0118243.
+- Scholing, A., & Emmelkamp, P. M. G. (1993). [Cognitive and behavioural treatments of fear of blushing, sweating or trembling](https://doi.org/10.1016/0005-7967(93)90067-5). *Behaviour Research and Therapy, 31*(2), 155–170.
+- Scholing, A., & Emmelkamp, P. M. G. (1996). [Treatment of fear of blushing, sweating, or trembling: Results at long-term follow-up](https://doi.org/10.1177/01454455960203006). *Behavior Modification, 20*(3), 338–356.
+- Bögels, S. M. (2006). [Task concentration training versus applied relaxation, in combination with cognitive therapy](https://doi.org/10.1016/j.brat.2005.08.010). *Behaviour Research and Therapy, 44*(8), 1199–1210.
+- Härtling, S., Klotsche, J., Heinrich, A., & Hoyer, J. (2016). [Cognitive Therapy and Task Concentration Training for Social Anxiety Disorder with Fear of Blushing](https://doi.org/10.1002/cpp.1975). *Clinical Psychology & Psychotherapy, 23*(6), 509–522.
+- Drummond, P. D., Shapiro, G. B., Nikolić, M., & Bögels, S. M. (2020). [Treatment Options for Fear of Blushing](https://doi.org/10.1007/s11920-020-01152-5). *Current Psychiatry Reports, 22*, 28.
+- Singh, D., & Bhushan, B. (2025). [Understanding shame, guilt, embarrassment and pride: A systematic review of self-conscious emotions](https://doi.org/10.3389/fpsyg.2025.1678930). *Frontiers in Psychology, 16*, 1678930.
+- Kavaklı, M., & Cirhinlioglu, F. G. (2025). [The Development and Validation of a Scale to Measure Embarrassment](https://doi.org/10.17066/tpdrd.1588924). Psychometric study; use culturally and methodologically cautiously.
+- Ziegler, A. H., Peloza, J., & Vincent, L. H. (2026; first published online 2025). [The nonlinear effect of consumer embarrassment on avoidance: A meta-analysis](https://doi.org/10.1002/jcpy.70015). *Journal of Consumer Psychology, 36*(2), 237–260. Consumer-context findings, not a clinical CBT trial.
+
 ## Remaining work and acceptance criteria
 
 The next quality phase should include real browser testing on desktop and narrow mobile screens, keyboard-only walkthroughs, screen-reader checks, contrast testing, and an automated accessibility scan. The site should also test storage quota failures, unavailable storage, corrupted saved data, export integrity, and long tool titles or prompt labels. Automated unit and smoke tests are necessary but cannot establish visual quality or accessibility by themselves.
