@@ -52,7 +52,8 @@ assert.equal(embarrassmentWorkspace.tools.length, 4, "Embarrassment should have 
 assert.equal(embarrassmentWorkspace.evidence.level, "foundational", "Embarrassment must not be presented as a validated stand-alone treatment.");
 assert.ok(embarrassmentWorkspace.evidence.note.toLowerCase().includes("no universal stand-alone cbt"), "Embarrassment evidence must distinguish emotion research from treatment evidence.");
 assert.ok(embarrassmentWorkspace.caution.toLowerCase().includes("social anxiety"), "Embarrassment must preserve the boundary with clinical social-anxiety care.");
-\nconst socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
+
+const socialWorkspace = EMOTIONS.find(item => item.id === "social-anxiety");
 assert.ok(socialWorkspace, "The social-anxiety workspace should be present.");
 assert.equal(socialWorkspace.tools.length, 9, "Social anxiety should contain nine dedicated tools.");
 assert.ok(socialWorkspace.tools.some(tool => tool.id === "social-anxiety-video-feedback-prep"), "The social-anxiety workspace should include clinician-guided video-feedback preparation.");
