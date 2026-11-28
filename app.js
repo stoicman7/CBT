@@ -4,7 +4,7 @@ import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "./fo
 import { EXERCISE_FAMILY_ORDER, EXERCISE_FAMILY_NOTES, exerciseFamily, groupExercises } from "./exercise-taxonomy.js";
 
 const KEY = "cbt-workspace-v1";
-const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All" };
+const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All", libraryApproach: "All" };
 let state = readState();
 let toastTimer;
 const $ = (s, root = document) => root.querySelector(s);
@@ -32,7 +32,8 @@ function readState() {
       entries,
       checkins,
       completed: saved.completed && typeof saved.completed === "object" && !Array.isArray(saved.completed) ? saved.completed : {},
-      libraryCategory: typeof saved.libraryCategory === "string" ? saved.libraryCategory : defaults.libraryCategory
+      libraryCategory: typeof saved.libraryCategory === "string" ? saved.libraryCategory : defaults.libraryCategory,
+      libraryApproach: typeof saved.libraryApproach === "string" ? saved.libraryApproach : defaults.libraryApproach
     };
   } catch { return structuredClone(defaults); }
 }
@@ -145,25 +146,32 @@ function techniques(e) {
 function renderTechniqueLibrary() {
   const query = ($("#global-search")?.value || "").trim().toLowerCase();
   const categories = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.category))];
+  const approaches = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.approach))];
   const visible = CORE_TECHNIQUES.filter(item => {
     const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
-    const searchText = [item.title,item.classification,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
-    return categoryMatch && (!query || searchText.includes(query));
+    const approachMatch = state.libraryApproach === "All" || item.approach === state.libraryApproach;
+    const searchText = [item.title,item.classification,item.methodType,item.approach,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
+    return categoryMatch && approachMatch && (!query || searchText.includes(query));
   });
   return `<section class="library-hero">
-    <div class="eyebrow"><span class="eyebrow-dot"></span>REFERENCE DIRECTORY / CBT METHODS</div>
-    <h1>CBT technique library<span class="title-period">.</span></h1>
-    <p>A structured map of common CBT procedures, specialist treatment components, and related third-wave approaches. Each entry identifies the kind of method and its boundaries.</p>
-    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.category)).size}</strong> method families</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.classification === "Specialist protocol").length}</strong> specialist components</span></div>
+    <div class="eyebrow"><span class="eyebrow-dot"></span>REFERENCE DIRECTORY / THERAPEUTIC METHODS</div>
+    <h1>Therapeutic technique library<span class="title-period">.</span></h1>
+    <p>Browse methods by what they do, then filter by the therapeutic model they come from. Specialist protocols and related approaches are distinguished from core CBT methods.</p>
+    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.category)).size}</strong> exercise families</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.approach)).size}</strong> therapeutic approaches</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.methodType === "Specialist protocol component").length}</strong> specialist components</span></div>
   </section>
-  <div class="library-notice"><strong>How to use this directory</strong><p>There is no single finite list of every CBT technique: manuals and diagnosis-specific protocols contain overlapping procedures and variations. This directory maps the principal methods identified in the scientific audit. Some techniques require a trained clinician. Related approaches are labelled separately rather than misrepresented as classical CBT.</p></div>
-  <div class="library-toolbar"><div class="library-filters" role="group" aria-label="Filter techniques by family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div><span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span></div>
+  <div class="library-notice"><strong>How to use this directory</strong><p>There is no single finite list of every therapeutic technique: manuals and diagnosis-specific protocols contain overlapping procedures and variations. This directory assigns a primary exercise family, labels the therapeutic approach separately, and distinguishes core methods from specialist protocol components. Some procedures require a trained clinician.</p></div>
+  <div class="library-toolbar">
+    <div class="library-filter-block"><span class="library-filter-label">Filter by exercise family</span><div class="library-filters" role="group" aria-label="Filter methods by exercise family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div></div>
+    <div class="library-filter-block"><span class="library-filter-label">Filter by therapeutic approach</span><div class="library-filters library-approaches" role="group" aria-label="Filter methods by therapeutic approach">${approaches.map(approach=>`<button type="button" class="library-filter ${state.libraryApproach===approach?"active":""}" data-library-approach="${esc(approach)}">${esc(approach)}</button>`).join("")}</div></div>
+    <span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span>
+  </div>
   ${visible.length ? `<div class="library-grid">${visible.map(item=>`<article class="library-card">
-    <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.classification === "Specialist protocol" ? "specialist" : item.classification === "Core CBT" ? "core" : "related"}">${esc(item.classification)}</span></div>
+    <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.methodType === "Specialist protocol component" ? "specialist" : item.methodType === "Core CBT method" ? "core" : "related"}">${esc(item.methodType)}</span><span class="library-approach">${esc(item.approach)}</span></div>
     <h3>${esc(item.title)}</h3>
     <p>${esc(item.description)}</p>
     <div class="library-use"><strong>Typical use</strong><span>${esc(item.when)}</span></div>
     <div class="library-boundary"><strong>Boundary</strong><span>${esc(item.caution)}</span></div>
+    ${item.evidenceNote ? `<div class="library-boundary"><strong>Evidence note</strong><span>${esc(item.evidenceNote)}</span></div>` : ""}
     <div class="library-sources">${links(item.sources)}</div>
   </article>`).join("")}</div>` : `<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different method family.</p></div>`}
   <div class="library-note"><strong>Clinical scope</strong><p>A technique is not a treatment by itself. Whether it is appropriate depends on formulation, diagnosis where relevant, risk, medical context, and practitioner competence. Read the evidence review before treating any item as a programme.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the full scientific audit ↗</a></div>`;
@@ -315,6 +323,8 @@ document.addEventListener("click", event => {
   if (tab) { state.tab = tab.dataset.tab; saveState(); render(); return; }
   const libraryCategory = event.target.closest("[data-library-category]");
   if (libraryCategory) { state.libraryCategory = libraryCategory.dataset.libraryCategory; render(); return; }
+  const libraryApproach = event.target.closest("[data-library-approach]");
+  if (libraryApproach) { state.libraryApproach = libraryApproach.dataset.libraryApproach; render(); return; }
   const tool = event.target.closest("[data-tool]");
   if (tool) { openTool(tool.dataset.tool); return; }
   const plan = event.target.closest("[data-plan]");
