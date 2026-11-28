@@ -1,6 +1,7 @@
 import { EMOTIONS, SOURCES, WORKSHEETS } from "./data.js";
 import { CORE_TECHNIQUES } from "./technique-library.js";
 import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "./formulation.js";
+import { EXERCISE_FAMILY_ORDER, EXERCISE_FAMILY_NOTES, exerciseFamily, groupExercises } from "./exercise-taxonomy.js";
 
 const KEY = "cbt-workspace-v1";
 const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All" };
@@ -57,39 +58,7 @@ function formatDate(date) {
 function links(ids) {
   return [...new Set(ids || [])].map(id => {
     const s = SOURCES[id];
-    return s ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} <span>↗</span></a>` : "";
-  }).join("");
-}
-
-
-const EXERCISE_FAMILY_ORDER = ["Assessment & formulation","Cognitive methods","Behavioural methods","Attention & metacognitive methods","Emotion regulation & distress tolerance","Acceptance & values","Interpersonal & communication"];
-const EXERCISE_FAMILY_NOTES = {
-  "Assessment & formulation":"Map triggers, patterns, maintaining loops, and context before choosing an intervention.",
-  "Cognitive methods":"Work with automatic thoughts, appraisals, assumptions, rules, and beliefs.",
-  "Behavioural methods":"Change action patterns through practice, activity, approach, experiments, and skills rehearsal.",
-  "Attention & metacognitive methods":"Notice where attention goes and change unhelpful worry, rumination, checking, or replay loops.",
-  "Emotion regulation & distress tolerance":"Manage arousal, urges, and intense emotion so an effective response becomes possible.",
-  "Acceptance & values":"Make room for difficult internal experiences and choose safe actions linked to personal values.",
-  "Interpersonal & communication":"Practise requests, boundaries, repair, and respectful communication."
-};
-function exerciseFamily(tool) {
-  if (tool.family && EXERCISE_FAMILY_ORDER.includes(tool.family)) return tool.family;
-  const t=(tool.id+" "+tool.title+" "+tool.description).toLowerCase();
-  if (/(boundary|request|relationship|conversation|refusal|assertive|communication|repair|interpersonal|accommodation|apology)/.test(t)) return "Interpersonal & communication";
-  if (/(values?|valued|acceptance|willingness|defusion|unhook|committed.action|toward.move)/.test(t)) return "Acceptance & values";
-  if (/(worry|ruminat|replay|attention|mindful|checking|reassurance|post.event|mode.shift|thought.loop|mental.ritual)/.test(t)) return "Attention & metacognitive methods";
-  if (/(arousal|pause|urge|coping|recovery|regulation|distress|reset|calm|vulnerability|emotion|sleep|tolerance)/.test(t)) return "Emotion regulation & distress tolerance";
-  if (/(experiment|exposure|avoidance|activity|graded.task|approach|practice|habit|schedule|activation|stimulus|pacing|rehears|task.start|pattern.break|learning.review)/.test(t)) return "Behavioural methods";
-  if (/(thought|belief|prediction|reappraisal|interpret|rule|standard|responsibility|evidence|story|label|facts|continuum|meaning|self-esteem|catastroph|attribution|assumption)/.test(t)) return "Cognitive methods";
-  if (/(map|cycle|chain|audit|diary|monitor|track|trigger|warning|inventory|functional.analysis|record)/.test(t)) return "Assessment & formulation";
-  return "Assessment & formulation";
-}
-function groupExercises(tools) {
-  const groups=new Map();
-  for (const tool of tools) {
-    const family=exerciseFamily(tool);
-    if(!groups.has(family)) groups.set(family,[]);
-    groups.get(family).push(tool);
+    return s oups.get(family).push(tool);
   }
   return EXERCISE_FAMILY_ORDER.filter(f=>groups.has(f)).map(f=>[f,groups.get(f)]);
 }
