@@ -130,22 +130,25 @@ for (const technique of CORE_TECHNIQUES) {
   techniqueIds.add(technique.id);
   categories.add(technique.category);
   assert.ok(technique.title && technique.description && technique.when && technique.caution, "Incomplete technique directory entry: " + technique.id);
-  assert.ok(technique.classification, "Technique classification missing: " + technique.id);
+  assert.ok(technique.methodType && technique.approach, "Technique family, method status, and approach must be explicit: " + technique.id);
+  assert.ok(EXERCISE_FAMILY_ORDER.includes(technique.category), "Technique must use a primary exercise family: " + technique.id);
   for (const sourceId of technique.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by directory technique " + technique.id);
 }
 assert.equal(categories.size, 8, "The technique directory should use the eight standard exercise families.");
 assert.ok(CORE_TECHNIQUES.every(item => item.methodType && item.approach && EXERCISE_FAMILY_ORDER.includes(item.category)), "Every directory entry must keep method family, therapeutic approach, and status separate.");
 assert.ok(CORE_TECHNIQUES.some(item => item.methodType === "Specialist protocol component"), "Specialist methods must be explicitly classified.");
 assert.ok(CORE_TECHNIQUES.some(item => item.methodType === "Core CBT method"), "Core CBT methods must be explicitly classified.");
-assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Metacognitive therapy"), "Related therapies must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MCT)")), "Metacognitive therapy methods must remain separately classified.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(ACT)")), "ACT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MBCT)")), "MBCT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(CFT)")), "CFT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(DBT)")), "DBT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(REBT)")), "REBT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MCT)")), "MCT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.every(item => ["Core CBT method","Specialist protocol component","Related therapy approach"].includes(item.methodType)), "Technique method status must use a consistent vocabulary.");
-assert.ok(CORE_TECHNIQUES.some(item => /Rational emotive/i.test(item.classification)), "REBT methods must remain separately classified.");
-assert.ok(CORE_TECHNIQUES.some(item => /Dialectical behavio/i.test(item.classification)), "DBT methods must remain separately classified.");
-assert.ok(CORE_TECHNIQUES.some(item => /Schema therapy/i.test(item.classification)), "Schema-therapy methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(REBT)")), "REBT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(DBT)")), "DBT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("Schema therapy")), "Schema-therapy methods must remain separately classified.");
 
 for (const [id, source] of Object.entries(SOURCES)) {
   assert.ok(source.label && source.citation, "Incomplete source metadata: " + id);
