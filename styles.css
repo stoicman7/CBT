@@ -965,3 +965,12 @@ a { color: inherit; }
   .exercise-family-heading { align-items: flex-start; }
   .exercise-family-heading h3 { font-size: 18px; }
 }
+
+
+.tool-card-top { align-items: center; }
+.tool-approach {
+  display: inline-block; max-width: 48%; padding: 3px 7px; border-radius: 6px;
+  color: var(--red-dark); background: var(--red-soft); font-size: 10px;
+  font-weight: 700; line-height: 1.35; text-align: right;
+}
+.tool-type { max-width: 42%; }
