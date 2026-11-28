@@ -2875,4 +2875,150 @@ export const WORKSHEETS = {
       ["nextStep", "Is a proportionate repair or safe next action needed, or can you close the review?"]
     ]
   }
+  ,
+  thoughtCapture: {
+    title: "Automatic-thought capture",
+    intro: "Use a specific moment, especially one linked to a sudden change in emotion. You may not identify a thought immediately; a mental image, memory, prediction, or meaning can be just as relevant.",
+    fields: [
+      ["situation", "What happened immediately before the emotional shift?"],
+      ["emotion", "What did you feel, and how intense was it (0–100)?"],
+      ["body", "What changed in your body or action urge?"],
+      ["image", "Did a picture, memory, phrase, or imagined future appear?"],
+      ["firstThought", "What went through your mind, even briefly? Use the closest wording you can remember."],
+      ["meaning", "What did the moment seem to mean to you?"]
+    ]
+  },
+  downwardArrow: {
+    title: "Meaning and belief ladder",
+    intro: "Explore what a thought means without assuming that the deepest answer is always a core belief. Stop if the questions become destabilising or lead into traumatic memories.",
+    fields: [
+      ["situation", "What specific situation triggered the reaction?"],
+      ["automaticThought", "What was the immediate thought or image?"],
+      ["meaning", "If this thought were true, what would it mean to you?"],
+      ["implication", "What would be so difficult or important about that meaning?"],
+      ["theme", "What broader theme appears across more than one situation?"],
+      ["tentativeBelief", "Write a tentative belief in your own words, and how certain you are (0–100)."]
+    ]
+  },
+  assumptionMap: {
+    title: "Intermediate belief and rule map",
+    intro: "Look for conditional assumptions, attitudes, and rules that guide behaviour. Treat them as working hypotheses, not facts or diagnoses.",
+    fields: [
+      ["rule", "What rule, standard, or attitude do you notice?"],
+      ["condition", "Does it take an 'if…then…' form?"],
+      ["prediction", "What do you expect will happen if you do not follow it?"],
+      ["strategy", "What do you do to obey the rule or prevent the feared outcome?"],
+      ["cost", "What short-term benefit and longer-term cost does the rule create?"],
+      ["flexibleRule", "What more flexible rule would preserve what matters without demanding perfection?"]
+    ]
+  },
+  beliefMap: {
+    title: "Core-belief evidence map",
+    intro: "A core belief is a broad, deeply held conclusion, not a label to assign after one difficult event. Look for repeated themes across contexts and consider realistic external circumstances.",
+    fields: [
+      ["theme", "What possible belief about yourself, other people, or the world keeps appearing?"],
+      ["situations", "List two or three different situations where the theme seems to arise."],
+      ["support", "What experiences seem to support the belief? Be specific."],
+      ["counter", "What experiences complicate, limit, or contradict it?"],
+      ["coping", "How do you react when the belief is activated?"],
+      ["balanced", "What is a more accurate, nuanced belief that fits the full evidence?"]
+    ]
+  },
+  copingLoop: {
+    title: "Belief and coping-maintenance loop",
+    intro: "Map how a coping strategy may reduce distress in the short term while keeping a belief untested. Include environmental conditions and other people's actual behaviour.",
+    fields: [
+      ["trigger", "What situation activates the pattern?"],
+      ["belief", "What thought, assumption, or belief appears?"],
+      ["coping", "Do you surrender, avoid, overcompensate, check, seek reassurance, or use another response?"],
+      ["shortTerm", "What does the strategy help you avoid or manage immediately?"],
+      ["longTerm", "What happens over time, and what new information is prevented?"],
+      ["alternative", "What safer, more flexible response could be tried in a manageable situation?"]
+    ]
+  },
+  schemaModeMap: {
+    title: "Schema and mode observation",
+    intro: "This is an educational observation tool, not a schema assessment or a way to diagnose a personality disorder. Do not deliberately revisit traumatic memories or use imagery-based trauma processing alone.",
+    fields: [
+      ["trigger", "What present-day event or interaction activated the pattern?"],
+      ["mode", "What state or response did you notice (for example, vulnerable, angry, detached, demanding, or overcompensating)?"],
+      ["need", "What legitimate emotional need, boundary, or value might be involved?"],
+      ["coping", "What familiar coping response followed?"],
+      ["adultResponse", "What would a grounded, safe, present-day response look like?"],
+      ["support", "Would this pattern benefit from discussion with a schema-trained clinician?"]
+    ]
+  },
+  rebtABCDE: {
+    title: "REBT ABCDE reflection",
+    intro: "REBT examines how beliefs about an activating event contribute to emotional and behavioural consequences. The aim is flexible, realistic preference—not forced positivity or tolerating injustice.",
+    fields: [
+      ["activating", "A — What activating event occurred? Describe facts."],
+      ["belief", "B — What belief or demand did you bring to it (for example, 'I must', 'they must', or 'this must not happen')?"],
+      ["consequence", "C — What emotional and behavioural consequences followed?"],
+      ["dispute", "D — Is the belief logical, evidence-based, and helpful? What makes the demand rigid or extreme?"],
+      ["effective", "E — What flexible preference or rational alternative fits the facts?"],
+      ["action", "What effective action follows, while still respecting real needs and boundaries?"]
+    ]
+  },
+  beliefExperiment: {
+    title: "Core-belief behavioural experiment",
+    intro: "Use only a safe, proportionate experiment. The goal is to collect new information, not to prove a belief false at any cost or to expose yourself to mistreatment.",
+    fields: [
+      ["belief", "What belief or prediction are you testing?"],
+      ["confidence", "How strongly do you believe it (0–100)?"],
+      ["experiment", "What small, ethical behaviour could provide relevant information?"],
+      ["safety", "What boundaries and reasonable precautions must remain in place?"],
+      ["outcome", "What actually happened? Record observable evidence."],
+      ["update", "How, if at all, should confidence or the belief be updated?"]
+    ]
+  },
+  dbtChain: {
+    title: "DBT behaviour-chain analysis",
+    intro: "A chain analysis studies the sequence leading to a target behaviour and its consequences so that useful skill points can be identified. It is not a blame exercise.",
+    fields: [
+      ["vulnerability", "What vulnerabilities or stressors were present beforehand?"],
+      ["prompting", "What was the prompting event?"],
+      ["links", "What thoughts, feelings, body sensations, urges, and actions followed in sequence?"],
+      ["target", "What was the target behaviour and what happened immediately after it?"],
+      ["consequences", "What short- and longer-term consequences followed?"],
+      ["skills", "Where could a specific skill or environmental change interrupt the chain next time?"]
+    ]
+  },
+  dbtCheckFacts: {
+    title: "DBT check-the-facts and action choice",
+    intro: "Check the facts without invalidating emotion or overlooking genuine danger, discrimination, or boundary violations. If the facts support the emotion, problem-solving or boundary-setting may be appropriate.",
+    fields: [
+      ["event", "What happened that an observer could verify?"],
+      ["interpretation", "What meaning or assumption did you add?"],
+      ["evidence", "What facts support or do not support the interpretation?"],
+      ["threat", "What is the actual threat or loss, and how likely or immediate is it?"],
+      ["emotion", "Does the emotion fit the facts? Is its intensity or duration useful?"],
+      ["action", "Would problem-solving, an assertive boundary, opposite action, or distress-tolerance be the best next step? Why?"]
+    ]
+  },
+  actChoicePoint: {
+    title: "ACT choice-point reflection",
+    intro: "ACT does not require proving a thought wrong. Notice whether you are hooked by it, make room for the experience where safe, and choose a workable action linked to your values.",
+    fields: [
+      ["trigger", "What situation or internal experience is present?"],
+      ["hook", "What thought, memory, or feeling is pulling your attention?"],
+      ["away", "What away-move do you feel urged to take to escape or control the experience?"],
+      ["value", "What quality of action matters to you in this situation?"],
+      ["toward", "What small toward-move would express that value?"],
+      ["willingness", "What discomfort are you willing to make room for, and what safety boundary remains important?"]
+    ]
+  },
+  schemaPatternBreak: {
+    title: "Schema-informed pattern-break plan",
+    intro: "Schema therapy combines cognitive, experiential, interpersonal, and behavioural methods. This worksheet is for noticing a present-day pattern; imagery rescripting and intensive mode work are best undertaken with a trained schema therapist.",
+    fields: [
+      ["pattern", "What recurring pattern or trigger are you noticing?"],
+      ["need", "What emotional need, value, or boundary is involved?"],
+      ["copingMode", "How do you tend to cope: surrender, avoidance, or overcompensation?"],
+      ["benefitCost", "What does that response protect you from, and what does it cost?"],
+      ["newResponse", "What realistic, safe, small pattern-breaking response could you practise?"],
+      ["review", "What would you want to review with a clinician or trusted support person?"]
+    ]
+  }
+
 };
