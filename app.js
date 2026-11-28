@@ -101,12 +101,14 @@ function renderSearchResults() {
   }
   const libraryWorkspace = { id: "library", name: "Therapeutic technique library" };
   for (const tool of CORE_TECHNIQUES) {
-    const toolText = [tool.title, tool.description, tool.when, tool.approach, tool.methodType, tool.category].join(" ").toLowerCase();
+    const guide = TECHNIQUE_GUIDES[tool.id];
+    const guideText = guide ? [guide.aim, ...(guide.steps || []), ...(guide.questions || []), guide.review, guide.pitfalls] : [];
+    const toolText = [tool.title, tool.description, tool.when, tool.approach, tool.methodType, tool.category, ...guideText].join(" ").toLowerCase();
     if (toolText.includes(query)) hits.push({ emotion: libraryWorkspace, tool, kind: "library" });
   }
   const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
   results.innerHTML = ordered.length
-    ? ordered.map(({ emotion, tool, kind }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-kind="${esc(kind || "emotion")}" data-search-tool="${esc(tool?.id || "")}" data-search-category="${esc(kind === "library" ? tool.category : "")}" data-search-approach="${esc(kind === "library" ? tool.approach : "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? esc(kind === "library" ? tool.approach : kind === "formulation" ? "Formulation exercise" : "Interactive exercise") : "Workspace"}</small></button>`).join("")
+    ? ordered.map(({ emotion, tool, kind }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-kind="${esc(kind || "emotion")}" data-search-tool="${esc(tool?.id || "")}" data-search-category="${esc(kind === "library" ? tool.category : "")}" data-search-approach="${esc(kind === "library" ? tool.approach : "")}" data-search-title="${esc(kind === "library" ? tool.title : "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? esc(kind === "library" ? tool.approach : kind === "formulation" ? "Formulation exercise" : "Interactive exercise") : "Workspace"}</small></button>`).join("")
     : '<div class="search-no-results">No matching tools or workspaces.</div>';
   results.hidden = false;
   input.setAttribute("aria-expanded", "true");
@@ -181,7 +183,7 @@ function renderTechniqueLibrary() {
   </section>
   <section class="method-compass">
     <div class="section-heading"><div><div class="eyebrow muted">CHOOSE BY THE QUESTION</div><h2>What are you trying to change?</h2><p>Start with the process maintaining the difficulty—not with the most familiar technique.</p></div><span class="section-index">01 / ORIENT</span></div>
-    <div class="method-compass-grid">${compass.map(([title,family,note])=>`<button type="button" class="method-compass-card" data-library-category="${esc(family)}"><span>${esc(family)}</span><strong>${esc(title)}</strong><small>${esc(note)}</small></button>`).join("")}</div>
+    <div class="method-compass-grid">${compass.map(([title,family,note])=>`<button type="button" class="method-compass-card" data-library-category="${esc(family)}" data-reset-approach="true"><span>${esc(family)}</span><strong>${esc(title)}</strong><small>${esc(note)}</small></button>`).join("")}</div>
   </section>
   <div class="library-notice"><strong>How to use a method guide</strong><p>First clarify the target and the person's formulation. Then choose one method that fits, agree a small and safe practice, observe what happens, and review the learning. Similar-looking techniques may have different rationales across CBT, REBT, ACT, DBT, MCT, MBCT and schema therapy. A technique is not a treatment by itself.</p></div>
   <div class="library-toolbar">
@@ -371,7 +373,7 @@ document.addEventListener("click", event => {
       state.tab = "library";
       state.libraryCategory = searchResult.dataset.searchCategory || "All";
       state.libraryApproach = searchResult.dataset.searchApproach || "All";
-      $("#global-search").value = "";
+      $("#global-search").value = searchResult.dataset.searchTitle || "";
     } else if (searchKind === "formulation") {
       state.tab = "formulation"; $("#global-search").value = "";
     } else {
@@ -390,7 +392,11 @@ document.addEventListener("click", event => {
   const tab = event.target.closest("[data-tab]");
   if (tab) { state.tab = tab.dataset.tab; saveState(); render(); return; }
   const libraryCategory = event.target.closest("[data-library-category]");
-  if (libraryCategory) { state.libraryCategory = libraryCategory.dataset.libraryCategory; render(); return; }
+  if (libraryCategory) {
+    state.libraryCategory = libraryCategory.dataset.libraryCategory;
+    if (libraryCategory.dataset.resetApproach === "true") state.libraryApproach = "All";
+    render(); return;
+  }
   const libraryApproach = event.target.closest("[data-library-approach]");
   if (libraryApproach) { state.libraryApproach = libraryApproach.dataset.libraryApproach; render(); return; }
   const tool = event.target.closest("[data-tool]");
