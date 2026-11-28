@@ -208,7 +208,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "imagery-elicitation",
     "title": "Imagery-based thought elicitation",
-    "category": "Cognitive methods",
+    "category": "Imagery & memory methods",
     "classification": "Core CBT",
     "description": "When a situation triggers emotion but no clear verbal thought is available, briefly revisit the context to identify images, meanings, or predictions associated with the reaction.",
     "when": "Use within a safe, tolerable reflective exercise or with a therapist.",
@@ -376,7 +376,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "role-play",
     "title": "Role-play and behavioural rehearsal",
-    "category": "Behavioural methods",
+    "category": "Interpersonal & communication",
     "classification": "Core CBT",
     "description": "Rehearse a difficult interaction, task, or coping response in a controlled setting, then review what felt realistic and what needs adjusting.",
     "when": "Use for assertiveness, communication, social anxiety, or preparing for a challenging task.",
@@ -391,7 +391,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "assertiveness",
     "title": "Assertiveness and communication skills",
-    "category": "Behavioural methods",
+    "category": "Interpersonal & communication",
     "classification": "Core CBT",
     "description": "Practise clear, respectful descriptions, requests, refusals, and boundaries without aggression or coercion.",
     "when": "Use when communication patterns maintain interpersonal stress or avoidance.",
@@ -421,7 +421,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "relaxation-training",
     "title": "Progressive muscle relaxation and relaxation training",
-    "category": "Behavioural methods",
+    "category": "Emotion regulation & distress tolerance",
     "classification": "Core CBT",
     "description": "Practise systematically tensing and releasing muscle groups or using another structured relaxation method to reduce somatic tension.",
     "when": "Use as an adjunct where appropriate for physical tension or arousal.",
@@ -437,7 +437,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "applied-relaxation",
     "title": "Applied relaxation",
-    "category": "Behavioural methods",
+    "category": "Emotion regulation & distress tolerance",
     "classification": "Specialist protocol",
     "description": "A structured programme that trains rapid recognition of tension and progressively faster use of relaxation in everyday situations.",
     "when": "Used in some anxiety protocols, delivered by a trained practitioner.",
@@ -512,7 +512,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "relapse-prevention",
     "title": "Relapse-prevention and maintenance planning",
-    "category": "Maintenance & homework",
+    "category": "Behavioural methods",
     "classification": "Core CBT",
     "description": "Identify warning signs, triggers, helpful strategies, support contacts, and a concrete response plan for future setbacks.",
     "when": "Use after learning or treatment gains, or when a recurring pattern has clear warning signs.",
@@ -528,7 +528,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "between-session-practice",
     "title": "Between-session practice and homework",
-    "category": "Maintenance & homework",
+    "category": "Behavioural methods",
     "classification": "Core CBT",
     "description": "Choose a specific, manageable real-world practice linked to the current formulation, then review what was learned rather than judging completion alone.",
     "when": "Use to transfer skills from a session or learning exercise into everyday life.",
@@ -542,7 +542,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "progress-review",
     "title": "Progress review and collaborative feedback",
-    "category": "Maintenance & homework",
+    "category": "Assessment & formulation",
     "classification": "Core CBT",
     "description": "Review whether a tool is helping, ask what feels inaccurate or unhelpful, and revise the formulation and plan collaboratively.",
     "when": "Use at regular intervals and after important exercises.",
@@ -556,7 +556,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "attention-training",
     "title": "Attention Training Technique (ATT)",
-    "category": "Related approaches",
+    "category": "Attention & metacognitive methods",
     "classification": "Metacognitive therapy",
     "description": "A structured auditory attention exercise used in metacognitive therapy to practise flexible attention across external sounds.",
     "when": "Use only as part of a coherent metacognitive therapy formulation delivered by a trained practitioner.",
@@ -570,7 +570,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "detached-mindfulness",
     "title": "Detached mindfulness",
-    "category": "Related approaches",
+    "category": "Attention & metacognitive methods",
     "classification": "Metacognitive therapy",
     "description": "Practise noticing a thought as a mental event without analysing, suppressing, or responding to it automatically.",
     "when": "Used in metacognitive therapy to change engagement with repetitive thinking.",
@@ -584,7 +584,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "cognitive-defusion",
     "title": "Cognitive defusion",
-    "category": "Related approaches",
+    "category": "Acceptance & values",
     "classification": "Acceptance and commitment therapy",
     "description": "Notice thoughts as words or mental events rather than commands that must determine behaviour.",
     "when": "Use within ACT-informed work to support values-consistent action while making room for difficult internal experiences.",
@@ -598,7 +598,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "values-clarification",
     "title": "Values clarification and committed action",
-    "category": "Related approaches",
+    "category": "Acceptance & values",
     "classification": "Acceptance and commitment therapy",
     "description": "Identify life directions that matter and choose small actions consistent with them, even when difficult feelings remain present.",
     "when": "Use when avoidance or distress has narrowed meaningful activity.",
@@ -612,7 +612,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "distress-tolerance",
     "title": "Distress-tolerance skills",
-    "category": "Related approaches",
+    "category": "Emotion regulation & distress tolerance",
     "classification": "Dialectical behaviour therapy",
     "description": "Use short-term skills to survive intense emotional arousal without making the situation more dangerous or worse.",
     "when": "Use within DBT or another appropriate clinical skills programme.",
@@ -626,7 +626,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "mindfulness-decentering",
     "title": "Mindfulness and decentering",
-    "category": "Related approaches",
+    "category": "Attention & metacognitive methods",
     "classification": "Mindfulness-based cognitive therapy",
     "description": "Practise noticing thoughts, feelings, and sensations as passing experiences rather than facts that must be acted on.",
     "when": "Used in MBCT and some third-wave CBT protocols, including relapse-prevention programmes.",
@@ -670,7 +670,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "session-feedback",
     "title": "Session feedback and summary",
-    "category": "Maintenance & homework",
+    "category": "Assessment & formulation",
     "classification": "Core CBT",
     "description": "Check what was understood, what felt useful or inaccurate, and what should change; summarise key learning and the next agreed action.",
     "when": "Use at the end of a session or after completing an important exercise.",
@@ -684,7 +684,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "scheduled-worry",
     "title": "Worry postponement / scheduled worry",
-    "category": "Cognitive methods",
+    "category": "Attention & metacognitive methods",
     "classification": "Core CBT",
     "description": "Briefly label a non-urgent worry, record it, return to the present activity, and review it at a planned time to distinguish problem-solving from repetitive hypothetical worry.",
     "when": "Use for repetitive, non-urgent worry in an appropriate anxiety formulation.",
@@ -835,7 +835,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "act-committed-action",
     "title": "Committed action and values-based goals",
-    "category": "Behavioural methods",
+    "category": "Acceptance & values",
     "classification": "Acceptance and commitment therapy",
     "description": "Translate a chosen value into specific, observable, adjustable actions and build persistence through barriers and feedback.",
     "when": "Use when goals are clear but avoidance, discomfort, or competing habits block action.",
@@ -971,7 +971,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "dbt-dear-man",
     "title": "DBT DEAR MAN interpersonal effectiveness",
-    "category": "Interpersonal methods",
+    "category": "Interpersonal & communication",
     "classification": "Dialectical behavior therapy",
     "description": "Structure a clear request or boundary using description, expression, assertion, reinforcement, mindful focus, confidence, and negotiation.",
     "when": "Use when asking for something or saying no in a relationship where direct communication is reasonably safe.",
@@ -986,7 +986,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "dbt-give",
     "title": "DBT GIVE relationship effectiveness",
-    "category": "Interpersonal methods",
+    "category": "Interpersonal & communication",
     "classification": "Dialectical behavior therapy",
     "description": "Practise relationship-preserving communication through gentleness, interest, validation, and an easy manner while still being clear.",
     "when": "Use when maintaining a relationship matters alongside discussing a disagreement.",
@@ -1001,7 +1001,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "dbt-fast",
     "title": "DBT FAST self-respect effectiveness",
-    "category": "Interpersonal methods",
+    "category": "Interpersonal & communication",
     "classification": "Dialectical behavior therapy",
     "description": "Reflect on fairness, limited unnecessary apologies, adherence to values, and truthful communication while making a request or setting a boundary.",
     "when": "Use when self-respect is at risk during a difficult conversation.",
@@ -1061,7 +1061,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "dbt-validation",
     "title": "DBT validation",
-    "category": "Interpersonal methods",
+    "category": "Interpersonal & communication",
     "classification": "Dialectical behavior therapy",
     "description": "Communicate that another person's response makes sense in context without necessarily agreeing with every interpretation or behaviour.",
     "when": "Use to reduce invalidation and improve understanding during difficult interactions.",
@@ -1150,7 +1150,7 @@ export const CORE_TECHNIQUES = [
   {
     "id": "schema-limited-reparenting",
     "title": "Limited reparenting (therapist-delivered)",
-    "category": "Schema & experiential methods",
+    "category": "Interpersonal & communication",
     "classification": "Schema therapy",
     "description": "A bounded, professional therapeutic relationship strategy intended to address unmet emotional needs within a clear treatment frame.",
     "when": "Reference for understanding a schema-therapy treatment component, not a self-help exercise.",
