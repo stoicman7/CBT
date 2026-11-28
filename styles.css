@@ -974,3 +974,17 @@ a { color: inherit; }
   font-weight: 700; line-height: 1.35; text-align: right;
 }
 .tool-type { max-width: 42%; }
+
+
+.library-filter-block { display: grid; gap: 7px; min-width: 0; }
+.library-filter-label { color: #908688; font: 700 10px Manrope,sans-serif; letter-spacing: .8px; text-transform: uppercase; }
+.library-approaches { max-height: 118px; overflow-y: auto; padding-bottom: 4px; }
+.library-card-meta { align-items: flex-start; flex-wrap: wrap; }
+.library-approach {
+  display: inline-flex; align-items: center; padding: 4px 7px; border: 1px solid #eee5e4;
+  border-radius: 6px; color: #5e5557; background: #fbf8f7; font-size: 10px; font-weight: 700; line-height: 1.4;
+}
+.library-toolbar { align-items: flex-start; }
+@media (max-width: 650px) {
+  .library-approaches { max-height: 150px; }
+}
