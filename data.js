@@ -6114,5 +6114,185 @@ export const WORKSHEETS = {
         "What is a fairer, more complete perspective, and what safe action is useful now?"
       ]
     ]
+  },
+  "thoughtSort": {
+    "title": "Separate the parts of an episode",
+    "intro": "Use one specific episode. The purpose is to distinguish what happened from thoughts, feelings, body responses and actions without assuming they always follow a simple one-way sequence.",
+    "fields": [
+      [
+        "situation",
+        "What could a neutral observer have recorded?"
+      ],
+      [
+        "thoughtImage",
+        "What thought, prediction, memory or image appeared? Use the closest wording."
+      ],
+      [
+        "emotion",
+        "What emotion or emotions appeared, and how intense was each (0–100)?"
+      ],
+      [
+        "body",
+        "What physical sensations or changes did you notice?"
+      ],
+      [
+        "actionUrge",
+        "What did you feel pulled to do, and what did you actually do?"
+      ],
+      [
+        "meaning",
+        "What did the thought or image seem to mean about the situation, you, others or the future?"
+      ]
+    ]
+  },
+  "hotThought": {
+    "title": "Select the emotionally central thought",
+    "intro": "When several thoughts appear, identify the one most closely linked to one chosen emotion or behaviour. The most dramatic thought is not automatically the most central.",
+    "fields": [
+      [
+        "situation",
+        "What was the specific moment?"
+      ],
+      [
+        "emotion",
+        "Which single emotion are you examining, and what was its intensity (0–100)?"
+      ],
+      [
+        "thoughts",
+        "List the brief thoughts, predictions or images that appeared, in order if possible."
+      ],
+      [
+        "centralThought",
+        "Which thought or image best explains this particular emotion or action urge?"
+      ],
+      [
+        "conviction",
+        "How strongly did you believe that thought at the time (0–100)?"
+      ],
+      [
+        "reason",
+        "What connects this thought to the emotion more than the other thoughts?"
+      ]
+    ]
+  },
+  "multipleThoughts": {
+    "title": "Map initial and secondary automatic thoughts",
+    "intro": "An initial appraisal can produce an emotion or bodily reaction, followed by a second thought about that reaction. Record the sequence rather than blending every thought into one statement.",
+    "fields": [
+      [
+        "trigger",
+        "What was the initial situation or internal cue?"
+      ],
+      [
+        "initialThought",
+        "What was the first thought, image or prediction?"
+      ],
+      [
+        "firstReaction",
+        "What emotion, body response or action urge followed?"
+      ],
+      [
+        "secondaryThought",
+        "Did a second thought arise about the first thought or reaction?"
+      ],
+      [
+        "secondaryReaction",
+        "What changed after the second thought?"
+      ],
+      [
+        "sequence",
+        "What sequence best describes the episode, and what remains uncertain?"
+      ]
+    ]
+  },
+  "assumptionTracker": {
+    "title": "Find a recurring rule across situations",
+    "intro": "Intermediate beliefs are often conditional predictions, attitudes or rules. Look for repetition across different contexts and consider exceptions before naming a pattern.",
+    "fields": [
+      [
+        "situations",
+        "Describe two or three different situations where a similar reaction occurred."
+      ],
+      [
+        "automaticThoughts",
+        "What specific automatic thoughts or images appeared in each situation?"
+      ],
+      [
+        "rule",
+        "What shared if–then assumption, attitude or rule may connect them?"
+      ],
+      [
+        "predictedCost",
+        "What do you expect would happen if you did not follow the rule?"
+      ],
+      [
+        "coping",
+        "What do you do to obey the rule or prevent the feared outcome?"
+      ],
+      [
+        "exceptions",
+        "What examples complicate the rule, and what more flexible alternative fits?"
+      ]
+    ]
+  },
+  "beliefContinuum": {
+    "title": "Test a global belief on a continuum",
+    "intro": "Use a continuum for a specific belief or quality, not as a score of human worth. The purpose is to replace a rigid all-or-nothing category with observable anchors and a more nuanced description.",
+    "fields": [
+      [
+        "belief",
+        "What global or dichotomous belief are you examining?"
+      ],
+      [
+        "lowerAnchor",
+        "What would the lower end of this specific scale look like in observable behaviour?"
+      ],
+      [
+        "upperAnchor",
+        "What would the upper end look like?"
+      ],
+      [
+        "middleAnchors",
+        "What concrete examples belong at intermediate points?"
+      ],
+      [
+        "evidence",
+        "What evidence from different situations helps place the current example?"
+      ],
+      [
+        "updatedView",
+        "What more nuanced conclusion fits the evidence without rating a whole person's worth?"
+      ]
+    ]
+  },
+  "socraticMap": {
+    "title": "Build a guided-discovery question sequence",
+    "intro": "Use a curious, non-interrogating sequence to examine one appraisal. You do not need to answer every question or reach a positive conclusion.",
+    "fields": [
+      [
+        "thought",
+        "What exact thought or prediction are you examining?"
+      ],
+      [
+        "evidenceFor",
+        "What concrete facts support it?"
+      ],
+      [
+        "evidenceAgainst",
+        "What facts, exceptions or missing information complicate it?"
+      ],
+      [
+        "alternative",
+        "What other explanations fit the same facts?"
+      ],
+      [
+        "perspective",
+        "What would a fair-minded person notice? What advice would you give someone you care about?"
+      ],
+      [
+        "conclusion",
+        "What is the most balanced conclusion, including what is still uncertain?"
+      ]
+    ]
   }
 };
