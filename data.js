@@ -1051,6 +1051,31 @@ export const EMOTIONS = [
       { id: "panic-cycle", title: "Map a panic episode", description: "Record sensations, interpretations, fear, and coping responses to understand the feedback loop.", when: "Use after an episode, not while you need urgent medical help.", steps: ["Write the first sensation or cue.", "Record the meaning you assigned to it.", "Note how fear changed the sensation.", "Identify escape, checking, or reassurance behaviours.", "Discuss recurring episodes with a healthcare professional."], worksheet: "thought", evidence: "Self-monitoring and cognitive formulation are standard components of panic-focused CBT.", sources: ["panicAPA", "gadGuideline"] },
       { id: "panic-reappraisal", title: "Review a catastrophic interpretation", description: "Examine the meaning assigned to a bodily sensation without dismissing genuine medical risk.", when: "Use after appropriate medical assessment when panic has been identified as part of the problem.", steps: ["Write the sensation and the feared explanation.", "Identify what a qualified clinician has said about medical causes.", "Review the pattern across previous episodes.", "Write a balanced interpretation that leaves room for uncertainty.", "Agree on a care plan for new, severe, or changing symptoms."], worksheet: "thought", evidence: "Cognitive restructuring is a core part of panic-focused CBT; physical symptoms must not be self-diagnosed.", sources: ["panicAPA", "panicComponents"] },
       { id: "panic-exposure", title: "Understand interoceptive exposure", description: "Learn what this specialist technique is intended to do; do not attempt symptom-induction exercises from this page.", when: "Discuss with a clinician when panic disorder has been assessed and exposure is appropriate.", steps: ["Ask your clinician which sensations or cues maintain fear.", "Review medical and physical contraindications.", "Agree on a graded protocol and monitoring plan.", "Practise only the exercises selected with your clinician.", "Review new learning and reduce unnecessary safety behaviours."], worksheet: "reflection", evidence: "Interoceptive exposure was associated with better outcomes in a component network meta-analysis; its implementation is clinical, not a do-it-yourself challenge.", sources: ["panicComponents", "panicAPA"] }
+    ,
+    {
+      "id": "panic-act-respond-to-the-moment",
+      "title": "ACT: respond to panic thoughts without obeying them",
+      "description": "Notice catastrophic thoughts and sensations as experiences, then choose a grounded and safe response without trying to force sensations away.",
+      "when": "Use as a reflective support after appropriate medical assessment, not to decide whether new physical symptoms are panic.",
+      "steps": [
+        "Describe the episode and what you know about the situation.",
+        "Notice the thought or prediction that appears with the sensations.",
+        "Use a defusion phrase such as 'I am noticing the thought that…'.",
+        "Allow manageable discomfort without deliberately inducing or intensifying sensations.",
+        "Identify the next safe action consistent with your needs and any clinical plan.",
+        "Discuss recurring, severe, new, or unusual physical symptoms with an appropriate clinician."
+      ],
+      "worksheet": "actChoicePoint",
+      "family": "Acceptance & values",
+      "approach": "ACT",
+      "evidence": "ACT processes may support psychological flexibility, but this is not panic-focused CBT or interoceptive exposure. Do not assume new or severe physical symptoms are panic.",
+      "sources": [
+        "actCoreProcesses",
+        "actMeta2024",
+        "panicAPA",
+        "gadGuideline"
+      ]
+    }
     ],
     plan: [
       { title: "Understand the cycle", detail: "Use psychoeducation and a calm-time record to map sensations, predictions, and responses." },
@@ -1072,6 +1097,30 @@ export const EMOTIONS = [
       { id: "ocd-cycle", title: "Map the OCD cycle", description: "Identify triggers, obsessional meanings, overt or mental rituals, and short-term relief.", when: "Use to prepare for discussion with an OCD-informed clinician.", steps: ["Describe the trigger or intrusive thought.", "Write the feared meaning or responsibility belief.", "List visible compulsions and mental rituals.", "Record what relief follows and how long it lasts.", "Bring the pattern to a clinician trained in ERP."], worksheet: "reflection", evidence: "Functional assessment supports OCD treatment planning; it is not a replacement for ERP.", sources: ["ocdNICE"] },
       { id: "ocd-erp", title: "Learn about ERP", description: "Understand the purpose of exposure and response prevention before starting a structured programme.", when: "Use as psychoeducation alongside professional guidance.", steps: ["Identify the obsession-compulsion cycle with a clinician.", "Discuss the feared prediction and the ritual that follows.", "Agree on a treatment hierarchy and safety boundaries.", "Practise exposure and response prevention within the agreed treatment plan.", "Review learning and adapt the plan with the clinician."], worksheet: "reflection", evidence: "NICE recommends CBT including ERP for adults with OCD; complex or impairing symptoms require specialist support.", sources: ["ocdNICE"] },
       { id: "ocd-reassurance", title: "Notice reassurance-seeking", description: "Recognise when asking for certainty is functioning as a ritual rather than providing useful information.", when: "Use to discuss repetitive reassurance with an OCD-informed clinician.", steps: ["Record the question you feel compelled to ask.", "Notice what uncertainty the question is meant to remove.", "Identify whether you have already received a reasonable answer.", "Do not repeatedly test or debate the obsession.", "Discuss a planned response-prevention strategy with your clinician."], worksheet: "worry", evidence: "Response prevention can include mental rituals and neutralising strategies; avoid designing unsupervised ERP from this prompt.", sources: ["ocdNICE"] }
+    ,
+    {
+      "id": "ocd-values-alongside-erp",
+      "title": "ACT: choose a valued action alongside specialist OCD care",
+      "description": "Notice intrusive thoughts and urges without treating them as instructions, then identify a value-guided action while following an agreed specialist treatment plan.",
+      "when": "Use only as an adjunct to appropriate OCD assessment and treatment; this is not an ERP hierarchy or an instruction to resist compulsions alone.",
+      "steps": [
+        "Name the intrusive thought or urge without analysing its meaning.",
+        "Notice what the urge is pulling you to do, such as checking, reassurance, or mental neutralising.",
+        "Identify a value or activity that matters beyond the OCD cycle.",
+        "Discuss with your ERP clinician how values-based action fits your treatment plan.",
+        "Choose a safe, agreed action that does not create a new ritual or reassurance strategy.",
+        "Review the outcome with the clinician rather than repeatedly checking whether the thought feels resolved."
+      ],
+      "worksheet": "actChoicePoint",
+      "family": "Acceptance & values",
+      "approach": "ACT-informed adjunct",
+      "evidence": "ACT processes can be used alongside treatment, but NICE recommends condition-specific CBT with ERP for OCD. This reflection does not prescribe response prevention or replace specialist ERP.",
+      "sources": [
+        "ocdNICE",
+        "actCoreProcesses",
+        "actMeta2024"
+      ]
+    }
     ],
     plan: [
       { title: "Identify the cycle", detail: "Map obsessions, meanings, visible rituals, mental rituals, and reassurance." },
@@ -1093,6 +1142,29 @@ export const EMOTIONS = [
       { id: "trauma-support", title: "Create a present-day support plan", description: "Identify people, routines, and practical supports that help you stay oriented and safe.", when: "Use as a stabilisation and support-planning aid, not trauma processing.", steps: ["Identify what helps you feel physically safer today.", "List one trusted person or service you could contact.", "Choose a grounding activity that is comfortable and not overwhelming.", "Identify reminders or situations you can reasonably avoid for immediate safety.", "Arrange professional support if symptoms persist or impair daily life."], worksheet: "problem", evidence: "NICE includes psychoeducation, arousal-management strategies, and safety planning in trauma-focused care.", sources: ["ptsdNICE"] },
       { id: "trauma-education", title: "Understand trauma-focused CBT", description: "Review what a validated trauma-focused intervention involves and what to ask a clinician.", when: "Use when deciding whether to seek treatment for trauma symptoms.", steps: ["Ask whether the clinician is trained in a validated trauma-focused protocol.", "Discuss current safety, dissociation, and other symptoms.", "Ask how arousal, flashbacks, and avoidance will be addressed.", "Clarify how memory processing and trauma-related meanings are handled.", "Agree on a plan for monitoring distress and support between sessions."], worksheet: "reflection", evidence: "NICE recommends manual-based trauma-focused CBT by trained practitioners with ongoing supervision.", sources: ["ptsdNICE"] },
       { id: "trauma-next-step", title: "Choose one functional next step", description: "Reconnect with a manageable daily activity without forcing exposure to trauma reminders.", when: "Use when trauma reactions have disrupted daily routines.", steps: ["Choose one ordinary activity that supports daily functioning.", "Reduce it to a small, manageable step.", "Decide what support or adjustment would make it safer.", "Complete the step only if it feels manageable and appropriate.", "Review the effect on functioning rather than judging yourself."], worksheet: "activity", evidence: "Restoring adaptive functioning is included in trauma-focused treatment; this is supportive activity planning only.", sources: ["ptsdNICE"] }
+    ,
+    {
+      "id": "trauma-present-time-orientation",
+      "title": "Present-time orientation and support plan",
+      "description": "Use current sensory and contextual information to orient to the present and identify a safe next step without revisiting traumatic memories.",
+      "when": "Use only when a mild trigger or disorientation has settled enough for present-focused attention; stop if it increases distress.",
+      "steps": [
+        "Pause and check whether the current environment is physically safe.",
+        "Name the present date, location, and what is happening now, if this feels grounding.",
+        "Notice a few neutral details in the room or contact with a stable surface.",
+        "Identify one current support, choice, or practical need.",
+        "Choose a small present-day action such as contacting support or moving to a safer place.",
+        "Do not continue if attention turns into reliving or intensifying the traumatic memory; seek clinician support."
+      ],
+      "worksheet": "reflection",
+      "family": "Emotion regulation & distress tolerance",
+      "approach": "Trauma-informed grounding",
+      "evidence": "Present-focused support and stabilisation may be useful within trauma care, but this is not trauma processing or a substitute for recommended trauma-focused CBT delivered by a trained practitioner.",
+      "sources": [
+        "ptsdNICE",
+        "beckBook2020"
+      ]
+    }
     ],
     plan: [
       { title: "Check safety and support", detail: "Prioritise current safety and identify a trusted person or professional service." },
@@ -1114,6 +1186,30 @@ export const EMOTIONS = [
       { id: "sleep-diary", title: "Keep a simple sleep diary", description: "Record sleep timing and daytime functioning to observe patterns over time.", when: "Use for observation; do not use the diary to make risky sleep-restriction changes alone.", steps: ["Record approximate bedtime and wake time.", "Estimate how long it took to fall asleep and time awake overnight.", "Note naps, caffeine timing, and daytime sleepiness.", "Track patterns across one to two weeks.", "Review the record with a clinician if insomnia persists."], worksheet: "sleep", evidence: "Sleep diaries are commonly used in assessment and CBT-I; interpretation should guide a structured plan.", sources: ["insomniaAASM", "insomniaVADoD"] },
       { id: "sleep-beliefs", title: "Review sleep-related thoughts", description: "Identify catastrophic predictions and rigid rules that increase pressure around sleep.", when: "Use when sleep worry itself is keeping you alert.", steps: ["Write the thought that appears when sleep is difficult.", "Identify the prediction about tomorrow or what the poor night means.", "Review what has happened after previous poor nights.", "Write a balanced statement that allows uncertainty.", "Choose a calm, practical response for the next day."], worksheet: "sleep", evidence: "Cognitive therapy is one component of multicomponent CBT-I.", sources: ["insomniaAASM"] },
       { id: "sleep-stimulus", title: "Learn stimulus-control principles", description: "Understand how consistent cues can strengthen the association between bed and sleep.", when: "Use as education and discuss the full protocol with a clinician.", steps: ["Keep a reasonably consistent wake time.", "Use the bed primarily for sleep and intimacy.", "If you are persistently awake and alert, follow a clinician-approved stimulus-control plan.", "Avoid clock-watching and repeated sleep checking.", "Review the plan if sleepiness creates safety concerns."], worksheet: "reflection", evidence: "Stimulus control is a recognised CBT-I component with a conditional AASM recommendation as a single component.", sources: ["insomniaAASM", "insomniaVADoD"] }
+    ,
+    {
+      "id": "sleep-worry-and-belief-review",
+      "title": "Review the worry that keeps sleep under pressure",
+      "description": "Identify sleep-related predictions and rigid rules, then develop a realistic response that reduces performance pressure without prescribing sleep restriction.",
+      "when": "Use when worry about the consequences of a poor night is adding pressure at bedtime or the following day.",
+      "steps": [
+        "Write the specific sleep-related prediction or rule.",
+        "Separate what you know from what you are forecasting.",
+        "Identify how the rule changes your behaviour or increases monitoring of sleep.",
+        "Write a balanced response that allows uncertainty and avoids all-or-nothing conclusions.",
+        "Choose one practical, low-risk action consistent with your established sleep-care plan.",
+        "Discuss persistent insomnia with a qualified clinician; do not start sleep restriction from this worksheet."
+      ],
+      "worksheet": "sleep",
+      "family": "Cognitive methods",
+      "approach": "CBT-informed sleep reflection",
+      "evidence": "Cognitive work is part of multicomponent CBT-I, but this is not a full CBT-I protocol and does not prescribe stimulus control or sleep restriction.",
+      "sources": [
+        "insomniaAASM",
+        "insomniaVADoD",
+        "cbtiComponents"
+      ]
+    }
     ],
     plan: [
       { title: "Observe", detail: "Keep a sleep diary without making major changes." },
@@ -1932,7 +2028,31 @@ EMOTIONS.push({
         "cognitiveRestructuring"
       ]
     }
-  ],
+  ,
+    {
+      "id": "health-anxiety-metacognitive-loop",
+      "title": "Map beliefs about worry and health checking",
+      "description": "Explore what you believe worry, symptom monitoring, online searching, or reassurance will achieve, and how the cycle affects you over time.",
+      "when": "Use after appropriate medical assessment when repeated non-urgent checking or reassurance is becoming a source of distress.",
+      "steps": [
+        "Identify the health concern and the recent checking or reassurance episode.",
+        "Write what you believe worrying or checking will prevent or prove.",
+        "Record the immediate effect and how long any relief lasts.",
+        "Notice whether monitoring creates more uncertainty or another urge to check.",
+        "Identify what requires appropriate medical follow-up versus what is repetitive reassurance seeking.",
+        "Discuss persistent checking and worry with a clinician; never use this worksheet to delay care for new, worsening, or urgent symptoms."
+      ],
+      "worksheet": "worry",
+      "family": "Attention & metacognitive methods",
+      "approach": "Metacognitive formulation",
+      "evidence": "Metacognitive formulations examine beliefs about worry and threat monitoring. This is not a diagnostic tool and does not replace medical assessment or a structured treatment plan.",
+      "sources": [
+        "healthAnxiety2026",
+        "mctWellsBook",
+        "mctEvidence2024"
+      ]
+    }
+    ],
   "plan": [
     {
       "title": "Clarify the healthcare plan",
@@ -2185,6 +2305,29 @@ EMOTIONS.push(...[
           "adhdNICE"
         ]
       }
+    ,
+    {
+      "id": "adhd-implementation-intention",
+      "title": "Build an if–then start plan",
+      "description": "Translate an intention into a visible cue and a small first action so that task initiation depends less on remembering or waiting for motivation.",
+      "when": "Use when a specific task is repeatedly delayed at the starting point.",
+      "steps": [
+        "Choose one concrete task and define what 'started' means.",
+        "Identify a reliable cue, place, or time that already occurs.",
+        "Write an if–then plan: 'If [cue] happens, then I will [first action]'.",
+        "Reduce friction by preparing materials or removing one predictable obstacle.",
+        "Set a short, realistic first step and decide how to resume if interrupted.",
+        "Review the plan after trying it and adapt the cue or task size rather than treating a lapse as failure."
+      ],
+      "worksheet": "activity",
+      "family": "Behavioural methods",
+      "approach": "CBT-informed executive-skills planning",
+      "evidence": "Structured psychological support and CBT elements may be considered in adult ADHD care. This implementation plan is a practical aid, not a diagnostic or comprehensive ADHD treatment.",
+      "sources": [
+        "adhdNICE",
+        "beckBook2020"
+      ]
+    }
     ],
     "plan": [
       {
@@ -2302,6 +2445,29 @@ EMOTIONS.push(...[
           "habitReversal2026"
         ]
       }
+    ,
+    {
+      "id": "bfrb-trigger-and-context-map",
+      "title": "Map the urge, context, and function",
+      "description": "Notice when a repetitive behaviour occurs, the sensory or emotional context around it, and what happens immediately before and after.",
+      "when": "Use as a brief awareness record alongside appropriate assessment or habit-reversal treatment.",
+      "steps": [
+        "Record the context and what you were doing when the urge appeared.",
+        "Notice sensory cues, emotions, thoughts, and environmental triggers.",
+        "Describe the behaviour neutrally without judging yourself.",
+        "Record the immediate consequence, including relief, stimulation, or interruption.",
+        "Identify one environmental adjustment or competing response already agreed with your clinician.",
+        "Review patterns over time without tracking so intensively that monitoring itself becomes distressing."
+      ],
+      "worksheet": "reflection",
+      "family": "Assessment & formulation",
+      "approach": "Habit-reversal-informed self-monitoring",
+      "evidence": "Awareness training and stimulus control are common components of habit-reversal approaches. Self-monitoring alone is not a complete treatment and the record should remain proportionate.",
+      "sources": [
+        "habitReversal2026",
+        "beckBook2020"
+      ]
+    }
     ],
     "plan": [
       {
@@ -2542,6 +2708,28 @@ EMOTIONS.push(...[
           "eatingDisordersNICE"
         ]
       }
+    ,
+    {
+      "id": "ed-session-preparation",
+      "title": "Prepare for a CBT-ED review with your clinician",
+      "description": "Organise questions, difficulties, and observations to discuss with your eating-disorder care team without changing eating, weight, or exercise plans independently.",
+      "when": "Use before an appointment as a communication aid within specialist eating-disorder care.",
+      "steps": [
+        "Write one concern or difficulty you want the clinician to understand.",
+        "Describe the context and how it affected daily functioning.",
+        "List questions about the agreed treatment plan or side effects.",
+        "Identify any barriers to following the plan that need practical support.",
+        "Record any safety concern or worsening symptom to raise promptly.",
+        "Bring the notes to your clinician; do not use this exercise to set calorie targets, weigh yourself more often, compensate, restrict, or change treatment alone."
+      ],
+      "worksheet": "problem",
+      "family": "Interpersonal & communication",
+      "approach": "Clinician-guided CBT-ED support",
+      "evidence": "CBT-ED is a specialist treatment with structured components and clinical monitoring. This tool supports communication only and deliberately does not give self-directed food, weight, or exercise prescriptions.",
+      "sources": [
+        "eatingDisordersNICE"
+      ]
+    }
     ],
     "plan": [
       {
@@ -2761,6 +2949,29 @@ EMOTIONS.push(...[
           "psychosisNICE"
         ]
       }
+    ,
+    {
+      "id": "psychosis-coping-review",
+      "title": "Review coping strategies with your care team",
+      "description": "Record a distressing experience and the coping responses used so that you can discuss what helps, what does not, and what increases distress with your clinician.",
+      "when": "Use collaboratively with a mental-health professional as part of an established care plan.",
+      "steps": [
+        "Describe the experience and its impact in your own words without trying to diagnose it.",
+        "Record the context, stressors, sleep, and other factors that may be relevant.",
+        "List the coping responses you used and what happened afterwards.",
+        "Identify any response that increased distress, isolation, or risk.",
+        "Write questions about alternative coping strategies or support to discuss with your clinician.",
+        "Seek urgent help if you may harm yourself or someone else, cannot keep yourself safe, or experience a medical emergency."
+      ],
+      "worksheet": "reflection",
+      "family": "Assessment & formulation",
+      "approach": "Clinician-guided CBT for psychosis support",
+      "evidence": "NICE describes individual CBT for psychosis as a structured, manual-based intervention delivered by trained practitioners. This exercise is preparation for collaborative care, not a self-help treatment.",
+      "sources": [
+        "psychosisNICE",
+        "beckBook2020"
+      ]
+    }
     ],
     "plan": [
       {
