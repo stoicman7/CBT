@@ -102,6 +102,12 @@ function renderSidebar() {
     return `<div class="nav-group"><div class="nav-group-title">${group === "Focused care" ? "FOCUSED CARE" : group.toUpperCase()}</div>${items.map(e => `<button class="emotion-link ${state.active === e.id && !["home","journal","library","formulation"].includes(state.tab) ? "active" : ""}" type="button" data-emotion="${e.id}" ${state.active === e.id && !["home","journal","library"].includes(state.tab) ? 'aria-current="page"' : ""}><span class="emotion-initial">${e.initials}</span><span class="emotion-name">${esc(e.name)}</span><span class="nav-arrow">›</span></button>`).join("")}</div>`;
   }).join("") || '<div class="nav-empty">No matching emotions or tools.</div>';
   $("#emotion-count").textContent = EMOTIONS.length;
+  const formulationLink = $(".formulation-nav-link");
+  if (formulationLink) {
+    formulationLink.classList.toggle("active", state.tab === "formulation");
+    if (state.tab === "formulation") formulationLink.setAttribute("aria-current", "page");
+    else formulationLink.removeAttribute("aria-current");
+  }
 }
 function renderSearchResults() {
   const input = $("#global-search"), results = $("#search-results");
@@ -116,6 +122,10 @@ function renderSearchResults() {
       const toolText = [tool.title, tool.description, tool.when].join(" ").toLowerCase();
       if (toolText.includes(query)) hits.push({ emotion, tool });
     }
+  }  const formulationWorkspace = { id: "formulation", name: "Thoughts, beliefs & schemas" };
+  for (const tool of FORMULATION_TOOLS) {
+    const toolText = [tool.title, tool.description, tool.when, tool.approach].join(" ").toLowerCase();
+    if (toolText.includes(query)) hits.push({ emotion: formulationWorkspace, tool });
   }
   const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
   results.innerHTML = ordered.length
@@ -132,7 +142,7 @@ function tabs() {
 }
 function toolCard(tool, index, family = exerciseFamily(tool)) {
   return `<article class="tool-card">
-    <div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">${esc(family)}</span></div>
+    <div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">${esc(family)}</span>${tool.approach ? `<span class="tool-approach">${esc(tool.approach)}</span>` : ""}</div>
     <h3>${esc(tool.title)}</h3>
     <p>${esc(tool.description)}</p>
     <div class="tool-when"><span>USE THIS WHEN</span><div>${esc(tool.when)}</div></div>
