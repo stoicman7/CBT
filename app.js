@@ -95,8 +95,10 @@ function renderSearchResults() {
     }
   }
   const formulationWorkspace = { id: "formulation", name: "Thoughts, beliefs & schemas" };
+  const conceptText = JSON.stringify(FORMULATION_SECTIONS).toLowerCase() + " " + JSON.stringify(THOUGHT_SPOTTING_GUIDE).toLowerCase();
+  if (conceptText.includes(query)) hits.push({ emotion: formulationWorkspace, tool: null, kind: "formulation" });
   for (const tool of FORMULATION_TOOLS) {
-    const toolText = [tool.title, tool.description, tool.when, tool.approach].join(" ").toLowerCase();
+    const toolText = [tool.title, tool.description, tool.when, tool.approach, ...tool.steps].join(" ").toLowerCase();
     if (toolText.includes(query)) hits.push({ emotion: formulationWorkspace, tool, kind: "formulation" });
   }
   const libraryWorkspace = { id: "library", name: "Therapeutic technique library" };
