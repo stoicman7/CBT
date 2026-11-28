@@ -5,9 +5,10 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 ## What is included
 
 - **26 workspaces:** anger, stress, anxiety, fear, low mood, frustration, guilt, shame, embarrassment, jealousy, rumination, low self-esteem, social anxiety, panic, OCD patterns, trauma reactions, sleep difficulties, perfectionism, health anxiety, chronic pain, adult ADHD skills, body-focused repetitive behaviours, substance-use recovery, eating-disorder CBT, prolonged grief, and CBT for psychosis support.
-- **163 interactive tools:** structured prompts and exercises with their purpose, suggested use, steps, evidence context, and source links. Anger, stress, anxiety, and fear each contain 15 tools; social anxiety contains 11.
-- **49-method CBT technique directory:** searchable by method family, with separate labels for core CBT, specialist protocols, and related approaches such as ACT, DBT, metacognitive therapy, and MBCT.
-- **Four-step practice plans:** progress can be checked off and is saved locally.
+- **192 emotion-specific exercises plus 13 formulation tools (205 total):** each has a purpose, usage guidance, structured steps, evidence context, and linked sources. Specialist pages now include model-informed material where appropriate, with explicit clinician-led boundaries for higher-risk conditions.
+- **83-method therapeutic technique directory:** searchable by intervention family, with the therapeutic approach labelled separately. It covers core CBT, specialist protocols, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused methods.
+- **Eight exercise families:** assessment and formulation, cognitive, behavioural, imagery and memory, attention and metacognitive, emotion regulation and distress tolerance, acceptance and values, and interpersonal communication.
+- **Thoughts, beliefs & schemas hub:** a dedicated sidebar resource covering automatic thoughts, intermediate beliefs and rules, core beliefs, schemas, maintenance loops, 13 guided tools, and 11 foundational books.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
 - **Scientific review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
@@ -35,7 +36,7 @@ Requires Node.js 20 or later:
 npm test
 ```
 
-This checks JavaScript syntax and validates the 26-workspace library, 163 tool-to-worksheet mappings, 49 technique-directory entries, evidence references, the expanded anger/stress/fear/anxiety and social-anxiety workspaces, and key safety boundaries.
+This checks JavaScript syntax and validates the 26-workspace library, 192 emotion tools, 13 formulation tools, 83 technique-directory entries, evidence references, the expanded anger/stress/fear/anxiety and social-anxiety workspaces, and key safety boundaries.
 
 GitHub Actions workflow files are included under `.github/workflows/`. A repository Actions runner must be enabled for those checks to execute.
 
