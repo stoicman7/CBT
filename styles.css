@@ -988,3 +988,116 @@ a { color: inherit; }
 @media (max-width: 650px) {
   .library-approaches { max-height: 150px; }
 }
+
+
+
+/* Deep method explorer */
+.method-compass { margin: 28px 0 26px; }
+.method-compass-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 11px; }
+.method-compass-card {
+  display: grid; gap: 8px; text-align: left; min-width: 0; padding: 16px;
+  border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink);
+  cursor: pointer; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.method-compass-card:hover { border-color: #d9b5b8; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(70,24,30,.06); }
+.method-compass-card > span { color: var(--red-dark); font: 700 9px Manrope,sans-serif; letter-spacing: .7px; text-transform: uppercase; }
+.method-compass-card strong { font: 800 15px/1.35 Manrope,sans-serif; }
+.method-compass-card small { color: var(--muted); font-size: 12px; line-height: 1.55; }
+.method-guide-grid { align-items: start; }
+.method-guide-card { display: flex; flex-direction: column; gap: 12px; }
+.method-card-aim { margin: 0; }
+.method-explainer { margin-top: 3px; border: 1px solid #eee4e3; border-radius: 10px; background: #fdfbfa; overflow: hidden; }
+.method-explainer > summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 14px; cursor: pointer; list-style: none; }
+.method-explainer > summary::-webkit-details-marker { display: none; }
+.method-explainer > summary > span:first-child { display: grid; gap: 4px; }
+.method-explainer > summary b { color: var(--red-dark); font: 800 12px Manrope,sans-serif; }
+.method-explainer > summary small { color: var(--muted); font-size: 10px; line-height: 1.4; }
+.method-explainer[open] > summary { border-bottom: 1px solid var(--line); }
+.method-explainer-body { display: grid; gap: 16px; padding: 15px; }
+.method-detail-block { display: grid; gap: 7px; }
+.method-detail-label { color: #96898b; font: 800 9px Manrope,sans-serif; letter-spacing: .9px; }
+.method-detail-block > p { margin: 0; color: #5f5658; font-size: 12px; line-height: 1.7; }
+.method-procedure-list { display: grid; gap: 9px; padding: 0; margin: 0; list-style: none; }
+.method-procedure-list li { display: grid; grid-template-columns: 24px 1fr; gap: 9px; align-items: start; }
+.method-procedure-list li > span { display: grid; place-items: center; width: 23px; height: 23px; border-radius: 7px; background: var(--red-soft); color: var(--red-dark); font: 800 9px Manrope,sans-serif; }
+.method-procedure-list li p { margin: 2px 0 0; color: #5f5658; font-size: 12px; line-height: 1.65; }
+.method-question-list { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.method-question-list li { position: relative; padding: 8px 10px 8px 26px; border-radius: 7px; background: #fff; color: #5d5355; font-size: 12px; line-height: 1.5; }
+.method-question-list li::before { content: "?"; position: absolute; left: 10px; top: 8px; color: var(--red); font: 800 11px Manrope,sans-serif; }
+.method-pitfall-block { padding: 11px; border: 1px solid #f0e1df; border-radius: 8px; background: #fff9f8; }
+.method-evidence-block { padding: 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.method-explainer-body .technique-sources { display: flex; flex-wrap: wrap; gap: 7px 12px; }
+
+/* Automatic-thought and belief field guide */
+.thought-guide-hero { background: linear-gradient(112deg,#fff 0%,#fff 60%,#fbefef 100%); }
+.thought-recognition-section, .thought-capture-section, .thought-types-section,
+.thought-sort-section, .thought-question-section, .thought-troubleshooting-section,
+.thought-examples-section, .thought-record-section, .belief-bridge-section { margin: 32px 0; }
+.thought-cue-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 11px; }
+.thought-cue-card, .thought-type-card, .thought-troubleshooting-card {
+  min-width: 0; padding: 15px; border: 1px solid var(--line); border-radius: 11px; background: #fff;
+}
+.cue-number { display: inline-grid; place-items: center; width: 25px; height: 25px; border-radius: 7px; background: var(--red-soft); color: var(--red-dark); font: 800 9px Manrope,sans-serif; }
+.thought-cue-card h3, .thought-type-card h3, .thought-troubleshooting-card h3 { margin: 10px 0 6px; font: 800 14px/1.35 Manrope,sans-serif; }
+.thought-cue-card p, .thought-type-card p, .thought-troubleshooting-card p { margin: 0; color: #6c6264; font-size: 12px; line-height: 1.7; }
+.thought-capture-timeline { display: grid; gap: 0; padding: 0; margin: 0 0 20px; list-style: none; }
+.thought-capture-timeline li { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.capture-step-number { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--red-soft); color: var(--red-dark); font: 800 11px Manrope,sans-serif; }
+.thought-capture-timeline h3 { margin: 1px 0 5px; font: 800 15px Manrope,sans-serif; }
+.thought-capture-timeline p { margin: 0; max-width: 850px; color: #685f61; font-size: 13px; line-height: 1.7; }
+.thought-types-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 11px; }
+.thought-type-card blockquote { margin: 8px 0; padding: 9px 11px; border-left: 2px solid var(--red); border-radius: 0 7px 7px 0; background: #fbf6f5; color: #594c4e; font: 700 12px/1.6 Manrope,sans-serif; }
+.thought-sort-table { display: grid; border: 1px solid var(--line); border-radius: 11px; overflow: hidden; background: #fff; }
+.thought-sort-row { display: grid; grid-template-columns: minmax(185px,.7fr) 1.3fr; gap: 18px; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+.thought-sort-row:last-child { border-bottom: 0; }
+.thought-sort-row > div { display: grid; gap: 4px; align-content: start; }
+.thought-sort-row strong { font: 800 13px Manrope,sans-serif; }
+.thought-sort-row small { color: #8a7e80; font-size: 11px; line-height: 1.5; }
+.thought-sort-row p { margin: 0; color: #5e5557; font-size: 12px; line-height: 1.65; }
+.thought-sort-section > button { margin-top: 12px; }
+.thought-question-group, .thought-example-card { margin: 10px 0; border: 1px solid var(--line); border-radius: 11px; background: #fff; overflow: hidden; }
+.thought-question-group > summary, .thought-example-card > summary { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 15px 17px; cursor: pointer; list-style: none; }
+.thought-question-group > summary::-webkit-details-marker, .thought-example-card > summary::-webkit-details-marker { display: none; }
+.thought-question-group > summary > span:first-child, .thought-example-card > summary > span:first-child { display: grid; gap: 4px; }
+.thought-question-group summary small, .thought-example-card summary small { color: #978b8d; font: 800 9px Manrope,sans-serif; letter-spacing: .8px; }
+.thought-question-group summary b, .thought-example-card summary b { color: var(--ink); font: 800 15px Manrope,sans-serif; }
+.thought-question-group[open] > summary, .thought-example-card[open] > summary { border-bottom: 1px solid var(--line); background: #fdfbfa; }
+.thought-question-group ul { display: grid; gap: 8px; margin: 0; padding: 15px 35px; }
+.thought-question-group li { color: #5e5557; font-size: 13px; line-height: 1.6; }
+.thought-troubleshooting-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.thought-troubleshooting-card h3 { color: var(--red-dark); }
+.thought-example-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; align-items: start; }
+.thought-example-card { margin: 0; }
+.thought-example-body { display: grid; padding: 14px; gap: 11px; }
+.thought-example-body > div { display: grid; gap: 4px; }
+.thought-example-body strong { color: #928688; font: 800 9px Manrope,sans-serif; letter-spacing: .7px; text-transform: uppercase; }
+.thought-example-body p { margin: 0; color: #5e5557; font-size: 12px; line-height: 1.65; }
+.thought-example-body > div:last-child { padding: 10px; border-radius: 8px; background: #f8f1ef; }
+.thought-record-steps { display: grid; gap: 0; padding: 0; margin: 0 0 15px; list-style: none; }
+.thought-record-steps li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.thought-record-steps li > span { color: var(--red-dark); font: 800 10px Manrope,sans-serif; padding-top: 3px; }
+.thought-record-steps strong { font: 800 13px Manrope,sans-serif; }
+.thought-record-steps p { margin: 4px 0 0; color: #6c6264; font-size: 12px; line-height: 1.6; }
+.belief-bridge-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 9px; }
+.belief-bridge-card { min-width: 0; padding: 13px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.belief-bridge-card > span { color: #9a8e90; font: 800 9px Manrope,sans-serif; }
+.belief-bridge-card h3 { margin: 6px 0; font: 800 13px/1.3 Manrope,sans-serif; }
+.belief-bridge-card blockquote { margin: 8px 0; color: #65595b; font: 700 11px/1.55 Manrope,sans-serif; }
+.belief-bridge-card p { margin: 0; color: #7a7072; font-size: 11px; line-height: 1.6; }
+.belief-bridge-note { display: grid; gap: 7px; margin-top: 12px; padding: 14px 16px; border: 1px solid #eee3e2; border-radius: 10px; background: #fdf9f8; }
+.belief-bridge-note p { margin: 0; color: #685e60; font-size: 12px; line-height: 1.65; }
+.formulation-boundary ul { display: grid; gap: 7px; margin: 12px 0 0; padding-left: 19px; }
+.formulation-boundary li { color: #6e6567; font-size: 12px; line-height: 1.65; }
+@media (max-width: 1050px) {
+  .method-compass-grid, .thought-cue-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .belief-bridge-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .thought-example-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .method-compass-grid, .thought-cue-grid, .thought-types-grid, .thought-troubleshooting-grid, .belief-bridge-grid { grid-template-columns: 1fr; }
+  .thought-sort-row { grid-template-columns: 1fr; gap: 5px; }
+  .method-detail-label { font-size: 8px; }
+  .method-explainer-body { padding: 12px; }
+  .thought-capture-timeline li { grid-template-columns: 32px 1fr; gap: 10px; }
+  .thought-question-group > summary, .thought-example-card > summary { padding: 13px; }
+}
