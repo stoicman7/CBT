@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 import { CORE_TECHNIQUES } from "../technique-library.js";
+import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "../formulation.js";
+import { EXERCISE_FAMILY_ORDER, exerciseFamily, groupExercises } from "../exercise-taxonomy.js";
 
 assert.ok(EMOTIONS.length >= 26, "The library should contain a broad set of emotion spaces.");
 const ids = EMOTIONS.map(item => item.id);
@@ -27,11 +29,11 @@ for (const emotion of EMOTIONS) {
   }
 }
 
-assert.equal(toolIds.size, 163, "The catalogue should contain exactly 159 unique interactive tools.");
+assert.equal(toolIds.size, 192, "The emotion workspaces should contain 192 unique interactive tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety"), "Health anxiety workspace should be present.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").tools.length >= 3, "Health anxiety needs dedicated tools.");
 assert.ok(EMOTIONS.find(item => item.id === "health-anxiety").caution.toLowerCase().includes("medical care"), "Health anxiety must preserve medical-care safeguards.");
-for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-boundary","anger-consequence","anger-repair","stress-demand","stress-problem","stress-time","stress-perfectionism","stress-recovery","stress-worry","anxiety-maintenance","anxiety-reassurance","anxiety-attention","anxiety-coping","anxiety-post","anxiety-behavioural","fear-expectancy","fear-context","fear-safety","fear-approach","fear-imaginal","fear-learning","anger-interpretation-check","anger-need-request","anger-pause-return","anger-vulnerability-plan","stress-control-influence-map","stress-priority-triage","stress-anticipatory-plan","stress-workload-conversation","anxiety-avoidance-cost-map","anxiety-worry-trigger-chain","anxiety-coping-evidence-log","anxiety-valued-approach-step","fear-real-risk-check","fear-coping-prediction-review","fear-values-approach-choice","fear-setback-reengagement","social-anxiety-safety-map","social-anxiety-anticipatory-review","social-anxiety-conversation-experiment","social-anxiety-impression-evidence","social-anxiety-core-rule-test","social-anxiety-video-feedback-prep","embarrassment-event-review","embarrassment-audience-test","embarrassment-replay","embarrassment-proportionate-repair"]) {
+for (const prefix of ["anger-trigger","anger-early","anger-rumination","anger-boundary","anger-consequence","anger-repair","stress-demand","stress-problem","stress-time","stress-perfectionism","stress-recovery","stress-worry","anxiety-maintenance","anxiety-reassurance","anxiety-attention","anxiety-coping","anxiety-post","anxiety-behavioural","fear-expectancy","fear-context","fear-safety","fear-approach","fear-imaginal","fear-learning","anger-interpretation-check","anger-need-request","anger-pause-return","anger-vulnerability-plan","stress-control-influence-map","stress-priority-triage","stress-anticipatory-plan","stress-workload-conversation","anxiety-avoidance-cost-map","anxiety-worry-trigger-chain","anxiety-coping-evidence-log","anxiety-valued-approach-step","fear-real-risk-check","fear-coping-prediction-review","fear-values-approach-choice","fear-setback-reengagement","social-anxiety-safety-map","social-anxiety-anticipatory-review","social-anxiety-conversation-experiment","social-anxiety-impression-evidence","social-anxiety-core-rule-test","social-anxiety-video-feedback-prep","embarrassment-event-review","embarrassment-audience-test","embarrassment-replay","embarrassment-proportionate-repair","panic-act-respond-to-the-moment","ocd-values-alongside-erp","trauma-present-time-orientation","sleep-worry-and-belief-review","health-anxiety-metacognitive-loop","adhd-implementation-intention","bfrb-trigger-and-context-map","ed-session-preparation","psychosis-coping-review"]) {
   const tool = EMOTIONS.flatMap(item => item.tools).find(item => item.id.startsWith(prefix));
   assert.ok(tool && tool.steps.length >= 5, "New focused-audit tools must contain at least five steps: " + prefix);
 }
@@ -85,9 +87,13 @@ assert.ok(EMOTIONS.find(item => item.id === "eating-disorder-cbt").caution.toLow
 assert.ok(EMOTIONS.find(item => item.id === "substance-use").caution.toLowerCase().includes("withdrawal"));
 assert.ok(EMOTIONS.find(item => item.id === "body-focused-repetitive-behaviours").tools.some(tool => tool.id === "bfrb-competing-response"));
 
-assert.ok(CORE_TECHNIQUES.length >= 49, "The searchable technique directory should contain at least 49 methods.");
+assert.ok(CORE_TECHNIQUES.length >= 83, "The searchable technique directory should contain at least 83 methods.");
 const appSource = await readFile(new URL("../app.js", import.meta.url), "utf8");
+const indexSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
+assert.ok(indexSource.includes('data-tab="formulation"'), "The thoughts and beliefs hub must be accessible from the sidebar.");
 assert.ok(appSource.includes("function renderTechniqueLibrary()"), "The technique directory renderer should exist.");
+assert.ok(appSource.includes("function renderFormulationHub()"), "The dedicated formulation hub should render.");
+assert.ok(appSource.includes("groupExercises(e.tools)"), "Emotion exercises should be grouped by their intervention family.");
 assert.ok(appSource.includes("function renderSearchResults()"), "Global search should render direct workspace and exercise results.");
 assert.ok(appSource.includes("data-search-tool"), "Search results should identify exact tools.");
 assert.ok(appSource.includes("practice-step-list"), "The worksheet should render visually separated practice steps.");
@@ -95,6 +101,25 @@ assert.ok(appSource.includes("if (!saveState())"), "Save actions should not show
 assert.ok(appSource.includes("${links(item.sources)}"), "The technique directory should use the shared source-link renderer.");
 assert.ok(!appSource.includes("${sourceLinks(item.sources)}"), "The technique directory must not call an undefined source-link helper.");
 assert.ok(appSource.includes('data-library-category'), "Technique category filters should be wired to the app.");
+
+
+assert.equal(FORMULATION_SECTIONS.length, 7, "The formulation hub should cover its seven core knowledge sections.");
+assert.equal(FORMULATION_TOOLS.length, 13, "The formulation hub should contain thirteen guided tools.");
+assert.ok(FORMULATION_BOOKS.length >= 11, "The formulation hub should include a substantial foundational reading list.");
+const formulationIds = new Set();
+for (const tool of FORMULATION_TOOLS) {
+  assert.ok(!toolIds.has(tool.id) && !formulationIds.has(tool.id), "Duplicate formulation tool ID: " + tool.id);
+  formulationIds.add(tool.id);
+  assert.ok(WORKSHEETS[tool.worksheet], "Missing formulation worksheet: " + tool.worksheet);
+  assert.ok(tool.steps.length >= 5 && tool.when && tool.evidence, "Incomplete formulation tool: " + tool.id);
+  assert.ok(EXERCISE_FAMILY_ORDER.includes(exerciseFamily(tool)), "Unclassified formulation tool: " + tool.id);
+  for (const sourceId of tool.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by formulation tool " + tool.id);
+}
+for (const emotion of EMOTIONS) {
+  const grouped = groupExercises(emotion.tools);
+  assert.equal(grouped.reduce((n,[,items]) => n + items.length, 0), emotion.tools.length, "Every exercise must appear in exactly one family for " + emotion.id);
+  for (const tool of emotion.tools) assert.ok(EXERCISE_FAMILY_ORDER.includes(exerciseFamily(tool)), "Unclassified exercise: " + tool.id);
+}
 
 const techniqueIds = new Set();
 const categories = new Set();
@@ -111,6 +136,9 @@ assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Specialist proto
 assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Core CBT"), "Core CBT methods must be explicitly classified.");
 assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Metacognitive therapy"), "Related therapies must remain separately classified.");
 assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Acceptance and commitment therapy"), "ACT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => /Rational emotive/i.test(item.classification)), "REBT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => /Dialectical behavio/i.test(item.classification)), "DBT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => /Schema therapy/i.test(item.classification)), "Schema-therapy methods must remain separately classified.");
 
 for (const [id, source] of Object.entries(SOURCES)) {
   assert.ok(source.label && source.citation, "Incomplete source metadata: " + id);
