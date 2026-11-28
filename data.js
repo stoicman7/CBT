@@ -353,6 +353,23 @@ export const SOURCES = {
     url: "https://www.guilford.com/books/Cognitive-Therapy-of-Depression/Beck-Rush-Shaw-Emery/9781572305823"
   }
 
+  ,
+  cftEvidence2015: {
+    label: "Compassion-focused therapy: early systematic review (2015)",
+    citation: "Leaviss, J., & Uttley, L. (2015). Psychotherapeutic benefits of compassion-focused therapy: an early systematic review. Psychological Medicine, 45(5), 927–945. Included 14 studies, three randomized trials; findings were promising but larger, higher-quality trials were needed.",
+    url: "https://doi.org/10.1017/S0033291714002141"
+  },
+  mbctRelapseMeta2016: {
+    label: "MBCT for depressive relapse prevention: individual-patient-data meta-analysis (2016)",
+    citation: "Kuyken, W., Warren, F. C., Taylor, R. S., et al. (2016). Efficacy of Mindfulness-Based Cognitive Therapy in Prevention of Depressive Relapse: An Individual Patient Data Meta-analysis From Randomized Trials. JAMA Psychiatry, 73(6), 565–574.",
+    url: "https://doi.org/10.1001/jamapsychiatry.2016.0076"
+  },
+  mbctPreventRCT2015: {
+    label: "PREVENT trial: MBCT compared with maintenance antidepressant treatment (2015)",
+    citation: "Kuyken, W., Hayes, R., Barrett, B., et al. (2015). Effectiveness and cost-effectiveness of mindfulness-based cognitive therapy compared with maintenance antidepressant treatment in the prevention of depressive relapse or recurrence (PREVENT): a randomised controlled trial. The Lancet, 386(9988), 63–73.",
+    url: "https://doi.org/10.1016/S0140-6736(14)62222-4"
+  }
+
 };
 
 
