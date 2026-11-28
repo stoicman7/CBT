@@ -158,19 +158,10 @@ function overview(e) {
   </aside></div>`;
 }
 function techniques(e) {
-  return `<section class="tab-intro"><div><div class="eyebrow muted">METHOD LIBRARY</div><h2>Techniques for ${esc(e.name.toLowerCase())}</h2><p>Browse the purpose and use of each method. Open the steps or launch its structured worksheet when you are ready.</p></div><span class="tab-count">${String(e.tools.length).padStart(2,"0")} METHODS</span></section>
-  <div class="technique-list">${e.tools.map((t,i) => `<article class="technique-row">
-    <div class="technique-index">${String(i+1).padStart(2,"0")}</div>
-    <div class="technique-main">
-      <div class="technique-overline">METHOD ${String(i+1).padStart(2,"0")}</div>
-      <h3>${esc(t.title)}</h3>
-      <p>${esc(t.description)}</p>
-      <div class="technique-when"><strong>When it may help</strong><span>${esc(t.when)}</span></div>
-      <details class="technique-expand"><summary>View suggested steps <span>${t.steps.length} steps</span></summary><ol class="technique-step-list">${t.steps.map(s => `<li>${esc(s)}</li>`).join("")}</ol></details>
-      <details class="technique-evidence"><summary>Evidence context and sources</summary><p>${esc(t.evidence)}</p><div class="technique-sources">${links(t.sources)}</div></details>
-    </div>
-    <div class="technique-side"><span class="worksheet-tag">PRACTICE TOOL</span><button class="primary-button compact" type="button" data-tool="${esc(t.id)}">Open exercise <span aria-hidden="true">↗</span></button></div>
-  </article>`).join("")}</div>`;
+  const groups = groupExercises(e.tools);
+  return '<section class="tab-intro"><div><div class="eyebrow muted">METHOD LIBRARY</div><h2>Techniques for ' + esc(e.name.toLowerCase()) + '</h2><p>Browse exercises grouped by their primary intervention type. Open the steps or launch a structured worksheet when ready.</p></div><span class="tab-count">' + String(e.tools.length).padStart(2,"0") + ' METHODS</span></section>' +
+    '<div class="exercise-family-list">' + groups.map(([family,tools]) => '<section class="exercise-family"><header class="exercise-family-heading"><div><span class="eyebrow muted">EXERCISE TYPE</span><h3>' + esc(family) + '</h3><p>' + esc(EXERCISE_FAMILY_NOTES[family]) + '</p></div><span class="family-count">' + tools.length + ' METHODS</span></header><div class="technique-list">' +
+    tools.map((t,i) => '<article class="technique-row"><div class="technique-index">' + String(i+1).padStart(2,"0") + '</div><div class="technique-main"><div class="technique-overline">' + esc(family) + '</div><h3>' + esc(t.title) + '</h3><p>' + esc(t.description) + '</p><div class="technique-when"><strong>When it may help</strong><span>' + esc(t.when) + '</span></div><details class="technique-expand"><summary>View suggested steps <span>' + t.steps.length + ' steps</span></summary><ol class="technique-step-list">' + t.steps.map(x=>'<li>'+esc(x)+'</li>').join("") + '</ol></details><details class="technique-evidence"><summary>Evidence context and sources</summary><p>' + esc(t.evidence) + '</p><div class="technique-sources">' + links(t.sources) + '</div></details></div><div class="technique-side"><span class="worksheet-tag">PRACTICE TOOL</span><button class="primary-button compact" type="button" data-tool="' + esc(t.id) + '">Open exercise <span aria-hidden="true">↗</span></button></div></article>').join("") + '</div></section>').join("") + '</div>';
 }
 
 function renderTechniqueLibrary() {
