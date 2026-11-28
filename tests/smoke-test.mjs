@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 import { CORE_TECHNIQUES } from "../technique-library.js";
-import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "../formulation.js";
+import { FORMULATION_SECTIONS, FORMULATION_TOOLS } from "../formulation.js";
+import { TECHNIQUE_GUIDES } from "../technique-guides.js";
+import { THOUGHT_SPOTTING_GUIDE } from "../automatic-thought-guide.js";
 import { EXERCISE_FAMILY_ORDER, exerciseFamily, groupExercises } from "../exercise-taxonomy.js";
 
 assert.ok(EMOTIONS.length >= 26, "The library should contain a broad set of emotion spaces.");
@@ -92,7 +94,12 @@ const appSource = await readFile(new URL("../app.js", import.meta.url), "utf8");
 const indexSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
 assert.ok(indexSource.includes('data-tab="formulation"'), "The thoughts and beliefs hub must be accessible from the sidebar.");
 assert.ok(appSource.includes("function renderTechniqueLibrary()"), "The technique directory renderer should exist.");
+assert.ok(appSource.includes("TECHNIQUE_GUIDES"), "The method explorer should load detailed guides.");
 assert.ok(appSource.includes("function renderFormulationHub()"), "The dedicated formulation hub should render.");
+assert.ok(appSource.includes("method-explainer"), "The method explorer should include expanded method guides.");
+assert.ok(appSource.includes("thought-capture-timeline"), "The thoughts hub should include a structured automatic-thought protocol.");
+assert.ok(appSource.includes("THOUGHT_SPOTTING_GUIDE"), "The thoughts hub should use the dedicated field guide.");
+assert.ok(!appSource.includes("FOUNDATIONAL READING") && !appSource.includes("FORMULATION_BOOKS"), "The foundational reading section must be removed from the hub.");
 assert.ok(appSource.includes("groupExercises(e.tools)"), "Emotion exercises should be grouped by their intervention family.");
 assert.ok(appSource.includes("data-library-approach"), "Technique directory should filter independently by therapeutic approach.");
 assert.ok(appSource.includes("searchKind === \"library\""), "Global search should navigate to technique-library results.");
@@ -106,11 +113,24 @@ assert.ok(appSource.includes('data-library-category'), "Technique category filte
 
 
 assert.equal(FORMULATION_SECTIONS.length, 7, "The formulation hub should cover its seven core knowledge sections.");
-assert.equal(FORMULATION_TOOLS.length, 14, "The formulation hub should contain fourteen guided tools.");
+
+assert.equal(Object.keys(TECHNIQUE_GUIDES).length, CORE_TECHNIQUES.length, "Every method must have a detailed method guide.");
+for (const method of CORE_TECHNIQUES) {
+  const guide = TECHNIQUE_GUIDES[method.id];
+  assert.ok(guide && guide.aim && guide.steps.length >= 5 && guide.questions.length >= 2 && guide.review && guide.pitfalls, "Incomplete detailed method guide: " + method.id);
+  assert.ok(guide.evidenceScope && guide.evidenceScope.length > 40, "Method evidence scope is missing: " + method.id);
+}
+assert.equal(THOUGHT_SPOTTING_GUIDE.recognitionCues.length, 8, "The thought-spotting guide should include eight recognition cues.");
+assert.equal(THOUGHT_SPOTTING_GUIDE.protocol.length, 7, "The thought-spotting protocol should contain seven stages.");
+assert.equal(THOUGHT_SPOTTING_GUIDE.questionBank.length, 6, "The thought-spotting guide should include context-specific question sets.");
+assert.equal(THOUGHT_SPOTTING_GUIDE.troubleshooting.length, 7, "The thought-spotting guide should include troubleshooting.");
+assert.equal(THOUGHT_SPOTTING_GUIDE.workedExamples.length, 3, "The thought-spotting guide should include worked examples.");
+for (const sourceId of THOUGHT_SPOTTING_GUIDE.sources) assert.ok(SOURCES[sourceId], "Unknown thought-spotting source: " + sourceId);
+assert.ok(THOUGHT_SPOTTING_GUIDE.formulationPrinciples.length >= 5, "Thought-spotting guide needs formulation safeguards.");
+
+assert.equal(FORMULATION_TOOLS.length, 20, "The formulation hub should contain twenty guided tools.");
 assert.ok(FORMULATION_TOOLS.some(tool => tool.id === "formulation-image-capture" && exerciseFamily(tool) === "Imagery & memory methods"), "The formulation hub should include a bounded automatic mental-image exercise.");
-assert.ok(FORMULATION_BOOKS.length >= 11, "The formulation hub should include a substantial foundational reading list.");
 for (const section of FORMULATION_SECTIONS) for (const sourceId of section.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by formulation section " + section.id);
-for (const book of FORMULATION_BOOKS) assert.ok(SOURCES[book.source], "Unknown source " + book.source + " used by formulation book " + book.title);
 assert.ok(SOURCES.actComparativeNMA2026, "The formulation hub should include current comparative ACT evidence.");
 assert.ok(SOURCES.dbtStandaloneSkillsMeta2026, "The DBT hub should include current evidence on stand-alone skills groups.");
 const formulationIds = new Set();
