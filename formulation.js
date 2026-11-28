@@ -259,7 +259,8 @@ export const FORMULATION_SECTIONS = [
       "schemaTherapyBook2003",
       "mctWellsBook",
       "mctEvidence2024",
-      "actComparativeNMA2026"
+      "actComparativeNMA2026",
+      "dbtStandaloneSkillsMeta2026"
     ]
   }
 ];
@@ -485,11 +486,12 @@ export const FORMULATION_TOOLS = [
       "Plan a repair and a future skill rehearsal; seek professional help for self-harm, suicidality, violence, or other high-risk behaviours."
     ],
     "worksheet": "dbtChain",
-    "evidence": "Behaviour-chain analysis is a core DBT strategy described in Linehan's skills training materials. A worksheet alone is not comprehensive DBT treatment or crisis care.",
+    "evidence": "Behaviour-chain analysis is a core DBT strategy described in Linehan's skills training materials. A worksheet alone is not comprehensive DBT treatment or crisis care. A 2026 review found promising changes in structured stand-alone DBT skills groups for borderline personality disorder, but only seven studies met criteria, five entered meta-analysis, and heterogeneity was substantial; this does not validate a single app worksheet.",
     "sources": [
       "dbtManual2025",
       "dbtHandouts2025",
-      "dbtEvidence2022"
+      "dbtEvidence2022",
+      "dbtStandaloneSkillsMeta2026"
     ]
   },
   {
