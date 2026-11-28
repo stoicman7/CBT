@@ -1488,7 +1488,7 @@ A new sidebar destination contains teaching material on automatic-thought identi
 | Emotion and specialist workspaces | 26 |
 | Emotion-specific guided exercises | 192 |
 | Thought/belief formulation exercises | 13 |
-| Total guided exercises | 205 |
+| Total guided exercises | 206 |
 | Indexed technique-directory methods | 91 |
 | Primary exercise families | 8 |
 | Linked source records | 86 |
