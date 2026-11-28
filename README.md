@@ -8,7 +8,8 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 - **192 emotion-specific exercises plus 13 formulation tools (205 total):** each has a purpose, usage guidance, structured steps, evidence context, and linked sources. Specialist pages now include model-informed material where appropriate, with explicit clinician-led boundaries for higher-risk conditions.
 - **83-method therapeutic technique directory:** searchable by intervention family, with the therapeutic approach labelled separately. It covers core CBT, specialist protocols, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused methods.
 - **Eight exercise families:** assessment and formulation, cognitive, behavioural, imagery and memory, attention and metacognitive, emotion regulation and distress tolerance, acceptance and values, and interpersonal communication.
-- **Thoughts, beliefs & schemas hub:** a dedicated sidebar resource covering automatic thoughts, intermediate beliefs and rules, core beliefs, schemas, maintenance loops, 13 guided tools, and 11 foundational books.
+- **Thoughts, beliefs & schemas hub:** a dedicated sidebar resource covering automatic thoughts, intermediate beliefs and rules, core beliefs, schemas, cognitive-maintenance loops, 13 guided tools, and 11 foundational books.
+- **Evidence and reading base:** 82 linked sources and a curated reading list spanning CBT, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused approaches.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
 - **Scientific review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
