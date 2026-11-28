@@ -1491,7 +1491,7 @@ A new sidebar destination contains teaching material on automatic-thought identi
 | Total guided exercises | 205 |
 | Indexed technique-directory methods | 91 |
 | Primary exercise families | 8 |
-| Linked source records | 85 |
+| Linked source records | 86 |
 | Foundational books in the formulation hub | 11 |
 
 All new and existing exercise tools must have a valid worksheet, a usage context, a substantive evidence note, and valid source identifiers. Higher-risk clinical areas retain specific safety boundaries. These numerical counts describe the current catalogue, not a claim of complete coverage of the literature.
@@ -1514,6 +1514,8 @@ All new and existing exercise tools must have a valid worksheet, a usage context
 - King, A. M., Plateau, C. R., Turner, M. J., Young, P., & Barker, J. B. (2024). A systematic review of the nature and efficacy of Rational Emotive Behaviour Therapy interventions. *PLOS ONE, 19*(7), e0306835. [DOI](https://doi.org/10.1371/journal.pone.0306835).
 
 ### ACT
+
+- Gower, T., Styler, Z. R., & Litz, B. T. (2026). [Randomized controlled evidence of the efficacy of acceptance and commitment therapy: A systematic review and meta-analysis](https://doi.org/10.1016/j.cpr.2026.102786). *Clinical Psychology Review, 128*, 102786. The review included 34 RCTs comparing full-model ACT with bona fide psychotherapies. The pooled result did not show ACT superiority on mental and behavioural health outcomes (g = −0.01, p = .86); the authors also identified recurring design and reporting limitations. This does not mean ACT is ineffective or that it cannot help specific people; it means a claim that it is generally better than established alternatives is not supported by these head-to-head trials.
 - Hayes, S. C., Strosahl, K. D., & Wilson, K. G. (2012). *Acceptance and Commitment Therapy: The Process and Practice of Mindful Change* (2nd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943).
 - Harris, R. (2019). *ACT Made Simple* (2nd ed., revised). New Harbinger Publications. [Publisher page](https://www.newharbinger.com/9781684033010/act-made-simple/).
 - Association for Contextual Behavioral Science. [Six core ACT processes](https://contextualscience.org/six_core_processes_act).
