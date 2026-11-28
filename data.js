@@ -359,7 +359,96 @@ export const EMOTIONS = [
       { id: "anger-rumination-break", title: "Interrupt anger rumination", description: "Notice repetitive replay and shift from mental rehearsal toward a useful next step.", when: "Use when replaying an incident keeps anger active after the event has ended.", steps: ["Label the process: 'I am replaying the event'.","Write the unresolved question or action, if one exists.","If action is possible, define one proportionate next step.","If no action is possible now, redirect attention to a chosen task or sensory activity.","Review whether the replay produced new information or only repeated the same story."], worksheet: "worry", evidence: "A 2025 meta-analysis found anger associated with rumination; the exercise adapts attention-shifting and problem-solving skills.", sources: ["angerRegulation","rumination"] },
       { id: "anger-boundary-request", title: "Turn anger into a clear boundary or request", description: "Translate the concern beneath anger into specific, non-threatening communication.", when: "Use when a legitimate need, limit, or unfair situation requires a conversation.", steps: ["Describe the observable behaviour without insults or mind-reading.","Name its impact on you or the situation.","State the boundary or request in one concrete sentence.","Identify what you will do to protect the boundary if it is ignored.","Plan the conversation for a time when everyone can engage safely."], worksheet: "relationship", evidence: "Assertive communication and rehearsal are established behavioural skills; this does not make unsafe relationships safe.", sources: ["angerSaini","beckManual"] },
       { id: "anger-consequence-choice", title: "Compare response options before acting", description: "Evaluate likely short- and long-term consequences of different responses.", when: "Use when you feel pulled toward retaliation, confrontation, or withdrawal.", steps: ["Write the action urge without acting on it.","List two or three possible responses, including pausing or seeking support.","Estimate immediate and later consequences for each option.","Consider safety, dignity, values, and practical outcomes.","Choose the least harmful response that addresses the real issue."], worksheet: "problem", evidence: "Decision balance and problem-solving are CBT-compatible methods; use only after immediate safety is secured.", sources: ["angerSaini","beckManual"] },
-      { id: "anger-repair", title: "Plan repair after an angry reaction", description: "Take responsibility for harmful behaviour while keeping the original concern available for discussion.", when: "Use after you have calmed down and it is safe to make contact.", steps: ["Describe what you did, without minimising or blaming the other person.","Identify the impact it may have had.","Write a direct apology for your behaviour, not for having an emotion.","State what you will do differently next time.","Return to the underlying issue separately and respectfully, if appropriate."], worksheet: "relationship", evidence: "Behavioural rehearsal and problem-solving support repair; this is not a substitute for violence-prevention care.", sources: ["angerSaini","angerReview"] }
+      { id: "anger-repair", title: "Plan repair after an angry reaction", description: "Take responsibility for harmful behaviour while keeping the original concern available for discussion.", when: "Use after you have calmed down and it is safe to make contact.", steps: ["Describe what you did, without minimising or blaming the other person.","Identify the impact it may have had.","Write a direct apology for your behaviour, not for having an emotion.","State what you will do differently next time.","Return to the underlying issue separately and respectfully, if appropriate."], worksheet: "relationship", evidence: "Behavioural rehearsal and problem-solving support repair; this is not a substitute for violence-prevention care.", sources: ["angerSaini","angerReview"] },
+      {
+        "id": "anger-rebt-demand-review",
+        "title": "REBT: separate a preference from a demand",
+        "description": "Identify rigid demands about how others must act, then form a flexible preference without abandoning a legitimate boundary.",
+        "when": "Use when the thought contains 'they must', 'this must not happen', or 'I cannot stand this'.",
+        "steps": [
+          "Describe the event without interpretation.",
+          "Write the demand or absolute rule that appeared.",
+          "Identify awfulising, low frustration tolerance, or global rating.",
+          "Dispute the demand for logic, evidence, and usefulness.",
+          "Replace it with a strong but flexible preference.",
+          "Choose a proportionate action or boundary based on the facts."
+        ],
+        "worksheet": "rebtABCDE",
+        "family": "Cognitive methods",
+        "approach": "REBT",
+        "evidence": "REBT distinguishes rigid demands from flexible preferences; this is not a reason to tolerate aggression or injustice.",
+        "sources": [
+          "rebtPracticeBook",
+          "rebtSystematicReview2024"
+        ]
+      },
+      {
+        "id": "anger-dbt-check-facts",
+        "title": "DBT: check the facts before responding",
+        "description": "Separate the observable event from assumptions about intent, then choose whether the situation needs a boundary, problem-solving, or emotion regulation.",
+        "when": "Use when anger is rising quickly and the meaning of an event is uncertain.",
+        "steps": [
+          "Write what an observer could verify.",
+          "Separate facts from assumptions about motive or disrespect.",
+          "Identify any real boundary violation or harm.",
+          "Check whether the emotion and action urge fit the full facts.",
+          "Choose a safe and effective response: assert, solve, pause, or disengage.",
+          "Review the outcome without turning it into a verdict about yourself."
+        ],
+        "worksheet": "dbtCheckFacts",
+        "family": "Cognitive methods",
+        "approach": "DBT",
+        "evidence": "Check the Facts is a DBT emotion-regulation skill; it does not invalidate anger that accurately signals mistreatment or danger.",
+        "sources": [
+          "dbtManual2025",
+          "dbtHandouts2025"
+        ]
+      },
+      {
+        "id": "anger-dbt-chain",
+        "title": "DBT: trace the anger behaviour chain",
+        "description": "Map vulnerability factors, the prompting event, internal links, behaviour, and consequences to find an earlier point for a different response.",
+        "when": "Use after a recurring anger episode has settled, especially when the same pattern repeats.",
+        "steps": [
+          "Identify the specific behaviour you want to understand.",
+          "List vulnerabilities and stressors present beforehand.",
+          "Describe the prompting event and each link in sequence.",
+          "Include thoughts, body sensations, emotions, urges, and actions.",
+          "Record short- and long-term consequences.",
+          "Choose one skill or environmental change that could interrupt the chain."
+        ],
+        "worksheet": "dbtChain",
+        "family": "Assessment & formulation",
+        "approach": "DBT",
+        "evidence": "Behaviour-chain analysis is a core DBT strategy; use professional support for aggression, self-harm, or risk of harm.",
+        "sources": [
+          "dbtManual2025",
+          "dbtHandouts2025",
+          "dbtEvidence2022"
+        ]
+      },
+      {
+        "id": "anger-act-values",
+        "title": "ACT: choose a values-based response to anger",
+        "description": "Notice anger without letting it dictate the next action, then choose behaviour consistent with values and safety.",
+        "when": "Use when anger is understandable but an impulsive response could damage something important.",
+        "steps": [
+          "Name the event and emotion without trying to suppress either.",
+          "Notice the thought or urge pulling you towards an immediate reaction.",
+          "Create distance by naming it as a thought or urge.",
+          "Identify the value you want your response to express.",
+          "Choose one safe action that fits that value and any necessary boundary.",
+          "Review whether the action served what matters, regardless of whether anger disappeared."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT focuses on psychological flexibility and values-guided action rather than requiring difficult emotions to disappear.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024"
+        ]
+      }
     ],
     plan: [
       { title: "Notice the pattern", detail: "Record two or three manageable anger episodes and identify common triggers and early body cues." },
@@ -387,7 +476,51 @@ export const EMOTIONS = [
       { id: "stress-time-boundaries", title: "Design a realistic workload boundary", description: "Identify overcommitment and prepare a specific limit, negotiation, or request.", when: "Use when workload or competing demands exceed available capacity.", steps: ["List what you are currently committed to.","Mark what is essential, negotiable, delegable, or removable.","Choose one boundary or request that would reduce the mismatch.","Write a clear sentence and identify the right person or process.","Review the outcome and plan the next negotiation if needed."], worksheet: "relationship", evidence: "Assertiveness and problem-solving can support coping, but they cannot replace changes to unsafe or excessive workloads.", sources: ["occupationalStress","beckManual"] },
       { id: "stress-perfectionism-experiment", title: "Test a perfectionistic work rule", description: "Examine whether rigid standards are helping performance or increasing delay and strain.", when: "Use when 'must be perfect' or fear of mistakes drives stress.", steps: ["Write the rule that governs the task.","Estimate the cost of following it and the feared cost of relaxing it.","Define a safe task where a 'good enough' standard is acceptable.","Set a clear completion criterion and time limit.","Compare the actual result with the prediction; do not use this for safety-critical work."], worksheet: "thought", evidence: "Behavioural experiments and cognitive restructuring are established CBT procedures; adapt standards to genuine task risk.", sources: ["perfectionism","cognitiveRestructuring","beckManual"] },
       { id: "stress-recovery-menu", title: "Build a recovery menu that fits the stressor", description: "Choose recovery actions that restore capacity without pretending to solve the cause of stress.", when: "Use between demanding periods or when recovery has become inconsistent.", steps: ["Identify what kind of depletion is present: physical, cognitive, social, or emotional.","List short and longer recovery actions that are realistically available.","Choose one action that fits the current need and constraints.","Schedule it and reduce competing inputs where possible.","Review whether it helped and what external change is still needed."], worksheet: "activity", evidence: "Recovery and relaxation may support stress management; evidence does not imply they resolve structural stressors.", sources: ["stressICBT","occupationalStress"] },
-      { id: "stress-worry-vs-action", title: "Separate solvable problems from hypothetical worry", description: "Distinguish practical planning from repetitive attempts to obtain certainty.", when: "Use when planning turns into repeated mental rehearsal.", steps: ["Write the concern in one sentence.","Ask what concrete action is available now or at a defined time.","If actionable, specify the next step and when to take it.","If not actionable, label the uncertainty and return to the current task.","Review later only if new information or a real decision becomes available."], worksheet: "worry", evidence: "Problem-solving and worry-management methods are included in CBT approaches for stress and GAD.", sources: ["stressICBT","gad","rumination"] }
+      { id: "stress-worry-vs-action", title: "Separate solvable problems from hypothetical worry", description: "Distinguish practical planning from repetitive attempts to obtain certainty.", when: "Use when planning turns into repeated mental rehearsal.", steps: ["Write the concern in one sentence.","Ask what concrete action is available now or at a defined time.","If actionable, specify the next step and when to take it.","If not actionable, label the uncertainty and return to the current task.","Review later only if new information or a real decision becomes available."], worksheet: "worry", evidence: "Problem-solving and worry-management methods are included in CBT approaches for stress and GAD.", sources: ["stressICBT","gad","rumination"] },
+      {
+        "id": "stress-act-willingness",
+        "title": "ACT: make room for stress while choosing a next step",
+        "description": "Distinguish unavoidable discomfort from a solvable stressor, then take one values-guided action rather than waiting to feel completely calm.",
+        "when": "Use when attempts to eliminate every uncomfortable feeling are delaying an important, safe action.",
+        "steps": [
+          "Name the stressor and the sensations or thoughts that appear.",
+          "Separate what can be changed from what cannot be changed now.",
+          "Notice any struggle to make the feeling disappear before acting.",
+          "Identify the value or priority that matters in this situation.",
+          "Choose one small action within your control or influence.",
+          "Review whether the action was workable and what practical support is still needed."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT targets psychological flexibility; acceptance is not resignation to excessive demands or unsafe conditions.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024"
+        ]
+      },
+      {
+        "id": "stress-dbt-stop",
+        "title": "DBT: pause with STOP before acting",
+        "description": "Interrupt an escalating stress response, observe what is happening, and choose the next effective action rather than reacting automatically.",
+        "when": "Use when stress is pushing you towards impulsive decisions or an avoidant response.",
+        "steps": [
+          "Stop the immediate action for a moment if pausing is safe.",
+          "Take a step back from the situation.",
+          "Observe the facts, thoughts, emotions, body state, and urge.",
+          "Proceed mindfully by asking what outcome matters most.",
+          "Choose one concrete next action or request for support.",
+          "Return to the issue at an agreed time if it cannot be resolved immediately."
+        ],
+        "worksheet": "dbtCheckFacts",
+        "family": "Emotion regulation & distress tolerance",
+        "approach": "DBT",
+        "evidence": "STOP is a DBT distress-tolerance skill. Do not use it to delay emergency action or necessary protection.",
+        "sources": [
+          "dbtManual2025",
+          "dbtHandouts2025"
+        ]
+      }
     ],
     plan: [
       { title: "Externalise the load", detail: "Write the demands down instead of keeping the whole list in working memory." },
@@ -415,7 +548,51 @@ export const EMOTIONS = [
       { id: "anxiety-attention-shift", title: "Practise flexible attention", description: "Notice threat-focused scanning and deliberately widen attention to the task and environment.", when: "Use when monitoring for danger or signs of anxiety dominates a safe situation.", steps: ["Name what your attention is monitoring.","Identify the feared sign or outcome you are scanning for.","Gently widen attention to several neutral or task-relevant details.","Return to the activity while allowing some uncertainty to remain.","Review whether attention became more flexible, not whether anxiety disappeared."], worksheet: "reflection", evidence: "Attention processes are addressed in anxiety treatments; this brief practice is not a standalone protocol.", sources: ["socialNICE","anxietyGuidelines"] },
       { id: "anxiety-coping-forecast", title: "Build a coping forecast instead of seeking certainty", description: "Replace 'I must know it will be fine' with a realistic plan for handling plausible outcomes.", when: "Use when uncertainty is unavoidable and the mind demands guarantees.", steps: ["State the uncertain situation and the outcome you fear.","Separate likelihood from how difficult the outcome would be.","List resources, skills, and people that could help if it happened.","Write a first response you could take without over-planning.","Choose what information is genuinely needed and stop when the decision threshold is met."], worksheet: "thought", evidence: "Cognitive reappraisal and coping appraisal are used in CBT; the aim is realistic coping, not false reassurance.", sources: ["gad","cognitiveRestructuring"] },
       { id: "anxiety-post-event-review", title: "Reduce post-event replay", description: "Review a social or performance situation without turning it into prolonged self-criticism.", when: "Use after a conversation, meeting, or performance when replaying keeps anxiety active.", steps: ["Describe what happened using observable details.","Write the negative conclusion you are drawing about yourself.","Identify what evidence you are overlooking or interpreting harshly.","Record one balanced learning point and one thing that went adequately.","Set a limit on further review and return to a valued activity."], worksheet: "worry", evidence: "NICE social-anxiety guidance explicitly includes work on problematic pre- and post-event processing.", sources: ["socialNICE","anxietyGuidelines"] },
-      { id: "anxiety-behavioural-experiment", title: "Design a low-risk anxiety experiment", description: "Test a specific prediction through a safe behaviour rather than relying only on reassurance.", when: "Use for ordinary, low-risk situations; severe anxiety and complex exposure need professional planning.", steps: ["Write one precise prediction that can be observed.","Rate how strongly you believe it and what you expect to happen.","Choose a small, ethical, low-risk test that does not violate safety guidance.","Carry it out without adding unnecessary reassurance or escape behaviours.","Compare prediction and outcome, including what you learned about coping."], worksheet: "exposure", evidence: "Behavioural experiments are central to CBT and are included in disorder-specific protocols; this is not a substitute for treatment.", sources: ["gad","socialNICE","anxietyGuidelines"] }
+      { id: "anxiety-behavioural-experiment", title: "Design a low-risk anxiety experiment", description: "Test a specific prediction through a safe behaviour rather than relying only on reassurance.", when: "Use for ordinary, low-risk situations; severe anxiety and complex exposure need professional planning.", steps: ["Write one precise prediction that can be observed.","Rate how strongly you believe it and what you expect to happen.","Choose a small, ethical, low-risk test that does not violate safety guidance.","Carry it out without adding unnecessary reassurance or escape behaviours.","Compare prediction and outcome, including what you learned about coping."], worksheet: "exposure", evidence: "Behavioural experiments are central to CBT and are included in disorder-specific protocols; this is not a substitute for treatment.", sources: ["gad","socialNICE","anxietyGuidelines"] },
+      {
+        "id": "anxiety-act-defusion",
+        "title": "ACT: unhook from an anxious prediction",
+        "description": "Notice a feared prediction as a mental event and choose a safe action without requiring certainty first.",
+        "when": "Use when repetitive prediction or reassurance seeking is preventing a manageable, meaningful action.",
+        "steps": [
+          "Write the anxious prediction in its exact words.",
+          "Prefix it with 'I am noticing the thought that…'.",
+          "Notice how the thought affects attention, body sensations, and behaviour.",
+          "Allow some uncertainty where there is no urgent risk to resolve.",
+          "Identify the value or goal that matters in the situation.",
+          "Choose a small, safe action that moves towards it."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT uses defusion and committed action to change the relationship with thoughts; it does not prove that a feared outcome is impossible.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024"
+        ]
+      },
+      {
+        "id": "anxiety-rebt-intolerance",
+        "title": "REBT: challenge 'I cannot stand this uncertainty'",
+        "description": "Examine low-frustration-tolerance beliefs and build a realistic preference for certainty without treating uncertainty as unbearable.",
+        "when": "Use when anxiety is driven by the belief that uncertainty or discomfort must not be experienced.",
+        "steps": [
+          "Describe the uncertain situation and what is known.",
+          "Write the exact demand or intolerance belief.",
+          "Identify what makes the situation difficult versus literally impossible to tolerate.",
+          "Dispute the belief for logic, evidence, and usefulness.",
+          "Create a flexible preference while acknowledging genuine risks.",
+          "Choose a proportionate next step and leave unresolved uncertainty where appropriate."
+        ],
+        "worksheet": "rebtABCDE",
+        "family": "Cognitive methods",
+        "approach": "REBT",
+        "evidence": "REBT conceptualises low frustration tolerance as one irrational-belief process; do not use disputation to ignore a real safety or health concern.",
+        "sources": [
+          "rebtPracticeBook",
+          "rebtSystematicReview2024"
+        ]
+      }
     ],
     plan: [
       { title: "Track the loop", detail: "Record one anxiety episode: trigger, prediction, body response, avoidance, and relief." },
@@ -443,7 +620,29 @@ export const EMOTIONS = [
       { id: "fear-safety-behaviour-review", title: "Distinguish safety precautions from fear-driven rituals", description: "Identify behaviours that may block learning without removing sensible protection.", when: "Use when a repeated behaviour is used mainly to prevent a feared outcome in a safe setting.", steps: ["Describe the feared situation and what you do to feel safe.","Ask what real-world risk the behaviour prevents.","Separate ordinary precautions from extra behaviours driven by fear.","Do not remove legitimate precautions; identify only a low-risk behaviour to discuss or test.","Review learning and stop if actual danger or medical risk is present."], worksheet: "reflection", evidence: "Exposure literature examines safety-seeking behaviours; the evidence is nuanced and does not justify removing reasonable safety measures.", sources: ["socialNICE","anxietyGuidelines"] },
       { id: "fear-approach-motivation", title: "Connect an approach step to what matters", description: "Choose an approach goal based on valued life activities rather than proving courage or forcing fear away.", when: "Use when avoidance is restricting a meaningful, objectively safe activity.", steps: ["Name the activity or life area that fear has narrowed.","Describe what you would like to do if fear were less controlling.","Identify a small safe step toward that activity.","Plan support and a realistic review point.","Record what the step made possible, regardless of whether fear was present."], worksheet: "activity", evidence: "Values-based behavioural goals can complement exposure; they do not replace disorder-specific CBT protocols.", sources: ["transdiagnostic","anxietyGuidelines"] },
       { id: "fear-imaginal-preparation", title: "Prepare questions about complex fear memories", description: "Organise concerns about intrusive or distressing memories for discussion with a trained clinician.", when: "Use only to prepare for clinical care; do not conduct memory exposure or trauma processing here.", steps: ["Describe the difficulty you want help with at a level that feels manageable.","Note triggers, avoidance, distress, and effects on daily life.","List what you fear might happen during treatment.","Write questions about pacing, consent, stabilisation, and support.","Bring the notes to a qualified clinician; do not start detailed exposure independently."], worksheet: "reflection", evidence: "Imaginal exposure and trauma-memory processing are specialist procedures and require assessment and a treatment protocol.", sources: ["ptsdNICE","anxietyGuidelines"] },
-      { id: "fear-learning-review", title: "Review what fear practice taught you", description: "Capture learning beyond whether anxiety fell during a practice.", when: "Use after a safe, planned approach exercise.", steps: ["Write what you predicted before the activity.","Record what actually happened, including uncertainty.","Note what you did that helped you remain engaged.","Identify what the experience suggests about danger and coping.","Choose whether to repeat, vary, pause, or seek guidance before another step."], worksheet: "exposure", evidence: "Exposure learning is not measured only by within-session fear reduction; outcomes and context matter.", sources: ["anxietyGuidelines","socialNICE"] }
+      { id: "fear-learning-review", title: "Review what fear practice taught you", description: "Capture learning beyond whether anxiety fell during a practice.", when: "Use after a safe, planned approach exercise.", steps: ["Write what you predicted before the activity.","Record what actually happened, including uncertainty.","Note what you did that helped you remain engaged.","Identify what the experience suggests about danger and coping.","Choose whether to repeat, vary, pause, or seek guidance before another step."], worksheet: "exposure", evidence: "Exposure learning is not measured only by within-session fear reduction; outcomes and context matter.", sources: ["anxietyGuidelines","socialNICE"] },
+      {
+        "id": "fear-act-willingness",
+        "title": "ACT: approach what matters with fear present",
+        "description": "Make room for manageable fear while choosing a safe action connected to personal values, rather than waiting for fear to disappear.",
+        "when": "Use for an ordinary, objectively safe situation that fear is causing you to avoid.",
+        "steps": [
+          "Identify the situation and real risks that must be respected.",
+          "Notice the feared prediction and the urge to avoid.",
+          "Name the value or life direction affected by avoidance.",
+          "Choose a small, safe step that is consistent with that value.",
+          "Allow manageable discomfort without removing legitimate precautions.",
+          "Review what you learned and whether support or a different plan is needed."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT supports psychological flexibility and committed action; it does not replace specialist exposure protocols or safety planning.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024"
+        ]
+      }
     ],
     plan: [
       { title: "Define the target", detail: "Describe the exact fear and distinguish genuine danger from anxiety-driven avoidance." },
@@ -464,7 +663,30 @@ export const EMOTIONS = [
     tools: [
       { id: "activity-schedule", title: "Schedule one meaningful activity", description: "Choose a small action connected to pleasure, mastery, care, or connection.", when: "Use when withdrawal or waiting for motivation has taken over.", steps: ["Choose an activity that takes 5–20 minutes.", "Give it a specific day and time.", "Make the first step very small.", "Afterwards, rate pleasure and mastery separately.", "Use the result to plan the next activity rather than judging yourself."], worksheet: "activity", evidence: "Behavioural activation is a structured, guideline-supported treatment option for depression.", sources: ["depressionNICE", "broadCBT"] },
       { id: "graded-task", title: "Break a task down", description: "Turn an overwhelming task into a sequence of actions small enough to start.", when: "Use when a task feels impossible or you are avoiding it.", steps: ["Write the task you are avoiding.", "Break it into steps that take 5–15 minutes.", "Choose the easiest meaningful starting step.", "Set a time and place.", "Review completion as information, not as a verdict on your worth."], worksheet: "activity", evidence: "Graded task assignment is a behavioural CBT method described in established treatment manuals.", sources: ["beckManual", "depressionNICE"] },
-      { id: "mood-thought", title: "Examine a low-mood thought", description: "Identify global conclusions that are being drawn from a difficult moment.", when: "Use when thoughts such as 'nothing will ever change' feel completely convincing.", steps: ["Write the thought exactly as it appeared.", "Identify the situation and the mood it triggered.", "Review evidence that supports and complicates the thought.", "Write a more complete statement.", "Choose one action that fits the balanced statement."], worksheet: "thought", evidence: "Cognitive restructuring is a core part of CBT for depression, usually combined with behavioural work.", sources: ["depressionNICE", "cognitiveRestructuring"] }
+      { id: "mood-thought", title: "Examine a low-mood thought", description: "Identify global conclusions that are being drawn from a difficult moment.", when: "Use when thoughts such as 'nothing will ever change' feel completely convincing.", steps: ["Write the thought exactly as it appeared.", "Identify the situation and the mood it triggered.", "Review evidence that supports and complicates the thought.", "Write a more complete statement.", "Choose one action that fits the balanced statement."], worksheet: "thought", evidence: "Cognitive restructuring is a core part of CBT for depression, usually combined with behavioural work.", sources: ["depressionNICE", "cognitiveRestructuring"] },
+      {
+        "id": "sadness-act-values",
+        "title": "ACT: reconnect with a valued direction",
+        "description": "Choose a small action linked to what matters even when low mood is present, without using activity as a demand to feel better immediately.",
+        "when": "Use when withdrawal has reduced access to meaningful routines or relationships.",
+        "steps": [
+          "Notice the mood and the urge to withdraw without blaming yourself.",
+          "Name a value or life direction that remains important.",
+          "Choose a small action that fits your current energy and circumstances.",
+          "Make the action specific and realistic.",
+          "Allow mood to be present without using it as the only measure of success.",
+          "Review what the action meant and whether the step needs adapting."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT supports values-based committed action; it complements rather than replaces depression assessment and evidence-based care.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024",
+          "depressionNICE"
+        ]
+      }
     ],
     plan: [
       { title: "Observe the pattern", detail: "Track activity, mood, and withdrawal for a few days without judging the data." },
@@ -485,7 +707,29 @@ export const EMOTIONS = [
     tools: [
       { id: "frustration-abc", title: "Use an ABC snapshot", description: "Separate the activating event, belief or expectation, and consequence.", when: "Use when a repeated obstacle produces the same reaction.", steps: ["A: Describe the event without interpretation.", "B: Write the rule or expectation you brought to it.", "C: Note the emotion and what you did next.", "Ask whether the rule is flexible and realistic.", "Choose a more workable belief and action."], worksheet: "thought", evidence: "ABC-style functional analysis and cognitive restructuring are foundational CBT skills.", sources: ["beckManual", "cognitiveRestructuring"] },
       { id: "frustration-plan", title: "Solve the actual obstacle", description: "Replace repeated mental replay with a defined problem-solving sequence.", when: "Use when there is a practical problem that can be influenced.", steps: ["Define the problem in one sentence.", "State the outcome you want.", "Generate several possible actions before evaluating them.", "Choose the most feasible first step.", "Set a time to review the result and revise the plan."], worksheet: "problem", evidence: "Structured problem-solving is included in evidence-based psychological interventions; fit depends on the problem.", sources: ["depressionNICE"] },
-      { id: "flexible-standard", title: "Replace an all-or-nothing rule", description: "Create a flexible standard that allows progress without abandoning the goal.", when: "Use when anything short of perfect feels like failure.", steps: ["Write the rule you are applying.", "Describe the cost of following it literally.", "Define what 'good enough for now' would look like.", "Test the flexible standard on a low-stakes task.", "Review the outcome."], worksheet: "belief", evidence: "A CBT-style behavioural experiment; not a frustration-specific validated protocol.", sources: ["perfectionism", "cognitiveRestructuring"] }
+      { id: "flexible-standard", title: "Replace an all-or-nothing rule", description: "Create a flexible standard that allows progress without abandoning the goal.", when: "Use when anything short of perfect feels like failure.", steps: ["Write the rule you are applying.", "Describe the cost of following it literally.", "Define what 'good enough for now' would look like.", "Test the flexible standard on a low-stakes task.", "Review the outcome."], worksheet: "belief", evidence: "A CBT-style behavioural experiment; not a frustration-specific validated protocol.", sources: ["perfectionism", "cognitiveRestructuring"] },
+      {
+        "id": "frustration-rebt-abcde",
+        "title": "REBT: work through an ABCDE frustration episode",
+        "description": "Identify the demand behind frustration and develop a flexible belief that allows persistence or a realistic change of goal.",
+        "when": "Use when a blocked goal triggers 'this should not happen' or 'I cannot stand this'.",
+        "steps": [
+          "A — describe the obstacle in observable terms.",
+          "B — write the demand or rigid expectation.",
+          "C — record the emotional and behavioural consequence.",
+          "D — dispute the demand for logic, evidence, and usefulness.",
+          "E — write a flexible preference and a workable next action.",
+          "Decide whether the goal, method, timeline, or boundary needs adjustment."
+        ],
+        "worksheet": "rebtABCDE",
+        "family": "Cognitive methods",
+        "approach": "REBT",
+        "evidence": "REBT distinguishes flexible preferences from rigid demands; frustration may still be a proportionate response to a real obstacle.",
+        "sources": [
+          "rebtPracticeBook",
+          "rebtSystematicReview2024"
+        ]
+      }
     ],
     plan: [
       { title: "Name the block", detail: "Describe the concrete obstacle and the goal it is interrupting." },
@@ -506,7 +750,29 @@ export const EMOTIONS = [
     tools: [
       { id: "responsibility-review", title: "Review responsibility fairly", description: "Estimate your role without taking responsibility for everything that happened.", when: "Use when guilt feels global or disproportionate.", steps: ["Describe the event and what you knew at the time.", "Separate your actions from other people's actions and external factors.", "Estimate your share of responsibility using evidence.", "Identify what you would advise someone else in the same position.", "Choose any realistic repair."], worksheet: "belief", evidence: "A cognitive appraisal exercise; not a validated stand-alone treatment for guilt.", sources: ["cognitiveRestructuring"] },
       { id: "repair-action", title: "Turn guilt into a repair plan", description: "Move from repeated self-criticism toward a realistic action, where repair is appropriate and safe.", when: "Use when a specific action or omission can be addressed.", steps: ["Ask whether anyone was harmed and what evidence you have.", "Identify whether an apology, correction, or changed behaviour would help.", "Choose a proportionate action.", "Complete it without demanding immediate forgiveness.", "If no repair is possible, plan how to act differently in future."], worksheet: "problem", evidence: "Problem-solving and behavioural change are CBT-consistent; interpersonal repair is context-dependent.", sources: ["beckManual"] },
-      { id: "guilt-thought", title: "Challenge hindsight certainty", description: "Check whether you are judging a past decision using information you did not have then.", when: "Use when you repeatedly think 'I should have known'.", steps: ["Write what you knew and what you could reasonably know at the time.", "List what only became clear afterwards.", "Replace hindsight certainty with a fair statement.", "Identify one lesson that is specific and actionable."], worksheet: "thought", evidence: "Cognitive restructuring applied to hindsight bias and over-responsibility.", sources: ["cognitiveRestructuring"] }
+      { id: "guilt-thought", title: "Challenge hindsight certainty", description: "Check whether you are judging a past decision using information you did not have then.", when: "Use when you repeatedly think 'I should have known'.", steps: ["Write what you knew and what you could reasonably know at the time.", "List what only became clear afterwards.", "Replace hindsight certainty with a fair statement.", "Identify one lesson that is specific and actionable."], worksheet: "thought", evidence: "Cognitive restructuring applied to hindsight bias and over-responsibility.", sources: ["cognitiveRestructuring"] },
+      {
+        "id": "guilt-rebt-unconditional-acceptance",
+        "title": "REBT: separate responsibility from global self-condemnation",
+        "description": "Acknowledge a specific mistake and its consequences without turning the action into a total rating of your human worth.",
+        "when": "Use when guilt becomes 'I am a bad person' rather than a specific appraisal of what happened.",
+        "steps": [
+          "Describe the behaviour and its actual impact.",
+          "Identify the global judgement you are making about yourself.",
+          "Separate evaluation of an action from the worth of the whole person.",
+          "Dispute the global rating while retaining appropriate accountability.",
+          "Identify proportionate repair or learning.",
+          "Write a balanced statement that includes responsibility and human fallibility."
+        ],
+        "worksheet": "rebtABCDE",
+        "family": "Cognitive methods",
+        "approach": "REBT",
+        "evidence": "Unconditional self-acceptance does not excuse harmful actions or remove the need for repair.",
+        "sources": [
+          "rebtPracticeBook",
+          "rebtSystematicReview2024"
+        ]
+      }
     ],
     plan: [
       { title: "Describe the facts", detail: "Write what happened without global labels about yourself." },
@@ -527,7 +793,29 @@ export const EMOTIONS = [
     tools: [
       { id: "shame-label", title: "Replace a global label", description: "Shift from 'I am defective' to a specific, testable description of an experience.", when: "Use when one event is being treated as proof about your entire identity.", steps: ["Write the exact self-judgement.", "Describe the event in observable terms.", "Identify what the event does and does not prove.", "Write a fairer statement that includes context and capacity to learn.", "Choose one action that reflects the person you want to be."], worksheet: "thought", evidence: "Cognitive restructuring is a core CBT skill; this is not proof of a stand-alone shame protocol.", sources: ["cognitiveRestructuring"] },
       { id: "shame-prediction", title: "Test a feared social prediction", description: "Plan a small, safe behaviour that tests a specific prediction about judgement.", when: "Use for ordinary social fears when the situation is safe and the risk is proportionate.", steps: ["Write what you predict another person will think or do.", "Choose a low-stakes situation.", "Decide what information would count as evidence.", "Try the behaviour without excessive impression-management.", "Review what happened and what remains uncertain."], worksheet: "exposure", evidence: "Behavioural experiments are established in social-anxiety CBT; shame-specific evidence is less developed.", sources: ["socialNICE"] },
-      { id: "shame-kindness", title: "Use a fair observer perspective", description: "Apply the standards you would use when evaluating another person in the same situation.", when: "Use when self-criticism is harsher than your standards for others.", steps: ["Imagine a respected person describing the same event.", "Write what you would say to them, including responsibility where relevant.", "Identify one practical next step.", "Keep the response specific rather than offering blanket reassurance."], worksheet: "reflection", evidence: "Supportive reappraisal is a CBT-consistent exercise; it should not replace condition-specific treatment.", sources: ["cognitiveRestructuring"] }
+      { id: "shame-kindness", title: "Use a fair observer perspective", description: "Apply the standards you would use when evaluating another person in the same situation.", when: "Use when self-criticism is harsher than your standards for others.", steps: ["Imagine a respected person describing the same event.", "Write what you would say to them, including responsibility where relevant.", "Identify one practical next step.", "Keep the response specific rather than offering blanket reassurance."], worksheet: "reflection", evidence: "Supportive reappraisal is a CBT-consistent exercise; it should not replace condition-specific treatment.", sources: ["cognitiveRestructuring"] },
+      {
+        "id": "shame-compassionate-response",
+        "title": "Compassion-focused response to shame",
+        "description": "Respond to a global self-attack with a grounded perspective that recognises responsibility without humiliation or self-erasure.",
+        "when": "Use when shame has become a harsh identity judgement and you are safe enough to reflect.",
+        "steps": [
+          "Write the self-judgement as it appeared.",
+          "Describe the event and its context without global labels.",
+          "Identify what responsibility is genuinely yours and what is not.",
+          "Write what a fair, compassionate observer might say.",
+          "Choose a proportionate repair or safe supportive action.",
+          "Notice whether the statement is credible; do not force reassurance."
+        ],
+        "worksheet": "reflection",
+        "family": "Cognitive methods",
+        "approach": "Compassion-focused methods",
+        "evidence": "Compassionate reappraisal is supportive, not a validated universal shame treatment; it must not minimise abuse or discrimination.",
+        "sources": [
+          "beckBook2020",
+          "mindOverMood2015"
+        ]
+      }
     ],
     plan: [
       { title: "Catch the self-label", detail: "Notice global statements about who you are." },
@@ -615,7 +903,29 @@ export const EMOTIONS = [
     tools: [
       { id: "rumination-mode", title: "Switch from abstract to concrete", description: "Move from broad self-evaluation to the specific sequence and next action.", when: "Use when you have replayed the same question without new information.", steps: ["Name the topic you are replaying.", "Ask whether the thought is producing new information or a decision.", "Describe the event in specific, observable details.", "Identify one action, learning point, or unresolved question.", "Return to the activity you had chosen."], worksheet: "reflection", evidence: "Process-focused and rumination-specific CBT approaches have growing evidence, though protocols vary.", sources: ["rumination", "ruminationFocused"] },
       { id: "rumination-action", title: "Convert replay into action", description: "Decide whether the issue is solvable now, solvable later, or not controllable.", when: "Use when repetitive thinking is replacing problem-solving.", steps: ["Write the question that keeps returning.", "Classify it as an actionable problem, an uncertainty, or a past event that cannot be changed.", "For actionable problems, choose one small step.", "For uncertainty, practise leaving the question open.", "For the past, identify one lesson and stop reopening the case unless new information appears."], worksheet: "problem", evidence: "CBT for repetitive negative thinking shows a moderate transdiagnostic effect in meta-analysis.", sources: ["rumination"] },
-      { id: "rumination-cue", title: "Plan a mode-shift cue", description: "Create a repeatable reminder that interrupts an unproductive thinking loop without suppressing thoughts.", when: "Use when you notice the same loop at predictable times.", steps: ["Identify a common time or cue for rumination.", "Choose a short phrase such as 'this is replay, not problem-solving'.", "Choose an outward task or concrete action to return to.", "Practise the shift without demanding that the thought disappear.", "Review whether the new behaviour reduced time lost to the loop."], worksheet: "reflection", evidence: "Behavioural and attentional methods are part of rumination-focused approaches; avoid forced thought suppression.", sources: ["ruminationFocused", "beckManual"] }
+      { id: "rumination-cue", title: "Plan a mode-shift cue", description: "Create a repeatable reminder that interrupts an unproductive thinking loop without suppressing thoughts.", when: "Use when you notice the same loop at predictable times.", steps: ["Identify a common time or cue for rumination.", "Choose a short phrase such as 'this is replay, not problem-solving'.", "Choose an outward task or concrete action to return to.", "Practise the shift without demanding that the thought disappear.", "Review whether the new behaviour reduced time lost to the loop."], worksheet: "reflection", evidence: "Behavioural and attentional methods are part of rumination-focused approaches; avoid forced thought suppression.", sources: ["ruminationFocused", "beckManual"] },
+      {
+        "id": "rumination-act-defusion",
+        "title": "ACT: unhook from repetitive self-analysis",
+        "description": "Notice recurring thoughts as mental activity and return to chosen action without having to solve every question.",
+        "when": "Use when replay or analysis has stopped producing new information or a useful decision.",
+        "steps": [
+          "Name the recurring thought or question.",
+          "Notice the mind's attempt to obtain certainty or control.",
+          "Label the process gently, such as 'replaying' or 'predicting'.",
+          "Allow the thought to be present without continuing the argument.",
+          "Choose an activity linked to a value or current priority.",
+          "Return to the activity and review whether another practical action is genuinely needed."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT defusion changes the relationship to repetitive thoughts; it is distinct from disputing the truth of each thought.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024"
+        ]
+      }
     ],
     plan: [
       { title: "Recognise replay", detail: "Notice the trigger, topic, and thinking mode without arguing with yourself." },
@@ -636,7 +946,29 @@ export const EMOTIONS = [
     tools: [
       { id: "self-esteem-data", title: "Build a balanced evidence log", description: "Record specific examples that complicate a global negative belief.", when: "Use when attention repeatedly selects only mistakes or criticism.", steps: ["Write the core belief in plain language.", "Record one concrete event that seems to support it.", "Record evidence that does not fit, however small.", "Avoid turning the log into a list of compliments; keep it factual.", "Review what a fair conclusion would be."], worksheet: "belief", evidence: "Fennell-model CBT has systematic-review and meta-analysis support for low self-esteem.", sources: ["selfEsteem"] },
       { id: "core-belief-test", title: "Run a core-belief experiment", description: "Test a conditional rule through a small behaviour rather than debating it endlessly.", when: "Use when you believe you must perform, please, or hide to be accepted.", steps: ["Write the rule and what you predict will happen if you do not follow it.", "Choose a low-risk situation.", "Plan a modest alternative behaviour.", "Observe the outcome and other people's actual responses.", "Update the belief based on evidence."], worksheet: "exposure", evidence: "Behavioural experiments are a core CBT method; choose targets carefully and proportionately.", sources: ["selfEsteem", "beckManual"] },
-      { id: "self-esteem-standards", title: "Examine your standards", description: "Check whether you apply harsher standards to yourself than to other people.", when: "Use when one mistake becomes proof of failure.", steps: ["Write the standard you apply to yourself.", "Write the standard you would apply to a friend.", "Compare the rules and evidence.", "Create a fair, specific standard that still allows accountability.", "Choose one action that reflects the new standard."], worksheet: "thought", evidence: "Cognitive restructuring applied to conditional assumptions and core beliefs.", sources: ["selfEsteem", "cognitiveRestructuring"] }
+      { id: "self-esteem-standards", title: "Examine your standards", description: "Check whether you apply harsher standards to yourself than to other people.", when: "Use when one mistake becomes proof of failure.", steps: ["Write the standard you apply to yourself.", "Write the standard you would apply to a friend.", "Compare the rules and evidence.", "Create a fair, specific standard that still allows accountability.", "Choose one action that reflects the new standard."], worksheet: "thought", evidence: "Cognitive restructuring applied to conditional assumptions and core beliefs.", sources: ["selfEsteem", "cognitiveRestructuring"] },
+      {
+        "id": "self-esteem-schema-pattern",
+        "title": "Schema-informed pattern observation",
+        "description": "Notice whether the same self-belief and coping response recur across situations, without treating the pattern as a fixed identity.",
+        "when": "Use when the same self-evaluation repeatedly shapes relationships, work, or decisions.",
+        "steps": [
+          "Choose two or three different situations where the same self-judgement appeared.",
+          "Write the recurring theme in tentative language.",
+          "Identify how you coped, avoided, surrendered, or overcompensated.",
+          "Notice evidence that supports and complicates the belief.",
+          "Identify a safe alternative response to practise.",
+          "Discuss persistent or complex patterns with a schema-trained clinician."
+        ],
+        "worksheet": "schemaModeMap",
+        "family": "Assessment & formulation",
+        "approach": "Schema therapy",
+        "evidence": "Schema therapy uses schema and mode formulation with cognitive, experiential, and behavioural strategies; this is observation, not diagnosis.",
+        "sources": [
+          "schemaTherapyBook2003",
+          "schemaTherapyMeta2023"
+        ]
+      }
     ],
     plan: [
       { title: "Name the belief", detail: "Identify a recurring global judgement and the rule attached to it." },
@@ -657,7 +989,30 @@ export const EMOTIONS = [
     tools: [
       { id: "social-attention", title: "Shift attention outward", description: "Practise attending to the conversation and environment rather than monitoring yourself.", when: "Use in a manageable social interaction.", steps: ["Notice what you are monitoring internally.", "Choose two external details to attend to.", "Listen for the other person's meaning rather than rehearsing your next sentence.", "Allow small pauses without correcting every impression.", "Afterwards, record what you noticed about the conversation."], worksheet: "reflection", evidence: "External attention is a named component of Clark and Wells CBT for social anxiety.", sources: ["socialNICE"] },
       { id: "social-experiment", title: "Test a social prediction", description: "Design a small behavioural experiment with a clear prediction and observable outcome.", when: "Use for a safe social situation that triggers fear of evaluation.", steps: ["Write the exact feared prediction.", "Identify the safety behaviour you usually use.", "Choose one modest change to that behaviour.", "Focus outward and observe what actually happens.", "Compare the result with your prediction."], worksheet: "exposure", evidence: "Behavioural experiments are explicitly included in NICE-recommended individual CBT for social anxiety.", sources: ["socialNICE"] },
-      { id: "post-event-review", title: "Make post-event review factual", description: "Replace prolonged self-criticism with a short, evidence-based review.", when: "Use after an interaction you keep replaying.", steps: ["Set a brief review window.", "Write what happened, not what you imagine everyone thought.", "Identify one thing that went as expected and one thing you learned.", "Notice mind-reading and selective attention.", "Close the review and return to your next activity."], worksheet: "thought", evidence: "NICE's Clark and Wells protocol addresses problematic pre- and post-event processing.", sources: ["socialNICE"] }
+      { id: "post-event-review", title: "Make post-event review factual", description: "Replace prolonged self-criticism with a short, evidence-based review.", when: "Use after an interaction you keep replaying.", steps: ["Set a brief review window.", "Write what happened, not what you imagine everyone thought.", "Identify one thing that went as expected and one thing you learned.", "Notice mind-reading and selective attention.", "Close the review and return to your next activity."], worksheet: "thought", evidence: "NICE's Clark and Wells protocol addresses problematic pre- and post-event processing.", sources: ["socialNICE"] },
+      {
+        "id": "social-anxiety-act-willingness",
+        "title": "ACT: take part while allowing social anxiety",
+        "description": "Make room for self-conscious thoughts and sensations while choosing a safe, meaningful social action.",
+        "when": "Use for ordinary, low-risk social situations when avoidance is narrowing valued participation.",
+        "steps": [
+          "Identify the social situation and what matters about taking part.",
+          "Notice the prediction, self-image, or sensation you are trying to control.",
+          "Use a brief defusion phrase to create space from the thought.",
+          "Allow manageable discomfort without forcing it away.",
+          "Choose one small, values-consistent participation step.",
+          "Review what you did and learned, not only how anxious you felt."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT targets psychological flexibility; clinical social anxiety is best treated with disorder-specific CBT or other appropriate evidence-based care.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024",
+          "socialNICE"
+        ]
+      }
     ],
     plan: [
       { title: "Map the social cycle", detail: "Identify feared predictions, inward attention, safety behaviours, and post-event review." },
@@ -762,7 +1117,30 @@ export const EMOTIONS = [
     tools: [
       { id: "perfectionism-rule", title: "Identify the perfectionism rule", description: "Write the conditional belief that drives overwork, delay, or self-criticism.", when: "Use when a task cannot feel finished or mistakes feel intolerable.", steps: ["Write the rule using 'If I do not…, then…'.", "Identify what the rule protects you from.", "List the costs of following it.", "Write a flexible alternative that still values quality.", "Choose a low-stakes test."], worksheet: "belief", evidence: "CBT for perfectionism has systematic-review and meta-analysis support.", sources: ["perfectionism"] },
       { id: "good-enough", title: "Run a good-enough experiment", description: "Test a modest reduction in unnecessary checking or polishing on a low-stakes task.", when: "Use only where mistakes would not create safety, legal, or major financial risks.", steps: ["Choose a low-stakes task.", "Define a reasonable quality standard before starting.", "Set a stopping point.", "Notice the urge to keep checking without automatically obeying it.", "Review the actual outcome and what you learned."], worksheet: "exposure", evidence: "Behavioural experiments and standards flexibility are core elements of CBT for perfectionism.", sources: ["perfectionism"] },
-      { id: "perfectionism-start", title: "Break procrastination into a first step", description: "Make beginning easier by reducing the task to one concrete action.", when: "Use when fear of an imperfect result is delaying action.", steps: ["Name the task and the feared standard.", "Define a 10-minute first draft or rough attempt.", "Choose a start time.", "Stop at the agreed review point rather than editing continuously.", "Use the result to revise the rule."], worksheet: "activity", evidence: "Graded task assignment is a general behavioural CBT strategy; perfectionism-specific programmes add targeted experiments.", sources: ["perfectionism", "beckManual"] }
+      { id: "perfectionism-start", title: "Break procrastination into a first step", description: "Make beginning easier by reducing the task to one concrete action.", when: "Use when fear of an imperfect result is delaying action.", steps: ["Name the task and the feared standard.", "Define a 10-minute first draft or rough attempt.", "Choose a start time.", "Stop at the agreed review point rather than editing continuously.", "Use the result to revise the rule."], worksheet: "activity", evidence: "Graded task assignment is a general behavioural CBT strategy; perfectionism-specific programmes add targeted experiments.", sources: ["perfectionism", "beckManual"] },
+      {
+        "id": "perfectionism-rebt-demand-review",
+        "title": "REBT: replace rigid perfection rules",
+        "description": "Examine 'must be perfect' beliefs and develop flexible standards that preserve quality without global self-condemnation.",
+        "when": "Use when a mistake or imperfect outcome is treated as unbearable or proof of worthlessness.",
+        "steps": [
+          "Write the exact standard or demand.",
+          "Identify what you predict will happen if you do not meet it.",
+          "Separate a real performance requirement from an absolute self-worth rule.",
+          "Dispute the demand for evidence, logic, and usefulness.",
+          "Write a flexible preference and define an adequate standard for this task.",
+          "Choose one low-risk experiment to practise the new standard."
+        ],
+        "worksheet": "rebtABCDE",
+        "family": "Cognitive methods",
+        "approach": "REBT",
+        "evidence": "Do not lower safety-critical or professional standards; REBT targets rigid demands and global ratings.",
+        "sources": [
+          "rebtPracticeBook",
+          "rebtSystematicReview2024",
+          "perfectionism"
+        ]
+      }
     ],
     plan: [
       { title: "Spot the rule", detail: "Identify the standard, fear, and behaviour that keep perfectionism going." },
@@ -1652,6 +2030,29 @@ EMOTIONS.push(...[
         "sources": [
           "chronicPainNICE"
         ]
+      },
+      {
+        "id": "pain-act-values",
+        "title": "ACT: values-guided action alongside pain",
+        "description": "Identify meaningful actions that can be adapted around pain rather than waiting for symptoms to disappear before living.",
+        "when": "Use as an adjunct to an agreed pain-management plan when symptoms fluctuate and activity has narrowed.",
+        "steps": [
+          "Identify an important value or life direction.",
+          "Notice thoughts and sensations pulling you towards total withdrawal or overexertion.",
+          "Separate pain acceptance from approval of pain or abandoning medical care.",
+          "Choose a small activity consistent with your value and current capacity.",
+          "Plan pacing, support, and recovery around the activity.",
+          "Review function and quality of life, not only pain intensity."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "ACT can be used in chronic-pain care but should complement medical evaluation and an individualised multidisciplinary plan.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024",
+          "chronicPainNICE"
+        ]
       }
     ],
     "plan": [
@@ -2003,6 +2404,30 @@ EMOTIONS.push(...[
           "alcoholGuideline2026",
           "substanceMeta2026"
         ]
+      },
+      {
+        "id": "substance-act-values",
+        "title": "ACT: choose a recovery action when an urge appears",
+        "description": "Notice an urge without treating it as a command and choose a safe action linked to recovery values and the agreed support plan.",
+        "when": "Use as an adjunct to professional substance-use treatment and relapse-prevention planning.",
+        "steps": [
+          "Name the cue and urge without judging yourself.",
+          "Notice the thought that using is necessary or inevitable.",
+          "Allow the urge to be present while delaying an unsafe action.",
+          "Identify a recovery value and the next step in your support plan.",
+          "Choose a concrete contact, coping action, or change of environment.",
+          "Review what helped and update the plan with professional support."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "This is not a detoxification, withdrawal, or substance-use treatment protocol.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024",
+          "addictionSkillsNCBI",
+          "alcoholGuideline2026"
+        ]
       }
     ],
     "plan": [
@@ -2195,6 +2620,30 @@ EMOTIONS.push(...[
         "worksheet": "activity",
         "evidence": "Behavioural activation and restoration of adaptive functioning are included in grief-focused CBT approaches. This activity plan is supportive and is not a complete grief treatment.",
         "sources": [
+          "griefMeta2024",
+          "griefRCT2024"
+        ]
+      },
+      {
+        "id": "grief-act-values",
+        "title": "ACT: reconnect with values while grieving",
+        "description": "Make space for grief while identifying small actions that maintain connection, meaning, or daily functioning.",
+        "when": "Use as supportive reflection alongside grief care, not as a way to rush or suppress grief.",
+        "steps": [
+          "Name what has been difficult in the present period.",
+          "Identify a value or relationship that remains important.",
+          "Notice any rule that says you must feel differently before acting.",
+          "Choose one small action that honours the value or supports daily functioning.",
+          "Allow grief to be present without treating the action as disloyalty.",
+          "Review the impact and consider whether specialist grief treatment is needed."
+        ],
+        "worksheet": "actChoicePoint",
+        "family": "Acceptance & values",
+        "approach": "ACT",
+        "evidence": "Values-guided action may support coping, but prolonged grief disorder has specific evidence-based treatments and needs appropriate assessment.",
+        "sources": [
+          "actCoreProcesses",
+          "actMeta2024",
           "griefMeta2024",
           "griefRCT2024"
         ]
