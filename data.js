@@ -246,6 +246,98 @@ export const SOURCES = {
     citation: "Singh, D., & Bhushan, B. (2025). Understanding shame, guilt, embarrassment and pride: A systematic review of self-conscious emotions. Frontiers in Psychology, 16, 1678930.",
     url: "https://doi.org/10.3389/fpsyg.2025.1678930"
   }
+  ,
+  beckBook2020: {
+    label: "Cognitive Behavior Therapy: Basics and Beyond, 3rd ed. (2020)",
+    citation: "Beck, J. S. (2020). Cognitive Behavior Therapy: Basics and Beyond (3rd ed.). Guilford Press. Covers cognitive conceptualization, automatic thoughts, emotional responses, belief identification/modification, mindfulness, imagery, action plans, and relapse prevention.",
+    url: "https://www.guilford.com/books/Cognitive-Behavior-Therapy/Judith-Beck/9781462544196"
+  },
+  mindOverMood2015: {
+    label: "Mind Over Mood, 2nd ed. (2015)",
+    citation: "Greenberger, D., & Padesky, C. A. (2015). Mind Over Mood: Change How You Feel by Changing the Way You Think (2nd ed.). Guilford Press. Covers automatic thoughts, evidence review, balanced thinking, assumptions, behavioural experiments, and core beliefs.",
+    url: "https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428"
+  },
+  padeskyClinician2020: {
+    label: "The Clinician's Guide to CBT Using Mind Over Mood, 2nd ed. (2020)",
+    citation: "Padesky, C. A. (2020). The Clinician's Guide to CBT Using Mind Over Mood (2nd ed.). Guilford Press. Includes thought records, cognitive restructuring, acceptance, behavioural experiments, core beliefs, and behavioural activation.",
+    url: "https://www.guilford.com/books/The-Clinicians-Guide-CBT-Using-Mind-Over-Mood/Christine-Padesky/9781462542574"
+  },
+  beckInstituteWorksheets: {
+    label: "Beck Institute: CBT worksheets and conceptualization resources",
+    citation: "Beck Institute for Cognitive Behavior Therapy. Professional and student resources accompanying Cognitive Behavior Therapy: Basics and Beyond, 3rd ed.; includes thought records, testing thoughts, cognitive conceptualization diagrams, and clinical tips.",
+    url: "https://beckinstitute.org/cbt-resources/resources-for-professionals-and-students/cbtresources/"
+  },
+  beckConceptualizationDiagram: {
+    label: "Beck Institute: cognitive conceptualization diagram",
+    citation: "Beck Institute for Cognitive Behavior Therapy. Traditional Cognitive Conceptualization Diagram Worksheet. Adapted from Judith S. Beck (2020), Cognitive Behavior Therapy: Basics and Beyond, 3rd ed.",
+    url: "https://beckinstitute.org/wp-content/uploads/2022/10/Traditional-CCD-Fillable.pdf"
+  },
+  schemaTherapyBook2003: {
+    label: "Schema Therapy: A Practitioner's Guide (2003)",
+    citation: "Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). Schema Therapy: A Practitioner's Guide. Guilford Press. Covers schema assessment/education, cognitive and experiential strategies, behavioural pattern-breaking, therapeutic relationship, and schema modes.",
+    url: "https://www.guilford.com/books/Schema-Therapy/Young-Klosko-Weishaar/9781593853723"
+  },
+  schemaTherapyMeta2023: {
+    label: "Schema therapy for personality disorders: systematic review and meta-analysis (2023)",
+    citation: "A systematic review and meta-analysis of schema therapy for personality disorders (2023). Included 8 RCTs (587 participants) and 7 single-group trials (163 participants); pooled effects varied by comparator and treatment format.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/37402124/"
+  },
+  rebtPracticeBook: {
+    label: "Rational Emotive Behaviour Therapy: A Therapist's Guide",
+    citation: "Ellis, A., & Dryden, W. (1997). The Practice of Rational Emotive Behaviour Therapy (2nd ed.). Springer. A foundational practitioner text on the REBT model, assessment, cognitive disputation, imagery, and behavioural methods.",
+    url: "https://www.arebt.org/rebt-publications.html"
+  },
+  rebtSystematicReview2024: {
+    label: "Systematic review of Rational Emotive Behaviour Therapy (2024)",
+    citation: "King, A. M., Plateau, C. R., Turner, M. J., Young, P., & Barker, J. B. (2024). A systematic review of the nature and efficacy of Rational Emotive Behaviour Therapy interventions. PLOS ONE, 19(7), e0306835.",
+    url: "https://doi.org/10.1371/journal.pone.0306835"
+  },
+  actCoreProcesses: {
+    label: "Association for Contextual Behavioral Science: six core ACT processes",
+    citation: "Association for Contextual Behavioral Science. The six core processes of Acceptance and Commitment Therapy: acceptance, cognitive defusion, present-moment contact, self-as-context, values, and committed action.",
+    url: "https://contextualscience.org/six_core_processes_act"
+  },
+  actMeta2024: {
+    label: "ACT psychological flexibility processes: systematic review and meta-analysis (2024)",
+    citation: "Systematic review and meta-analysis of psychological flexibility and inflexibility as treatment mechanisms in Acceptance and Commitment Therapy (2024). Included 67 unique studies and 9,123 participants.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/38615492/"
+  },
+  dbtManual2025: {
+    label: "DBT Skills Training Manual, revised edition (2025)",
+    citation: "Linehan, M. M. (2025). DBT Skills Training Manual (Revised ed.). Guilford Press. Covers treatment structure, behaviour analysis, mindfulness, interpersonal effectiveness, emotion regulation, and distress tolerance.",
+    url: "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462556359"
+  },
+  dbtHandouts2025: {
+    label: "DBT Skills Training Handouts and Worksheets, revised edition (2025)",
+    citation: "Linehan, M. M. (2025). DBT Skills Training Handouts and Worksheets (Revised ed.). Guilford Press. Updated handouts and worksheets across mindfulness, interpersonal effectiveness, emotion regulation, and distress tolerance.",
+    url: "https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781462556342"
+  },
+  dbtEvidence2022: {
+    label: "Psychotherapies for borderline personality disorder: focused systematic review and meta-analysis (2022)",
+    citation: "Focused systematic review and meta-analysis of psychotherapies for borderline personality disorder (2022). 31 RCTs, 1,870 participants; evidence certainty varied by treatment and outcome.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/35088687/"
+  },
+  mctWellsBook: {
+    label: "Metacognitive Therapy for Anxiety and Depression (2008)",
+    citation: "Wells, A. (2008). Metacognitive Therapy for Anxiety and Depression. Guilford Press. Covers attention training, detached mindfulness, metacognitive beliefs, and disorder-specific MCT formulations.",
+    url: "https://www.guilford.com/books/Metacognitive-Therapy-for-Anxiety-and-Depression/Adrian-Wells/9781609184964"
+  },
+  mctEvidence2024: {
+    label: "Metacognitive interventions: systematic review and meta-analysis (2024)",
+    citation: "Systematic review and meta-analysis of metacognitive interventions for adults with psychiatric disorders (2024). Included 21 MCT and 28 metacognitive-training studies, 3,239 participants; quality limitations were reported.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/39692039/"
+  },
+  cbtModelNCBI: {
+    label: "CBT cognitive model: automatic thoughts, distortions, and underlying beliefs",
+    citation: "StatPearls. Cognitive Behavior Therapy. Overview of automatic thoughts, cognitive distortions, intermediate beliefs, core beliefs, and schemas as elements of cognitive conceptualization.",
+    url: "https://www.ncbi.nlm.nih.gov/sites/books/NBK470241/"
+  },
+  rebtEvidence2024: {
+    label: "REBT evidence review (2024)",
+    citation: "King et al. (2024). Systematic review of the nature and efficacy of Rational Emotive Behaviour Therapy interventions. PLOS ONE, 19(7), e0306835.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/38980891/"
+  }
+
 };
 
 export const EMOTIONS = [
