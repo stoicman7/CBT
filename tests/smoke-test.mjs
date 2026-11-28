@@ -3,6 +3,8 @@ import { readFile } from "node:fs/promises";
 import { EMOTIONS, SOURCES, WORKSHEETS } from "../data.js";
 import { CORE_TECHNIQUES } from "../technique-library.js";
 import { FORMULATION_SECTIONS, FORMULATION_TOOLS } from "../formulation.js";
+import { TECHNIQUE_GUIDES, getTechniqueGuide } from "../technique-guides.js";
+import { THOUGHT_SPOTTING_GUIDE } from "../automatic-thought-guide.js";
 import { TECHNIQUE_GUIDES } from "../technique-guides.js";
 import { THOUGHT_SPOTTING_GUIDE } from "../automatic-thought-guide.js";
 import { EXERCISE_FAMILY_ORDER, exerciseFamily, groupExercises } from "../exercise-taxonomy.js";
@@ -116,7 +118,7 @@ assert.equal(FORMULATION_SECTIONS.length, 7, "The formulation hub should cover i
 
 assert.equal(Object.keys(TECHNIQUE_GUIDES).length, CORE_TECHNIQUES.length, "Every method must have a detailed method guide.");
 for (const method of CORE_TECHNIQUES) {
-  const guide = TECHNIQUE_GUIDES[method.id];
+  const guide = getTechniqueGuide(method.id);
   assert.ok(guide && guide.aim && guide.steps.length >= 5 && guide.questions.length >= 2 && guide.review && guide.pitfalls, "Incomplete detailed method guide: " + method.id);
   assert.ok(guide.evidenceScope && guide.evidenceScope.length > 40, "Method evidence scope is missing: " + method.id);
 }
