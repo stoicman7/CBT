@@ -583,74 +583,144 @@ export const FORMULATION_TOOLS = [
       "beckInstituteWorksheets",
       "socialNICE"
     ]
+  },
+  {
+    "id": "formulation-sort-episode",
+    "title": "Separate situation, thought, emotion and response",
+    "family": "Assessment & formulation",
+    "approach": "CBT",
+    "description": "Sort the observable event from automatic appraisals, emotions, body responses and actions so the formulation does not confuse one category with another.",
+    "when": "Use when a journal entry or explanation blends 'what happened', 'what I felt' and 'what I thought' into one statement.",
+    "steps": [
+      "Choose one short episode and describe only what an observer could verify.",
+      "Write the thought, image, prediction or meaning that appeared.",
+      "Name each emotion separately and rate intensity.",
+      "Record body sensations separately from emotions.",
+      "Record the urge and the action actually taken.",
+      "Check which links are supported and what remains a hypothesis."
+    ],
+    "worksheet": "thoughtSort",
+    "evidence": "Distinguishing situation, automatic thoughts/images, emotions, behaviour and physiology is central to the Beck cognitive model. The categories are a formulation aid, not a claim that every response follows a simple linear chain.",
+    "sources": [
+      "beckCognitiveModel",
+      "beckConceptualizationDiagram",
+      "beckInstituteWorksheets"
+    ]
+  },
+  {
+    "id": "formulation-hot-thought",
+    "title": "Identify the emotionally central thought",
+    "family": "Assessment & formulation",
+    "approach": "CBT",
+    "description": "Select the thought or image most closely linked to one chosen emotion or action urge when several cognitions occur in the same episode.",
+    "when": "Use when the thought record contains several possible thoughts and it is unclear which one to evaluate first.",
+    "steps": [
+      "Choose one specific situation and one emotion.",
+      "List the thoughts, images or predictions that appeared, in order if possible.",
+      "For each, ask how closely it connects to the selected emotion or action urge.",
+      "Select the most central thought; do not simply choose the most dramatic.",
+      "Rate conviction in that thought separately from emotion intensity.",
+      "Keep other thoughts in the sequence if they appear to be secondary reactions."
+    ],
+    "worksheet": "hotThought",
+    "evidence": "Beck-style thought identification and thought-record guidance encourages focusing on a specific mood and the thoughts linked to it. 'Hot thought' is a practical selection aid, not a formal diagnostic construct or a requirement to find one hidden sentence.",
+    "sources": [
+      "beckBook2020",
+      "mindOverMoodAutomaticThoughtWorksheet",
+      "beckInstituteWorksheets"
+    ]
+  },
+  {
+    "id": "formulation-thought-sequence",
+    "title": "Map initial and secondary thoughts",
+    "family": "Assessment & formulation",
+    "approach": "CBT",
+    "description": "Capture how an initial appraisal may be followed by a second appraisal about the emotion, body reaction or first thought.",
+    "when": "Use when someone says 'I got anxious, then I panicked because I was anxious' or when the emotional episode seems to escalate in stages.",
+    "steps": [
+      "Describe the initial trigger.",
+      "Record the first thought, image or prediction.",
+      "Record the first emotional, bodily or behavioural response.",
+      "Notice whether a second thought arose about that response.",
+      "Record any new emotion or action urge following the second thought.",
+      "Summarise the sequence without assuming every link is certain."
+    ],
+    "worksheet": "multipleThoughts",
+    "evidence": "Cognitive therapy recognises that thoughts can be followed by additional thoughts and reactions. Mapping the sequence can clarify the point where a maintaining loop develops.",
+    "sources": [
+      "beckBook2020",
+      "beckCognitiveModel",
+      "beckInstituteWorksheets"
+    ]
+  },
+  {
+    "id": "formulation-assumption-pattern",
+    "title": "Find an intermediate rule across situations",
+    "family": "Cognitive methods",
+    "approach": "CBT",
+    "description": "Compare separate episodes to identify a possible conditional assumption, attitude or rule that organises predictions and coping.",
+    "when": "Use when different situations appear to trigger similar fears, self-judgements or protective behaviours.",
+    "steps": [
+      "Collect examples from at least two different situations.",
+      "Record the specific automatic thought in each example before generalising.",
+      "Look for a shared if–then prediction, attitude or rule.",
+      "Identify the feared cost of breaking the rule.",
+      "Map the coping response used to obey it or prevent the cost.",
+      "Record exceptions and formulate a more flexible alternative to test."
+    ],
+    "worksheet": "assumptionTracker",
+    "evidence": "Intermediate beliefs in cognitive conceptualization include assumptions, attitudes and rules. Padesky and Greenberger distinguish underlying assumptions from situation-specific automatic thoughts and link them to behavioural experiments.",
+    "sources": [
+      "beckBook2020",
+      "beckConceptualizationDiagram",
+      "padeskyClinician2020"
+    ]
+  },
+  {
+    "id": "formulation-belief-continuum",
+    "title": "Move a core belief off the extremes",
+    "family": "Cognitive methods",
+    "approach": "CBT",
+    "description": "Use observable anchors and intermediate examples to evaluate an absolute self-, other- or world-related belief without turning it into a score of human worth.",
+    "when": "Use when a belief is expressed in all-or-nothing terms such as 'I am completely incompetent' or 'people are always cruel'.",
+    "steps": [
+      "Write the belief in the words that appear.",
+      "Define what the endpoints would look like in specific observable behaviour.",
+      "Create intermediate anchors using real examples.",
+      "Place relevant experiences on the scale using evidence.",
+      "Notice whether exceptions and context change the original all-or-nothing conclusion.",
+      "Write a more nuanced belief and identify what further learning would matter."
+    ],
+    "worksheet": "beliefContinuum",
+    "evidence": "Continuum methods are used in cognitive therapy to soften dichotomous core-belief ratings. The scale should describe a specific quality or action, not measure a person's worth.",
+    "sources": [
+      "beckBook2020",
+      "mindOverMood2015",
+      "padeskyClinician2020"
+    ]
+  },
+  {
+    "id": "formulation-socratic-map",
+    "title": "Use a Socratic question sequence",
+    "family": "Cognitive methods",
+    "approach": "CBT",
+    "description": "Build a collaborative sequence of evidence, alternative explanations and perspective-taking questions that helps the person reach a considered conclusion.",
+    "when": "Use after a specific automatic thought is captured and the person wants to evaluate it rather than simply label a distortion.",
+    "steps": [
+      "Write the thought as it appeared and what makes it convincing.",
+      "Gather concrete evidence for the thought.",
+      "Look for evidence that complicates it or information still missing.",
+      "Generate alternative explanations that fit the same facts.",
+      "Consider a fair-minded outside perspective without forcing reassurance.",
+      "Write a balanced conclusion and decide whether action or a behavioural experiment is needed."
+    ],
+    "worksheet": "socraticMap",
+    "evidence": "Socratic questioning and guided discovery are core CBT methods. The quality of the process depends on collaboration, timing and avoiding leading questions.",
+    "sources": [
+      "beckBook2020",
+      "beckInstituteWorksheets",
+      "padeskyClinician2020"
+    ]
   }
 ];
 
-export const FORMULATION_BOOKS = [
-  {
-    "title": "Cognitive Behavior Therapy: Basics and Beyond (3rd ed.)",
-    "author": "Judith S. Beck",
-    "note": "Core clinician text: conceptualization, automatic thoughts, beliefs, interventions, imagery, and relapse prevention.",
-    "source": "beckBook2020"
-  },
-  {
-    "title": "Mind Over Mood (2nd ed.)",
-    "author": "Dennis Greenberger & Christine A. Padesky",
-    "note": "Structured workbook for thought records, assumptions, behavioural experiments, and core beliefs.",
-    "source": "mindOverMood2015"
-  },
-  {
-    "title": "The Clinician's Guide to CBT Using Mind Over Mood (2nd ed.)",
-    "author": "Christine A. Padesky",
-    "note": "Clinical guidance for adapting the workbook, including conceptualization and cognitive/behavioural interventions.",
-    "source": "padeskyClinician2020"
-  },
-  {
-    "title": "Schema Therapy: A Practitioner's Guide",
-    "author": "Jeffrey E. Young, Janet S. Klosko & Marjorie E. Weishaar",
-    "note": "Foundational guide to schemas, modes, cognitive and experiential strategies, and behavioural pattern-breaking.",
-    "source": "schemaTherapyBook2003"
-  },
-  {
-    "title": "The Practice of Rational Emotive Behaviour Therapy (2nd ed.)",
-    "author": "Albert Ellis & Windy Dryden",
-    "note": "Foundational practitioner reference for REBT assessment, disputation, imagery, and behavioural methods.",
-    "source": "rebtPracticeBook"
-  },
-  {
-    "title": "DBT Skills Training Manual (Revised ed.)",
-    "author": "Marsha M. Linehan",
-    "note": "Current revised manual for mindfulness, interpersonal effectiveness, emotion regulation, distress tolerance, and behaviour analysis.",
-    "source": "dbtManual2025"
-  },
-  {
-    "title": "DBT Skills Training Handouts and Worksheets (Revised ed.)",
-    "author": "Marsha M. Linehan",
-    "note": "Client-facing skills handouts and worksheets for the four DBT modules.",
-    "source": "dbtHandouts2025"
-  },
-  {
-    "title": "Metacognitive Therapy for Anxiety and Depression",
-    "author": "Adrian Wells",
-    "note": "Clinical model and techniques including attention training and detached mindfulness.",
-    "source": "mctWellsBook"
-  },
-  {
-    "title": "ACT Made Simple (2nd ed.)",
-    "author": "Russ Harris",
-    "note": "Practical ACT primer covering choice point, defusion, self-compassion, values, and the six core processes.",
-    "source": "actMadeSimple2019"
-  },
-  {
-    "title": "Acceptance and Commitment Therapy: The Process and Practice of Mindful Change (2nd ed.)",
-    "author": "Steven C. Hayes, Kirk D. Strosahl & Kelly G. Wilson",
-    "note": "Foundational clinician reference for ACT case formulation and psychological flexibility processes.",
-    "source": "actProcessPractice2012"
-  },
-  {
-    "title": "Cognitive Therapy of Depression (2nd ed.)",
-    "author": "Aaron T. Beck, A. John Rush, Brian F. Shaw, Gary Emery, Robert J. DeRubeis & Steven D. Hollon",
-    "note": "Updated clinical reference on cognitive and behavioural methods, schemas, core beliefs, and treatment planning.",
-    "source": "cognitiveTherapyDepression2024"
-  }
-];
