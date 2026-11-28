@@ -433,6 +433,26 @@ export const SOURCES = {
     "label": "Stand-alone DBT skills training for borderline personality disorder: systematic review and meta-analysis (2026)",
     "citation": "Arqueros, M., Soler, J., & Pascual, J. C. (2026). Stand-alone dialectical behavior therapy skills training for borderline personality disorder: A systematic review and meta-analysis. Personality Disorders: Theory, Research, and Treatment, 17(6), 460–473. Seven studies met criteria and five entered meta-analysis; large within-arm changes were reported with substantial heterogeneity, and pooled dropout was 29%. These package-level findings do not validate individual app exercises.",
     "url": "https://doi.org/10.1037/per0000774"
+  },
+  "beckCognitiveModel": {
+    "label": "Beck Institute: the cognitive model",
+    "citation": "Beck Institute for Cognitive Behavior Therapy. Cognitive Model. The model distinguishes the situation, automatic thoughts and images, and emotional, behavioural and physiological reactions.",
+    "url": "https://beckinstitute.org/wp-content/uploads/2024/05/Cognitive-Model.pdf"
+  },
+  "mindOverMoodAutomaticThoughtWorksheet": {
+    "label": "Mind Over Mood: Identifying Automatic Thoughts worksheet",
+    "citation": "Greenberger, D., & Padesky, C. A. (2015). Mind Over Mood (2nd ed.), Worksheet 7.3: Identifying Automatic Thoughts. The worksheet separates situation, mood intensity, and automatic thoughts/images and offers mood-sensitive prompts.",
+    "url": "https://www.guilford.com/add/MOM2-promo-forms.pdf"
+  },
+  "padeskyImageryThoughtRecords2023": {
+    "label": "Incorporating imagery into thought records (2023)",
+    "citation": "Padesky, C. A. (2023). Incorporating Imagery into Thought Records: Increase Engagement and Balanced Thoughts. A clinical resource describing elicitation of images, encapsulated meanings and central thoughts within a thought-record framework.",
+    "url": "https://www.padesky.com/wp-content/uploads/2023/07/002-Incorporating-Imagery-Thought-Records-Increase-Engagement-Balanced-Thoughts.pdf"
+  },
+  "behaviouralExperiments2025": {
+    "label": "Driving cognitive change: a guide to behavioural experiments in cognitive therapy (2025)",
+    "citation": "Clark, D. M., & colleagues (2025). Driving cognitive change: a guide to behavioural experiments in cognitive therapy for anxiety disorders and PTSD. Cognitive Behaviour Therapy. Describes formulation-driven experiments, observable predictions, safety behaviours, outcome review, and troubleshooting for panic, social anxiety and PTSD.",
+    "url": "https://doi.org/10.1080/16506073.2025.2518427"
   }
 };
 
