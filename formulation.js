@@ -558,6 +558,29 @@ export const FORMULATION_TOOLS = [
       "mindOverMood2015",
       "beckInstituteWorksheets"
     ]
+  },
+  {
+    "id": "formulation-image-capture",
+    "title": "Identify an automatic mental image",
+    "family": "Imagery & memory methods",
+    "approach": "CBT cognitive conceptualization",
+    "description": "Notice a brief mental picture or imagined scene linked to an emotion, identify the meaning it carries, and compare that meaning with present-day evidence.",
+    "when": "Use when a specific image, memory fragment, or imagined audience reaction appears quickly during an ordinary, manageable situation.",
+    "steps": [
+      "Choose one recent, low-intensity situation; do not deliberately revisit a traumatic memory or force an image to appear.",
+      "Record the brief image or scene as it naturally appeared, without repeatedly replaying or embellishing it.",
+      "Identify what the image seemed to predict or imply about you, other people, or the future.",
+      "Notice the emotion and action urge that accompanied the image.",
+      "Separate observable information from what the image leaves out, assumes, or predicts.",
+      "Write a balanced perspective and choose a safe present-day action; stop if the exercise becomes distressing."
+    ],
+    "worksheet": "imageCapture",
+    "evidence": "Mental images can function like automatic thoughts in cognitive conceptualization. This is a brief identification and perspective-taking aid, not imagery rescripting or trauma-memory processing.",
+    "sources": [
+      "beckBook2020",
+      "beckInstituteWorksheets",
+      "socialNICE"
+    ]
   }
 ];
 
