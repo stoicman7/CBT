@@ -57,10 +57,9 @@ function formatDate(date) {
 }
 function links(ids) {
   return [...new Set(ids || [])].map(id => {
-    const s = SOURCES[id];
-    return s oups.get(family).push(tool);
-  }
-  return EXERCISE_FAMILY_ORDER.filter(f=>groups.has(f)).map(f=>[f,groups.get(f)]);
+    const source = SOURCES[id];
+    return source ? `<a href="${esc(source.url)}" target="_blank" rel="noopener">${esc(source.label)} <span>↗</span></a>` : "";
+  }).join("");
 }
 
 function renderSidebar() {
