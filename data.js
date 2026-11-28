@@ -6059,5 +6059,35 @@ export const WORKSHEETS = {
         "What would you want to review with a clinician or trusted support person?"
       ]
     ]
+  },
+  "imageCapture": {
+    "title": "Automatic mental-image record",
+    "intro": "Use one mild, present-day image or imagined scene. Do not deliberately revisit traumatic memories, force imagery, or keep repeating the scene to obtain certainty.",
+    "fields": [
+      [
+        "situation",
+        "What was happening just before the image appeared?"
+      ],
+      [
+        "image",
+        "What did you briefly picture, as specifically as you can describe without elaborating it?"
+      ],
+      [
+        "meaning",
+        "What did the image seem to say about you, another person, or what might happen?"
+      ],
+      [
+        "emotion",
+        "What emotion and body response accompanied it?"
+      ],
+      [
+        "evidence",
+        "What observable information supports or does not support the prediction represented by the image?"
+      ],
+      [
+        "balanced",
+        "What is a fairer, more complete perspective, and what safe action is useful now?"
+      ]
+    ]
   }
 };
