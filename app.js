@@ -1,5 +1,6 @@
 import { EMOTIONS, SOURCES, WORKSHEETS } from "./data.js";
 import { CORE_TECHNIQUES } from "./technique-library.js";
+import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "./formulation.js";
 
 const KEY = "cbt-workspace-v1";
 const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All" };
@@ -60,6 +61,39 @@ function links(ids) {
   }).join("");
 }
 
+
+const EXERCISE_FAMILY_ORDER = ["Assessment & formulation","Cognitive methods","Behavioural methods","Attention & metacognitive methods","Emotion regulation & distress tolerance","Acceptance & values","Interpersonal & communication"];
+const EXERCISE_FAMILY_NOTES = {
+  "Assessment & formulation":"Map triggers, patterns, maintaining loops, and context before choosing an intervention.",
+  "Cognitive methods":"Work with automatic thoughts, appraisals, assumptions, rules, and beliefs.",
+  "Behavioural methods":"Change action patterns through practice, activity, approach, experiments, and skills rehearsal.",
+  "Attention & metacognitive methods":"Notice where attention goes and change unhelpful worry, rumination, checking, or replay loops.",
+  "Emotion regulation & distress tolerance":"Manage arousal, urges, and intense emotion so an effective response becomes possible.",
+  "Acceptance & values":"Make room for difficult internal experiences and choose safe actions linked to personal values.",
+  "Interpersonal & communication":"Practise requests, boundaries, repair, and respectful communication."
+};
+function exerciseFamily(tool) {
+  if (tool.family && EXERCISE_FAMILY_ORDER.includes(tool.family)) return tool.family;
+  const t=(tool.id+" "+tool.title+" "+tool.description).toLowerCase();
+  if (/(boundary|request|relationship|conversation|refusal|assertive|communication|repair|interpersonal|accommodation|apology)/.test(t)) return "Interpersonal & communication";
+  if (/(values?|valued|acceptance|willingness|defusion|unhook|committed.action|toward.move)/.test(t)) return "Acceptance & values";
+  if (/(worry|ruminat|replay|attention|mindful|checking|reassurance|post.event|mode.shift|thought.loop|mental.ritual)/.test(t)) return "Attention & metacognitive methods";
+  if (/(arousal|pause|urge|coping|recovery|regulation|distress|reset|calm|vulnerability|emotion|sleep|tolerance)/.test(t)) return "Emotion regulation & distress tolerance";
+  if (/(experiment|exposure|avoidance|activity|graded.task|approach|practice|habit|schedule|activation|stimulus|pacing|rehears|task.start|pattern.break|learning.review)/.test(t)) return "Behavioural methods";
+  if (/(thought|belief|prediction|reappraisal|interpret|rule|standard|responsibility|evidence|story|label|facts|continuum|meaning|self-esteem|catastroph|attribution|assumption)/.test(t)) return "Cognitive methods";
+  if (/(map|cycle|chain|audit|diary|monitor|track|trigger|warning|inventory|functional.analysis|record)/.test(t)) return "Assessment & formulation";
+  return "Assessment & formulation";
+}
+function groupExercises(tools) {
+  const groups=new Map();
+  for (const tool of tools) {
+    const family=exerciseFamily(tool);
+    if(!groups.has(family)) groups.set(family,[]);
+    groups.get(family).push(tool);
+  }
+  return EXERCISE_FAMILY_ORDER.filter(f=>groups.has(f)).map(f=>[f,groups.get(f)]);
+}
+
 function renderSidebar() {
   const q = state.tab === "library" ? "" : ($("#global-search").value || "").trim().toLowerCase();
   nav.innerHTML = ["Emotions", "Patterns", "Focused care"].map(group => {
@@ -96,9 +130,9 @@ function renderHeader() {
 function tabs() {
   return `<nav class="section-tabs" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" aria-pressed="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</nav>`;
 }
-function toolCard(tool, index) {
+function toolCard(tool, index, family = exerciseFamily(tool)) {
   return `<article class="tool-card">
-    <div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">GUIDED EXERCISE</span></div>
+    <div class="tool-card-top"><span class="tool-number">${String(index+1).padStart(2,"0")}</span><span class="tool-type">${esc(family)}</span></div>
     <h3>${esc(tool.title)}</h3>
     <p>${esc(tool.description)}</p>
     <div class="tool-when"><span>USE THIS WHEN</span><div>${esc(tool.when)}</div></div>
@@ -114,7 +148,7 @@ function overview(e) {
     <section class="section-heading"><div><div class="eyebrow muted">START WITH UNDERSTANDING</div><h2>What is happening?</h2></div><span class="section-index">01 / THE MODEL</span></section>
     <article class="model-card"><p class="model-copy">${esc(e.description)}</p><div class="model-flow">${e.model.split(" → ").map((p,i) => `<span class="model-step"><b>${String(i+1).padStart(2,"0")}</b>${esc(p)}</span>`).join('<span class="flow-arrow">→</span>')}</div><div class="model-insight"><span class="insight-mark">i</span><p>${esc(e.why)}</p></div></article>
     <section class="section-heading tool-heading"><div><div class="eyebrow muted">PRACTICAL METHODS</div><h2>Tools to work with</h2></div><button class="subtle-action" type="button" data-tab="techniques">View all techniques →</button></section>
-    <div class="tool-grid">${e.tools.map(toolCard).join("")}</div>
+    <div class="exercise-family-list">${groupExercises(e.tools).map(([family,tools]) => `<section class="exercise-family"><header class="exercise-family-heading"><div><span class="eyebrow muted">EXERCISE TYPE</span><h3>${esc(family)}</h3><p>${esc(EXERCISE_FAMILY_NOTES[family])}</p></div><span class="family-count">${tools.length} ${tools.length === 1 ? "TOOL" : "TOOLS"}</span></header><div class="tool-grid">${tools.map((tool,index) => toolCard(tool,index,family)).join("")}</div></section>`).join("")}</div>
     <section class="section-heading plan-heading"><div><div class="eyebrow muted">A SMALL, STRUCTURED START</div><h2>Your practice plan</h2></div><span class="progress-label">${done} of 4 completed</span></section>
     <div class="plan-preview"><div class="progress-track"><span style="width:${done*25}%"></span></div>${e.plan.slice(0,2).map((p,i) => `<div class="plan-preview-item"><span class="plan-step-number">0${i+1}</span><div><strong>${esc(p.title)}</strong><p>${esc(p.detail)}</p></div></div>`).join("")}<button class="plan-link" type="button" data-tab="plan">Open the full plan →</button></div>
   </div><aside class="workspace-aside">
@@ -141,7 +175,7 @@ function techniques(e) {
 
 function renderTechniqueLibrary() {
   const query = ($("#global-search")?.value || "").trim().toLowerCase();
-  const categories = ["All","Assessment & formulation","Cognitive methods","Behavioural methods","Imagery & memory methods","Maintenance & homework","Related approaches"];
+  const categories = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.category))];
   const visible = CORE_TECHNIQUES.filter(item => {
     const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
     const searchText = [item.title,item.classification,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
@@ -151,7 +185,7 @@ function renderTechniqueLibrary() {
     <div class="eyebrow"><span class="eyebrow-dot"></span>REFERENCE DIRECTORY / CBT METHODS</div>
     <h1>CBT technique library<span class="title-period">.</span></h1>
     <p>A structured map of common CBT procedures, specialist treatment components, and related third-wave approaches. Each entry identifies the kind of method and its boundaries.</p>
-    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>6</strong> method families</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.classification === "Specialist protocol").length}</strong> specialist components</span></div>
+    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.category)).size}</strong> method families</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.classification === "Specialist protocol").length}</strong> specialist components</span></div>
   </section>
   <div class="library-notice"><strong>How to use this directory</strong><p>There is no single finite list of every CBT technique: manuals and diagnosis-specific protocols contain overlapping procedures and variations. This directory maps the principal methods identified in the scientific audit. Some techniques require a trained clinician. Related approaches are labelled separately rather than misrepresented as classical CBT.</p></div>
   <div class="library-toolbar"><div class="library-filters" role="group" aria-label="Filter techniques by family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div><span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span></div>
