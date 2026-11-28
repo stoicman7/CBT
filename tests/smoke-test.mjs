@@ -87,7 +87,7 @@ assert.ok(EMOTIONS.find(item => item.id === "eating-disorder-cbt").caution.toLow
 assert.ok(EMOTIONS.find(item => item.id === "substance-use").caution.toLowerCase().includes("withdrawal"));
 assert.ok(EMOTIONS.find(item => item.id === "body-focused-repetitive-behaviours").tools.some(tool => tool.id === "bfrb-competing-response"));
 
-assert.ok(CORE_TECHNIQUES.length >= 83, "The searchable technique directory should contain at least 83 methods.");
+assert.ok(CORE_TECHNIQUES.length >= 91, "The searchable technique directory should contain at least 91 methods.");
 const appSource = await readFile(new URL("../app.js", import.meta.url), "utf8");
 const indexSource = await readFile(new URL("../index.html", import.meta.url), "utf8");
 assert.ok(indexSource.includes('data-tab="formulation"'), "The thoughts and beliefs hub must be accessible from the sidebar.");
@@ -142,6 +142,7 @@ assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MCT)")), "Metaco
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(ACT)")), "ACT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MBCT)")), "MBCT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(CFT)")), "CFT methods must remain separately labelled.");
+for (const required of ["dbt-wise-mind","dbt-improve","dbt-pros-cons","dbt-mindfulness-what-how","dbt-diary-card","dbt-self-validation","act-drop-anchor","rebt-rational-coping-statements"]) assert.ok(CORE_TECHNIQUES.some(item => item.id === required), "Missing expanded method: " + required);
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(DBT)")), "DBT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(REBT)")), "REBT methods must remain separately labelled.");
 assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MCT)")), "MCT methods must remain separately labelled.");
