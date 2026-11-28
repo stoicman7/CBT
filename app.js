@@ -86,19 +86,25 @@ function renderSearchResults() {
   const hits = [];
   for (const emotion of EMOTIONS) {
     const workspaceText = [emotion.name, emotion.subtitle, emotion.description].join(" ").toLowerCase();
-    if (workspaceText.includes(query)) hits.push({ emotion, tool: null });
+    if (workspaceText.includes(query)) hits.push({ emotion, tool: null, kind: "emotion" });
     for (const tool of emotion.tools) {
       const toolText = [tool.title, tool.description, tool.when].join(" ").toLowerCase();
-      if (toolText.includes(query)) hits.push({ emotion, tool });
+      if (toolText.includes(query)) hits.push({ emotion, tool, kind: "emotion" });
     }
-  }  const formulationWorkspace = { id: "formulation", name: "Thoughts, beliefs & schemas" };
+  }
+  const formulationWorkspace = { id: "formulation", name: "Thoughts, beliefs & schemas" };
   for (const tool of FORMULATION_TOOLS) {
     const toolText = [tool.title, tool.description, tool.when, tool.approach].join(" ").toLowerCase();
-    if (toolText.includes(query)) hits.push({ emotion: formulationWorkspace, tool });
+    if (toolText.includes(query)) hits.push({ emotion: formulationWorkspace, tool, kind: "formulation" });
+  }
+  const libraryWorkspace = { id: "library", name: "Therapeutic technique library" };
+  for (const tool of CORE_TECHNIQUES) {
+    const toolText = [tool.title, tool.description, tool.when, tool.approach, tool.methodType, tool.category].join(" ").toLowerCase();
+    if (toolText.includes(query)) hits.push({ emotion: libraryWorkspace, tool, kind: "library" });
   }
   const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
   results.innerHTML = ordered.length
-    ? ordered.map(({ emotion, tool }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-tool="${esc(tool?.id || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? "Interactive exercise" : "Workspace"}</small></button>`).join("")
+    ? ordered.map(({ emotion, tool, kind }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-kind="${esc(kind || "emotion")}" data-search-tool="${esc(tool?.id || "")}" data-search-title="${esc(tool?.title || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? esc(kind === "library" ? tool.approach : kind === "formulation" ? "Formulation exercise" : "Interactive exercise") : "Workspace"}</small></button>`).join("")
     : '<div class="search-no-results">No matching tools or workspaces.</div>';
   results.hidden = false;
   input.setAttribute("aria-expanded", "true");
@@ -305,12 +311,18 @@ document.addEventListener("click", event => {
   const searchResult = event.target.closest("[data-search-emotion]");
   if (searchResult) {
     const searchEmotion = searchResult.dataset.searchEmotion;
-    if (searchEmotion === "formulation") state.tab = "formulation";
-    else { state.active = searchEmotion; state.tab = "overview"; }
+    const searchKind = searchResult.dataset.searchKind || "emotion";
     const toolId = searchResult.dataset.searchTool;
-    $("#global-search").value = "";
+    if (searchKind === "library") {
+      state.tab = "library"; state.libraryCategory = "All"; state.libraryApproach = "All";
+      $("#global-search").value = searchResult.dataset.searchTitle || "";
+    } else if (searchKind === "formulation") {
+      state.tab = "formulation"; $("#global-search").value = "";
+    } else {
+      state.active = searchEmotion; state.tab = "overview"; $("#global-search").value = "";
+    }
     saveState(); render();
-    if (toolId) openTool(toolId);
+    if (toolId && searchKind !== "library") openTool(toolId);
     return;
   }
   if (!event.target.closest(".topbar-actions")) $("#search-results").hidden = true;
