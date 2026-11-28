@@ -9,7 +9,7 @@ An English-language, evidence-informed CBT skills workspace for adults. It is or
 - **91-method therapeutic technique directory:** searchable by intervention family, with the therapeutic approach labelled separately. It covers core CBT, specialist protocols, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused methods.
 - **Eight exercise families:** assessment and formulation, cognitive, behavioural, imagery and memory, attention and metacognitive, emotion regulation and distress tolerance, acceptance and values, and interpersonal communication.
 - **Thoughts, beliefs & schemas hub:** a dedicated sidebar resource covering automatic thoughts, intermediate beliefs and rules, core beliefs, schemas, cognitive-maintenance loops, 13 guided tools, and 11 foundational books.
-- **Evidence and reading base:** 85 linked sources and a curated reading list spanning CBT, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused approaches.
+- **Evidence and reading base:** 86 linked sources and a curated reading list spanning CBT, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT, and compassion-focused approaches.
 - **Daily check-ins:** a simple self-reflection scale, explicitly not a diagnostic score.
 - **Private journal:** saved worksheet reflections and check-ins, with JSON export and local deletion controls.
 - **Scientific review:** see [docs/SCIENTIFIC_REVIEW.md](docs/SCIENTIFIC_REVIEW.md) for the evidence map, source register, clinical scope, and safety rules.
