@@ -2,7 +2,7 @@ import { EMOTIONS, SOURCES, WORKSHEETS } from "./data.js";
 import { CORE_TECHNIQUES } from "./technique-library.js";
 import { FORMULATION_SECTIONS, FORMULATION_TOOLS } from "./formulation.js";
 import { EXERCISE_FAMILY_ORDER, EXERCISE_FAMILY_NOTES, exerciseFamily, groupExercises } from "./exercise-taxonomy.js";
-import { TECHNIQUE_GUIDES } from "./technique-guides.js";
+import { TECHNIQUE_GUIDES, getTechniqueGuide } from "./technique-guides.js";
 import { THOUGHT_SPOTTING_GUIDE } from "./automatic-thought-guide.js";
 
 const KEY = "cbt-workspace-v1";
@@ -101,7 +101,7 @@ function renderSearchResults() {
   }
   const libraryWorkspace = { id: "library", name: "Therapeutic technique library" };
   for (const tool of CORE_TECHNIQUES) {
-    const guide = TECHNIQUE_GUIDES[tool.id];
+    const guide = getTechniqueGuide(tool.id);
     const guideText = guide ? [guide.aim, ...(guide.steps || []), ...(guide.questions || []), guide.review, guide.pitfalls] : [];
     const toolText = [tool.title, tool.description, tool.when, tool.approach, tool.methodType, tool.category, ...guideText].join(" ").toLowerCase();
     if (toolText.includes(query)) hits.push({ emotion: libraryWorkspace, tool, kind: "library" });
@@ -158,7 +158,7 @@ function renderTechniqueLibrary() {
   const categories = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.category))];
   const approaches = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.approach))];
   const visible = CORE_TECHNIQUES.filter(item => {
-    const guide = TECHNIQUE_GUIDES[item.id];
+    const guide = getTechniqueGuide(item.id);
     const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
     const approachMatch = state.libraryApproach === "All" || item.approach === state.libraryApproach;
     const guideText = guide ? [guide.aim, ...(guide.steps||[]), ...(guide.questions||[]), guide.review, guide.pitfalls] : [];
@@ -192,7 +192,7 @@ function renderTechniqueLibrary() {
     <span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span>
   </div>
   ${visible.length ? `<div class="library-grid method-guide-grid">${visible.map(item=>{
-    const guide = TECHNIQUE_GUIDES[item.id];
+    const guide = getTechniqueGuide(item.id);
     return `<article class="library-card method-guide-card">
       <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.methodType === "Specialist protocol component" ? "specialist" : item.methodType === "Core CBT method" ? "core" : "related"}">${esc(item.methodType)}</span><span class="library-approach">${esc(item.approach)}</span></div>
       <h3>${esc(item.title)}</h3>
