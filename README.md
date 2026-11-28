@@ -1,6 +1,6 @@
 # CBT Workspace
 
-An English-language, evidence-informed CBT skills workspace for adults. It is organised around the emotion or pattern a person wants to work with, with practical worksheets, flexible practice plans, evidence notes, and clear boundaries around self-guided care.
+An English-language, evidence-informed CBT skills workspace for adults. It is organised around the emotion or pattern a person wants to work with, with exercises grouped by intervention family, model-specific technique references, guided formulation tools, evidence notes, and clear boundaries around self-guided care.
 
 ## What is included
 
@@ -37,7 +37,7 @@ Requires Node.js 20 or later:
 npm test
 ```
 
-This checks JavaScript syntax and validates the 26-workspace library, 192 emotion tools, 13 formulation tools, 83 technique-directory entries, evidence references, the expanded anger/stress/fear/anxiety and social-anxiety workspaces, and key safety boundaries.
+This checks JavaScript syntax and validates the 26-workspace library, 192 emotion tools, 13 formulation tools, 91 technique-directory entries, evidence references, the expanded anger/stress/fear/anxiety and social-anxiety workspaces, and key safety boundaries.
 
 GitHub Actions workflow files are included under `.github/workflows/`. A repository Actions runner must be enabled for those checks to execute.
 
