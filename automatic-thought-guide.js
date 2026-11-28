@@ -327,7 +327,7 @@ export const THOUGHT_SPOTTING_GUIDE = {
     "beckConceptualizationDiagram",
     "mindOverMood2015",
     "padeskyClinician2020",
-    "beckModel",
+    "beckCognitiveModel",
     "socialNICE",
     "socialAnxietyNICE",
     "ocdNICE",
