@@ -9,7 +9,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not treat the model as proof that thoughts cause every symptom or that external adversity is only a thinking problem.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "functional-analysis",
@@ -22,7 +24,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "addictionSkillsNCBI"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "self-monitoring",
@@ -35,7 +39,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "depressionNICE"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "guided-discovery",
@@ -47,7 +53,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Questions should be curious and collaborative, not cross-examination. Do not force a positive conclusion or dispute a genuine threat.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "downward-arrow",
@@ -59,7 +67,9 @@ export const CORE_TECHNIQUES = [
     "caution": "This can evoke painful material. Use gently, stop if overwhelmed, and discuss persistent core beliefs with a trained practitioner.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "core-belief-map",
@@ -72,7 +82,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "selfEsteem"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "cognitive-distortions",
@@ -85,7 +97,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "cognitiveRestructuring"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "thought-record",
@@ -98,7 +112,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "cognitiveRestructuring",
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "decatastrophising",
@@ -111,7 +127,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "gad"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "reattribution",
@@ -124,7 +142,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "cognitiveRestructuring"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "continuum",
@@ -137,7 +157,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "selfEsteem"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "advantages-disadvantages",
@@ -149,7 +171,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not use a pros-and-cons list to rationalise unsafe behaviour or delay urgent action.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "coping-cards",
@@ -162,7 +186,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "panicAPA"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "positive-data",
@@ -175,7 +201,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "selfEsteem",
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "imagery-elicitation",
@@ -187,7 +215,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not ask users to relive trauma or induce overwhelming imagery without a validated clinical protocol.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "behavioural-experiment",
@@ -201,7 +231,9 @@ export const CORE_TECHNIQUES = [
       "beckManual",
       "socialNICE",
       "perfectionism"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "behavioural-activation",
@@ -215,7 +247,9 @@ export const CORE_TECHNIQUES = [
       "depressionNICE",
       "ba2026",
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "graded-task",
@@ -228,7 +262,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "adhdNICE"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "structured-problem-solving",
@@ -242,7 +278,9 @@ export const CORE_TECHNIQUES = [
       "depressionNICE",
       "stressICBT",
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "graded-exposure",
@@ -255,7 +293,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "anxietyGuidelines",
       "socialNICE"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT / graded exposure"
   },
   {
     "id": "interoceptive-exposure",
@@ -268,7 +308,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "panicComponents",
       "panicAPA"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "Panic-focused CBT / interoceptive exposure"
   },
   {
     "id": "imaginal-exposure",
@@ -281,7 +323,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "ptsdNICE",
       "griefMeta2024"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "Trauma-focused CBT / imaginal exposure"
   },
   {
     "id": "response-prevention",
@@ -294,7 +338,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "ocdNICE",
       "healthAnxiety2026"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT / exposure and response prevention (ERP)"
   },
   {
     "id": "stimulus-control",
@@ -308,7 +354,9 @@ export const CORE_TECHNIQUES = [
       "insomniaAASM",
       "cbtiComponents",
       "habitReversal2026"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT for insomnia (CBT-I)"
   },
   {
     "id": "habit-reversal",
@@ -321,7 +369,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "habitReversal2026",
       "anxietyGuidelines"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "Habit Reversal Training (HRT)"
   },
   {
     "id": "role-play",
@@ -334,7 +384,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "socialNICE"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "assertiveness",
@@ -347,7 +399,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "angerReview"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "cognitive-rehearsal",
@@ -360,7 +414,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "adhdNICE"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "relaxation-training",
@@ -374,7 +430,9 @@ export const CORE_TECHNIQUES = [
       "anxietyGuidelines",
       "angerArousal",
       "insomniaAASM"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "applied-relaxation",
@@ -387,7 +445,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "gadGuideline",
       "anxietyGuidelines"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "Applied relaxation"
   },
   {
     "id": "activity-pacing",
@@ -399,7 +459,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not use pacing to disregard new symptoms or substitute for medical evaluation; avoid rigid activity limits.",
     "sources": [
       "chronicPainNICE"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT for chronic pain / activity pacing"
   },
   {
     "id": "craving-coping",
@@ -413,7 +475,9 @@ export const CORE_TECHNIQUES = [
       "addictionSkillsNCBI",
       "alcoholGuideline2026",
       "substanceMeta2026"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT / relapse-prevention"
   },
   {
     "id": "regular-eating",
@@ -425,7 +489,9 @@ export const CORE_TECHNIQUES = [
     "caution": "The website must not prescribe meals, calories, weight targets, dieting, or compensatory behaviours. Do not start or change an eating plan without the care team.",
     "sources": [
       "eatingDisordersNICE"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT for eating disorders (CBT-ED)"
   },
   {
     "id": "imagery-rescripting",
@@ -439,7 +505,9 @@ export const CORE_TECHNIQUES = [
       "imageryRescripting2023",
       "socialNICE",
       "ptsdNICE"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "CBT / schema therapy"
   },
   {
     "id": "relapse-prevention",
@@ -453,7 +521,9 @@ export const CORE_TECHNIQUES = [
       "depressionNICE",
       "alcoholGuideline2026",
       "addictionSkillsNCBI"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "between-session-practice",
@@ -465,7 +535,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Assignments should be collaborative, relevant, and realistically sized. Failure to complete is a cue to review barriers, not shame.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "progress-review",
@@ -477,7 +549,9 @@ export const CORE_TECHNIQUES = [
     "caution": "A self-report score is not a diagnosis. The review should not imply that lack of immediate improvement means personal failure.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "attention-training",
@@ -489,7 +563,9 @@ export const CORE_TECHNIQUES = [
     "caution": "MCT is a distinct therapy model, not a generic classic-CBT worksheet. The exercise is not simply distraction or relaxation.",
     "sources": [
       "anxietyGuidelines"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Metacognitive therapy (MCT)"
   },
   {
     "id": "detached-mindfulness",
@@ -501,7 +577,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not confuse it with thought suppression or assume it is appropriate for every intrusive thought or condition.",
     "sources": [
       "ruminationFocused"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Metacognitive therapy (MCT)"
   },
   {
     "id": "cognitive-defusion",
@@ -513,7 +591,9 @@ export const CORE_TECHNIQUES = [
     "caution": "ACT is a related contextual behavioural therapy, not identical to traditional cognitive restructuring.",
     "sources": [
       "gad"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
     "id": "values-clarification",
@@ -525,7 +605,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Values work is a core ACT process and is often integrated into third-wave CBT programmes; do not present it as unique to classical CBT.",
     "sources": [
       "gad"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
     "id": "distress-tolerance",
@@ -537,7 +619,9 @@ export const CORE_TECHNIQUES = [
     "caution": "DBT is a distinct treatment model. Skills are not a substitute for crisis care or safety planning.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
     "id": "mindfulness-decentering",
@@ -550,7 +634,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "depressionNICE",
       "ruminationFocused"
-    ]
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Mindfulness-based cognitive therapy (MBCT)"
   },
   {
     "id": "psychoeducation",
@@ -563,7 +649,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "gadGuideline"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "collaborative-agenda",
@@ -575,7 +663,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Do not make an agenda so ambitious that it becomes another source of pressure. Targets should be jointly chosen and revised when necessary.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "session-feedback",
@@ -587,7 +677,9 @@ export const CORE_TECHNIQUES = [
     "caution": "Feedback is part of collaborative clinical delivery, not a score of whether a person is a 'good' therapy participant.",
     "sources": [
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "scheduled-worry",
@@ -601,7 +693,9 @@ export const CORE_TECHNIQUES = [
       "gad",
       "gadGuideline",
       "rumination"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
     "id": "systematic-desensitisation",
@@ -614,7 +708,9 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "anxietyGuidelines",
       "socialNICE"
-    ]
+    ],
+    "methodType": "Specialist protocol component",
+    "approach": "Behaviour therapy / systematic desensitisation"
   },
   {
     "id": "coping-skills-training",
@@ -628,346 +724,518 @@ export const CORE_TECHNIQUES = [
       "addictionSkillsNCBI",
       "alcoholGuideline2026",
       "beckManual"
-    ]
+    ],
+    "methodType": "Core CBT method",
+    "approach": "CBT"
   },
   {
-    id: "rebt-abcde",
-    title: "REBT ABCDE analysis",
-    category: "Cognitive methods",
-    classification: "Rational emotive behavior therapy",
-    description: "Map the activating event, belief, emotional/behavioural consequence, disputation, and effective new philosophy. The key target is rigid demandingness and related irrational beliefs, not the event alone.",
-    when: "Use when absolute demands, awfulising, low frustration tolerance, or global self-rating intensify distress.",
-    caution: "Do not dispute real danger, deprivation, discrimination, or legitimate needs. REBT is a distinct model and this worksheet is not a complete treatment.",
-    sources: ["rebtPracticeBook","rebtSystematicReview2024"]
+    "id": "rebt-abcde",
+    "title": "REBT ABCDE analysis",
+    "category": "Cognitive methods",
+    "classification": "Rational emotive behavior therapy",
+    "description": "Map the activating event, belief, emotional/behavioural consequence, disputation, and effective new philosophy. The key target is rigid demandingness and related irrational beliefs, not the event alone.",
+    "when": "Use when absolute demands, awfulising, low frustration tolerance, or global self-rating intensify distress.",
+    "caution": "Do not dispute real danger, deprivation, discrimination, or legitimate needs. REBT is a distinct model and this worksheet is not a complete treatment.",
+    "sources": [
+      "rebtPracticeBook",
+      "rebtSystematicReview2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Rational emotive behavior therapy (REBT)"
   },
   {
-    id: "rebt-disputation",
-    title: "REBT logical, empirical, and pragmatic disputation",
-    category: "Cognitive methods",
-    classification: "Rational emotive behavior therapy",
-    description: "Examine whether a belief is logically consistent, supported by evidence, and useful for chosen goals; develop flexible preferences rather than rigid demands.",
-    when: "Use when a clear demanding or absolutist belief is maintaining distress.",
-    caution: "Do not turn disputation into self-criticism or endless argument. A rational belief can still acknowledge pain, injustice, and limits.",
-    sources: ["rebtPracticeBook","rebtSystematicReview2024"]
+    "id": "rebt-disputation",
+    "title": "REBT logical, empirical, and pragmatic disputation",
+    "category": "Cognitive methods",
+    "classification": "Rational emotive behavior therapy",
+    "description": "Examine whether a belief is logically consistent, supported by evidence, and useful for chosen goals; develop flexible preferences rather than rigid demands.",
+    "when": "Use when a clear demanding or absolutist belief is maintaining distress.",
+    "caution": "Do not turn disputation into self-criticism or endless argument. A rational belief can still acknowledge pain, injustice, and limits.",
+    "sources": [
+      "rebtPracticeBook",
+      "rebtSystematicReview2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Rational emotive behavior therapy (REBT)"
   },
   {
-    id: "rebt-unconditional-acceptance",
-    title: "Unconditional self- and other-acceptance",
-    category: "Cognitive methods",
-    classification: "Rational emotive behavior therapy",
-    description: "Separate evaluation of a specific action from a global rating of a whole person; maintain standards and boundaries without rating human worth.",
-    when: "Use when a mistake becomes a total verdict about the self or another person.",
-    caution: "Acceptance does not mean approving harmful behaviour, removing accountability, staying in unsafe relationships, or abandoning boundaries.",
-    sources: ["rebtPracticeBook","rebtSystematicReview2024"]
+    "id": "rebt-unconditional-acceptance",
+    "title": "Unconditional self- and other-acceptance",
+    "category": "Cognitive methods",
+    "classification": "Rational emotive behavior therapy",
+    "description": "Separate evaluation of a specific action from a global rating of a whole person; maintain standards and boundaries without rating human worth.",
+    "when": "Use when a mistake becomes a total verdict about the self or another person.",
+    "caution": "Acceptance does not mean approving harmful behaviour, removing accountability, staying in unsafe relationships, or abandoning boundaries.",
+    "sources": [
+      "rebtPracticeBook",
+      "rebtSystematicReview2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Rational emotive behavior therapy (REBT)"
   },
   {
-    id: "rebt-rational-imagery",
-    title: "Rational-emotive imagery",
-    category: "Imagery & memory methods",
-    classification: "Rational emotive behavior therapy",
-    description: "In a structured clinical exercise, imagine a difficult event and practise shifting an unhelpful emotional response towards a more adaptive one while keeping the situation realistic.",
-    when: "Use when imagery and emotional rehearsal are part of an REBT formulation.",
-    caution: "Emotional imagery can intensify distress. Complex trauma, severe symptoms, or destabilisation require a trained clinician; do not use this as unsupervised trauma exposure.",
-    sources: ["rebtPracticeBook"]
+    "id": "rebt-rational-imagery",
+    "title": "Rational-emotive imagery",
+    "category": "Imagery & memory methods",
+    "classification": "Rational emotive behavior therapy",
+    "description": "In a structured clinical exercise, imagine a difficult event and practise shifting an unhelpful emotional response towards a more adaptive one while keeping the situation realistic.",
+    "when": "Use when imagery and emotional rehearsal are part of an REBT formulation.",
+    "caution": "Emotional imagery can intensify distress. Complex trauma, severe symptoms, or destabilisation require a trained clinician; do not use this as unsupervised trauma exposure.",
+    "sources": [
+      "rebtPracticeBook"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Rational emotive behavior therapy (REBT)"
   },
   {
-    id: "act-acceptance-willingness",
-    title: "Acceptance and willingness",
-    category: "Acceptance & values",
-    classification: "Acceptance and commitment therapy",
-    description: "Practise making room for private experiences while choosing behaviour based on values, rather than making symptom removal a prerequisite for living.",
-    when: "Use when efforts to control internal experiences have narrowed behaviour and the situation is safe.",
-    caution: "Acceptance is not resignation, tolerating abuse, ignoring medical care, or dropping reasonable protective action.",
-    sources: ["actCoreProcesses","actMeta2024"]
+    "id": "act-acceptance-willingness",
+    "title": "Acceptance and willingness",
+    "category": "Acceptance & values",
+    "classification": "Acceptance and commitment therapy",
+    "description": "Practise making room for private experiences while choosing behaviour based on values, rather than making symptom removal a prerequisite for living.",
+    "when": "Use when efforts to control internal experiences have narrowed behaviour and the situation is safe.",
+    "caution": "Acceptance is not resignation, tolerating abuse, ignoring medical care, or dropping reasonable protective action.",
+    "sources": [
+      "actCoreProcesses",
+      "actMeta2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
-    id: "act-choice-point",
-    title: "ACT choice point",
-    category: "Acceptance & values",
-    classification: "Acceptance and commitment therapy",
-    description: "Map triggers, hooks, away-moves, values, and toward-moves to make behavioural choice visible.",
-    when: "Use when a person feels pulled between short-term escape and a valued direction.",
-    caution: "Values are personally chosen qualities of action, not demands imposed by others. A toward-move must remain safe and feasible.",
-    sources: ["actCoreProcesses","actMeta2024"]
+    "id": "act-choice-point",
+    "title": "ACT choice point",
+    "category": "Acceptance & values",
+    "classification": "Acceptance and commitment therapy",
+    "description": "Map triggers, hooks, away-moves, values, and toward-moves to make behavioural choice visible.",
+    "when": "Use when a person feels pulled between short-term escape and a valued direction.",
+    "caution": "Values are personally chosen qualities of action, not demands imposed by others. A toward-move must remain safe and feasible.",
+    "sources": [
+      "actCoreProcesses",
+      "actMeta2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
-    id: "act-self-as-context",
-    title: "Self-as-context / observing perspective",
-    category: "Acceptance & values",
-    classification: "Acceptance and commitment therapy",
-    description: "Practise noticing thoughts, feelings, memories, and roles from a broader observing perspective rather than equating the self with any single experience.",
-    when: "Use when a person is fused with a fixed identity story or transient internal state.",
-    caution: "This is an experiential process, not a claim about metaphysical identity or a requirement to detach from relationships and responsibilities.",
-    sources: ["actCoreProcesses","actMeta2024"]
+    "id": "act-self-as-context",
+    "title": "Self-as-context / observing perspective",
+    "category": "Acceptance & values",
+    "classification": "Acceptance and commitment therapy",
+    "description": "Practise noticing thoughts, feelings, memories, and roles from a broader observing perspective rather than equating the self with any single experience.",
+    "when": "Use when a person is fused with a fixed identity story or transient internal state.",
+    "caution": "This is an experiential process, not a claim about metaphysical identity or a requirement to detach from relationships and responsibilities.",
+    "sources": [
+      "actCoreProcesses",
+      "actMeta2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
-    id: "act-committed-action",
-    title: "Committed action and values-based goals",
-    category: "Behavioural methods",
-    classification: "Acceptance and commitment therapy",
-    description: "Translate a chosen value into specific, observable, adjustable actions and build persistence through barriers and feedback.",
-    when: "Use when goals are clear but avoidance, discomfort, or competing habits block action.",
-    caution: "Values work must not become pressure to over-function, ignore disability, or accept structural barriers without practical support.",
-    sources: ["actCoreProcesses","actMeta2024"]
+    "id": "act-committed-action",
+    "title": "Committed action and values-based goals",
+    "category": "Behavioural methods",
+    "classification": "Acceptance and commitment therapy",
+    "description": "Translate a chosen value into specific, observable, adjustable actions and build persistence through barriers and feedback.",
+    "when": "Use when goals are clear but avoidance, discomfort, or competing habits block action.",
+    "caution": "Values work must not become pressure to over-function, ignore disability, or accept structural barriers without practical support.",
+    "sources": [
+      "actCoreProcesses",
+      "actMeta2024"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Acceptance and commitment therapy (ACT)"
   },
   {
-    id: "dbt-chain-analysis",
-    title: "DBT behaviour-chain analysis",
-    category: "Assessment & formulation",
-    classification: "Dialectical behavior therapy",
-    description: "Map vulnerabilities, prompting events, links, target behaviour, and consequences to identify places for skills, support, or environmental change.",
-    when: "Use as part of DBT-informed review of a target behaviour.",
-    caution: "For self-harm, suicidal behaviour, violence, or other high-risk targets, use comprehensive professional treatment and safety planning; an app worksheet is insufficient.",
-    sources: ["dbtManual2025","dbtHandouts2025","dbtEvidence2022"]
+    "id": "dbt-chain-analysis",
+    "title": "DBT behaviour-chain analysis",
+    "category": "Assessment & formulation",
+    "classification": "Dialectical behavior therapy",
+    "description": "Map vulnerabilities, prompting events, links, target behaviour, and consequences to identify places for skills, support, or environmental change.",
+    "when": "Use as part of DBT-informed review of a target behaviour.",
+    "caution": "For self-harm, suicidal behaviour, violence, or other high-risk targets, use comprehensive professional treatment and safety planning; an app worksheet is insufficient.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025",
+      "dbtEvidence2022"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-check-facts",
-    title: "DBT Check the Facts",
-    category: "Cognitive methods",
-    classification: "Dialectical behavior therapy",
-    description: "Separate observable facts from assumptions and assess whether an emotional interpretation fits the situation before choosing an effective response.",
-    when: "Use when interpretations are escalating an emotion and the facts can be clarified.",
-    caution: "Do not use it to invalidate emotions that accurately signal threat, mistreatment, discrimination, or violated boundaries.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-check-facts",
+    "title": "DBT Check the Facts",
+    "category": "Cognitive methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Separate observable facts from assumptions and assess whether an emotional interpretation fits the situation before choosing an effective response.",
+    "when": "Use when interpretations are escalating an emotion and the facts can be clarified.",
+    "caution": "Do not use it to invalidate emotions that accurately signal threat, mistreatment, discrimination, or violated boundaries.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-opposite-action",
-    title: "DBT Opposite Action",
-    category: "Emotion regulation & distress tolerance",
-    classification: "Dialectical behavior therapy",
-    description: "When an emotion and its action urge do not fit the facts or are ineffective, practise an opposite action in a safe and proportionate way.",
-    when: "Use only after checking the facts and identifying an action urge that is not effective for the situation.",
-    caution: "Do not use opposite action when fear signals real danger or anger signals an actual boundary violation that needs safe action.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-opposite-action",
+    "title": "DBT Opposite Action",
+    "category": "Emotion regulation & distress tolerance",
+    "classification": "Dialectical behavior therapy",
+    "description": "When an emotion and its action urge do not fit the facts or are ineffective, practise an opposite action in a safe and proportionate way.",
+    "when": "Use only after checking the facts and identifying an action urge that is not effective for the situation.",
+    "caution": "Do not use opposite action when fear signals real danger or anger signals an actual boundary violation that needs safe action.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-stop",
-    title: "DBT STOP skill",
-    category: "Emotion regulation & distress tolerance",
-    classification: "Dialectical behavior therapy",
-    description: "Interrupt impulsive action by pausing, stepping back, observing the situation, and proceeding mindfully.",
-    when: "Use when an intense urge risks an impulsive response and a pause is safe.",
-    caution: "A pause is not a reason to delay emergency help, leave a dangerous situation untreated, or avoid a necessary protective action.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-stop",
+    "title": "DBT STOP skill",
+    "category": "Emotion regulation & distress tolerance",
+    "classification": "Dialectical behavior therapy",
+    "description": "Interrupt impulsive action by pausing, stepping back, observing the situation, and proceeding mindfully.",
+    "when": "Use when an intense urge risks an impulsive response and a pause is safe.",
+    "caution": "A pause is not a reason to delay emergency help, leave a dangerous situation untreated, or avoid a necessary protective action.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-tipp",
-    title: "DBT TIPP crisis-survival skills",
-    category: "Emotion regulation & distress tolerance",
-    classification: "Dialectical behavior therapy",
-    description: "A set of short-term physiological and attentional strategies intended to help reduce extreme arousal so a person can return to effective action.",
-    when: "Use only as a crisis-survival skill within a DBT-informed plan, not as a long-term solution to the problem.",
-    caution: "Some temperature-based or intense breathing practices may be medically unsuitable. Avoid unsupervised extreme cold, breath-holding, or exertion; consult a clinician for relevant health conditions.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-tipp",
+    "title": "DBT TIPP crisis-survival skills",
+    "category": "Emotion regulation & distress tolerance",
+    "classification": "Dialectical behavior therapy",
+    "description": "A set of short-term physiological and attentional strategies intended to help reduce extreme arousal so a person can return to effective action.",
+    "when": "Use only as a crisis-survival skill within a DBT-informed plan, not as a long-term solution to the problem.",
+    "caution": "Some temperature-based or intense breathing practices may be medically unsuitable. Avoid unsupervised extreme cold, breath-holding, or exertion; consult a clinician for relevant health conditions.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-self-soothe",
-    title: "DBT self-soothing and sensory grounding",
-    category: "Emotion regulation & distress tolerance",
-    classification: "Dialectical behavior therapy",
-    description: "Use the senses and safe environmental cues to tolerate distress without making the situation worse.",
-    when: "Use for short-term distress when sensory grounding feels tolerable and appropriate.",
-    caution: "This is not a substitute for solving an actionable problem, seeking protection, or obtaining medical or crisis support.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-self-soothe",
+    "title": "DBT self-soothing and sensory grounding",
+    "category": "Emotion regulation & distress tolerance",
+    "classification": "Dialectical behavior therapy",
+    "description": "Use the senses and safe environmental cues to tolerate distress without making the situation worse.",
+    "when": "Use for short-term distress when sensory grounding feels tolerable and appropriate.",
+    "caution": "This is not a substitute for solving an actionable problem, seeking protection, or obtaining medical or crisis support.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-radical-acceptance",
-    title: "DBT radical acceptance",
-    category: "Acceptance & values",
-    classification: "Dialectical behavior therapy",
-    description: "Acknowledge reality as it is in the present so that energy can shift towards effective next steps, without approving or liking what happened.",
-    when: "Use for painful realities that cannot be changed in the moment.",
-    caution: "Acceptance is not approval, forgiveness, passivity, or staying in a harmful situation. Change what can be changed and seek safety where needed.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-radical-acceptance",
+    "title": "DBT radical acceptance",
+    "category": "Acceptance & values",
+    "classification": "Dialectical behavior therapy",
+    "description": "Acknowledge reality as it is in the present so that energy can shift towards effective next steps, without approving or liking what happened.",
+    "when": "Use for painful realities that cannot be changed in the moment.",
+    "caution": "Acceptance is not approval, forgiveness, passivity, or staying in a harmful situation. Change what can be changed and seek safety where needed.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-willingness",
-    title: "DBT willingness and turning the mind",
-    category: "Acceptance & values",
-    classification: "Dialectical behavior therapy",
-    description: "Notice resistance to a reality that cannot be changed now and deliberately return to a willing stance, repeatedly if necessary.",
-    when: "Use when fighting an unchangeable fact adds suffering or blocks effective action.",
-    caution: "Do not confuse willingness with compliance, submission, or tolerating abuse or coercion.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-willingness",
+    "title": "DBT willingness and turning the mind",
+    "category": "Acceptance & values",
+    "classification": "Dialectical behavior therapy",
+    "description": "Notice resistance to a reality that cannot be changed now and deliberately return to a willing stance, repeatedly if necessary.",
+    "when": "Use when fighting an unchangeable fact adds suffering or blocks effective action.",
+    "caution": "Do not confuse willingness with compliance, submission, or tolerating abuse or coercion.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-dear-man",
-    title: "DBT DEAR MAN interpersonal effectiveness",
-    category: "Interpersonal methods",
-    classification: "Dialectical behavior therapy",
-    description: "Structure a clear request or boundary using description, expression, assertion, reinforcement, mindful focus, confidence, and negotiation.",
-    when: "Use when asking for something or saying no in a relationship where direct communication is reasonably safe.",
-    caution: "Not recommended for situations where assertiveness increases danger. It does not guarantee agreement or override another person's autonomy.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-dear-man",
+    "title": "DBT DEAR MAN interpersonal effectiveness",
+    "category": "Interpersonal methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Structure a clear request or boundary using description, expression, assertion, reinforcement, mindful focus, confidence, and negotiation.",
+    "when": "Use when asking for something or saying no in a relationship where direct communication is reasonably safe.",
+    "caution": "Not recommended for situations where assertiveness increases danger. It does not guarantee agreement or override another person's autonomy.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-give",
-    title: "DBT GIVE relationship effectiveness",
-    category: "Interpersonal methods",
-    classification: "Dialectical behavior therapy",
-    description: "Practise relationship-preserving communication through gentleness, interest, validation, and an easy manner while still being clear.",
-    when: "Use when maintaining a relationship matters alongside discussing a disagreement.",
-    caution: "Relationship effectiveness does not require self-abandonment, appeasement, or accepting disrespect.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-give",
+    "title": "DBT GIVE relationship effectiveness",
+    "category": "Interpersonal methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Practise relationship-preserving communication through gentleness, interest, validation, and an easy manner while still being clear.",
+    "when": "Use when maintaining a relationship matters alongside discussing a disagreement.",
+    "caution": "Relationship effectiveness does not require self-abandonment, appeasement, or accepting disrespect.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-fast",
-    title: "DBT FAST self-respect effectiveness",
-    category: "Interpersonal methods",
-    classification: "Dialectical behavior therapy",
-    description: "Reflect on fairness, limited unnecessary apologies, adherence to values, and truthful communication while making a request or setting a boundary.",
-    when: "Use when self-respect is at risk during a difficult conversation.",
-    caution: "Being effective does not mean refusing accountability or ignoring the other person's legitimate interests.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-fast",
+    "title": "DBT FAST self-respect effectiveness",
+    "category": "Interpersonal methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Reflect on fairness, limited unnecessary apologies, adherence to values, and truthful communication while making a request or setting a boundary.",
+    "when": "Use when self-respect is at risk during a difficult conversation.",
+    "caution": "Being effective does not mean refusing accountability or ignoring the other person's legitimate interests.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-please",
-    title: "DBT PLEASE vulnerability-reduction review",
-    category: "Emotion regulation & distress tolerance",
-    classification: "Dialectical behavior therapy",
-    description: "Review health-related and routine vulnerability factors that can make emotion regulation more difficult, and identify realistic support or care actions.",
-    when: "Use as a broad vulnerability review alongside medical and practical care.",
-    caution: "This is not medical advice or a reason to blame yourself for distress; access, illness, disability, poverty, and care constraints matter.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-please",
+    "title": "DBT PLEASE vulnerability-reduction review",
+    "category": "Emotion regulation & distress tolerance",
+    "classification": "Dialectical behavior therapy",
+    "description": "Review health-related and routine vulnerability factors that can make emotion regulation more difficult, and identify realistic support or care actions.",
+    "when": "Use as a broad vulnerability review alongside medical and practical care.",
+    "caution": "This is not medical advice or a reason to blame yourself for distress; access, illness, disability, poverty, and care constraints matter.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-cope-ahead",
-    title: "DBT cope-ahead rehearsal",
-    category: "Behavioural methods",
-    classification: "Dialectical behavior therapy",
-    description: "Mentally rehearse a foreseeable difficult situation, likely links in the chain, and specific skills or supports to use.",
-    when: "Use before a predictable challenge when a plan can improve effective responding.",
-    caution: "Keep predictions realistic and plans flexible; rehearsal is not a guarantee and should not become compulsive mental checking.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-cope-ahead",
+    "title": "DBT cope-ahead rehearsal",
+    "category": "Behavioural methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Mentally rehearse a foreseeable difficult situation, likely links in the chain, and specific skills or supports to use.",
+    "when": "Use before a predictable challenge when a plan can improve effective responding.",
+    "caution": "Keep predictions realistic and plans flexible; rehearsal is not a guarantee and should not become compulsive mental checking.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-mindfulness-observe-describe",
-    title: "DBT observe and describe mindfulness",
-    category: "Attention & metacognitive methods",
-    classification: "Dialectical behavior therapy",
-    description: "Practise observing internal and external events and describing them in neutral, nonjudgmental language before deciding what to do.",
-    when: "Use when strong interpretations or urges are crowding out observation.",
-    caution: "Do not use mindfulness to ignore danger or dissociate from a situation; stop or adapt if the exercise increases distress.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-mindfulness-observe-describe",
+    "title": "DBT observe and describe mindfulness",
+    "category": "Attention & metacognitive methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Practise observing internal and external events and describing them in neutral, nonjudgmental language before deciding what to do.",
+    "when": "Use when strong interpretations or urges are crowding out observation.",
+    "caution": "Do not use mindfulness to ignore danger or dissociate from a situation; stop or adapt if the exercise increases distress.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-validation",
-    title: "DBT validation",
-    category: "Interpersonal methods",
-    classification: "Dialectical behavior therapy",
-    description: "Communicate that another person's response makes sense in context without necessarily agreeing with every interpretation or behaviour.",
-    when: "Use to reduce invalidation and improve understanding during difficult interactions.",
-    caution: "Validation is not endorsement of harmful conduct, false reassurance, or abandoning boundaries and accountability.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-validation",
+    "title": "DBT validation",
+    "category": "Interpersonal methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Communicate that another person's response makes sense in context without necessarily agreeing with every interpretation or behaviour.",
+    "when": "Use to reduce invalidation and improve understanding during difficult interactions.",
+    "caution": "Validation is not endorsement of harmful conduct, false reassurance, or abandoning boundaries and accountability.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "dbt-dialectical-synthesis",
-    title: "Dialectical thinking: both-and synthesis",
-    category: "Cognitive methods",
-    classification: "Dialectical behavior therapy",
-    description: "Hold apparently competing truths together, look for what is missing, and move beyond rigid either-or conclusions.",
-    when: "Use when conflict is being framed as only one person can be right or only one need can matter.",
-    caution: "Do not manufacture false equivalence between a harmful act and a reasonable response; facts, power, and safety still matter.",
-    sources: ["dbtManual2025","dbtHandouts2025"]
+    "id": "dbt-dialectical-synthesis",
+    "title": "Dialectical thinking: both-and synthesis",
+    "category": "Cognitive methods",
+    "classification": "Dialectical behavior therapy",
+    "description": "Hold apparently competing truths together, look for what is missing, and move beyond rigid either-or conclusions.",
+    "when": "Use when conflict is being framed as only one person can be right or only one need can matter.",
+    "caution": "Do not manufacture false equivalence between a harmful act and a reasonable response; facts, power, and safety still matter.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Dialectical behavior therapy (DBT)"
   },
   {
-    id: "schema-mode-map",
-    title: "Schema mode mapping",
-    category: "Assessment & formulation",
-    classification: "Schema therapy",
-    description: "Identify recurring emotional states and coping modes that activate in particular contexts and link them to unmet needs and current behaviour.",
-    when: "Use for pattern observation across situations, preferably with schema-informed clinical support.",
-    caution: "Modes are formulation concepts, not diagnoses or fixed identities. Do not infer childhood trauma or use a mode checklist as a personality test.",
-    sources: ["schemaTherapyBook2003","schemaTherapyMeta2023"]
+    "id": "schema-mode-map",
+    "title": "Schema mode mapping",
+    "category": "Assessment & formulation",
+    "classification": "Schema therapy",
+    "description": "Identify recurring emotional states and coping modes that activate in particular contexts and link them to unmet needs and current behaviour.",
+    "when": "Use for pattern observation across situations, preferably with schema-informed clinical support.",
+    "caution": "Modes are formulation concepts, not diagnoses or fixed identities. Do not infer childhood trauma or use a mode checklist as a personality test.",
+    "sources": [
+      "schemaTherapyBook2003",
+      "schemaTherapyMeta2023"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy"
   },
   {
-    id: "schema-imagery-rescripting",
-    title: "Imagery rescripting",
-    category: "Imagery & memory methods",
-    classification: "Schema therapy / CBT",
-    description: "A structured experiential method that changes the meaning and response associated with distressing mental images or memories.",
-    when: "Use only within an appropriate formulation and with a trained clinician when memories are traumatic or destabilising.",
-    caution: "Do not provide self-guided trauma-memory exposure or detailed trauma processing. The evidence base and indications vary across conditions.",
-    sources: ["imageryRescripting2023","schemaTherapyBook2003"]
+    "id": "schema-imagery-rescripting",
+    "title": "Imagery rescripting",
+    "category": "Imagery & memory methods",
+    "classification": "Schema therapy / CBT",
+    "description": "A structured experiential method that changes the meaning and response associated with distressing mental images or memories.",
+    "when": "Use only within an appropriate formulation and with a trained clinician when memories are traumatic or destabilising.",
+    "caution": "Do not provide self-guided trauma-memory exposure or detailed trauma processing. The evidence base and indications vary across conditions.",
+    "sources": [
+      "imageryRescripting2023",
+      "schemaTherapyBook2003"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy (integrative CBT)"
   },
   {
-    id: "schema-chair-work",
-    title: "Chair work for schema modes",
-    category: "Imagery & memory methods",
-    classification: "Schema therapy",
-    description: "A therapist-facilitated experiential dialogue that helps identify different modes, needs, and healthier responses.",
-    when: "Use in schema therapy with a trained practitioner when appropriate.",
-    caution: "Do not encourage unsupervised enactment of traumatic memories or emotionally intense dialogues; suitability and pacing require assessment.",
-    sources: ["schemaTherapyBook2003"]
+    "id": "schema-chair-work",
+    "title": "Chair work for schema modes",
+    "category": "Imagery & memory methods",
+    "classification": "Schema therapy",
+    "description": "A therapist-facilitated experiential dialogue that helps identify different modes, needs, and healthier responses.",
+    "when": "Use in schema therapy with a trained practitioner when appropriate.",
+    "caution": "Do not encourage unsupervised enactment of traumatic memories or emotionally intense dialogues; suitability and pacing require assessment.",
+    "sources": [
+      "schemaTherapyBook2003"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy"
   },
   {
-    id: "schema-pattern-breaking",
-    title: "Schema behavioural pattern-breaking",
-    category: "Behavioural methods",
-    classification: "Schema therapy",
-    description: "Plan and rehearse safe alternative behaviours to weaken recurring surrender, avoidance, or overcompensation patterns.",
-    when: "Use when a recurring pattern is understood and a realistic, low-risk alternative can be practised.",
-    caution: "Do not abandon legitimate safety behaviours, boundaries, or accommodations; complex patterns are best treated within schema therapy.",
-    sources: ["schemaTherapyBook2003","schemaTherapyMeta2023"]
+    "id": "schema-pattern-breaking",
+    "title": "Schema behavioural pattern-breaking",
+    "category": "Behavioural methods",
+    "classification": "Schema therapy",
+    "description": "Plan and rehearse safe alternative behaviours to weaken recurring surrender, avoidance, or overcompensation patterns.",
+    "when": "Use when a recurring pattern is understood and a realistic, low-risk alternative can be practised.",
+    "caution": "Do not abandon legitimate safety behaviours, boundaries, or accommodations; complex patterns are best treated within schema therapy.",
+    "sources": [
+      "schemaTherapyBook2003",
+      "schemaTherapyMeta2023"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy"
   },
   {
-    id: "schema-limited-reparenting",
-    title: "Limited reparenting (therapist-delivered)",
-    category: "Schema & experiential methods",
-    classification: "Schema therapy",
-    description: "A bounded, professional therapeutic relationship strategy intended to address unmet emotional needs within a clear treatment frame.",
-    when: "Reference for understanding a schema-therapy treatment component, not a self-help exercise.",
-    caution: "This is a therapist-delivered clinical strategy with ethical, relational, cultural, and supervision requirements. It must not be simulated by an app or an untrained helper.",
-    sources: ["schemaTherapyBook2003"]
+    "id": "schema-limited-reparenting",
+    "title": "Limited reparenting (therapist-delivered)",
+    "category": "Schema & experiential methods",
+    "classification": "Schema therapy",
+    "description": "A bounded, professional therapeutic relationship strategy intended to address unmet emotional needs within a clear treatment frame.",
+    "when": "Reference for understanding a schema-therapy treatment component, not a self-help exercise.",
+    "caution": "This is a therapist-delivered clinical strategy with ethical, relational, cultural, and supervision requirements. It must not be simulated by an app or an untrained helper.",
+    "sources": [
+      "schemaTherapyBook2003"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy"
   },
   {
-    id: "schema-flashcards",
-    title: "Schema coping cards and healthy-adult reminders",
-    category: "Cognitive methods",
-    classification: "Schema therapy",
-    description: "Create brief reminders of a balanced response to a recurring schema trigger, linked to real evidence and a practical action.",
-    when: "Use as a maintenance aid after a pattern has been formulated and a credible alternative response identified.",
-    caution: "Cards should not become reassurance rituals or replace experiential and behavioural work when those are clinically indicated.",
-    sources: ["schemaTherapyBook2003","beckBook2020"]
+    "id": "schema-flashcards",
+    "title": "Schema coping cards and healthy-adult reminders",
+    "category": "Cognitive methods",
+    "classification": "Schema therapy",
+    "description": "Create brief reminders of a balanced response to a recurring schema trigger, linked to real evidence and a practical action.",
+    "when": "Use as a maintenance aid after a pattern has been formulated and a credible alternative response identified.",
+    "caution": "Cards should not become reassurance rituals or replace experiential and behavioural work when those are clinically indicated.",
+    "sources": [
+      "schemaTherapyBook2003",
+      "beckBook2020"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Schema therapy"
   },
   {
-    id: "cft-compassionate-imagery",
-    title: "Compassionate imagery",
-    category: "Imagery & memory methods",
-    classification: "Compassion-focused therapy",
-    description: "Develop a compassionate, grounded image or perspective to support warmth, courage, and non-hostile self-relating.",
-    when: "Use when threat-based self-criticism is prominent and imagery is comfortable.",
-    caution: "Imagery can be difficult for some people; adapt or stop if it increases distress. It is not a substitute for trauma treatment or real-world protection.",
-    sources: ["imageryRescripting2023"]
+    "id": "cft-compassionate-imagery",
+    "title": "Compassionate imagery",
+    "category": "Imagery & memory methods",
+    "classification": "Compassion-focused therapy",
+    "description": "Develop a compassionate, grounded image or perspective to support warmth, courage, and non-hostile self-relating.",
+    "when": "Use when threat-based self-criticism is prominent and imagery is comfortable.",
+    "caution": "Imagery can be difficult for some people; adapt or stop if it increases distress. It is not a substitute for trauma treatment or real-world protection.",
+    "sources": [
+      "cftEvidence2015"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Compassion-focused therapy (CFT)",
+    "evidenceNote": "The CFT evidence base was still preliminary in an early systematic review; that review found promising but limited evidence. This exercise is a supportive practice, not a proven stand-alone treatment."
   },
   {
-    id: "cft-compassionate-letter",
-    title: "Compassionate letter to self",
-    category: "Cognitive methods",
-    classification: "Compassion-focused therapy",
-    description: "Write to yourself from a balanced, supportive perspective that acknowledges suffering, responsibility, and a realistic next step.",
-    when: "Use when self-criticism is global, harsh, or paralysing.",
-    caution: "Compassion does not mean excusing harm, removing accountability, or forcing positive language that does not feel credible.",
-    sources: ["beckBook2020"]
+    "id": "cft-compassionate-letter",
+    "title": "Compassionate letter to self",
+    "category": "Cognitive methods",
+    "classification": "Compassion-focused therapy",
+    "description": "Write to yourself from a balanced, supportive perspective that acknowledges suffering, responsibility, and a realistic next step.",
+    "when": "Use when self-criticism is global, harsh, or paralysing.",
+    "caution": "Compassion does not mean excusing harm, removing accountability, or forcing positive language that does not feel credible.",
+    "sources": [
+      "cftEvidence2015"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Compassion-focused therapy (CFT)",
+    "evidenceNote": "The CFT evidence base was still preliminary in an early systematic review; that review found promising but limited evidence. This exercise is a supportive practice, not a proven stand-alone treatment."
   },
   {
-    id: "mbct-three-minute-space",
-    title: "Three-minute breathing space",
-    category: "Attention & metacognitive methods",
-    classification: "Mindfulness-based cognitive therapy",
-    description: "Briefly shift from broad awareness of thoughts, feelings, and sensations to focused breathing and then widened awareness.",
-    when: "Use as a short attentional practice when helpful and tolerable.",
-    caution: "Not a crisis intervention or a substitute for treatment; breath focus can be uncomfortable for some people and should be adapted.",
-    sources: ["beckBook2020"]
+    "id": "mbct-three-minute-space",
+    "title": "Three-minute breathing space",
+    "category": "Attention & metacognitive methods",
+    "classification": "Mindfulness-based cognitive therapy",
+    "description": "Briefly shift from broad awareness of thoughts, feelings, and sensations to focused breathing and then widened awareness.",
+    "when": "Use as a short attentional practice when helpful and tolerable.",
+    "caution": "Not a crisis intervention or a substitute for treatment; breath focus can be uncomfortable for some people and should be adapted.",
+    "sources": [
+      "mbctRelapseMeta2016",
+      "mbctPreventRCT2015"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Mindfulness-based cognitive therapy (MBCT)",
+    "evidenceNote": "Evidence for MBCT concerns a structured multi-session programme, including relapse prevention in recurrent depression. It does not establish that this brief exercise alone prevents relapse or treats depression."
   },
   {
-    id: "mbct-body-scan",
-    title: "Body scan and mindful noticing",
-    category: "Attention & metacognitive methods",
-    classification: "Mindfulness-based cognitive therapy",
-    description: "Move attention through bodily sensations with curiosity and a nonjudgmental stance, noticing rather than forcing change.",
-    when: "Use for mindfulness practice when focusing on the body is comfortable.",
-    caution: "Can intensify pain, panic, dissociation, or trauma symptoms for some people. Offer external grounding or stop when needed.",
-    sources: ["beckBook2020"]
+    "id": "mbct-body-scan",
+    "title": "Body scan and mindful noticing",
+    "category": "Attention & metacognitive methods",
+    "classification": "Mindfulness-based cognitive therapy",
+    "description": "Move attention through bodily sensations with curiosity and a nonjudgmental stance, noticing rather than forcing change.",
+    "when": "Use for mindfulness practice when focusing on the body is comfortable.",
+    "caution": "Can intensify pain, panic, dissociation, or trauma symptoms for some people. Offer external grounding or stop when needed.",
+    "sources": [
+      "mbctRelapseMeta2016",
+      "mbctPreventRCT2015"
+    ],
+    "methodType": "Related therapy approach",
+    "approach": "Mindfulness-based cognitive therapy (MBCT)",
+    "evidenceNote": "Evidence for MBCT concerns a structured multi-session programme, including relapse prevention in recurrent depression. It does not establish that this brief exercise alone prevents relapse or treats depression."
   }
 ];
