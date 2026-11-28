@@ -106,7 +106,8 @@ assert.ok(appSource.includes('data-library-category'), "Technique category filte
 
 
 assert.equal(FORMULATION_SECTIONS.length, 7, "The formulation hub should cover its seven core knowledge sections.");
-assert.equal(FORMULATION_TOOLS.length, 13, "The formulation hub should contain thirteen guided tools.");
+assert.equal(FORMULATION_TOOLS.length, 14, "The formulation hub should contain fourteen guided tools.");
+assert.ok(FORMULATION_TOOLS.some(tool => tool.id === "formulation-image-capture" && exerciseFamily(tool) === "Imagery & memory methods"), "The formulation hub should include a bounded automatic mental-image exercise.");
 assert.ok(FORMULATION_BOOKS.length >= 11, "The formulation hub should include a substantial foundational reading list.");
 for (const section of FORMULATION_SECTIONS) for (const sourceId of section.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by formulation section " + section.id);
 for (const book of FORMULATION_BOOKS) assert.ok(SOURCES[book.source], "Unknown source " + book.source + " used by formulation book " + book.title);
