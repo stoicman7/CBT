@@ -340,6 +340,23 @@ export const SOURCES = {
 
 };
 
+  ,
+  actMadeSimple2019: {
+    label: "ACT Made Simple, 2nd ed. (2019)",
+    citation: "Harris, R. (2019). ACT Made Simple: An Easy-to-Read Primer on Acceptance and Commitment Therapy (2nd ed., revised). New Harbinger Publications. Practical ACT text covering the six core processes, choice point, defusion, self-compassion, values, and experiential exercises.",
+    url: "https://www.newharbinger.com/9781684033010/act-made-simple/"
+  },
+  actProcessPractice2012: {
+    label: "Acceptance and Commitment Therapy: The Process and Practice of Mindful Change, 2nd ed. (2012)",
+    citation: "Hayes, S. C., Strosahl, K. D., & Wilson, K. G. (2012). Acceptance and Commitment Therapy: The Process and Practice of Mindful Change (2nd ed.). Guilford Press. Clinical text on the ACT model, functional case formulation, psychological flexibility, acceptance, defusion, present-moment awareness, self-as-context, values, and committed action.",
+    url: "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943"
+  },
+  cognitiveTherapyDepression2024: {
+    label: "Cognitive Therapy of Depression, 2nd ed. (2024)",
+    citation: "Beck, A. T., Rush, A. J., Shaw, B. F., Emery, G., DeRubeis, R. J., & Hollon, S. D. (2024). Cognitive Therapy of Depression (2nd ed.). Guilford Press. Updated clinical text with chapters on behavioural and cognitive techniques, schemas, core beliefs, underlying assumptions, case examples, and relapse prevention.",
+    url: "https://www.guilford.com/books/Cognitive-Therapy-of-Depression/Beck-Rush-Shaw-Emery/9781572305823"
+  }
+
 export const EMOTIONS = [
   {
     id: "anger", name: "Anger", group: "Emotions", initials: "AN",
