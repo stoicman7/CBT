@@ -887,3 +887,81 @@ a { color: inherit; }
 @media (max-width: 650px) {
   .search-results { top: 43px; right: 0; width: min(360px, calc(100vw - 26px)); }
 }
+
+
+/* Exercise families and the cognitive-conceptualization hub */
+.sidebar-home.active,
+.sidebar-home[aria-current="page"] { background: var(--red-soft); color: var(--red-dark); font-weight: 700; }
+.formulation-nav-link .nav-glyph { color: var(--red); }
+.exercise-family { margin: 0 0 30px; }
+.exercise-family-heading {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 18px;
+  padding: 0 1px 12px; margin: 0 0 14px; border-bottom: 1px solid var(--line);
+}
+.exercise-family-heading h3 { margin: 3px 0 4px; font: 800 21px/1.25 Manrope,sans-serif; letter-spacing: -.55px; }
+.exercise-family-heading p { margin: 0; max-width: 690px; color: var(--muted); font-size: 14px; }
+.family-count { flex: 0 0 auto; color: #93898a; font: 700 10px Manrope,sans-serif; letter-spacing: .8px; white-space: nowrap; }
+.exercise-family-list { display: grid; gap: 12px; }
+.tool-card-top .tool-type { max-width: 72%; white-space: normal; text-align: right; line-height: 1.35; }
+.formulation-hero {
+  position: relative; overflow: hidden; padding: 36px 40px; border: 1px solid #efe3e2; border-radius: 18px;
+  background: linear-gradient(112deg,#fff 0%,#fff 58%,#faeeee 100%);
+}
+.formulation-hero::after {
+  content: "A→B"; position: absolute; right: 30px; top: 23px; color: rgba(165,31,43,.065);
+  font: 800 94px/1 Manrope,sans-serif; letter-spacing: -7px; pointer-events: none;
+}
+.formulation-hero h1 { position: relative; z-index: 1; margin: 13px 0 9px; max-width: 760px; font: 800 clamp(31px,4vw,45px)/1.12 Manrope,sans-serif; letter-spacing: -1.9px; }
+.formulation-hero > p { position: relative; z-index: 1; max-width: 730px; margin: 0; color: #776d6f; font-size: 16px; line-height: 1.65; }
+.formulation-hero-metrics { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
+.formulation-hero-metrics span { display: grid; gap: 2px; color: #8b8182; font-size: 11px; }
+.formulation-hero-metrics strong { color: var(--ink); font: 800 21px Manrope,sans-serif; }
+.formulation-notice, .formulation-boundary {
+  margin: 18px 0 30px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: #fff;
+}
+.formulation-notice strong, .formulation-boundary strong { display: block; margin-bottom: 5px; font: 800 15px Manrope,sans-serif; }
+.formulation-notice p, .formulation-boundary p { margin: 0; color: #6e6567; font-size: 14px; line-height: 1.7; }
+.formulation-levels, .formulation-knowledge, .formulation-tools, .formulation-reading { margin: 31px 0; }
+.belief-level-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.belief-level-card { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.belief-level-card > span { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; color: var(--red-dark); background: var(--red-soft); font: 800 11px Manrope,sans-serif; }
+.belief-level-card h3 { margin: 12px 0 6px; font: 800 16px/1.3 Manrope,sans-serif; }
+.belief-level-card p { margin: 0; color: #746b6d; font-size: 13px; line-height: 1.65; }
+.formulation-section-note { margin: 14px 1px 7px; color: #756b6d; font-size: 14px; line-height: 1.7; }
+.formulation-citations { display: flex; flex-wrap: wrap; gap: 7px 14px; }
+.formulation-knowledge-card { margin: 10px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; overflow: hidden; }
+.formulation-knowledge-card > summary { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 18px; cursor: pointer; list-style: none; }
+.formulation-knowledge-card > summary::-webkit-details-marker { display: none; }
+.formulation-knowledge-card > summary > span:first-child { display: grid; gap: 3px; }
+.formulation-knowledge-card summary small { color: #9a8f91; font: 700 10px Manrope,sans-serif; letter-spacing: .8px; text-transform: uppercase; }
+.formulation-knowledge-card summary b { font: 800 17px Manrope,sans-serif; }
+.formulation-knowledge-card[open] > summary { border-bottom: 1px solid var(--line); background: #fdfbfa; }
+.formulation-knowledge-body { padding: 17px 19px 20px; }
+.formulation-knowledge-body > p { margin: 0 0 14px; color: #6b6264; font-size: 14px; line-height: 1.75; }
+.formulation-knowledge-body ul { display: grid; gap: 10px; padding: 0; margin: 0 0 16px; list-style: none; }
+.formulation-knowledge-body li { display: grid; grid-template-columns: minmax(135px,.32fr) 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0ebea; }
+.formulation-knowledge-body li:last-child { border-bottom: 0; }
+.formulation-knowledge-body li strong { font: 700 13px Manrope,sans-serif; }
+.formulation-knowledge-body li span { color: #6d6466; font-size: 13px; line-height: 1.65; }
+.formulation-reading .section-heading p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+.formulation-book-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.formulation-book-card { min-width: 0; padding: 17px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.formulation-book-card .book-author { color: #92888a; font-size: 11px; font-weight: 700; }
+.formulation-book-card h3 { margin: 6px 0 8px; font: 800 16px/1.4 Manrope,sans-serif; }
+.formulation-book-card p { margin: 0 0 11px; color: #706769; font-size: 13px; line-height: 1.65; }
+.formulation-boundary { margin-top: 28px; border-color: #e9dddd; }
+.formulation-boundary a { display: inline-block; margin-top: 9px; color: var(--red-dark); font-size: 13px; font-weight: 700; }
+@media (max-width: 820px) {
+  .belief-level-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .formulation-book-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .formulation-hero { padding: 25px 21px; }
+  .formulation-hero::after { right: 12px; top: 12px; font-size: 57px; }
+  .formulation-hero h1 { font-size: 31px; letter-spacing: -1px; }
+  .formulation-hero-metrics { gap: 14px; }
+  .belief-level-grid { grid-template-columns: 1fr; }
+  .formulation-knowledge-body li { grid-template-columns: 1fr; gap: 3px; }
+  .exercise-family-heading { align-items: flex-start; }
+  .exercise-family-heading h3 { font-size: 18px; }
+}
