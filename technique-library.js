@@ -199,7 +199,9 @@ export const CORE_TECHNIQUES = [
     "when": "Use within a safe, tolerable reflective exercise or with a therapist.",
     "caution": "Do not ask users to relive trauma or induce overwhelming imagery without a validated clinical protocol.",
     "sources": [
-      "beckManual"
+      "beckManual",
+      "padeskyImageryThoughtRecords2023",
+      "mindOverMoodAutomaticThoughtWorksheet"
     ],
     "methodType": "Core CBT method",
     "approach": "CBT"
@@ -214,7 +216,8 @@ export const CORE_TECHNIQUES = [
     "sources": [
       "beckManual",
       "socialNICE",
-      "perfectionism"
+      "perfectionism",
+      "behaviouralExperiments2025"
     ],
     "methodType": "Core CBT method",
     "approach": "CBT"
