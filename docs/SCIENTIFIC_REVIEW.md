@@ -1438,6 +1438,9 @@ Linehan's revised *DBT Skills Training Manual* and *DBT Skills Training Handouts
 
 **Safety:** standalone DBT-informed skills are not comprehensive DBT, crisis treatment, or a substitute for a safety plan. Self-harm, suicidal behaviour, violence, and other high-risk targets require appropriate professional care. Opposite Action must not be used to override fear of real danger or anger that signals a genuine boundary violation.
 
+
+A further 2026 systematic review and meta-analysis by Arqueros, Soler, and Pascual evaluated stand-alone DBT skills-training groups for adults with borderline personality disorder. Seven studies met the inclusion criteria and five entered meta-analysis. The authors reported large within-arm changes in BPD severity and depression, with substantial heterogeneity; pooled dropout was 29%. These are package-level results from structured skills groups in a selected clinical population. They do not show that an individual worksheet, a few app-based skills, or unsupervised self-help is equivalent to DBT skills training or comprehensive DBT. The application cites this source as context, not as validation of its individual exercises. [DOI: 10.1037/per0000774](https://doi.org/10.1037/per0000774).
+
 ### Metacognitive Therapy (MCT)
 
 MCT differs from traditional cognitive restructuring. It targets metacognitive beliefs and the cognitive-attentional syndrome, including persistent worry, rumination, threat monitoring, and strategies used to control thinking. Attention Training Technique and detached mindfulness are model-specific procedures described in Adrian Wells' *Metacognitive Therapy for Anxiety and Depression*.
@@ -1491,7 +1494,7 @@ A new sidebar destination contains teaching material on automatic-thought identi
 | Total guided exercises | 206 |
 | Indexed technique-directory methods | 91 |
 | Primary exercise families | 8 |
-| Linked source records | 86 |
+| Linked source records | 87 |
 | Foundational books in the formulation hub | 11 |
 
 All new and existing exercise tools must have a valid worksheet, a usage context, a substantive evidence note, and valid source identifiers. Higher-risk clinical areas retain specific safety boundaries. These numerical counts describe the current catalogue, not a claim of complete coverage of the literature.
@@ -1524,6 +1527,7 @@ All new and existing exercise tools must have a valid worksheet, a usage context
 ### DBT
 - Linehan, M. M. (2025). *DBT Skills Training Manual* (Revised ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462556359).
 - Linehan, M. M. (2025). *DBT Skills Training Handouts and Worksheets* (Revised ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781462556342).
+- Arqueros, M., Soler, J., & Pascual, J. C. (2026). [Stand-alone dialectical behavior therapy skills training for borderline personality disorder: A systematic review and meta-analysis](https://doi.org/10.1037/per0000774). *Personality Disorders: Theory, Research, and Treatment, 17*(6), 460–473. Seven studies met criteria; five entered meta-analysis; results were heterogeneous.
 - *Psychotherapies for borderline personality disorder: focused systematic review and meta-analysis* (2022). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/35088687/).
 
 ### MCT, MBCT, and CFT
