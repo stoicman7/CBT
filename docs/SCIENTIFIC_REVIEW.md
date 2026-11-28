@@ -1489,7 +1489,7 @@ A new sidebar destination contains teaching material on automatic-thought identi
 | Emotion-specific guided exercises | 192 |
 | Thought/belief formulation exercises | 13 |
 | Total guided exercises | 205 |
-| Indexed technique-directory methods | 83 |
+| Indexed technique-directory methods | 91 |
 | Primary exercise families | 8 |
 | Linked source records | 85 |
 | Foundational books in the formulation hub | 11 |
@@ -1536,6 +1536,22 @@ All new and existing exercise tools must have a valid worksheet, a usage context
 - NICE NG116. [Post-traumatic stress disorder](https://www.nice.org.uk/guidance/ng116/chapter/Recommendations).
 - NICE NG222. [Depression in adults: treatment and management](https://www.nice.org.uk/guidance/ng222/chapter/recommendations).
 - NICE NG87. [Attention deficit hyperactivity disorder: diagnosis and management](https://www.nice.org.uk/guidance/ng87/chapter/recommendations).
+
+
+## 5. Further DBT skill coverage added to the directory
+
+The DBT catalogue was extended beyond the initial skills to include Wise Mind, IMPROVE the Moment, Pros and Cons, mindfulness WHAT/HOW skills, diary-card monitoring, and self-validation. These are distinct procedures with specific functions:
+
+- **Wise Mind** supports mindful integration of emotion and reason; it does not treat intuition as infallible.
+- **IMPROVE the Moment** offers temporary distress-tolerance strategies for situations that cannot be changed immediately. Optional spiritual wording must remain optional and culturally appropriate.
+- **Pros and Cons** compares the immediate and delayed consequences of acting on an urge versus choosing a different response.
+- **Mindfulness WHAT/HOW skills** distinguish observing, describing and participating from the HOW skills of nonjudgmental, one-mindful and effective action.
+- **Diary-card monitoring** is a structured clinical monitoring procedure, not an invitation to track every feeling indefinitely. It should be agreed with a clinician and kept proportionate.
+- **Self-validation** recognises the understandable context of an emotion without automatically treating every interpretation as correct.
+
+The ACT Drop Anchor exercise and REBT rational coping statements were also added. Drop Anchor is a brief present-moment exercise; it is not intended to remove emotion by force. REBT coping statements should follow a reasoned evaluation of a specific belief and must not turn into rote reassurance.
+
+The directory now contains **91 indexed methods** across the eight exercise families. This increases the breadth of the catalogue, not the evidence strength of every method. The DBT 2025 manuals remain the direct source for the new DBT skill descriptions; the 2022 psychotherapy meta-analysis provides context for clinical evidence but does not validate every individual skills handout as a stand-alone intervention.
 
 ## Remaining work and acceptance criteria
 
