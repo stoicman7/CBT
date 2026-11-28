@@ -106,6 +106,7 @@ assert.ok(appSource.includes("groupExercises(e.tools)"), "Emotion exercises shou
 assert.ok(appSource.includes("data-library-approach"), "Technique directory should filter independently by therapeutic approach.");
 assert.ok(appSource.includes("searchKind === \"library\""), "Global search should navigate to technique-library results.");
 assert.ok(appSource.includes("function renderSearchResults()"), "Global search should render direct workspace and exercise results.");
+assert.ok(appSource.includes("JSON.stringify(THOUGHT_SPOTTING_GUIDE)"), "Global search should index the automatic-thought field guide and knowledge sections.");
 assert.ok(appSource.includes("data-search-tool"), "Search results should identify exact tools.");
 assert.ok(appSource.includes("practice-step-list"), "The worksheet should render visually separated practice steps.");
 assert.ok(appSource.includes("if (!saveState())"), "Save actions should not show success after local persistence fails.");
