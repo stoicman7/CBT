@@ -1154,5 +1154,119 @@ export const CORE_TECHNIQUES = [
     "methodType": "Related therapy approach",
     "approach": "Mindfulness-based cognitive therapy (MBCT)",
     "evidenceNote": "Evidence for MBCT concerns a structured multi-session programme, including relapse prevention in recurrent depression. It does not establish that this brief exercise alone prevents relapse or treats depression."
+  },
+  {
+    "id": "dbt-wise-mind",
+    "title": "DBT Wise Mind",
+    "category": "Attention & metacognitive methods",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Related therapy approach",
+    "description": "Pause and integrate emotional information with facts and longer-term goals before choosing an effective response. Wise Mind is a DBT mindfulness concept, not a claim that intuition is always correct.",
+    "when": "Use when emotion and analysis seem to pull in opposite directions and a safe pause is possible.",
+    "caution": "Do not treat a gut feeling as proof or ignore verifiable facts, medical advice, or safety concerns. For high-risk decisions, involve appropriate support.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ]
+  },
+  {
+    "id": "dbt-improve",
+    "title": "DBT IMPROVE the Moment",
+    "category": "Emotion regulation & distress tolerance",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Related therapy approach",
+    "description": "Choose one or more short-term crisis-survival strategies—imagery, meaning, prayer or personally meaningful reflection, relaxation, one thing in the moment, a brief break, or encouragement—to make a difficult moment more tolerable.",
+    "when": "Use for time-limited distress when the immediate situation cannot be changed at once and you are physically safe.",
+    "caution": "This is a temporary distress-tolerance strategy, not problem-solving or crisis care. Religious or spiritual options are optional; do not use the exercise to remain in danger or delay urgent help.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ]
+  },
+  {
+    "id": "dbt-pros-cons",
+    "title": "DBT Pros and Cons",
+    "category": "Cognitive methods",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Related therapy approach",
+    "description": "Compare the short- and long-term consequences of acting on an urge with the consequences of choosing a safer or more effective response.",
+    "when": "Use when an intense urge promises immediate relief but may have significant longer-term costs.",
+    "caution": "A worksheet cannot resolve every dilemma. Include real material constraints, safety, and other people's rights; do not use it to delay emergency action.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ]
+  },
+  {
+    "id": "dbt-mindfulness-what-how",
+    "title": "DBT mindfulness WHAT and HOW skills",
+    "category": "Attention & metacognitive methods",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Related therapy approach",
+    "description": "Practise observing, describing, and participating, while using nonjudgmental, one-mindful, and effective attention. These are DBT mindfulness skills, not an instruction to suppress thoughts.",
+    "when": "Use as a short practice to notice what is happening and return to an effective present-moment action.",
+    "caution": "Adapt or stop if inward attention increases panic, dissociation, pain, or trauma symptoms. Mindfulness must not be used to ignore danger or injustice.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ]
+  },
+  {
+    "id": "dbt-diary-card",
+    "title": "DBT diary card and skills-use monitoring",
+    "category": "Assessment & formulation",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Specialist protocol component",
+    "description": "A structured record of agreed target behaviours, urges, emotions, and skills use to support review with a DBT therapist or team.",
+    "when": "Use only within a DBT or clinician-agreed monitoring plan, with a clearly defined purpose and a manageable recording schedule.",
+    "caution": "Diary cards can become burdensome or compulsive if overused. Do not add self-harm or suicide details to an insecure shared device; high-risk monitoring requires a clinical safety plan.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025",
+      "dbtEvidence2022"
+    ]
+  },
+  {
+    "id": "dbt-self-validation",
+    "title": "DBT self-validation",
+    "category": "Emotion regulation & distress tolerance",
+    "approach": "Dialectical behavior therapy (DBT)",
+    "methodType": "Related therapy approach",
+    "description": "Acknowledge that an emotional response is understandable in its context, name the need or facts involved, and respond without dismissing yourself or automatically endorsing every interpretation.",
+    "when": "Use when self-invalidation or harsh self-judgement is adding a second layer of distress.",
+    "caution": "Validation is not proof that an interpretation is correct, permission for harmful behaviour, or a substitute for accountability and boundaries.",
+    "sources": [
+      "dbtManual2025",
+      "dbtHandouts2025"
+    ]
+  },
+  {
+    "id": "act-drop-anchor",
+    "title": "ACT: Drop Anchor",
+    "category": "Attention & metacognitive methods",
+    "approach": "Acceptance and commitment therapy (ACT)",
+    "methodType": "Related therapy approach",
+    "description": "Briefly notice thoughts and feelings, connect with current sensory information, and re-engage with a chosen action. This is a short present-moment flexibility exercise, not a way to force calm.",
+    "when": "Use when thoughts or emotions have pulled attention away from a safe task or valued action.",
+    "caution": "Do not use grounding to tolerate abuse, delay medical care, or remain in danger. Adapt attention to the senses if body focus is uncomfortable.",
+    "sources": [
+      "actMadeSimple2019",
+      "actProcessPractice2012",
+      "actCoreProcesses"
+    ]
+  },
+  {
+    "id": "rebt-rational-coping-statements",
+    "title": "REBT rational coping statements",
+    "category": "Cognitive methods",
+    "approach": "Rational emotive behavior therapy (REBT)",
+    "methodType": "Related therapy approach",
+    "description": "Create brief, believable statements that express flexible preferences, high frustration tolerance, and unconditional acceptance while preserving responsibility and practical action.",
+    "when": "Use after disputing a specific rigid belief, as a reminder to practise a more flexible response.",
+    "caution": "Statements should not become forced affirmations or reassurance rituals. They must acknowledge real harm, practical constraints, grief, and legitimate needs.",
+    "sources": [
+      "rebtPracticeBook",
+      "rebtSystematicReview2024"
+    ]
   }
 ];
