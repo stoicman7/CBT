@@ -428,6 +428,11 @@ export const SOURCES = {
     "label": "Full-model ACT compared with bona fide psychotherapies: systematic review and meta-analysis (2026)",
     "citation": "Gower, T., Styler, Z. R., & Litz, B. T. (2026). Randomized controlled evidence of the efficacy of acceptance and commitment therapy: A systematic review and meta-analysis. Clinical Psychology Review, 128, 102786. 34 RCTs compared full-model ACT with bona fide psychotherapies; ACT was not superior on mental and behavioural health outcomes (g = −0.01, p = .86), with recurrent methodological limitations.",
     "url": "https://doi.org/10.1016/j.cpr.2026.102786"
+  },
+  "dbtStandaloneSkillsMeta2026": {
+    "label": "Stand-alone DBT skills training for borderline personality disorder: systematic review and meta-analysis (2026)",
+    "citation": "Arqueros, M., Soler, J., & Pascual, J. C. (2026). Stand-alone dialectical behavior therapy skills training for borderline personality disorder: A systematic review and meta-analysis. Personality Disorders: Theory, Research, and Treatment, 17(6), 460–473. Seven studies met criteria and five entered meta-analysis; large within-arm changes were reported with substantial heterogeneity, and pooled dropout was 29%. These package-level findings do not validate individual app exercises.",
+    "url": "https://doi.org/10.1037/per0000774"
   }
 };
 
