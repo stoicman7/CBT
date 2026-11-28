@@ -125,7 +125,7 @@ function renderSearchResults() {
   input.setAttribute("aria-expanded", "true");
 }
 function renderHeader() {
-  $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : state.tab === "library" ? "CBT TECHNIQUE LIBRARY" : activeEmotion().name.toUpperCase();
+  $("#breadcrumb-current").textContent = state.tab === "journal" ? "MY JOURNAL" : state.tab === "home" ? "OVERVIEW" : state.tab === "library" ? "TECHNIQUE LIBRARY" : state.tab === "formulation" ? "THOUGHTS, BELIEFS & SCHEMAS" : activeEmotion().name.toUpperCase();
 }
 function tabs() {
   return `<nav class="section-tabs" aria-label="Workspace sections">${[["overview","Overview"],["techniques","Techniques"],["plan","My plan"],["journal","My notes"]].map(([id,label]) => `<button type="button" aria-pressed="${state.tab === id}" class="section-tab ${state.tab === id ? "selected" : ""}" data-tab="${id}">${label}</button>`).join("")}</nav>`;
@@ -213,18 +213,41 @@ function homePage() {
   ${groups.map(([group,items], index) => `<section class="home-section ${group === "Focused care" ? "focus-section" : ""}"><div class="home-section-heading"><div><div class="eyebrow muted">${index === 0 ? "START WITH WHAT YOU FEEL" : index === 1 ? "RECURRING THINKING PATTERNS" : "SPECIALISED PATTERNS"}</div><h2>${group === "Emotions" ? "Choose an emotion" : group === "Patterns" ? "Work with a pattern" : "Condition-focused spaces"}</h2><p>${group === "Focused care" ? "Disorder-specific methods with stronger clinical boundaries." : "Explore explanations, practical tools, and a structured plan."}</p></div><span>0${index+1} / ${group.toUpperCase()}</span></div><div class="${group === "Focused care" ? "focus-card-grid" : "emotion-card-grid"}">${items.map(e => group === "Focused care" ? `<button type="button" class="focus-card" data-emotion="${e.id}"><span class="focus-card-code">${e.initials}</span><strong>${esc(e.name)}</strong><small>${esc(e.evidence.label)}</small><span class="card-arrow">↗</span></button>` : `<button type="button" class="emotion-card" data-emotion="${e.id}"><span class="emotion-card-initial">${e.initials}</span><span class="emotion-card-copy"><strong>${esc(e.name)}</strong><small>${esc(e.subtitle)}</small></span><span class="emotion-card-arrow">↗</span></button>`).join("")}</div></section>`).join("")}
   <section class="home-disclaimer"><span class="disclaimer-mark">i</span><div><strong>Use this as a skills workspace, not a diagnosis.</strong><p>Self-guided exercises can support reflection and practice, but cannot assess risk, diagnose a condition, or replace personalised care. Some methods on this site are intended to be used with a trained practitioner.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and safety review ↗</a></div></section>`;
 }
+function renderFormulationHub() {
+  const levels = FORMULATION_SECTIONS.find(x => x.id === "levels");
+  const families = groupExercises(FORMULATION_TOOLS);
+  return '<section class="formulation-hero"><div class="eyebrow"><span class="eyebrow-dot"></span>COGNITIVE CONCEPTUALIZATION / SKILL HUB</div><h1>Thoughts, beliefs & schemas<span class="title-period">.</span></h1><p>Learn to spot automatic thoughts, identify intermediate rules, map core beliefs and schemas, and choose a method that fits the pattern you are trying to understand.</p><div class="formulation-hero-metrics"><span><strong>3</strong> cognitive levels</span><span><strong>' + FORMULATION_TOOLS.length + '</strong> guided tools</span><span><strong>7</strong> therapeutic models covered</span></div></section>' +
+  '<div class="formulation-notice"><strong>Start with a specific situation, not a label.</strong><p>A formulation is a revisable explanation of how context, learning history, thoughts, emotions, body responses, behaviours, and coping interact. It is not a diagnosis, personality test, or proof that all distress comes from thinking.</p></div>' +
+  '<section class="formulation-levels"><div class="section-heading"><div><div class="eyebrow muted">THE COGNITIVE MAP</div><h2>From an event to a recurring belief</h2></div><span class="section-index">01 / CONCEPTUALIZE</span></div><div class="belief-level-grid">' +
+  levels.points.map(([name,desc],i) => '<article class="belief-level-card"><span>' + String(i+1).padStart(2,"0") + '</span><h3>' + esc(name) + '</h3><p>' + esc(desc) + '</p></article>').join("") +
+  '</div><p class="formulation-section-note">' + esc(levels.body) + '</p><div class="formulation-citations">' + links(levels.sources) + '</div></section>' +
+  '<section class="formulation-knowledge"><div class="section-heading"><div><div class="eyebrow muted">KNOWLEDGE BASE</div><h2>How to identify and understand patterns</h2></div><span class="section-index">02 / LEARN</span></div>' +
+  FORMULATION_SECTIONS.filter(x=>x.id!=="levels").map((section,i) => '<details class="formulation-knowledge-card" ' + (i===0?'open':'') + '><summary><span><small>' + esc(section.kicker) + '</small><b>' + esc(section.title) + '</b></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><div class="formulation-knowledge-body"><p>' + esc(section.body) + '</p><ul>' +
+  section.points.map(([name,desc]) => '<li><strong>' + esc(name) + '</strong><span>' + esc(desc) + '</span></li>').join("") +
+  '</ul><div class="technique-sources">' + links(section.sources) + '</div></div></details>').join("") + '</section>' +
+  '<section class="formulation-tools"><div class="section-heading"><div><div class="eyebrow muted">INTERACTIVE PRACTICE</div><h2>Tools for each level</h2><p>Choose one method that matches the question you are trying to answer. You do not need to complete them all.</p></div><span class="family-count">' + FORMULATION_TOOLS.length + ' TOOLS</span></div>' +
+  families.map(([family,tools]) => '<section class="exercise-family"><header class="exercise-family-heading"><div><span class="eyebrow muted">METHOD FAMILY</span><h3>' + esc(family) + '</h3><p>' + esc(EXERCISE_FAMILY_NOTES[family]) + '</p></div><span class="family-count">' + tools.length + ' TOOLS</span></header><div class="tool-grid">' +
+  tools.map((tool,index) => toolCard(tool,index,family)).join("") + '</div></section>').join("") + '</section>' +
+  '<section class="formulation-reading"><div class="section-heading"><div><div class="eyebrow muted">FOUNDATIONAL READING</div><h2>Core books and clinical references</h2><p>Books are model references; they do not replace independent research and guideline review.</p></div><span class="section-index">03 / READ</span></div><div class="formulation-book-grid">' +
+  FORMULATION_BOOKS.map(book => '<article class="formulation-book-card"><span class="book-author">' + esc(book.author) + '</span><h3>' + esc(book.title) + '</h3><p>' + esc(book.note) + '</p><div class="technique-sources">' + links([book.source]) + '</div></article>').join("") + '</div></section>' +
+  '<section class="formulation-boundary"><strong>Clinical boundaries</strong><p>Do not use this hub to self-diagnose a schema, infer abuse or childhood causes, or deliberately intensify distress. Imagery rescripting, chair work, trauma processing, and complex mode work require appropriate clinical assessment and practitioner competence. Keep real-world safety, discrimination, illness, and material conditions in the formulation.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></section>';
+}
+
 function render() {
   renderSidebar(); renderHeader(); renderSearchResults();
   if (state.tab === "home") page.innerHTML = homePage();
   else if (state.tab === "journal") page.innerHTML = journalPage();
   else if (state.tab === "library") page.innerHTML = renderTechniqueLibrary();
+  else if (state.tab === "formulation") page.innerHTML = renderFormulationHub();
   else {
     const e = activeEmotion();
     page.innerHTML = hero(e) + tabs() + (state.tab === "techniques" ? techniques(e) : state.tab === "plan" ? planPage(e) : overview(e));
   }
 }
 function openTool(id) {
-  const e = activeEmotion(), tool = e.tools.find(t => t.id === id);
+  const isFormulation = state.tab === "formulation";
+  const e = isFormulation ? { id:"formulation", name:"Thoughts, beliefs & schemas" } : activeEmotion();
+  const tool = isFormulation ? FORMULATION_TOOLS.find(t=>t.id===id) : e.tools.find(t => t.id === id);
   if (!tool) return;
   const schema = WORKSHEETS[tool.worksheet] || WORKSHEETS.reflection;
   const fields = schema.fields.map(([key,label],i) => `<label class="form-field"><span class="field-caption"><b>${String(i+1).padStart(2,"0")}</b><span>${esc(label)}</span></span><textarea name="${esc(key)}" rows="3" aria-label="${esc(label)}" placeholder="A few words or bullet points are enough..." ${i === 0 ? "autofocus" : ""}></textarea></label>`).join("");
@@ -257,7 +280,7 @@ function openPrivacy() {
 }
 function saveWorksheet(form) {
   const e = EMOTIONS.find(x => x.id === form.dataset.emotion);
-  const tool = e?.tools.find(x => x.id === form.dataset.tool);
+  const tool = form.dataset.emotion === "formulation" ? FORMULATION_TOOLS.find(x=>x.id===form.dataset.tool) : e?.tools.find(x => x.id === form.dataset.tool);
   const values = Object.fromEntries(new FormData(form).entries());
   if (!Object.values(values).some(v => String(v).trim())) { toast("Add at least one reflection before saving."); return; }
   const entry = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), emotionId: form.dataset.emotion, toolId: form.dataset.tool, toolTitle: tool?.title || "Practice note", createdAt: new Date().toISOString(), values };
@@ -295,8 +318,9 @@ function action(name) {
 document.addEventListener("click", event => {
   const searchResult = event.target.closest("[data-search-emotion]");
   if (searchResult) {
-    state.active = searchResult.dataset.searchEmotion;
-    state.tab = "overview";
+    const searchEmotion = searchResult.dataset.searchEmotion;
+    if (searchEmotion === "formulation") state.tab = "formulation";
+    else { state.active = searchEmotion; state.tab = "overview"; }
     const toolId = searchResult.dataset.searchTool;
     $("#global-search").value = "";
     saveState(); render();
