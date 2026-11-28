@@ -1356,6 +1356,187 @@ All four tools use a dedicated reflection schema and link to relevant research. 
 - Kavaklı, M., & Cirhinlioglu, F. G. (2025). [The Development and Validation of a Scale to Measure Embarrassment](https://doi.org/10.17066/tpdrd.1588924). Psychometric study; use culturally and methodologically cautiously.
 - Ziegler, A. H., Peloza, J., & Vincent, L. H. (2026; first published online 2025). [The nonlinear effect of consumer embarrassment on avoidance: A meta-analysis](https://doi.org/10.1002/jcpy.70015). *Journal of Consumer Psychology, 36*(2), 237–260. Consumer-context findings, not a clinical CBT trial.
 
+
+# Seventh focused audit — cognitive conceptualization and integrative skills (28 November 2026)
+
+## Scope and evidence discipline
+
+This update reviews the architecture and educational content for automatic thoughts, intermediate beliefs, core beliefs and schemas, and the methods added from cognitive therapy, REBT, ACT, DBT, schema therapy, metacognitive therapy, MBCT and compassion-focused therapy. It draws on clinician manuals and workbooks as well as systematic reviews, randomized trials, and clinical guidance.
+
+This is a targeted product audit, **not a registered systematic review**. The technique directory is a curated teaching and navigation map, not an exhaustive inventory of every published technique. It does not claim that every protocol, adaptation, population, or paper has been identified. The evidence notes must be updated as new guidance and studies emerge. Book descriptions identify foundational or practitioner resources; they do not imply that every exercise in a book has equally strong empirical support.
+
+## 1. The cognitive-conceptualization model
+
+Judith S. Beck's *Cognitive Behavior Therapy: Basics and Beyond* (3rd ed., 2020) and the Beck Institute's cognitive-conceptualization materials inform the new hub. In a typical cognitive formulation, a situation is associated with automatic thoughts or images, emotion, physiology, and behaviour. Repeated meanings may connect to intermediate beliefs—assumptions, attitudes, and rules—and to broader core beliefs. Coping strategies can help maintain or compensate for a belief. Life experiences and current context are relevant, but the diagram is a hypothesis to refine collaboratively, not a deterministic explanation.
+
+The hub presents six teaching layers:
+
+1. **Situation:** observable events and context, including current environmental conditions.
+2. **Automatic thought or image:** a rapid phrase, prediction, memory, mental picture, or felt meaning.
+3. **Personal meaning:** what the thought seems to imply about the event, self, other people, or future.
+4. **Intermediate belief:** conditional assumptions, attitudes, standards, and rules such as “if…then…” or “I must…”.
+5. **Core belief:** a broader, deeply held conclusion about self, other people, or the world.
+6. **Schema or mode:** a wider organising pattern that may shape attention, memory, expectation, emotion, coping, and behaviour.
+
+These layers are useful teaching distinctions, not a compulsory sequence. A person may not experience them in this order; not every distressing situation reveals a core belief; schemas should not be inferred from one event or checklist. Current threat, discrimination, illness, poverty, disability, unsafe relationships, and other external realities belong in the formulation.
+
+### Identifying automatic thoughts accurately
+
+The new automatic-thought tools begin with a specific event and a change in emotion, physiology, attention, or action urge. They prompt the user to recover the closest wording, image, memory, or prediction, and to distinguish what appeared at the time from a later explanation. A missing or uncertain thought is allowed; users are not instructed to invent one.
+
+The downward-arrow method explores personal meaning through guided questions. It can help identify a tentative assumption or core belief, but it is not a test that uncovers one hidden truth. Repeatedly asking “what does that mean?” can become circular, self-critical, or destabilising. The tool therefore discourages forced depth and directs complex or traumatic material towards appropriate clinical support.
+
+### Cognitive distortions are working descriptions, not diagnoses
+
+Terms such as mind-reading, catastrophising, all-or-nothing thinking, overgeneralisation, emotional reasoning, and personalisation are shorthand for reasoning patterns. They do not prove that an appraisal is false. The person must check the specific evidence, probability, context, power dynamics, and real-world consequences. A thought may be painful and accurate; a cognitive exercise must never be used to persuade someone to ignore danger or mistreatment.
+
+### Core-belief and schema formulation
+
+The core-belief map asks for repeated examples across contexts, supporting and disconfirming experiences, coping responses, and a more nuanced working formulation. It avoids fixed labels such as “defective” or “unlovable” becoming an identity assigned by the app.
+
+Schema therapy is related to, but not identical with, standard Beck-style cognitive therapy. Young, Klosko, and Weishaar's *Schema Therapy: A Practitioner's Guide* describes early maladaptive schemas and modes, and combines cognitive, experiential, behavioural, and relational interventions. A 2023 systematic review and meta-analysis included eight randomized trials (587 participants) and seven single-group trials (163 participants). Findings varied with population, comparator, and treatment format; this evidence does not establish that schema therapy is a universal treatment for all recurring patterns.
+
+The product offers schema and mode observation, coping-loop mapping, and low-risk behavioural pattern-breaking. It does **not** turn the app into a schema assessment, childhood-trauma detector, or substitute therapist. Imagery rescripting, chair work, limited reparenting, and intensive mode work are labelled as clinician-delivered or requiring trained support.
+
+## 2. Distinct therapeutic approaches
+
+The expanded directory deliberately separates the **primary exercise family** (what the exercise does) from the **therapeutic approach** (the model in which it is used) and **method status** (core skill, specialist protocol component, or related approach). A thought record may be cognitive; a behavioural experiment is behavioural; either can appear in more than one model with different rationales. A method label is not a treatment recommendation.
+
+### Traditional CBT
+
+The central CBT tools include specific thought records, guided discovery, Socratic questioning, reattribution, downward-arrow questioning, behavioural experiments, activity scheduling, problem-solving, and relapse/maintenance planning. *Mind Over Mood* (2nd ed., Greenberger & Padesky) is included as a structured workbook for thoughts, beliefs, and behaviour; Padesky's clinician guide explains its use in clinical formulation. Beck Institute resources include thought records and conceptualization worksheets.
+
+**Product boundary:** thought records are not forced positivity or reassurance. Behavioural experiments should have a clear prediction, a safe and ethical test, observable evidence, and a proportionate review. They are not dares, humiliation exercises, or instructions to enter unsafe settings.
+
+### Rational Emotive Behaviour Therapy (REBT)
+
+REBT is a distinct cognitive-behavioural model. The ABCDE framework separates the activating event, beliefs, consequences, disputation, and an effective new philosophy. REBT specifically examines rigid demands, awfulising, low frustration tolerance, and global ratings of self or others. Its alternative is flexible preference and unconditional acceptance—not pretending that all outcomes are acceptable or that injustice should be tolerated.
+
+A 2024 systematic review by King and colleagues examined the nature and efficacy of REBT interventions. The studies and outcomes were heterogeneous; a brief ABCDE worksheet should not be presented as equivalent to full REBT treatment.
+
+**Product changes:** ABCDE reflection, logical/empirical/pragmatic disputation, unconditional self- and other-acceptance, rational-emotive imagery references, and applications within anger, anxiety, frustration, guilt, and perfectionism workspaces.
+
+**Safety:** disputation must not minimise genuine danger, deprivation, discrimination, or legitimate needs. Unconditional acceptance of a person is not approval of harmful behaviour.
+
+### Acceptance and Commitment Therapy (ACT)
+
+ACT is organised around psychological flexibility and six interrelated processes: acceptance, cognitive defusion, present-moment contact, self-as-context, values, and committed action. It does not require proving a thought wrong or waiting until symptoms disappear before acting. The ACBS overview and the clinician texts by Hayes, Strosahl, and Wilson, and by Russ Harris, are included.
+
+A 2024 process-focused systematic review and meta-analysis examined 67 unique studies and 9,123 participants. It supports investigation of psychological flexibility and inflexibility as treatment processes, but mediation/mechanism findings do not by themselves prove that a brief stand-alone app exercise is effective. A separate comparative meta-analysis of 34 randomized trials found ACT was not superior to bona fide psychotherapies on the analysed clinical outcomes; this is an important reminder not to market ACT as universally superior.
+
+**Product changes:** acceptance and willingness, choice-point reflection, defusion, self-as-context, values clarification, and committed action. ACT-informed options are placed in emotion and pattern workspaces where the rationale is appropriate.
+
+**Safety:** acceptance is not resignation, submission, tolerating abuse, or abandoning medical care. Values are chosen by the individual and must not become another demand to over-function.
+
+### Dialectical Behavior Therapy (DBT)
+
+DBT combines validation and change within a structured treatment model. Its skills curriculum covers mindfulness, interpersonal effectiveness, emotion regulation, and distress tolerance. Behaviour-chain analysis traces vulnerabilities, prompting events, links, target behaviour, and consequences. Skills such as Check the Facts, Opposite Action, STOP, TIPP, self-soothing, radical acceptance, DEAR MAN, GIVE, FAST, PLEASE, and cope-ahead have specific rationales and conditions for use.
+
+Linehan's revised *DBT Skills Training Manual* and *DBT Skills Training Handouts and Worksheets* (2025) are listed as core practitioner resources. A focused systematic review and meta-analysis of psychotherapies for borderline personality disorder included 31 randomized trials and 1,870 participants; certainty and outcomes varied across interventions. This does not mean that a skills worksheet is equivalent to comprehensive DBT.
+
+**Product changes:** behaviour-chain analysis, Check the Facts, Opposite Action, STOP, selected distress-tolerance skills, radical acceptance, mindfulness, dialectical both-and thinking, validation, and interpersonal-effectiveness tools. TIPP is explicitly marked for caution because intense temperature, breathing, or exertion practices may be medically unsuitable.
+
+**Safety:** standalone DBT-informed skills are not comprehensive DBT, crisis treatment, or a substitute for a safety plan. Self-harm, suicidal behaviour, violence, and other high-risk targets require appropriate professional care. Opposite Action must not be used to override fear of real danger or anger that signals a genuine boundary violation.
+
+### Metacognitive Therapy (MCT)
+
+MCT differs from traditional cognitive restructuring. It targets metacognitive beliefs and the cognitive-attentional syndrome, including persistent worry, rumination, threat monitoring, and strategies used to control thinking. Attention Training Technique and detached mindfulness are model-specific procedures described in Adrian Wells' *Metacognitive Therapy for Anxiety and Depression*.
+
+A 2024 systematic review and meta-analysis included 21 MCT studies and 28 metacognitive-training studies (3,239 participants); these are related but distinct intervention families and should not be collapsed into a single efficacy claim.
+
+**Product changes:** a health-anxiety checking/worry formulation, detached-mindfulness and attention-training references, and tools that distinguish the original concern from beliefs about worrying. These records are educational aids, not a complete MCT protocol.
+
+### Mindfulness-Based Cognitive Therapy (MBCT)
+
+MBCT is a structured programme that combines mindfulness practice and cognitive-therapy ideas. The directory includes brief practices such as a three-minute breathing space and body scan, but the evidence for MBCT concerns a multi-session programme, not the isolated exercise alone. The 2016 individual-patient-data meta-analysis by Kuyken and colleagues evaluated relapse prevention in recurrent depression; the 2015 PREVENT trial compared MBCT with maintenance antidepressant treatment.
+
+**Product boundary:** the site does not imply that a short breathing-space exercise or body scan prevents relapse or treats depression by itself. Breath and body focus can be uncomfortable for some people; external grounding or a different support strategy may be more suitable.
+
+### Compassion-Focused Therapy (CFT)
+
+CFT uses compassion-focused methods to address shame, self-criticism, and threat-based self-relating. The early systematic review by Leaviss and Uttley (2015) included 14 studies, three randomized trials, and concluded that the approach was promising while calling for larger, higher-quality studies. The product therefore presents compassionate imagery and writing as supportive methods with a developing evidence base, not as established stand-alone cures.
+
+### Specialist and diagnosis-specific protocols
+
+Some techniques are components of specific clinical protocols rather than universal self-help tools. Examples include ERP for OCD, interoceptive exposure in panic-focused CBT, trauma-focused exposure, CBT-I components, habit-reversal training for body-focused repetitive behaviours, and CBT-ED. The directory labels these as specialist components and retains their clinical cautions. It must not supply unsupervised hierarchies or procedures where assessment, monitoring, or practitioner training is required.
+
+## 3. Changes to the application architecture
+
+### Exercise taxonomy
+
+Every emotion workspace now displays its exercises grouped under one primary intervention family:
+
+1. Assessment and formulation
+2. Cognitive methods
+3. Behavioural methods
+4. Imagery and memory methods
+5. Attention and metacognitive methods
+6. Emotion regulation and distress tolerance
+7. Acceptance and values
+8. Interpersonal and communication methods
+
+The primary family is a navigation choice, not a claim that the tool uses only one mechanism. The approach label remains separate. The technique directory can be filtered independently by exercise family and by therapeutic approach.
+
+### Dedicated thoughts, beliefs, and schemas hub
+
+A new sidebar destination contains teaching material on automatic-thought identification, the personal-meaning ladder, intermediate beliefs and rules, core beliefs, schemas and modes, thinking patterns, and maintenance loops. It includes 13 guided tools and an 11-book reading list. The global search indexes those tools as well as the emotion workspaces and the technique directory.
+
+### Current catalogue
+
+| Component | Current count |
+|---|---:|
+| Emotion and specialist workspaces | 26 |
+| Emotion-specific guided exercises | 192 |
+| Thought/belief formulation exercises | 13 |
+| Total guided exercises | 205 |
+| Indexed technique-directory methods | 83 |
+| Primary exercise families | 8 |
+| Linked source records | 85 |
+| Foundational books in the formulation hub | 11 |
+
+All new and existing exercise tools must have a valid worksheet, a usage context, a substantive evidence note, and valid source identifiers. Higher-risk clinical areas retain specific safety boundaries. These numerical counts describe the current catalogue, not a claim of complete coverage of the literature.
+
+## 4. Selected books, reviews, and guidance
+
+### Core CBT and conceptualization
+- Beck, J. S. (2020). *Cognitive Behavior Therapy: Basics and Beyond* (3rd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/Cognitive-Behavior-Therapy/Judith-Beck/9781462544196).
+- Greenberger, D., & Padesky, C. A. (2015). *Mind Over Mood* (2nd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/Mind-Over-Mood/Greenberger-Padesky/9781462520428).
+- Padesky, C. A. (2020). *The Clinician's Guide to CBT Using Mind Over Mood* (2nd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/The-Clinicians-Guide-CBT-Using-Mind-Over-Mood/Christine-Padesky/9781462542574).
+- Beck, A. T., Rush, A. J., Shaw, B. F., Emery, G., DeRubeis, R. J., & Hollon, S. D. (2024). *Cognitive Therapy of Depression* (2nd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/Cognitive-Therapy-of-Depression/Beck-Rush-Shaw-Emery/9781572305823).
+- Beck Institute. [CBT resources and worksheets](https://beckinstitute.org/cbt-resources/resources-for-professionals-and-students/cbtresources/) and [Cognitive Conceptualization Diagram](https://beckinstitute.org/wp-content/uploads/2022/10/Traditional-CCD-Fillable.pdf).
+
+### Schema therapy
+- Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). *Schema Therapy: A Practitioner's Guide*. Guilford Press. [Publisher page](https://www.guilford.com/books/Schema-Therapy/Young-Klosko-Weishaar/9781593853723).
+- *A systematic review and meta-analysis of schema therapy for personality disorders* (2023). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/37402124/).
+
+### REBT
+- Ellis, A., & Dryden, W. (1997). *The Practice of Rational Emotive Behaviour Therapy* (2nd ed.). Springer.
+- King, A. M., Plateau, C. R., Turner, M. J., Young, P., & Barker, J. B. (2024). A systematic review of the nature and efficacy of Rational Emotive Behaviour Therapy interventions. *PLOS ONE, 19*(7), e0306835. [DOI](https://doi.org/10.1371/journal.pone.0306835).
+
+### ACT
+- Hayes, S. C., Strosahl, K. D., & Wilson, K. G. (2012). *Acceptance and Commitment Therapy: The Process and Practice of Mindful Change* (2nd ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943).
+- Harris, R. (2019). *ACT Made Simple* (2nd ed., revised). New Harbinger Publications. [Publisher page](https://www.newharbinger.com/9781684033010/act-made-simple/).
+- Association for Contextual Behavioral Science. [Six core ACT processes](https://contextualscience.org/six_core_processes_act).
+- *Systematic review and meta-analysis of psychological flexibility and inflexibility as treatment mechanisms in ACT* (2024). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/38615492/).
+
+### DBT
+- Linehan, M. M. (2025). *DBT Skills Training Manual* (Revised ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462556359).
+- Linehan, M. M. (2025). *DBT Skills Training Handouts and Worksheets* (Revised ed.). Guilford Press. [Publisher page](https://www.guilford.com/books/DBT-Skills-Training-Handouts-and-Worksheets/Marsha-Linehan/9781462556342).
+- *Psychotherapies for borderline personality disorder: focused systematic review and meta-analysis* (2022). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/35088687/).
+
+### MCT, MBCT, and CFT
+- Wells, A. (2008). *Metacognitive Therapy for Anxiety and Depression*. Guilford Press. [Publisher page](https://www.guilford.com/books/Metacognitive-Therapy-for-Anxiety-and-Depression/Adrian-Wells/9781609184964).
+- *Systematic review and meta-analysis of metacognitive interventions for adults with psychiatric disorders* (2024). [PubMed record](https://pubmed.ncbi.nlm.nih.gov/39692039/).
+- Kuyken, W., Warren, F. C., Taylor, R. S., et al. (2016). Efficacy of MBCT in prevention of depressive relapse: an individual patient data meta-analysis. *JAMA Psychiatry, 73*(6), 565–574. [DOI](https://doi.org/10.1001/jamapsychiatry.2016.0076).
+- Leaviss, J., & Uttley, L. (2015). Psychotherapeutic benefits of compassion-focused therapy: an early systematic review. *Psychological Medicine, 45*(5), 927–945. [DOI](https://doi.org/10.1017/S0033291714002141).
+
+### Clinical guidance
+- NICE CG159. [Social anxiety disorder: recognition, assessment and treatment](https://www.nice.org.uk/guidance/cg159/chapter/recommendations).
+- NICE CG31. [Obsessive-compulsive disorder and body dysmorphic disorder](https://www.nice.org.uk/guidance/cg31/chapter/Recommendations).
+- NICE NG116. [Post-traumatic stress disorder](https://www.nice.org.uk/guidance/ng116/chapter/Recommendations).
+- NICE NG222. [Depression in adults: treatment and management](https://www.nice.org.uk/guidance/ng222/chapter/recommendations).
+- NICE NG87. [Attention deficit hyperactivity disorder: diagnosis and management](https://www.nice.org.uk/guidance/ng87/chapter/recommendations).
+
 ## Remaining work and acceptance criteria
 
 The next quality phase should include real browser testing on desktop and narrow mobile screens, keyboard-only walkthroughs, screen-reader checks, contrast testing, and an automated accessibility scan. The site should also test storage quota failures, unavailable storage, corrupted saved data, export integrity, and long tool titles or prompt labels. Automated unit and smoke tests are necessary but cannot establish visual quality or accessibility by themselves.
