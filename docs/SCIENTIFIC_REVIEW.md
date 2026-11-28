@@ -1482,7 +1482,7 @@ The primary family is a navigation choice, not a claim that the tool uses only o
 
 ### Dedicated thoughts, beliefs, and schemas hub
 
-A new sidebar destination contains teaching material on automatic-thought identification, the personal-meaning ladder, intermediate beliefs and rules, core beliefs, schemas and modes, thinking patterns, and maintenance loops. It includes 13 guided tools and an 11-book reading list. The global search indexes those tools as well as the emotion workspaces and the technique directory.
+A new sidebar destination contains teaching material on automatic-thought identification, the personal-meaning ladder, intermediate beliefs and rules, core beliefs, schemas and modes, thinking patterns, and maintenance loops. It includes 20 guided tools, a structured thought-spotting protocol, worked examples, and troubleshooting guidance. The application no longer presents a standalone foundational-reading section; sources remain linked alongside the concepts and methods they support. The global search indexes those tools as well as the emotion workspaces and the technique directory.
 
 ### Current catalogue
 
@@ -1491,10 +1491,10 @@ A new sidebar destination contains teaching material on automatic-thought identi
 | Emotion and specialist workspaces | 26 |
 | Emotion-specific guided exercises | 192 |
 | Thought/belief formulation exercises | 13 |
-| Total guided exercises | 206 |
+| Total guided exercises | 212 |
 | Indexed technique-directory methods | 91 |
 | Primary exercise families | 8 |
-| Linked source records | 87 |
+| Linked source records | 91 |
 | Foundational books in the formulation hub | 11 |
 
 All new and existing exercise tools must have a valid worksheet, a usage context, a substantive evidence note, and valid source identifiers. Higher-risk clinical areas retain specific safety boundaries. These numerical counts describe the current catalogue, not a claim of complete coverage of the literature.
@@ -1558,6 +1558,142 @@ The DBT catalogue was extended beyond the initial skills to include Wise Mind, I
 The ACT Drop Anchor exercise and REBT rational coping statements were also added. Drop Anchor is a brief present-moment exercise; it is not intended to remove emotion by force. REBT coping statements should follow a reasoned evaluation of a specific belief and must not turn into rote reassurance.
 
 The directory now contains **91 indexed methods** across the eight exercise families. This increases the breadth of the catalogue, not the evidence strength of every method. The DBT 2025 manuals remain the direct source for the new DBT skill descriptions; the 2022 psychotherapy meta-analysis provides context for clinical evidence but does not validate every individual skills handout as a stand-alone intervention.
+
+
+# Eighth focused audit — method guides and automatic-thought formulation (28 November 2026)
+
+## Scope and approach
+
+This focused product audit deepens two user-facing resources: the therapeutic method explorer and the thoughts, beliefs and schemas hub. It draws on current clinician resources and worksheets, practitioner manuals, NICE guidance, and a 2025 clinical guide to behavioural experiments. It is a targeted content and design audit, not a registered systematic review. It does not claim to list every intervention ever published or to establish the efficacy of each individual exercise.
+
+## 1. Automatic thoughts: what the hub now teaches
+
+The new field guide is based on the Beck cognitive model and its practical worksheets. The Beck Institute's model distinguishes the situation, automatic thoughts and images, and emotional, behavioural and physiological reactions. The *Mind Over Mood* automatic-thought worksheet similarly separates a specific situation, mood intensity and the thought or image associated with it. This is important because people often report a blended statement such as “I felt anxious because everything was awful,” which does not yet identify the moment-specific appraisal.
+
+The guide now teaches eight possible recognition cues: an emotion shift, bodily change, action urge, mental image, narrowed attention, post-event replay, sudden need for action, or a recurring theme. These are prompts to investigate, not proof that a particular thought occurred.
+
+It distinguishes six useful forms:
+- a verbal automatic thought;
+- a prediction about the future or another person's response;
+- a mental image or imagined scene;
+- a memory or remembered scene;
+- a personal meaning or implication;
+- an extended worry or rumination process.
+
+This avoids the common error of assuming that every automatic cognition must be a sentence. Padesky's clinical work on imagery in thought records supports asking about images and the meaning they carry, especially when a verbal thought does not fully account for the emotional response.
+
+## 2. A more disciplined thought-elicitation sequence
+
+The hub now offers a seven-stage protocol:
+
+1. Choose one specific, recent situation rather than a broad life problem.
+2. Locate the moment the emotion, body response, attention or action urge changed.
+3. Ask what went through the mind just before or during that change.
+4. Look for words, pictures, memories, predictions or implied meanings.
+5. Record the closest wording or image without editing it into a more reasonable statement.
+6. When several thoughts appear, select the one most closely connected to one chosen emotion or behaviour; rate thought conviction separately from emotional intensity.
+7. Decide whether the useful next step is a thought record, belief map, behavioural experiment, metacognitive method, or no further analysis.
+
+The guide explicitly allows “I don't know” or a blank thought field. Repeated questioning can create an answer that was not actually present, and forced searching can increase rumination. The appropriate response to an unclear thought may be to observe another episode, clarify the event, or stop.
+
+### Separating components accurately
+
+A thought is not an emotion. An emotion is not a bodily sensation. An action urge is not the action itself. The updated interface provides side-by-side prompts for:
+- observable situation;
+- automatic thought or image;
+- emotion and intensity;
+- body response;
+- action urge or behaviour;
+- personal meaning.
+
+This follows the Beck cognitive model while keeping causal links provisional. The application should not imply that every bodily symptom is caused by cognition or that every emotion has one identifiable thought.
+
+### Finding the emotionally central thought
+
+When several appraisals appear, the new “hot thought” exercise helps identify which thought best explains one particular emotion or action urge. It does not automatically select the most dramatic thought. A second thought about the first reaction may also be important; a sequence map therefore separates initial and secondary thoughts rather than collapsing them into one statement.
+
+### Context-sensitive prompts and troubleshooting
+
+The question bank is divided into general elicitation, anxiety/fear, anger/injustice, shame/embarrassment, guilt/responsibility, and imagery/memory. The troubleshooting section addresses:
+- “Nothing went through my mind.”
+- only being able to name an emotion;
+- giving a long retrospective explanation;
+- several thoughts appearing together;
+- treating an inference as a fact;
+- uncertainty about whether the experience was a thought or image;
+- distress, repetitive replay or reassurance-seeking during the exercise.
+
+The correct response is not to push harder. Return to the observable event, change the question, record uncertainty, or stop. For OCD and other compulsive loops, repeated thought evaluation can itself become reassurance or checking.
+
+## 3. From automatic thoughts to beliefs without over-interpreting
+
+The hub connects a moment-specific thought to personal meaning, intermediate beliefs, core beliefs and broader schema/mode formulation. The sequence is presented as a possible conceptual map, not a compulsory ladder.
+
+New guided tools cover:
+- sorting situation, thought, emotion, body and behaviour;
+- identifying the emotionally central thought;
+- mapping initial and secondary thoughts;
+- comparing separate episodes to identify an intermediate rule;
+- using a continuum to examine a global belief;
+- building a Socratic/guided-discovery question sequence.
+
+A candidate assumption or core belief should recur across contexts and help explain patterns of prediction or coping. Counterexamples, cultural context, discrimination, unsafe relationships, illness, disability and material conditions must be included. The hub does not assign schema diagnoses or infer childhood causes.
+
+## 4. The method explorer: from method names to usable guides
+
+All **91** directory methods now have a detailed guide record. Each guide includes:
+- **Target and rationale:** what process the method is intended to address and why it may fit;
+- **Application sequence:** practical steps in a sensible order;
+- **Focused questions:** prompts that sharpen the task rather than generic reflection questions;
+- **What to review:** the kind of learning or outcome to look for;
+- **Common traps and limits:** errors, misuse and contextual cautions;
+- **Evidence scope:** whether the method is a core CBT procedure, an ACT/REBT/DBT/MCT/MBCT/schema/CFT process, or part of a specialist protocol.
+
+The method explorer begins with a “choose by the question” compass and then allows independent filtering by intervention family and therapeutic model/protocol. This helps prevent a method from being selected just because its name is familiar. Global search now indexes the detailed guide content, not only the title and short description.
+
+### Method-specific reasoning
+
+The guides distinguish, for example:
+- cognitive restructuring from ACT defusion;
+- cognitive appraisal from MCT attention training and detached mindfulness;
+- a general behavioural experiment from clinical exposure and from OCD ERP;
+- DBT distress-tolerance skills from the full DBT treatment programme;
+- identifying a mental image from imagery rescripting;
+- schema-mode observation from clinician-delivered chair work and limited reparenting.
+
+The same surface action can serve a different function in a different model. The application therefore preserves a separate method-family label, therapeutic approach label, and method-status label.
+
+## 5. Evidence and clinical boundaries
+
+The expanded guides are not claims that every individual technique is a stand-alone evidence-based treatment. Evidence for a multi-session treatment package does not automatically validate one isolated worksheet. This is especially important for interoceptive exposure, trauma-memory processing, OCD ERP, CBT-I components, eating-disorder procedures, and specialist schema interventions.
+
+The updated content links thought elicitation to the Beck Institute's cognitive model and worksheets, *Mind Over Mood* worksheet 7.3, and Padesky's work on imagery in thought records. It links behavioural experiments to a 2025 clinical guide describing formulation-driven prediction testing and review. NICE guidance remains the relevant boundary for condition-specific social-anxiety treatment, OCD, PTSD and other specialist care.
+
+## 6. User-interface changes
+
+The “Foundational Reading / Core books and clinical references” block has been removed from the thoughts-and-beliefs hub. The hub is now organised around the learning and practice workflow rather than a list of books. Sources remain available alongside the concepts and methods they support, preserving traceability without making a reading list a central product section.
+
+## 7. Updated catalogue
+
+| Component | Current count |
+|---|---:|
+| Emotion and specialist workspaces | 26 |
+| Emotion-specific exercises | 192 |
+| Formulation and thought-spotting tools | 20 |
+| Total interactive guided exercises | 212 |
+| Detailed therapeutic method guides | 91 |
+| Thought-spotting recognition cues | 8 |
+| Thought-spotting protocol stages | 7 |
+| Context-specific question sets | 6 |
+| Troubleshooting entries | 7 |
+| Worked examples | 3 |
+| Linked source records | 91 |
+
+Counts describe the current application catalogue, not coverage of the entire psychotherapy literature.
+
+## 8. Further acceptance criteria
+
+Every method guide should continue to have a target, a practical sequence, focused questions, a review criterion, common pitfalls and evidence-scope statement. Every thought-spotting concept and tool should distinguish observation from interpretation, permit uncertainty, avoid forced depth and preserve the option to stop. Every method and formulation tool must resolve to valid source identifiers; every interactive tool must resolve to a worksheet with complete field labels. Real-browser, mobile, keyboard, screen-reader and accessibility testing remains necessary beyond the content and syntax checks.
 
 ## Remaining work and acceptance criteria
 
