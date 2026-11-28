@@ -156,7 +156,7 @@ function renderTechniqueLibrary() {
   const visible = CORE_TECHNIQUES.filter(item => {
     const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
     const approachMatch = state.libraryApproach === "All" || item.approach === state.libraryApproach;
-    const searchText = [item.title,item.classification,item.methodType,item.approach,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
+    const searchText = [item.title,item.methodType,item.approach,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
     return categoryMatch && approachMatch && (!query || searchText.includes(query));
   });
   return `<section class="library-hero">
