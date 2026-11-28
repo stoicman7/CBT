@@ -173,7 +173,7 @@ function renderTechniqueLibrary() {
     ["Move towards a chosen direction","Acceptance & values","Make room for internal experiences and take a values-consistent step."],
     ["Handle a difficult interaction","Interpersonal & communication","Practise requests, boundaries, validation and repair where safe."]
   ];
-  return \`<section class="library-hero method-explorer-hero">
+  return `<section class="library-hero method-explorer-hero">
     <div class="eyebrow"><span class="eyebrow-dot"></span>METHOD EXPLORER / CLINICAL SKILL MAP</div>
     <h1>Explore the methods<span class="title-period">.</span></h1>
     <p>Go beyond a technique name. Each guide explains what the method targets, how to apply it, the questions that sharpen the work, what to review afterwards, and where its limits matter.</p>
@@ -181,17 +181,17 @@ function renderTechniqueLibrary() {
   </section>
   <section class="method-compass">
     <div class="section-heading"><div><div class="eyebrow muted">CHOOSE BY THE QUESTION</div><h2>What are you trying to change?</h2><p>Start with the process maintaining the difficulty—not with the most familiar technique.</p></div><span class="section-index">01 / ORIENT</span></div>
-    <div class="method-compass-grid">${compass.map(([title,family,note])=>\`<button type="button" class="method-compass-card" data-library-category="${esc(family)}"><span>${esc(family)}</span><strong>${esc(title)}</strong><small>${esc(note)}</small></button>\`).join("")}</div>
+    <div class="method-compass-grid">${compass.map(([title,family,note])=>`<button type="button" class="method-compass-card" data-library-category="${esc(family)}"><span>${esc(family)}</span><strong>${esc(title)}</strong><small>${esc(note)}</small></button>`).join("")}</div>
   </section>
   <div class="library-notice"><strong>How to use a method guide</strong><p>First clarify the target and the person's formulation. Then choose one method that fits, agree a small and safe practice, observe what happens, and review the learning. Similar-looking techniques may have different rationales across CBT, REBT, ACT, DBT, MCT, MBCT and schema therapy. A technique is not a treatment by itself.</p></div>
   <div class="library-toolbar">
-    <div class="library-filter-block"><span class="library-filter-label">Filter by intervention family</span><div class="library-filters" role="group" aria-label="Filter methods by intervention family">${categories.map(category=>\`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>\`).join("")}</div></div>
-    <div class="library-filter-block"><span class="library-filter-label">Filter by therapeutic model or protocol</span><div class="library-filters library-approaches" role="group" aria-label="Filter methods by therapeutic model or protocol">${approaches.map(approach=>\`<button type="button" class="library-filter ${state.libraryApproach===approach?"active":""}" data-library-approach="${esc(approach)}">${esc(approach)}</button>\`).join("")}</div></div>
+    <div class="library-filter-block"><span class="library-filter-label">Filter by intervention family</span><div class="library-filters" role="group" aria-label="Filter methods by intervention family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div></div>
+    <div class="library-filter-block"><span class="library-filter-label">Filter by therapeutic model or protocol</span><div class="library-filters library-approaches" role="group" aria-label="Filter methods by therapeutic model or protocol">${approaches.map(approach=>`<button type="button" class="library-filter ${state.libraryApproach===approach?"active":""}" data-library-approach="${esc(approach)}">${esc(approach)}</button>`).join("")}</div></div>
     <span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span>
   </div>
-  ${visible.length ? \`<div class="library-grid method-guide-grid">${visible.map(item=>{
+  ${visible.length ? `<div class="library-grid method-guide-grid">${visible.map(item=>{
     const guide = TECHNIQUE_GUIDES[item.id];
-    return \`<article class="library-card method-guide-card">
+    return `<article class="library-card method-guide-card">
       <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.methodType === "Specialist protocol component" ? "specialist" : item.methodType === "Core CBT method" ? "core" : "related"}">${esc(item.methodType)}</span><span class="library-approach">${esc(item.approach)}</span></div>
       <h3>${esc(item.title)}</h3>
       <p class="method-card-aim">${esc(item.description)}</p>
@@ -200,17 +200,17 @@ function renderTechniqueLibrary() {
         <summary><span><b>Explore the full method</b><small>Rationale · sequence · questions · review · limits</small></span><span class="evidence-toggle" aria-hidden="true">+</span></summary>
         <div class="method-explainer-body">
           <section class="method-detail-block"><span class="method-detail-label">01 / TARGET AND RATIONALE</span><p>${esc(guide.aim)}</p></section>
-          <section class="method-detail-block"><span class="method-detail-label">02 / HOW TO APPLY IT</span><ol class="method-procedure-list">${guide.steps.map((step,i)=>\`<li><span>${String(i+1).padStart(2,"0")}</span><p>${esc(step)}</p></li>\`).join("")}</ol></section>
-          <section class="method-detail-block"><span class="method-detail-label">03 / QUESTIONS THAT SHARPEN THE WORK</span><ul class="method-question-list">${guide.questions.map(q=>\`<li>${esc(q)}</li>\`).join("")}</ul></section>
+          <section class="method-detail-block"><span class="method-detail-label">02 / HOW TO APPLY IT</span><ol class="method-procedure-list">${guide.steps.map((step,i)=>`<li><span>${String(i+1).padStart(2,"0")}</span><p>${esc(step)}</p></li>`).join("")}</ol></section>
+          <section class="method-detail-block"><span class="method-detail-label">03 / QUESTIONS THAT SHARPEN THE WORK</span><ul class="method-question-list">${guide.questions.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></section>
           <section class="method-detail-block"><span class="method-detail-label">04 / WHAT TO REVIEW</span><p>${esc(guide.review)}</p></section>
           <section class="method-detail-block method-pitfall-block"><span class="method-detail-label">05 / COMMON TRAPS AND BOUNDARIES</span><p>${esc(guide.pitfalls)}</p><p>${esc(item.caution)}</p></section>
-          <section class="method-detail-block method-evidence-block"><span class="method-detail-label">06 / EVIDENCE AND SCOPE</span><p>${esc(guide.evidenceScope)}</p>${item.evidenceNote ? \`<p>${esc(item.evidenceNote)}</p>\` : ""}</section>
+          <section class="method-detail-block method-evidence-block"><span class="method-detail-label">06 / EVIDENCE AND SCOPE</span><p>${esc(guide.evidenceScope)}</p>${item.evidenceNote ? `<p>${esc(item.evidenceNote)}</p>` : ""}</section>
           <div class="technique-sources">${links(item.sources)}</div>
         </div>
       </details>
-    </article>\`;
-  }).join("")}</div>\` : \`<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different intervention family or model.</p></div>\`}
-  <div class="library-note"><strong>Clinical scope</strong><p>Match the method to the person's formulation, goals, preferences, culture, risk and access to care. Specialist protocol components require appropriate assessment and delivery. The evidence for a complete treatment package does not automatically establish the effectiveness of one isolated technique.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></div>\`;
+    </article>`;
+  }).join("")}</div>` : `<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different intervention family or model.</p></div>`}
+  <div class="library-note"><strong>Clinical scope</strong><p>Match the method to the person's formulation, goals, preferences, culture, risk and access to care. Specialist protocol components require appropriate assessment and delivery. The evidence for a complete treatment package does not automatically establish the effectiveness of one isolated technique.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></div>`;
 }
 
 function planPage(e) {
