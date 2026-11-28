@@ -104,7 +104,7 @@ function renderSearchResults() {
   }
   const ordered = [...hits.filter(hit => hit.tool), ...hits.filter(hit => !hit.tool)].slice(0, 9);
   results.innerHTML = ordered.length
-    ? ordered.map(({ emotion, tool, kind }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-kind="${esc(kind || "emotion")}" data-search-tool="${esc(tool?.id || "")}" data-search-title="${esc(tool?.title || "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? esc(kind === "library" ? tool.approach : kind === "formulation" ? "Formulation exercise" : "Interactive exercise") : "Workspace"}</small></button>`).join("")
+    ? ordered.map(({ emotion, tool, kind }) => `<button type="button" class="search-result" role="option" aria-selected="false" data-search-emotion="${esc(emotion.id)}" data-search-kind="${esc(kind || "emotion")}" data-search-tool="${esc(tool?.id || "")}" data-search-category="${esc(kind === "library" ? tool.category : "")}" data-search-approach="${esc(kind === "library" ? tool.approach : "")}"><span class="search-result-main">${esc(tool?.title || emotion.name)}</span><small>${esc(emotion.name)} · ${tool ? esc(kind === "library" ? tool.approach : kind === "formulation" ? "Formulation exercise" : "Interactive exercise") : "Workspace"}</small></button>`).join("")
     : '<div class="search-no-results">No matching tools or workspaces.</div>';
   results.hidden = false;
   input.setAttribute("aria-expanded", "true");
@@ -314,8 +314,10 @@ document.addEventListener("click", event => {
     const searchKind = searchResult.dataset.searchKind || "emotion";
     const toolId = searchResult.dataset.searchTool;
     if (searchKind === "library") {
-      state.tab = "library"; state.libraryCategory = "All"; state.libraryApproach = "All";
-      $("#global-search").value = searchResult.dataset.searchTitle || "";
+      state.tab = "library";
+      state.libraryCategory = searchResult.dataset.searchCategory || "All";
+      state.libraryApproach = searchResult.dataset.searchApproach || "All";
+      $("#global-search").value = "";
     } else if (searchKind === "formulation") {
       state.tab = "formulation"; $("#global-search").value = "";
     } else {
