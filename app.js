@@ -1,7 +1,9 @@
 import { EMOTIONS, SOURCES, WORKSHEETS } from "./data.js";
 import { CORE_TECHNIQUES } from "./technique-library.js";
-import { FORMULATION_SECTIONS, FORMULATION_TOOLS, FORMULATION_BOOKS } from "./formulation.js";
+import { FORMULATION_SECTIONS, FORMULATION_TOOLS } from "./formulation.js";
 import { EXERCISE_FAMILY_ORDER, EXERCISE_FAMILY_NOTES, exerciseFamily, groupExercises } from "./exercise-taxonomy.js";
+import { TECHNIQUE_GUIDES } from "./technique-guides.js";
+import { THOUGHT_SPOTTING_GUIDE } from "./automatic-thought-guide.js";
 
 const KEY = "cbt-workspace-v1";
 const defaults = { active: "anger", tab: "home", entries: [], checkins: [], completed: {}, libraryCategory: "All", libraryApproach: "All" };
@@ -154,33 +156,61 @@ function renderTechniqueLibrary() {
   const categories = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.category))];
   const approaches = ["All", ...new Set(CORE_TECHNIQUES.map(item => item.approach))];
   const visible = CORE_TECHNIQUES.filter(item => {
+    const guide = TECHNIQUE_GUIDES[item.id];
     const categoryMatch = state.libraryCategory === "All" || item.category === state.libraryCategory;
     const approachMatch = state.libraryApproach === "All" || item.approach === state.libraryApproach;
-    const searchText = [item.title,item.methodType,item.approach,item.category,item.description,item.when,item.caution].join(" ").toLowerCase();
+    const guideText = guide ? [guide.aim, ...(guide.steps||[]), ...(guide.questions||[]), guide.review, guide.pitfalls] : [];
+    const searchText = [item.title,item.methodType,item.approach,item.category,item.description,item.when,item.caution,item.evidenceNote,...guideText].join(" ").toLowerCase();
     return categoryMatch && approachMatch && (!query || searchText.includes(query));
   });
-  return `<section class="library-hero">
-    <div class="eyebrow"><span class="eyebrow-dot"></span>REFERENCE DIRECTORY / THERAPEUTIC METHODS</div>
-    <h1>Therapeutic technique library<span class="title-period">.</span></h1>
-    <p>Browse methods by what they do, then filter by the therapeutic model they come from. Specialist protocols and related approaches are distinguished from core CBT methods.</p>
-    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> indexed methods</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.category)).size}</strong> exercise families</span><span><strong>${new Set(CORE_TECHNIQUES.map(x=>x.approach)).size}</strong> model / protocol labels</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.methodType === "Specialist protocol component").length}</strong> specialist components</span></div>
+  const compass = [
+    ["Understand a repeating pattern","Assessment & formulation","Map the sequence and what keeps it going."],
+    ["Examine an appraisal or rule","Cognitive methods","Clarify the exact thought, meaning or assumption and test it fairly."],
+    ["Test a prediction or change a habit","Behavioural methods","Use an observable, proportionate action to learn or practise a new response."],
+    ["Work with a mental picture","Imagery & memory methods","Identify what an image means; specialist memory work requires trained care."],
+    ["Interrupt worry or rigid attention","Attention & metacognitive methods","Change how attention engages with repetitive thinking."],
+    ["Respond to intense emotion or urges","Emotion regulation & distress tolerance","Choose a skill that fits the facts, safety and immediate need."],
+    ["Move towards a chosen direction","Acceptance & values","Make room for internal experiences and take a values-consistent step."],
+    ["Handle a difficult interaction","Interpersonal & communication","Practise requests, boundaries, validation and repair where safe."]
+  ];
+  return \`<section class="library-hero method-explorer-hero">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>METHOD EXPLORER / CLINICAL SKILL MAP</div>
+    <h1>Explore the methods<span class="title-period">.</span></h1>
+    <p>Go beyond a technique name. Each guide explains what the method targets, how to apply it, the questions that sharpen the work, what to review afterwards, and where its limits matter.</p>
+    <div class="library-metrics"><span><strong>${CORE_TECHNIQUES.length}</strong> method guides</span><span><strong>${categories.length-1}</strong> intervention families</span><span><strong>${approaches.length-1}</strong> models / protocols</span><span><strong>${CORE_TECHNIQUES.filter(x=>x.methodType === "Specialist protocol component").length}</strong> specialist components</span></div>
   </section>
-  <div class="library-notice"><strong>How to use this directory</strong><p>There is no single finite list of every therapeutic technique: manuals and diagnosis-specific protocols contain overlapping procedures and variations. This directory assigns a primary exercise family, labels the therapeutic approach separately, and distinguishes core methods from specialist protocol components. Some procedures require a trained clinician.</p></div>
+  <section class="method-compass">
+    <div class="section-heading"><div><div class="eyebrow muted">CHOOSE BY THE QUESTION</div><h2>What are you trying to change?</h2><p>Start with the process maintaining the difficulty—not with the most familiar technique.</p></div><span class="section-index">01 / ORIENT</span></div>
+    <div class="method-compass-grid">${compass.map(([title,family,note])=>\`<button type="button" class="method-compass-card" data-library-category="${esc(family)}"><span>${esc(family)}</span><strong>${esc(title)}</strong><small>${esc(note)}</small></button>\`).join("")}</div>
+  </section>
+  <div class="library-notice"><strong>How to use a method guide</strong><p>First clarify the target and the person's formulation. Then choose one method that fits, agree a small and safe practice, observe what happens, and review the learning. Similar-looking techniques may have different rationales across CBT, REBT, ACT, DBT, MCT, MBCT and schema therapy. A technique is not a treatment by itself.</p></div>
   <div class="library-toolbar">
-    <div class="library-filter-block"><span class="library-filter-label">Filter by exercise family</span><div class="library-filters" role="group" aria-label="Filter methods by exercise family">${categories.map(category=>`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>`).join("")}</div></div>
-    <div class="library-filter-block"><span class="library-filter-label">Filter by therapeutic model or protocol</span><div class="library-filters library-approaches" role="group" aria-label="Filter methods by therapeutic approach">${approaches.map(approach=>`<button type="button" class="library-filter ${state.libraryApproach===approach?"active":""}" data-library-approach="${esc(approach)}">${esc(approach)}</button>`).join("")}</div></div>
+    <div class="library-filter-block"><span class="library-filter-label">Filter by intervention family</span><div class="library-filters" role="group" aria-label="Filter methods by intervention family">${categories.map(category=>\`<button type="button" class="library-filter ${state.libraryCategory===category?"active":""}" data-library-category="${esc(category)}">${esc(category)}</button>\`).join("")}</div></div>
+    <div class="library-filter-block"><span class="library-filter-label">Filter by therapeutic model or protocol</span><div class="library-filters library-approaches" role="group" aria-label="Filter methods by therapeutic model or protocol">${approaches.map(approach=>\`<button type="button" class="library-filter ${state.libraryApproach===approach?"active":""}" data-library-approach="${esc(approach)}">${esc(approach)}</button>\`).join("")}</div></div>
     <span class="library-result-count">${visible.length} OF ${CORE_TECHNIQUES.length} METHODS</span>
   </div>
-  ${visible.length ? `<div class="library-grid">${visible.map(item=>`<article class="library-card">
-    <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.methodType === "Specialist protocol component" ? "specialist" : item.methodType === "Core CBT method" ? "core" : "related"}">${esc(item.methodType)}</span><span class="library-approach">${esc(item.approach)}</span></div>
-    <h3>${esc(item.title)}</h3>
-    <p>${esc(item.description)}</p>
-    <div class="library-use"><strong>Typical use</strong><span>${esc(item.when)}</span></div>
-    <div class="library-boundary"><strong>Boundary</strong><span>${esc(item.caution)}</span></div>
-    ${item.evidenceNote ? `<div class="library-boundary"><strong>Evidence note</strong><span>${esc(item.evidenceNote)}</span></div>` : ""}
-    <div class="library-sources">${links(item.sources)}</div>
-  </article>`).join("")}</div>` : `<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different method family.</p></div>`}
-  <div class="library-note"><strong>Clinical scope</strong><p>A technique is not a treatment by itself. Whether it is appropriate depends on formulation, diagnosis where relevant, risk, medical context, and practitioner competence. Read the evidence review before treating any item as a programme.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the full scientific audit ↗</a></div>`;
+  ${visible.length ? \`<div class="library-grid method-guide-grid">${visible.map(item=>{
+    const guide = TECHNIQUE_GUIDES[item.id];
+    return \`<article class="library-card method-guide-card">
+      <div class="library-card-meta"><span class="library-category">${esc(item.category)}</span><span class="library-class ${item.methodType === "Specialist protocol component" ? "specialist" : item.methodType === "Core CBT method" ? "core" : "related"}">${esc(item.methodType)}</span><span class="library-approach">${esc(item.approach)}</span></div>
+      <h3>${esc(item.title)}</h3>
+      <p class="method-card-aim">${esc(item.description)}</p>
+      <div class="library-use"><strong>When it may fit</strong><span>${esc(item.when)}</span></div>
+      <details class="method-explainer">
+        <summary><span><b>Explore the full method</b><small>Rationale · sequence · questions · review · limits</small></span><span class="evidence-toggle" aria-hidden="true">+</span></summary>
+        <div class="method-explainer-body">
+          <section class="method-detail-block"><span class="method-detail-label">01 / TARGET AND RATIONALE</span><p>${esc(guide.aim)}</p></section>
+          <section class="method-detail-block"><span class="method-detail-label">02 / HOW TO APPLY IT</span><ol class="method-procedure-list">${guide.steps.map((step,i)=>\`<li><span>${String(i+1).padStart(2,"0")}</span><p>${esc(step)}</p></li>\`).join("")}</ol></section>
+          <section class="method-detail-block"><span class="method-detail-label">03 / QUESTIONS THAT SHARPEN THE WORK</span><ul class="method-question-list">${guide.questions.map(q=>\`<li>${esc(q)}</li>\`).join("")}</ul></section>
+          <section class="method-detail-block"><span class="method-detail-label">04 / WHAT TO REVIEW</span><p>${esc(guide.review)}</p></section>
+          <section class="method-detail-block method-pitfall-block"><span class="method-detail-label">05 / COMMON TRAPS AND BOUNDARIES</span><p>${esc(guide.pitfalls)}</p><p>${esc(item.caution)}</p></section>
+          <section class="method-detail-block method-evidence-block"><span class="method-detail-label">06 / EVIDENCE AND SCOPE</span><p>${esc(guide.evidenceScope)}</p>${item.evidenceNote ? \`<p>${esc(item.evidenceNote)}</p>\` : ""}</section>
+          <div class="technique-sources">${links(item.sources)}</div>
+        </div>
+      </details>
+    </article>\`;
+  }).join("")}</div>\` : \`<div class="empty-state"><div class="empty-mark">00</div><h3>No matching methods</h3><p>Try another search term or select a different intervention family or model.</p></div>\`}
+  <div class="library-note"><strong>Clinical scope</strong><p>Match the method to the person's formulation, goals, preferences, culture, risk and access to care. Specialist protocol components require appropriate assessment and delivery. The evidence for a complete treatment package does not automatically establish the effectiveness of one isolated technique.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></div>\`;
 }
 
 function planPage(e) {
@@ -207,22 +237,46 @@ function homePage() {
 }
 function renderFormulationHub() {
   const levels = FORMULATION_SECTIONS.find(x => x.id === "levels");
+  const g = THOUGHT_SPOTTING_GUIDE;
   const families = groupExercises(FORMULATION_TOOLS);
-  return '<section class="formulation-hero"><div class="eyebrow"><span class="eyebrow-dot"></span>COGNITIVE CONCEPTUALIZATION / SKILL HUB</div><h1>Thoughts, beliefs & schemas<span class="title-period">.</span></h1><p>Learn to spot automatic thoughts, identify intermediate rules, map core beliefs and schemas, and choose a method that fits the pattern you are trying to understand.</p><div class="formulation-hero-metrics"><span><strong>' + levels.points.length + '</strong> conceptual layers</span><span><strong>' + FORMULATION_TOOLS.length + '</strong> guided tools</span><span><strong>6</strong> therapeutic models compared</span></div></section>' +
-  '<div class="formulation-notice"><strong>Start with a specific situation, not a label.</strong><p>A formulation is a revisable explanation of how context, learning history, thoughts, emotions, body responses, behaviours, and coping interact. It is not a diagnosis, personality test, or proof that all distress comes from thinking.</p></div>' +
-  '<section class="formulation-levels"><div class="section-heading"><div><div class="eyebrow muted">THE COGNITIVE MAP</div><h2>From an event to a recurring belief</h2></div><span class="section-index">01 / CONCEPTUALIZE</span></div><div class="belief-level-grid">' +
-  levels.points.map(([name,desc],i) => '<article class="belief-level-card"><span>' + String(i+1).padStart(2,"0") + '</span><h3>' + esc(name) + '</h3><p>' + esc(desc) + '</p></article>').join("") +
-  '</div><p class="formulation-section-note">' + esc(levels.body) + '</p><div class="formulation-citations">' + links(levels.sources) + '</div></section>' +
-  '<section class="formulation-knowledge"><div class="section-heading"><div><div class="eyebrow muted">KNOWLEDGE BASE</div><h2>How to identify and understand patterns</h2></div><span class="section-index">02 / LEARN</span></div>' +
-  FORMULATION_SECTIONS.filter(x=>x.id!=="levels").map((section,i) => '<details class="formulation-knowledge-card" ' + (i===0?'open':'') + '><summary><span><small>' + esc(section.kicker) + '</small><b>' + esc(section.title) + '</b></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><div class="formulation-knowledge-body"><p>' + esc(section.body) + '</p><ul>' +
-  section.points.map(([name,desc]) => '<li><strong>' + esc(name) + '</strong><span>' + esc(desc) + '</span></li>').join("") +
-  '</ul><div class="technique-sources">' + links(section.sources) + '</div></div></details>').join("") + '</section>' +
-  '<section class="formulation-tools"><div class="section-heading"><div><div class="eyebrow muted">INTERACTIVE PRACTICE</div><h2>Tools for each level</h2><p>Choose one method that matches the question you are trying to answer. You do not need to complete them all.</p></div><span class="family-count">' + FORMULATION_TOOLS.length + ' TOOLS</span></div>' +
-  families.map(([family,tools]) => '<section class="exercise-family"><header class="exercise-family-heading"><div><span class="eyebrow muted">METHOD FAMILY</span><h3>' + esc(family) + '</h3><p>' + esc(EXERCISE_FAMILY_NOTES[family]) + '</p></div><span class="family-count">' + tools.length + ' TOOLS</span></header><div class="tool-grid">' +
-  tools.map((tool,index) => toolCard(tool,index,family)).join("") + '</div></section>').join("") + '</section>' +
-  '<section class="formulation-reading"><div class="section-heading"><div><div class="eyebrow muted">FOUNDATIONAL READING</div><h2>Core books and clinical references</h2><p>Books are model references; they do not replace independent research and guideline review.</p></div><span class="section-index">03 / READ</span></div><div class="formulation-book-grid">' +
-  FORMULATION_BOOKS.map(book => '<article class="formulation-book-card"><span class="book-author">' + esc(book.author) + '</span><h3>' + esc(book.title) + '</h3><p>' + esc(book.note) + '</p><div class="technique-sources">' + links([book.source]) + '</div></article>').join("") + '</div></section>' +
-  '<section class="formulation-boundary"><strong>Clinical boundaries</strong><p>Do not use this hub to self-diagnose a schema, infer abuse or childhood causes, or deliberately intensify distress. Imagery rescripting, chair work, trauma processing, and complex mode work require appropriate clinical assessment and practitioner competence. Keep real-world safety, discrimination, illness, and material conditions in the formulation.</p><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></section>';
+  return '<section class="formulation-hero thought-guide-hero"><div class="eyebrow"><span class="eyebrow-dot"></span>COGNITIVE CONCEPTUALIZATION / PRACTICAL FIELD GUIDE</div><h1>Thoughts, beliefs & schemas<span class="title-period">.</span></h1><p>A practical system for noticing the cognition behind an emotional shift, separating it from feelings and facts, exploring its meaning, and deciding when a deeper belief formulation is actually useful.</p><div class="formulation-hero-metrics"><span><strong>' + FORMULATION_TOOLS.length + '</strong> guided tools</span><span><strong>' + g.protocol.length + '</strong> capture stages</span><span><strong>' + g.workedExamples.length + '</strong> worked examples</span></div></section>' +
+  '<div class="formulation-notice"><strong>Start with a specific episode—not a diagnosis or a search for a hidden belief.</strong><p>Automatic thoughts may be words, images, predictions, memories or meanings. They are hypotheses about how a situation was appraised. A blank answer is acceptable. The goal is accurate observation and useful choice, not finding something negative in every feeling.</p></div>' +
+  '<section class="thought-recognition-section"><div class="section-heading"><div><div class="eyebrow muted">01 / NOTICE THE CUE</div><h2>Where automatic thoughts show up</h2><p>Look for a shift in the response. The cue helps you locate the moment; it does not prove which thought occurred.</p></div><span class="section-index">RECOGNITION</span></div><div class="thought-cue-grid">' +
+  g.recognitionCues.map((x,i)=>'<article class="thought-cue-card"><span class="cue-number">'+String(i+1).padStart(2,"0")+'</span><h3>'+esc(x.name)+'</h3><p>'+esc(x.detail)+'</p></article>').join("") +
+  '</div></section>' +
+  '<section class="thought-capture-section"><div class="section-heading"><div><div class="eyebrow muted">02 / CAPTURE THE MOMENT</div><h2>A seven-stage thought-spotting protocol</h2><p>Move from one concrete event to an accurate record. Do not rush to challenge a thought before you have identified it.</p></div><span class="section-index">FIELD SEQUENCE</span></div><ol class="thought-capture-timeline">' +
+  g.protocol.map((x,i)=>'<li><span class="capture-step-number">'+String(i+1).padStart(2,"0")+'</span><div><h3>'+esc(x.title)+'</h3><p>'+esc(x.body)+'</p></div></li>').join("") +
+  '</ol><button class="primary-button" type="button" data-tool="formulation-thought-capture">Open guided thought capture <span aria-hidden="true">↗</span></button></section>' +
+  '<section class="thought-types-section"><div class="section-heading"><div><div class="eyebrow muted">03 / RECOGNISE THE FORM</div><h2>Not every automatic thought is a sentence</h2><p>Capture the form that actually occurred; do not translate every experience into words if that changes its meaning.</p></div><span class="section-index">COGNITIVE FORMS</span></div><div class="thought-types-grid">' +
+  g.cognitionTypes.map(x=>'<article class="thought-type-card"><h3>'+esc(x.name)+'</h3><blockquote>'+esc(x.example)+'</blockquote><p>'+esc(x.distinction)+'</p></article>').join("") +
+  '</div></section>' +
+  '<section class="thought-sort-section"><div class="section-heading"><div><div class="eyebrow muted">04 / SEPARATE THE COMPONENTS</div><h2>Thought, emotion, body and behaviour are not interchangeable</h2><p>A clear record prevents an emotion label or a physical sensation from being mistaken for the appraisal that may have accompanied it.</p></div><span class="section-index">DISTINCTIONS</span></div><div class="thought-sort-table">' +
+  g.discrimination.map(x=>'<article class="thought-sort-row"><div><strong>'+esc(x.label)+'</strong><small>'+esc(x.test)+'</small></div><p>'+esc(x.example)+'</p></article>').join("") +
+  '</div><button class="outline-button" type="button" data-tool="formulation-sort-episode">Practise sorting an episode</button></section>' +
+  '<section class="thought-question-section"><div class="section-heading"><div><div class="eyebrow muted">05 / ASK BETTER QUESTIONS</div><h2>A question bank for different emotional contexts</h2><p>Use a few fitting prompts. Do not ask every question or lead the person towards a presumed answer.</p></div><span class="section-index">ELICITATION</span></div>' +
+  g.questionBank.map((group,i)=>'<details class="thought-question-group" '+(i===0?'open':'')+'><summary><span><small>QUESTION SET '+String(i+1).padStart(2,"0")+'</small><b>'+esc(group.group)+'</b></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><ul>'+group.questions.map(q=>'<li>'+esc(q)+'</li>').join("")+'</ul></details>').join("") +
+  '</section>' +
+  '<section class="thought-troubleshooting-section"><div class="section-heading"><div><div class="eyebrow muted">06 / WHEN YOU GET STUCK</div><h2>Common difficulties—and what to try instead</h2><p>The answer is not to push harder. Change the question, return to the situation or stop when the process becomes unhelpful.</p></div><span class="section-index">TROUBLESHOOTING</span></div><div class="thought-troubleshooting-grid">' +
+  g.troubleshooting.map(x=>'<article class="thought-troubleshooting-card"><h3>'+esc(x.problem)+'</h3><p>'+esc(x.response)+'</p></article>').join("") +
+  '</div></section>' +
+  '<section class="thought-examples-section"><div class="section-heading"><div><div class="eyebrow muted">07 / SEE THE DIFFERENCE</div><h2>Worked examples</h2><p>Each example separates the event, cognition, emotion, image, meaning and behaviour. The balanced response is not a claim that the feared interpretation is impossible.</p></div><span class="section-index">APPLICATION</span></div><div class="thought-example-grid">' +
+  g.workedExamples.map((x,i)=>'<details class="thought-example-card" '+(i===0?'open':'')+'><summary><span><small>EXAMPLE '+String(i+1).padStart(2,"0")+'</small><b>'+esc(x.title)+'</b></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><div class="thought-example-body">'+[['Situation',x.situation],['Emotion',x.emotion],['Automatic thought',x.thought],['Image',x.image],['Personal meaning',x.meaning],['Behaviour / urge',x.behaviour],['Balanced perspective',x.balanced],['Learning point',x.learning]].map(([k,v])=>'<div><strong>'+k+'</strong><p>'+esc(v)+'</p></div>').join("")+'</div></details>').join("") +
+  '</div></section>' +
+  '<section class="thought-record-section"><div class="section-heading"><div><div class="eyebrow muted">08 / RECORD AND EVALUATE</div><h2>A structured record—from capture to response</h2><p>Use this order to avoid jumping from an emotion straight to a positive alternative.</p></div><span class="section-index">RECORD QUALITY</span></div><ol class="thought-record-steps">' +
+  g.thoughtRecord.map((x,i)=>'<li><span>'+String(i+1).padStart(2,"0")+'</span><div><strong>'+esc(x[0])+'</strong><p>'+esc(x[1])+'</p></div></li>').join("") +
+  '</ol><button class="primary-button" type="button" data-tool="formulation-thought-record">Open thought record <span aria-hidden="true">↗</span></button></section>' +
+  '<section class="belief-bridge-section"><div class="section-heading"><div><div class="eyebrow muted">09 / EXPLORE MEANING CAREFULLY</div><h2>From automatic thought to a broader belief</h2><p>Move deeper only when repeated examples support it and the exploration remains useful.</p></div><span class="section-index">FORMULATION</span></div><div class="belief-bridge-grid">' +
+  g.beliefBridge.map((x,i)=>'<article class="belief-bridge-card"><span>'+String(i+1).padStart(2,"0")+'</span><h3>'+esc(x.level)+'</h3><blockquote>'+esc(x.example)+'</blockquote><p>'+esc(x.question)+'</p></article>').join("") +
+  '</div><div class="belief-bridge-note">'+g.formulationPrinciples.map(x=>'<p>'+esc(x)+'</p>').join("")+'</div></section>' +
+  '<section class="formulation-knowledge"><div class="section-heading"><div><div class="eyebrow muted">10 / KNOWLEDGE MAP</div><h2>Learn the wider cognitive model</h2><p>These concepts help organise repeated observations. They are not labels to assign after one event.</p></div><span class="section-index">CONCEPTS</span></div><div class="belief-level-grid">' +
+  levels.points.map((x,i)=>'<article class="belief-level-card"><span>'+String(i+1).padStart(2,"0")+'</span><h3>'+esc(x[0])+'</h3><p>'+esc(x[1])+'</p></article>').join("") +
+  '</div><p class="formulation-section-note">'+esc(levels.body)+'</p><div class="formulation-citations">'+links(levels.sources)+'</div>' +
+  FORMULATION_SECTIONS.filter(x=>x.id!=="levels").map((section,i)=>'<details class="formulation-knowledge-card" '+(i===0?'open':'')+'><summary><span><small>'+esc(section.kicker)+'</small><b>'+esc(section.title)+'</b></span><span class="evidence-toggle" aria-hidden="true">+</span></summary><div class="formulation-knowledge-body"><p>'+esc(section.body)+'</p><ul>'+section.points.map(([name,desc])=>'<li><strong>'+esc(name)+'</strong><span>'+esc(desc)+'</span></li>').join("")+'</ul><div class="technique-sources">'+links(section.sources)+'</div></div></details>').join("") +
+  '</section>' +
+  '<section class="formulation-tools"><div class="section-heading"><div><div class="eyebrow muted">11 / PRACTISE AND APPLY</div><h2>Tools for each stage</h2><p>Choose a tool that matches the question. You do not need to complete every worksheet.</p></div><span class="family-count">'+FORMULATION_TOOLS.length+' TOOLS</span></div>' +
+  families.map(([family,tools])=>'<section class="exercise-family"><header class="exercise-family-heading"><div><span class="eyebrow muted">METHOD FAMILY</span><h3>'+esc(family)+'</h3><p>'+esc(EXERCISE_FAMILY_NOTES[family])+'</p></div><span class="family-count">'+tools.length+' TOOLS</span></header><div class="tool-grid">'+tools.map((tool,index)=>toolCard(tool,index,family)).join("")+'</div></section>').join("") +
+  '</section>' +
+  '<section class="formulation-boundary"><strong>Clinical boundaries and quality checks</strong><ul>'+g.clinicalBoundaries.map(x=>'<li>'+esc(x)+'</li>').join("")+'</ul><div class="technique-sources">'+links(g.sources)+'</div><a href="./docs/SCIENTIFIC_REVIEW.md" target="_blank" rel="noopener">Read the scientific and clinical review ↗</a></section>';
 }
 
 function render() {
