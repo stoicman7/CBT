@@ -336,11 +336,7 @@ export const SOURCES = {
     label: "REBT evidence review (2024)",
     citation: "King et al. (2024). Systematic review of the nature and efficacy of Rational Emotive Behaviour Therapy interventions. PLOS ONE, 19(7), e0306835.",
     url: "https://pubmed.ncbi.nlm.nih.gov/38980891/"
-  }
-
-};
-
-  ,
+  }  ,
   actMadeSimple2019: {
     label: "ACT Made Simple, 2nd ed. (2019)",
     citation: "Harris, R. (2019). ACT Made Simple: An Easy-to-Read Primer on Acceptance and Commitment Therapy (2nd ed., revised). New Harbinger Publications. Practical ACT text covering the six core processes, choice point, defusion, self-compassion, values, and experiential exercises.",
@@ -356,6 +352,10 @@ export const SOURCES = {
     citation: "Beck, A. T., Rush, A. J., Shaw, B. F., Emery, G., DeRubeis, R. J., & Hollon, S. D. (2024). Cognitive Therapy of Depression (2nd ed.). Guilford Press. Updated clinical text with chapters on behavioural and cognitive techniques, schemas, core beliefs, underlying assumptions, case examples, and relapse prevention.",
     url: "https://www.guilford.com/books/Cognitive-Therapy-of-Depression/Beck-Rush-Shaw-Emery/9781572305823"
   }
+
+};
+
+
 
 export const EMOTIONS = [
   {
