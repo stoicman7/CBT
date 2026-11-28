@@ -112,6 +112,7 @@ assert.ok(FORMULATION_BOOKS.length >= 11, "The formulation hub should include a 
 for (const section of FORMULATION_SECTIONS) for (const sourceId of section.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by formulation section " + section.id);
 for (const book of FORMULATION_BOOKS) assert.ok(SOURCES[book.source], "Unknown source " + book.source + " used by formulation book " + book.title);
 assert.ok(SOURCES.actComparativeNMA2026, "The formulation hub should include current comparative ACT evidence.");
+assert.ok(SOURCES.dbtStandaloneSkillsMeta2026, "The DBT hub should include current evidence on stand-alone skills groups.");
 const formulationIds = new Set();
 for (const tool of FORMULATION_TOOLS) {
   assert.ok(!toolIds.has(tool.id) && !formulationIds.has(tool.id), "Duplicate formulation tool ID: " + tool.id);
