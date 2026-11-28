@@ -94,6 +94,8 @@ assert.ok(indexSource.includes('data-tab="formulation"'), "The thoughts and beli
 assert.ok(appSource.includes("function renderTechniqueLibrary()"), "The technique directory renderer should exist.");
 assert.ok(appSource.includes("function renderFormulationHub()"), "The dedicated formulation hub should render.");
 assert.ok(appSource.includes("groupExercises(e.tools)"), "Emotion exercises should be grouped by their intervention family.");
+assert.ok(appSource.includes("data-library-approach"), "Technique directory should filter independently by therapeutic approach.");
+assert.ok(appSource.includes("searchKind === \"library\""), "Global search should navigate to technique-library results.");
 assert.ok(appSource.includes("function renderSearchResults()"), "Global search should render direct workspace and exercise results.");
 assert.ok(appSource.includes("data-search-tool"), "Search results should identify exact tools.");
 assert.ok(appSource.includes("practice-step-list"), "The worksheet should render visually separated practice steps.");
@@ -131,11 +133,16 @@ for (const technique of CORE_TECHNIQUES) {
   assert.ok(technique.classification, "Technique classification missing: " + technique.id);
   for (const sourceId of technique.sources) assert.ok(SOURCES[sourceId], "Unknown source " + sourceId + " used by directory technique " + technique.id);
 }
-assert.ok(categories.size >= 6, "The technique directory should cover at least six method families.");
-assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Specialist protocol"), "Specialist methods must be explicitly classified.");
-assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Core CBT"), "Core CBT methods must be explicitly classified.");
+assert.equal(categories.size, 8, "The technique directory should use the eight standard exercise families.");
+assert.ok(CORE_TECHNIQUES.every(item => item.methodType && item.approach && EXERCISE_FAMILY_ORDER.includes(item.category)), "Every directory entry must keep method family, therapeutic approach, and status separate.");
+assert.ok(CORE_TECHNIQUES.some(item => item.methodType === "Specialist protocol component"), "Specialist methods must be explicitly classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.methodType === "Core CBT method"), "Core CBT methods must be explicitly classified.");
 assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Metacognitive therapy"), "Related therapies must remain separately classified.");
-assert.ok(CORE_TECHNIQUES.some(item => item.classification === "Acceptance and commitment therapy"), "ACT methods must remain separately classified.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(ACT)")), "ACT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(DBT)")), "DBT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(REBT)")), "REBT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.some(item => item.approach.includes("(MCT)")), "MCT methods must remain separately labelled.");
+assert.ok(CORE_TECHNIQUES.every(item => ["Core CBT method","Specialist protocol component","Related therapy approach"].includes(item.methodType)), "Technique method status must use a consistent vocabulary.");
 assert.ok(CORE_TECHNIQUES.some(item => /Rational emotive/i.test(item.classification)), "REBT methods must remain separately classified.");
 assert.ok(CORE_TECHNIQUES.some(item => /Dialectical behavio/i.test(item.classification)), "DBT methods must remain separately classified.");
 assert.ok(CORE_TECHNIQUES.some(item => /Schema therapy/i.test(item.classification)), "Schema-therapy methods must remain separately classified.");
